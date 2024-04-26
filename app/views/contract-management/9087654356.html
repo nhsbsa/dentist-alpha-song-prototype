@@ -1,0 +1,336 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'default-layout.html' %}
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  Contract details
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+  {{ breadcrumb({
+    items: [
+      {
+        href: "/landing-page",
+        text: "Home"
+      },
+      {
+        href: "/contract-management/contracts",
+        text: "Contract Management"
+      }
+    ],
+    href: "/contract-management/9087654356",
+    text: "9087654356"
+  }) }}
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+      <h1>
+        9087654356
+      </h1>
+
+      <div class="nhsuk-tabs" data-module="nhsuk-tabs">
+        <h2 class="nhsuk-tabs__title">
+          Contents
+        </h2>
+      
+        <ul class="nhsuk-tabs__list">
+          <li class="nhsuk-tabs__list-item nhsuk-tabs__list-item--selected">
+            <a class="nhsuk-tabs__tab" href="#panel-1">
+              General
+            </a>
+          </li>
+      
+          <li class="nhsuk-tabs__list-item">
+            <a class="nhsuk-tabs__tab" href="#panel-2">
+              Services
+            </a>
+          </li>
+      
+          <li class="nhsuk-tabs__list-item">
+            <a class="nhsuk-tabs__tab" href="#panel-3">
+              Treatment Location
+            </a>
+          </li>
+      
+          <li class="nhsuk-tabs__list-item">
+            <a class="nhsuk-tabs__tab" href="#panel-4">
+              Performers
+            </a>
+          </li>
+        </ul>
+      
+        <!-- Panel 1 -->
+        <div class="nhsuk-tabs__panel nhsuk-u-padding-top-4" id="panel-1">
+          <div class="nhsuk-summary-edit">
+            <a class="nhsuk-link--no-visited-state" href="/contract-management/9087654356/edit">Edit</a>
+          </div>
+          <dl class="nhsuk-summary-list">
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">
+                Contract Number
+              </dt>
+              <dd class="nhsuk-summary-list__value">
+                99017500001
+              </dd>
+            </div>
+          
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">
+                Commissioner
+              </dt>
+              <dd class="nhsuk-summary-list__value">
+                QYG
+              </dd>
+            </div>
+          
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">
+                Contract Type
+              </dt>
+              <dd class="nhsuk-summary-list__value">
+                GDS
+              </dd>
+            </div>
+          
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">
+                Pilot
+              </dt>
+              <dd class="nhsuk-summary-list__value">
+                False
+              </dd>
+            </div>
+
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">
+                Provider
+              </dt>
+              <dd class="nhsuk-summary-list__value">
+                102827
+              </dd>
+            </div>
+          
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">
+                Contract Location
+              </dt>
+              <dd class="nhsuk-summary-list__value">
+                5612
+              </dd>
+            </div>
+          
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">
+                Address Title
+              </dt>
+              <dd class="nhsuk-summary-list__value">
+                
+              </dd>
+            </div>
+          
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">
+                Postcode
+              </dt>
+              <dd class="nhsuk-summary-list__value">
+                SA1 3EN
+              </dd>
+            </div>
+
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">
+                Address
+              </dt>
+              <dd class="nhsuk-summary-list__value">
+                <p>3 Pudding Plate Close</p>
+                <p>Darlington</p>
+                <p>Tonypandy</p>
+              </dd>
+            </div>
+          
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">
+                Catagory Code
+              </dt>
+              <dd class="nhsuk-summary-list__value">
+                3
+              </dd>
+            </div>
+          
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">
+                Subcategory Code
+              </dt>
+              <dd class="nhsuk-summary-list__value">
+                46
+              </dd>
+            </div>
+          
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">
+                Contract Start Date
+              </dt>
+              <dd class="nhsuk-summary-list__value">
+                01/04/2006
+              </dd>
+            </div>
+
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">
+                Contract End Date
+              </dt>
+              <dd class="nhsuk-summary-list__value">
+                
+              </dd>
+            </div>
+          
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">
+                Closure Reason
+              </dt>
+              <dd class="nhsuk-summary-list__value">
+                
+              </dd>
+            </div>
+          
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">
+                Not Paid By NHSBSA
+              </dt>
+              <dd class="nhsuk-summary-list__value">
+                False
+              </dd>
+            </div>
+          
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">
+                Data Collection Only Contract
+              </dt>
+              <dd class="nhsuk-summary-list__value">
+                False
+              </dd>
+            </div>
+
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">
+                Local Dental Committee
+              </dt>
+              <dd class="nhsuk-summary-list__value">
+                LDC075
+              </dd>
+            </div>
+          
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">
+                Prison Indicator
+              </dt>
+              <dd class="nhsuk-summary-list__value">
+                No
+              </dd>
+            </div>
+          
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">
+                Provider Effective Date
+              </dt>
+              <dd class="nhsuk-summary-list__value">
+                01/12/2018
+              </dd>
+            </div>
+          
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">
+                Landline Phone Number
+              </dt>
+              <dd class="nhsuk-summary-list__value">
+                12345678
+              </dd>
+            </div>
+
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">
+                Mobile Phone Number
+              </dt>
+              <dd class="nhsuk-summary-list__value">
+                12345678
+              </dd>
+            </div>
+          
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">
+                Email Address
+              </dt>
+              <dd class="nhsuk-summary-list__value">
+                DCSSTransformation@capita.com
+              </dd>
+            </div>
+          
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">
+                Website Address
+              </dt>
+              <dd class="nhsuk-summary-list__value">
+                www.nhsbsa.nhs.uk
+              </dd>
+            </div>
+          
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">
+                Contact Name
+              </dt>
+              <dd class="nhsuk-summary-list__value">
+                
+              </dd>
+            </div>
+
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">
+                Category Notes
+              </dt>
+              <dd class="nhsuk-summary-list__value">
+                
+              </dd>
+            </div>
+          
+          </dl>
+        </div>
+      
+        <!-- Panel 2 -->
+        <div class="nhsuk-tabs__panel nhsuk-tabs__panel--hidden" id="panel-2">
+      
+          
+      
+        </div>
+      
+        <!-- Panel 3 -->
+        <div class="nhsuk-tabs__panel nhsuk-tabs__panel--hidden" id="panel-3">
+      
+          
+      
+        </div>
+      
+        <!-- Panel 4 -->
+        <div class="nhsuk-tabs__panel nhsuk-tabs__panel--hidden" id="panel-4">
+      
+        </div>
+      
+      </div>
+
+    </div>
+  </div>
+{% endblock %}

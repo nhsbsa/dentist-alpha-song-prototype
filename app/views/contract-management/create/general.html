@@ -1,0 +1,344 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'default-layout.html' %}
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  Contract details
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1>
+        Create Contract
+      </h1>
+
+      <h2>General</h2>
+      <hr />
+
+      <form action="/contract-management/create/services" method="post">
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="contract-number">
+            Contract Number
+          </label>
+          <input class="nhsuk-input" id="contract-number" name="contract-number" type="text">
+        </div>
+
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="commissioner">
+            Commissioner
+          </label>
+          <input class="nhsuk-input" id="commissioner" name="commissioner" type="text">
+        </div>
+
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="contract-type">
+            Contract Type
+          </label>
+          <select class="nhsuk-select" id="contract-type" name="contract-type">
+            <option value="1">Select</option>
+            <option value="2" selected>Option 1</option>
+            <option value="3" disabled>Option 2</option>
+          </select>
+        </div>
+
+        <div class="nhsuk-form-group">
+          <fieldset class="nhsuk-fieldset">
+            <legend class="nhsuk-u-visually-hidden">
+              Pilot
+            </legend>
+
+            <div class="nhsuk-checkboxes">
+              <div class="nhsuk-checkboxes__item">
+                <input class="nhsuk-checkboxes__input" id="pilot" name="pilot" type="checkbox" value="true">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="pilot">
+                  Pilot
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="provider">
+            Provider
+          </label>
+          <input class="nhsuk-input" id="provider" name="provider" type="text">
+        </div>
+
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="contract-location">
+            Contract Location
+          </label>
+          <input class="nhsuk-input" id="contract-location" name="contract-location" type="text">
+        </div>
+
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="address-title">
+            Address Title
+          </label>
+          <input class="nhsuk-input" id="address-title" name="address-title" type="text">
+        </div>
+
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="postcode">
+            Postcode
+          </label>
+          <input class="nhsuk-input" id="postcode" name="postcode" type="text">
+        </div>
+
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="address">
+            Address
+          </label>
+          <textarea class="nhsuk-textarea" id="address" name="address" rows="5"></textarea>
+        </div>
+
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="catagory-code">
+            Catagory Code
+          </label>
+          <input class="nhsuk-input" id="catagory-code" name="catagory-code" type="text">
+        </div>
+
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="subcategory-code">
+            Subcategory Code
+          </label>
+          <input class="nhsuk-input" id="subcategory-code" name="subcategory-code" type="text">
+        </div>
+
+        <div class="nhsuk-form-group">
+          <fieldset class="nhsuk-fieldset" role="group">
+            <legend class="nhsuk-label" for="contract-start-date">
+              Contract Start Date
+            </legend>
+
+            <div class="nhsuk-date-input" id="contract-start-date">
+              <div class="nhsuk-date-input__item">
+                <div class="nhsuk-form-group">
+                  <label class="nhsuk-label nhsuk-date-input__label" for="start-day">
+                    Day
+                  </label>
+                  <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="start-day" name="start-day" type="text" pattern="[0-9]*" inputmode="numeric">
+                </div>
+              </div>
+              <div class="nhsuk-date-input__item">
+                <div class="nhsuk-form-group">
+                  <label class="nhsuk-label nhsuk-date-input__label" for="start-month">
+                    Month
+                  </label>
+                  <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="start-month" name="start-month" type="text" pattern="[0-9]*" inputmode="numeric">
+                </div>
+              </div>
+              <div class="nhsuk-date-input__item">
+                <div class="nhsuk-form-group">
+                  <label class="nhsuk-label nhsuk-date-input__label" for="start-year">
+                    Year
+                  </label>
+                  <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="start-year" name="start-year" type="text" pattern="[0-9]*" inputmode="numeric">
+                </div>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="nhsuk-form-group">
+          <fieldset class="nhsuk-fieldset" role="group">
+            <legend class="nhsuk-label" for="contract-end-date">
+              Contract End Date
+            </legend>
+
+            <div class="nhsuk-date-input" id="contract-end-date">
+              <div class="nhsuk-date-input__item">
+                <div class="nhsuk-form-group">
+                  <label class="nhsuk-label nhsuk-date-input__label" for="end-day">
+                    Day
+                  </label>
+                  <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="end-day" name="end-day" type="text" pattern="[0-9]*" inputmode="numeric">
+                </div>
+              </div>
+              <div class="nhsuk-date-input__item">
+                <div class="nhsuk-form-group">
+                  <label class="nhsuk-label nhsuk-date-input__label" for="end-month">
+                    Month
+                  </label>
+                  <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="end-month" name="end-month" type="text" pattern="[0-9]*" inputmode="numeric">
+                </div>
+              </div>
+              <div class="nhsuk-date-input__item">
+                <div class="nhsuk-form-group">
+                  <label class="nhsuk-label nhsuk-date-input__label" for="end-year">
+                    Year
+                  </label>
+                  <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="end-year" name="end-year" type="text" pattern="[0-9]*" inputmode="numeric">
+                </div>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="closure-reason">
+            Closure Reason
+          </label>
+          <select class="nhsuk-select" id="closure-reason" name="closure-reason">
+            <option value="1">Select</option>
+            <option value="2" selected>Option 1</option>
+            <option value="3" disabled>Option 2</option>
+          </select>
+        </div>
+
+        <div class="nhsuk-form-group">
+          <fieldset class="nhsuk-fieldset">
+            <legend class="nhsuk-u-visually-hidden">
+              Not Paid By NHSBSA
+            </legend>
+
+            <div class="nhsuk-checkboxes">
+              <div class="nhsuk-checkboxes__item">
+                <input class="nhsuk-checkboxes__input" id="not-paid-by-nhsbsa" name="not-paid-by-nhsbsa" type="checkbox" value="true">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="not-paid-by-nhsbsa">
+                  Not Paid By NHSBSA
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="nhsuk-form-group">
+          <fieldset class="nhsuk-fieldset">
+            <legend class="nhsuk-u-visually-hidden">
+              Data Collection Only Contract
+            </legend>
+
+            <div class="nhsuk-checkboxes">
+              <div class="nhsuk-checkboxes__item">
+                <input class="nhsuk-checkboxes__input" id="data-collection-only-contract" name="data-collection-only-contract" type="checkbox" value="true">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="data-collection-only-contract">
+                  Data Collection Only Contract
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="local-dental-committee">
+            Local Dental Committee
+          </label>
+          <input class="nhsuk-input" id="local-dental-committee" name="local-dental-committee" type="text">
+        </div>
+
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="prison-indicator">
+            Prison Indicator
+          </label>
+          <select class="nhsuk-select" id="prison-indicator" name="prison-indicator">
+            <option value="1">Select</option>
+            <option value="2" selected>Option 1</option>
+            <option value="3" disabled>Option 2</option>
+          </select>
+        </div>
+
+        <div class="nhsuk-form-group">
+          <fieldset class="nhsuk-fieldset" role="group">
+            <legend class="nhsuk-label" for="provider-effective-date">
+              Provider Effective Date
+            </legend>
+
+            <div class="nhsuk-date-input" id="provider-effective-date">
+              <div class="nhsuk-date-input__item">
+                <div class="nhsuk-form-group">
+                  <label class="nhsuk-label nhsuk-date-input__label" for="provider-effective-day">
+                    Day
+                  </label>
+                  <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="provider-effective-day" name="provider-effective-day" type="text" pattern="[0-9]*" inputmode="numeric">
+                </div>
+              </div>
+              <div class="nhsuk-date-input__item">
+                <div class="nhsuk-form-group">
+                  <label class="nhsuk-label nhsuk-date-input__label" for="provider-effective-month">
+                    Month
+                  </label>
+                  <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="provider-effective-month" name="provider-effective-month" type="text" pattern="[0-9]*" inputmode="numeric">
+                </div>
+              </div>
+              <div class="nhsuk-date-input__item">
+                <div class="nhsuk-form-group">
+                  <label class="nhsuk-label nhsuk-date-input__label" for="provider-effective-year">
+                    Year
+                  </label>
+                  <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="provider-effective-year" name="provider-effective-year" type="text" pattern="[0-9]*" inputmode="numeric">
+                </div>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="landline-phone-number">
+            Landline Phone Number
+          </label>
+          <input class="nhsuk-input" id="landline-phone-number" name="landline-phone-number" type="text">
+        </div>
+
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="mobile-phone-number">
+            Mobile Phone Number
+          </label>
+          <input class="nhsuk-input" id="mobile-phone-number" name="mobile-phone-number" type="text">
+        </div>
+
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="email-address">
+            Email Address
+          </label>
+          <input class="nhsuk-input" id="email-address" name="email-address" type="text">
+        </div>
+
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="website-address">
+            Website Address
+          </label>
+          <input class="nhsuk-input" id="website-address" name="website-address" type="text">
+        </div>
+
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="contact-name">
+            Contact Name
+          </label>
+          <input class="nhsuk-input" id="contact-name" name="contact-name" type="text">
+        </div>
+
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="category-notes">
+            Category Notes
+          </label>
+          <textarea class="nhsuk-textarea" id="category-notes" name="category-notes" rows="5"></textarea>
+        </div>
+
+        <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
+          Next
+        </button>
+      </form>
+    </div>
+  </div>
+{% endblock %}

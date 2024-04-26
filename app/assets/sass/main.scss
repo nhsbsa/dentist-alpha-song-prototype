@@ -1,0 +1,55 @@
+// Import NHS.UK frontend library
+@import 'node_modules/nhsuk-frontend/packages/nhsuk';
+
+// Components that are not in the NHS.UK frontend library
+@import 'components/list-border';
+@import 'components/related-nav';
+
+///////////////////////////////////////////
+// Add your custom CSS/Sass styles below...
+///////////////////////////////////////////
+
+.nhsuk-header-secondary-divider {
+    color: #fff;
+    padding: 5px;
+}
+
+.nhsuk-summary-edit {
+    display: flex;
+    justify-content: end;
+}
+
+.nhsuk-user-text {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px;
+    &:hover {
+        color: #fff;
+        background-color: #003f7b;
+    }
+    &:focus {
+        color: #000;
+        background-color: #ffeb3b;
+    }
+}
+
+.nhsuk-multi-link {
+    &-row-one {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.nhsuk-card-custom {
+    &-container {
+        margin-bottom: 0;
+        border-bottom-width: 1px;
+    }
+    &-content {
+        padding: 15px;
+    }
+    &-icon {
+        margin-top: -13px !important;
+    }
+}

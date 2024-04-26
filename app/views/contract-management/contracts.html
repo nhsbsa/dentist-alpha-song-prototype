@@ -1,0 +1,116 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'default-layout.html' %}
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  Manage contracts
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+  {{ breadcrumb({
+    items: [
+      {
+        href: "/landing-page",
+        text: "Home"
+      }
+    ],
+    href: "/contract-management/contracts",
+    text: "Contract Management"
+  }) }}
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+      <!-- Add your content here -->
+      <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+
+      <h1>
+        Contract management
+      </h1>
+
+      <table class="nhsuk-table">
+        <caption class="nhsuk-table__caption" style="display: none;">Contracts</caption>
+        <thead role="rowgroup" class="nhsuk-table__head">
+          <tr role="row">
+            <th role="columnheader" class="" scope="col">
+              Contract No
+            </th>
+            <th role="columnheader" class="" scope="col">
+              Commissioner Name
+            </th>
+            <th role="columnheader" class="" scope="col">
+              Provider
+            </th>
+            <th role="columnheader" class="" scope="col">
+              Contract Type
+            </th>
+            <th role="columnheader" class="" scope="col">
+              Contract Start Date
+            </th>
+            <th role="columnheader" class="" scope="col">
+              Contract End Date
+            </th>
+            <th role="columnheader" class="" scope="col">
+              Status
+            </th>
+            <th role="columnheader" class="" scope="col">
+              
+            </th>
+          </tr>
+        </thead>
+        <tbody class="nhsuk-table__body">
+          <a class="nhsuk-link--no-visited-state" href="/contract-management/9087654356">
+            <tr role="row" class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">9087654356</td>
+              <td class="nhsuk-table__cell ">Cheshire and Merseyside ICB</td>
+              <td class="nhsuk-table__cell">City Centre Dentists</td>
+              <td class="nhsuk-table__cell">GDS</td>
+              <td class="nhsuk-table__cell">01/04/2006</td>
+              <td class="nhsuk-table__cell"></td>
+              <td class="nhsuk-table__cell">Active</td>
+              <td class="nhsuk-table__cell"><a class="nhsuk-link--no-visited-state" href="/contract-management/9087654356">View</a></td>
+            </tr>
+          </a>
+          <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell">9712345675</td>
+            <td class="nhsuk-table__cell ">Cheshire and Merseyside ICB</td>
+            <td class="nhsuk-table__cell">310 Dental Care</td>
+            <td class="nhsuk-table__cell">GDS</td>
+            <td class="nhsuk-table__cell">01/04/2006</td>
+            <td class="nhsuk-table__cell">31/03/2024</td>
+            <td class="nhsuk-table__cell">Active</td>
+            <td class="nhsuk-table__cell"><a class="nhsuk-link--no-visited-state" href="/contract-management/9087654356">View</a></td>
+          </tr>
+          <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell">9384567876</td>
+            <td class="nhsuk-table__cell ">Cheshire and Merseyside ICB</td>
+            <td class="nhsuk-table__cell">Chirag Patel</td>
+            <td class="nhsuk-table__cell">GDS</td>
+            <td class="nhsuk-table__cell">01/04/2006</td>
+            <td class="nhsuk-table__cell"></td>
+            <td class="nhsuk-table__cell">Active</td>
+            <td class="nhsuk-table__cell"><a class="nhsuk-link--no-visited-state" href="/contract-management/9087654356">View</a></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- End of content -->
+
+    </div>
+  </div>
+{% endblock %}
