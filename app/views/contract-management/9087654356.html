@@ -38,10 +38,26 @@
 {% block content %}
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-full">
+      <strong class="nhsuk-tag nhsuk-tag--green">
+        Active
+      </strong>
 
-      <h1>
-        9087654356
-      </h1>
+      <div class="nhsuk-contract-summary nhsuk-u-margin-bottom-4">
+        <h1 class="nhsuk-u-margin-bottom-0">
+          9087654356
+        </h1>
+        <div>
+          <button class="nhsuk-button nhsuk-contract-summary-actions" data-module="nhsuk-button" type="submit">
+            Withhold
+          </button>
+          <button class="nhsuk-button nhsuk-button--secondary nhsuk-contract-summary-actions" data-module="nhsuk-button" type="submit">
+            Transfer Ownership
+          </button>
+          <button class="nhsuk-button nhsuk-contract-summary-actions nhsuk-contract-summary-actions--close" data-module="nhsuk-button" type="submit">
+            Close Contract
+          </button>
+        </div>
+      </div>
 
       <div class="nhsuk-tabs" data-module="nhsuk-tabs">
         <h2 class="nhsuk-tabs__title">

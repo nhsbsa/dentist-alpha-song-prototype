@@ -19,6 +19,101 @@
     justify-content: end;
 }
 
+.nhsuk-button-group {
+    display: flex;
+    align-items: baseline;
+    & button {
+        margin-right: 15px;
+    }
+    & a {
+        margin-right: 15px;
+    }
+}
+
+.nhsuk-filter {
+    &-container {
+        margin-top: 25px;
+        display: none;
+    }
+    &-box {
+        margin: 25px 15px 0px 15px;
+    }
+    &-text {
+        color: #005eb8;
+        cursor: pointer;
+        text-decoration: underline;
+        &:hover{
+            color: #7c2855;
+            text-decoration: none;
+        }
+        &:focus {
+            background-color: #ffeb3b;
+            box-shadow: 0 -2px #ffeb3b,0 4px #212b32;
+            color: #212b32;
+            text-decoration: none;
+        }
+        &:active {
+            background-color: #ffeb3b;
+            box-shadow: 0 -2px #ffeb3b,0 4px #212b32;
+            color: #212b32;
+            text-decoration: none;
+        }
+    }
+}
+
+.nhsuk-custom-search {
+    display: flex;
+
+    &-input {
+        border: 1px solid #000;
+    }
+
+    &-filter-container {
+        display: flex;
+    }
+
+    &-filter-text {
+        padding-left: 30px;
+        display: flex;
+        align-items: center;
+    }
+
+    &-icon {
+        background-color: #007f3b;
+        border: 1px solid #000;
+        border-left: 0;
+        &:hover {
+            background-color: #00401e;
+            border: 1px solid #000;
+            border-left: 0;
+        }
+        &:active {
+            background-color: #ffeb3b;
+            border: 1px solid #000;
+            border-left: 0;
+            border-bottom: 2px solid #000;
+        }
+        &:focus {
+            background-color: #ffeb3b;
+            border: 1px solid #000;
+            border-left: 0;
+            border-bottom: 2px solid #000;
+            box-shadow: none;
+        }
+        &-svg {
+            fill: #fff;
+            height: 27px;
+            width: 27px;
+        }
+        &:active {
+            fill: #000;
+        }
+        &:focus {
+            fill: #000;
+        }
+    }
+}
+
 .nhsuk-user-text {
     color: #fff;
     text-decoration: none;
@@ -31,6 +126,15 @@
         color: #000;
         background-color: #ffeb3b;
     }
+}
+
+.nhsuk-summary-card-custom {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+    padding: 0;
+    margin-top: 35px;
+    justify-content: center;
 }
 
 .nhsuk-multi-link {
@@ -52,4 +156,33 @@
     &-icon {
         margin-top: -13px !important;
     }
+}
+
+.nhsuk-contract-summary {
+    display: flex;
+    justify-content: space-between;
+    &-actions {
+        margin-bottom: 0;
+        padding: 5px 10px;
+        &--withhold {
+            background-color: #4c6272;
+        }
+        &--transfer {
+            background-color: #fff9c4;
+        }
+        &--close {
+            background-color: #d5281b;
+        }
+    }
+}
+
+.nhsuk-plus-icon {
+    background: url("data:image/svg+xml,%3Csvg class='nhsuk-icon nhsuk-icon__plus' xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 24 24' aria-hidden='true'%3E%3Ccircle cx='12' cy='12' r='10' fill='%23005eb8'%3E%3C/circle%3E%3Cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M12 8v8M8 12h8'%3E%3C/path%3E%3C/svg%3E%0A") left -2px center no-repeat;
+  content: "";
+  display: inline-block;
+  height: 32px;
+  left: 0;
+  position: absolute;
+  top: calc(50% - 16px);
+  width: 32px;
 }
