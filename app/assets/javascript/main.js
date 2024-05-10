@@ -166,29 +166,6 @@ if(deleteActivityBtn) {
 
 console.log("On load activity: ", hasActivity);
 
-/// ADD EVENT
-
-const eventAddBtn = document.getElementById('event-add');
-const deleteEventBtn = document.getElementById('delete-event');
-const eventPageOne = document.getElementById('event-page-1');
-const eventPageTwo = document.getElementById('event-page-2');
-let hasEvent = localStorage['hasEvent'];
-
-if(eventAddBtn) {
-  eventAddBtn.addEventListener('click', ()=>{
-    localStorage['hasEvent'] = 'Yes';
-  });
-}
-
-if(deleteEventBtn) {
-  deleteEventBtn.addEventListener('click', ()=>{
-    localStorage['hasEvent'] = 'No';
-    location.reload();
-  });
-}
-
-console.log("On load event: ", hasEvent);
-
 /// ON PAGE LOAD
 
 window.onload = function() {
@@ -227,14 +204,5 @@ window.onload = function() {
     console.log("I LOADED WITHOUT A ACTIVITY");
     activityPageOne.style.display = 'block';
     activityPageTwo.style.display = 'none';
-  };
-  if(hasEvent == "Yes") {
-    console.log("I LOADED WITH A EVENT");
-    eventPageOne.style.display = 'none';
-    eventPageTwo.style.display = 'block';
-  } else {
-    console.log("I LOADED WITHOUT A EVENT");
-    eventPageOne.style.display = 'block';
-    eventPageTwo.style.display = 'none';
   };
 };
