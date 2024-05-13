@@ -268,7 +268,7 @@
         <input class="nhsuk-input nhsuk-u-width-two-thirds" id="net-pensionable-earnings-equivalent" name="net-pensionable-earnings-equivalent" type="text">
       </div>
 
-      <button class="nhsuk-button nhsuk-button--secondary nhsuk-u-margin-bottom-4" data-module="nhsuk-button" type="submit">
+      <button id="add-npe-npee-btn" class="nhsuk-button nhsuk-button--secondary nhsuk-u-margin-bottom-4" data-module="nhsuk-button" type="submit">
         Add NPE/NPEE
       </button>
 
@@ -297,7 +297,7 @@
           </tr>
         </thead>
         <tbody class="nhsuk-table__body">
-          <tr role="row" class="nhsuk-table__row">
+          <tr id="npe-npee-row" role="row" class="nhsuk-table__row" style="display: none;">
             <td role="cell" class="nhsuk-table__cell">
               <span class="nhsuk-table-responsive__heading">Employment Type </span>Employment Value
             </td>
@@ -315,7 +315,7 @@
             </td>
             <td role="cell" class="nhsuk-table__cell">
               <span class="nhsuk-table-responsive__heading">Action </span>
-              <a id="" href="/contract-management/create/create-contract#services-panel" class="nhsuk-link nhsuk-link--no-visited-state">Delete</a>
+              <a id="delete-npe-npee-btn" href="#" class="nhsuk-link nhsuk-link--no-visited-state">Delete</a>
             </td>
           </tr>
         </tbody>
