@@ -16,19 +16,19 @@
   {{ breadcrumb({
     items: [
       {
-        href: "/landing-page",
+        href: "/commissioner/landing-page",
         text: "Home"
       },
       {
-        href: "/contract-management/contracts",
+        href: "/commissioner/contract-management/contracts",
         text: "Contract Management"
       },
       {
-        href: "/contract-management/9087654356",
+        href: "/commissioner/contract-management/9087654356",
         text: "9087654356"
       }
     ],
-    href: "/contract-management/9087654356/arr",
+    href: "/commissioner/contract-management/9087654356/arr",
     text: "ARR"
   }) }}
 {% endblock %}
@@ -44,20 +44,11 @@
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
       <!-- TITLE -->
-      <h1 class="nhsuk-u-margin-bottom-0">
+      <h1>
         ARR for Francescine Wilene Pimley
         <span class="nhsuk-caption-xl nhsuk-caption--bottom">1st April 2018 to 31st March 2019</span>
       </h1>
-      <!-- CALL OUT -->
-      <div class="nhsuk-warning-callout">
-        <h3 class="nhsuk-warning-callout__label">
-          <span role="text">
-            <span class="nhsuk-u-visually-hidden">Important: </span>
-            Requires action
-          </span>
-        </h3>
-        <p>Please confirm or reject the details of this ARR.</p>
-      </div>
+
       <!-- SUMMARY TABLE -->
       <dl class="nhsuk-summary-list">
         <div class="nhsuk-summary-list__row">
@@ -129,7 +120,7 @@
             Contract Ceiling
           </dt>
           <dd class="nhsuk-summary-list__value">
-            <p>177532.29</p>
+            <p>£177,532.29</p>
           </dd>
         </div>
         <div class="nhsuk-summary-list__row">
@@ -137,7 +128,7 @@
             Performer NPEE
           </dt>
           <dd class="nhsuk-summary-list__value">
-            <p>50000</p>
+            <p>0</p>
           </dd>
         </div>
         <div class="nhsuk-summary-list__row">
@@ -145,7 +136,7 @@
             Original NPE
           </dt>
           <dd class="nhsuk-summary-list__value">
-            <p>50000</p>
+            <p>0</p>
           </dd>
         </div>
         <div class="nhsuk-summary-list__row">
@@ -153,7 +144,7 @@
             Actual NPE
           </dt>
           <dd class="nhsuk-summary-list__value">
-            <p>50000</p>
+            <p>£50,000</p>
           </dd>
         </div>
         <div class="nhsuk-summary-list__row">
@@ -161,41 +152,83 @@
             Proposed NPE
           </dt>
           <dd class="nhsuk-summary-list__value">
-            <p>50000</p>
+            <p>£50,000</p>
           </dd>
         </div>
       </dl>
-      <!-- DECLARATION -->
-      <form>
-        <div class="nhsuk-form-group">
-          <fieldset class="nhsuk-fieldset" aria-describedby="contact-hint">
-            <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
-              <h1 class="nhsuk-fieldset__heading">
-                Declaration
-              </h1>
-            </legend>
-            <div class="nhsuk-body-s" id="contact-hint">
-              I understand that the administration of NHS Dental Services and responsibility for anti fraud work in the NHS are both responsibilities of the NHS Business Services Authority. I understand that NHS Dental Services may share the information on this form with NHS Protect, a devision of the NHS Business Services Authority, for the purposes of the prevention, detection, investigation and prosecution of fraud or any other unlawful activity affecting the health service.
+      <!-- ARR ACTION -->
+      <div class="nhsuk-form-group">
+        <fieldset class="nhsuk-fieldset">
+          <legend class="nhsuk-fieldset__legend nhsuk-u-font-weight-bold">
+            Are these details correct?
+          </legend>
+          <div class="nhsuk-radios nhsuk-radios--inline">
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="arr-correct-yes" name="arr-correct" type="radio" value="yes">
+              <label class="nhsuk-label nhsuk-radios__label" for="arr-correct-yes">
+                Yes
+              </label>
             </div>
-            <div class="nhsuk-checkboxes">
-              <div class="nhsuk-checkboxes__item">
-                <input id="arr-declaration" class="nhsuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email">
-                <label class="nhsuk-label nhsuk-checkboxes__label" for="contact">
-                  I confirm
-                </label>
-              </div>
+      
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="arr-correct-no" name="arr-correct" type="radio" value="no">
+              <label class="nhsuk-label nhsuk-radios__label" for="arr-correct-no">
+                No
+              </label>
             </div>
-          </fieldset>
+          </div>
+        </fieldset>
+      </div>
+
+      <div id="arr-reason-q" class="nhsuk-form-group" style="display: none;">
+        <fieldset class="nhsuk-fieldset">
+          <legend class="nhsuk-fieldset__legend nhsuk-u-font-weight-bold">
+            Reason for rejection
+          </legend>
+          <div class="nhsuk-radios">
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="arr-reason-1" name="arr-reason" type="radio" value="Incorrect NPEE">
+              <label class="nhsuk-label nhsuk-radios__label" for="arr-reason-1">
+                Incorrect NPEE
+              </label>
+            </div>
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="arr-reason-2" name="arr-reason" type="radio" value="Rejection 2">
+              <label class="nhsuk-label nhsuk-radios__label" for="arr-reason-2">
+                Rejection reason 2
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <div id="arr-proposed-q" class="nhsuk-form-group" style="display: none;">
+        <label class="nhsuk-label nhsuk-u-font-weight-bold" for="arr-proposed">
+          Proposed NPEE
+        </label>
+        <div class="nhsuk-input__wrapper">
+          <div class="nhsuk-input__prefix" aria-hidden="true">£</div>
+          <input class="nhsuk-input nhsuk-input--width-5" id="arr-proposed" name="arr-proposed" type="text">
         </div>
-      </form>
+      </div>
+
+      <div id="arr-additional-q" class="nhsuk-form-group" style="display: none;">
+        <label class="nhsuk-label nhsuk-u-font-weight-bold display-flex" for="arr-additional">
+          Additional information
+          <span class="nhsuk-hint">&nbsp;(optional)</span>
+        </label>
+        <textarea class="nhsuk-textarea" id="arr-additional" name="arr-additional" rows="5"></textarea>
+      </div>
+
       <!-- ACTION BUTTONS -->
-      <button id="arr-accept-btn" class="nhsuk-button" data-module="nhsuk-button" type="submit" disabled>
-        Accept
-      </button>
-  
-      <button class="nhsuk-button nhsuk-button--secondary" data-module="nhsuk-button" type="submit">
-        Reject
-      </button>
+      <div class="nhsuk-button-group nhsuk-u-margin-top-4">
+        <button id="arr-accept-btn" class="nhsuk-button nhsuk-u-margin-bottom-0" data-module="nhsuk-button" type="submit" disabled>
+          Submit
+        </button>
+        <a href="/commissioner/contract-management/9087654356" class="nhsuk-link nhsuk-link--no-visited-state">
+          Cancel
+        </a>
+      </div>
     </div>
   </div>
 {% endblock %}

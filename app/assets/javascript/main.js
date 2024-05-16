@@ -95,8 +95,6 @@ if(deleteServiceBtnTwo) {
   });
 }
 
-console.log("On load service: ", hasService);
-
 /// ADD LOCATION
 
 const locationAddBtn = document.getElementById('location-add');
@@ -117,8 +115,6 @@ if(deleteLocationBtn) {
     location.reload();
   });
 }
-
-console.log("On load location: ", hasLocation);
 
 /// ADD PERFORMER
 
@@ -153,11 +149,8 @@ if(addNpeBtn) {
 if(deleteNpeBtn) {
   deleteNpeBtn.addEventListener('click', ()=>{
     npeTableRow.style.display = 'none';
-    // location.reload();
   });
 }
-
-console.log("On load performer: ", hasPerformer);
 
 /// ADD PERFORMER ACTIVITY
 
@@ -180,63 +173,79 @@ if(deleteActivityBtn) {
   });
 }
 
-console.log("On load activity: ", hasActivity);
 
 /// ARR
 
-const arrDeclaration = document.getElementById('arr-declaration');
+const arrCorrectYes = document.getElementById('arr-correct-yes');
+const arrCorrectNo = document.getElementById('arr-correct-no');
+const arrReason1 = document.getElementById('arr-reason-1');
+const arrReason2 = document.getElementById('arr-reason-2');
+const arrProposed = document.getElementById('arr-proposed');
+const arrReasonQ = document.getElementById('arr-reason-q');
+const arrProposedQ = document.getElementById('arr-proposed-q');
+const arrAdditionalQ = document.getElementById('arr-additional-q');
 const arrAcceptBtn = document.getElementById('arr-accept-btn');
 
-function validate() {
-  if (arrDeclaration.checked) {
-    arrAcceptBtn.disabled = false;
-  } else {
-    arrAcceptBtn.disabled = true;
-  }
-}
-
-if(arrDeclaration) {
-  arrDeclaration.addEventListener('click', ()=>{
-    validate()
+if(arrCorrectYes) {
+  arrCorrectYes.addEventListener('click', ()=>{
+    if(arrCorrectYes.checked) {
+      arrAcceptBtn.disabled = false;
+      arrReasonQ.style.display = 'none';
+      arrProposedQ.style.display = 'none';
+      arrAdditionalQ.style.display = 'none';
+    }
   });
 }
+
+if(arrCorrectNo) {
+  arrCorrectNo.addEventListener('click', ()=>{
+    if(arrCorrectNo.checked) {
+      arrAcceptBtn.disabled = true;
+      arrReasonQ.style.display = 'block';
+    }
+  });
+}
+
+if(arrReason1) {
+  arrReason1.addEventListener('click', ()=>{
+    if(arrCorrectNo.checked) {
+      arrProposedQ.style.display = 'block';
+      arrAdditionalQ.style.display = 'block';
+      arrAcceptBtn.disabled = false;
+    }
+  });
+}
+
+
 
 /// ON PAGE LOAD
 
 window.onload = function() {
   if(hasService == "Yes") {
-    console.log("I LOADED WITH A SERVICE");
     servicePageOne.style.display = 'none';
     servicePageTwo.style.display = 'block';
   } else {
-    console.log("I LOADED WITHOUT A SERVICE");
     servicePageOne.style.display = 'block';
     servicePageTwo.style.display = 'none';
   };
   if(hasLocation == "Yes") {
-    console.log("I LOADED WITH A LOCATION");
     locationPageOne.style.display = 'none';
     locationPageTwo.style.display = 'block';
   } else {
-    console.log("I LOADED WITHOUT A LOCATION");
     locationPageOne.style.display = 'block';
     locationPageTwo.style.display = 'none';
   };
   if(hasPerformer == "Yes") {
-    console.log("I LOADED WITH A PERFORMER");
     performerPageOne.style.display = 'none';
     performerPageTwo.style.display = 'block';
   } else {
-    console.log("I LOADED WITHOUT A PERFORMER");
     performerPageOne.style.display = 'block';
     performerPageTwo.style.display = 'none';
   };
   if(hasActivity == "Yes") {
-    console.log("I LOADED WITH A ACTIVITY");
     activityPageOne.style.display = 'none';
     activityPageTwo.style.display = 'block';
   } else {
-    console.log("I LOADED WITHOUT A ACTIVITY");
     activityPageOne.style.display = 'block';
     activityPageTwo.style.display = 'none';
   };

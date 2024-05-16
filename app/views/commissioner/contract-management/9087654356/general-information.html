@@ -13,18 +13,29 @@
 <!-- For adding a breadcrumb -->
 <!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
 {% block beforeContent %}
+  {{ breadcrumb({
+    items: [
+      {
+        href: "/commissioner/landing-page",
+        text: "Home"
+      },
+      {
+        href: "/commissioner/contract-management/contracts",
+        text: "Contract Management"
+      },
+      {
+        href: "/commissioner/contract-management/9087654356",
+        text: "9087654356"
+      }
+    ],
+    href: "/commissioner/contract-management/9087654356/general-information",
+    text: "General Details"
+  }) }}
 {% endblock %}
 
 <!-- For adding a back link -->
 <!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
 {% block outerContent %}
-  <div class="nhsuk-back-link nhsuk-u-padding-top-3 nhsuk-u-padding-top-0 nhsuk-u-margin-bottom-0">
-    <a class="nhsuk-back-link__link" href="/contract-management/create/create-contract#events-panel">
-      <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
-        <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
-      </svg>
-      Go back</a>
-  </div>
 {% endblock %}
 
 <!-- For adding page content -->
@@ -34,7 +45,7 @@
     <div class="nhsuk-grid-column-full">
 
       <h1>
-        Contract Name Summary
+        Contract Name General Details
       </h1>
 
       <div class="nhsuk-tabs" data-module="nhsuk-tabs">
@@ -72,6 +83,12 @@
               Activity
             </a>
           </li>
+      
+          <li class="nhsuk-tabs__list-item">
+            <a class="nhsuk-tabs__tab" href="#summary-6">
+              Events
+            </a>
+          </li>
         </ul>
       
         <!-- Panel 1 -->
@@ -79,10 +96,10 @@
           <dl class="nhsuk-summary-list">
             <div class="nhsuk-summary-list__row">
               <dt class="nhsuk-summary-list__key">
-                Contract Name
+                Contract Number
               </dt>
               <dd class="nhsuk-summary-list__value">
-                Contract Example Title
+                99017500001
               </dd>
             </div>
           
@@ -613,17 +630,46 @@
           </table>
 
         </div>
+      
+        <!-- Panel 6 -->
+        <div class="nhsuk-tabs__panel nhsuk-tabs__panel--hidden" id="summary-6">
+      
+          <table role="table" class="nhsuk-table-responsive">
+            <caption class="nhsuk-u-visually-hidden">Event Table</caption>
+            <thead role="rowgroup" class="nhsuk-table__head">
+              <tr role="row">
+                <th role="columnheader" class="" scope="col">
+                  Event Date
+                </th>
+                <th role="columnheader" class="" scope="col">
+                  Event Type
+                </th>
+                <th role="columnheader" class="" scope="col">
+                  Event Title
+                </th>
+              </tr>
+            </thead>
+            <tbody class="nhsuk-table__body">
+              <tr role="row" class="nhsuk-table__row">
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Event Date </span> Tom
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Event Type </span>Holland
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Event Title </span>12034
+                </td>
+              </tr>
+            </tbody>
+          </table>
 
+        </div>
       </div>
 
-      <div class="nhsuk-button-group nhsuk-u-margin-top-4">
-        <a href="/contract-management/create/confirmation" class="nhsuk-button nhsuk-u-margin-bottom-0" data-module="nhsuk-button" type="submit">
-          Create
-        </a>
-        <a href="/contract-management/create/create-contract#general-panel" class="nhsuk-button nhsuk-button--secondary nhsuk-u-margin-bottom-0" data-module="nhsuk-button" type="submit">
-          Edit
-        </a>
-      </div>
+      <a href="/commissioner/contract-management/9087654356/general-information/edit" class="nhsuk-button nhsuk-button--secondary nhsuk-u-margin-bottom-0" data-module="nhsuk-button" type="submit">
+        Edit
+      </a>
 
     </div>
   </div>

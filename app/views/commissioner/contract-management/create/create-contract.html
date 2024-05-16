@@ -16,24 +16,12 @@
   {{ breadcrumb({
     items: [
       {
-        href: "/landing-page",
+        href: "/commissioner/landing-page",
         text: "Home"
-      },
-      {
-        href: "/contract-management/contracts",
-        text: "Contract Management"
-      },
-      {
-        href: "/contract-management/9087654356",
-        text: "9087654356"
-      },
-      {
-        href: "/contract-management/9087654356/general-information",
-        text: "General Details"
       }
     ],
-    href: "/contract-management/9087654356/general-information/edit",
-    text: "Edit"
+    href: "/commissioner/contract-management/create/create-contract",
+    text: "Create Contract"
   }) }}
 {% endblock %}
 
@@ -48,7 +36,7 @@
     <div class="nhsuk-grid-column-full">
 
       <h1>
-        General Details Edit
+        Create Contract
       </h1>
 
       <div class="nhsuk-tabs" data-module="nhsuk-tabs">
@@ -78,11 +66,6 @@
               Activity
             </a>
           </li>
-          <li class="nhsuk-tabs__list-item">
-            <a class="nhsuk-tabs__tab" href="#events-panel">
-              Events
-            </a>
-          </li>
         </ul>
         <!-- GENERAL -->
         <div class="nhsuk-tabs__panel" id="general-panel">
@@ -90,17 +73,17 @@
             <div class="nhsuk-grid-column-two-thirds">
 
               <div class="nhsuk-form-group">
-                <label class="nhsuk-label nhsuk-u-font-weight-bold" for="contract-number">
-                  Contract Number
+                <label class="nhsuk-label nhsuk-u-font-weight-bold" for="contract-name">
+                  Contract Name
                 </label>
-                <input class="nhsuk-input" id="contract-number" name="contract-number" type="text" value="99017500001">
+                <input class="nhsuk-input" id="contract-name" name="contract-name" type="text">
               </div>
 
               <div class="nhsuk-form-group">
                 <label class="nhsuk-label nhsuk-u-font-weight-bold" for="commissioner">
                   Commissioner
                 </label>
-                <input class="nhsuk-input" id="commissioner" name="commissioner" type="text" value="QYG">
+                <input class="nhsuk-input" id="commissioner" name="commissioner" type="text">
               </div>
 
               <div class="nhsuk-form-group">
@@ -108,8 +91,8 @@
                   Contract Type
                 </label>
                 <select class="nhsuk-select" id="contract-type" name="contract-type">
-                  <option value="1">Select</option>
-                  <option value="2" selected>GDS</option>
+                  <option value="1" selected>Select</option>
+                  <option value="2">GDS</option>
                   <option value="3">PDS</option>
                 </select>
               </div>
@@ -137,14 +120,14 @@
                 <label class="nhsuk-label nhsuk-u-font-weight-bold" for="provider">
                   Provider
                 </label>
-                <input class="nhsuk-input" id="provider" name="provider" type="text" value="102827">
+                <input class="nhsuk-input" id="provider" name="provider" type="text">
               </div>
           
               <div class="nhsuk-form-group">
                 <label class="nhsuk-label nhsuk-u-font-weight-bold" for="contract-location">
                   Contract Location
                 </label>
-                <input class="nhsuk-input" id="contract-location" name="contract-location" type="text" value="5612">
+                <input class="nhsuk-input" id="contract-location" name="contract-location" type="text">
               </div>
           
               <fieldset class="nhsuk-fieldset">
@@ -156,7 +139,7 @@
                   <label class="nhsuk-label nhsuk-u-font-weight-bold" for="address-line-1">
                     Building and street <span class="nhsuk-u-visually-hidden">line 1 of 2</span>
                   </label>
-                  <input class="nhsuk-input" id="address-line-1" name="address-line-1" type="text" value="3 Pudding Plate Close">
+                  <input class="nhsuk-input" id="address-line-1" name="address-line-1" type="text">
                 </div>
               
                 <div class="nhsuk-form-group">
@@ -170,21 +153,21 @@
                   <label class="nhsuk-label nhsuk-u-font-weight-bold" for="address-town">
                     Town or city
                   </label>
-                  <input class="nhsuk-input nhsuk-u-width-two-thirds" id="address-town" name="address-town" type="text" value="Darlington">
+                  <input class="nhsuk-input nhsuk-u-width-two-thirds" id="address-town" name="address-town" type="text">
                 </div>
               
                 <div class="nhsuk-form-group">
                   <label class="nhsuk-label nhsuk-u-font-weight-bold" for="address-county">
                     County
                   </label>
-                  <input class="nhsuk-input nhsuk-u-width-two-thirds" id="address-county" name="address-county" type="text" value="Durham">
+                  <input class="nhsuk-input nhsuk-u-width-two-thirds" id="address-county" name="address-county" type="text">
                 </div>
               
                 <div class="nhsuk-form-group">
                   <label class="nhsuk-label nhsuk-u-font-weight-bold" for="address-postcode">
                     Postcode
                   </label>
-                  <input class="nhsuk-input nhsuk-input--width-10" id="address-postcode" name="address-postcode" type="text" value="SA1 3EN">
+                  <input class="nhsuk-input nhsuk-input--width-10" id="address-postcode" name="address-postcode" type="text">
                 </div>
               </fieldset>
           
@@ -192,14 +175,14 @@
                 <label class="nhsuk-label nhsuk-u-font-weight-bold" for="catagory-code">
                   Catagory Code
                 </label>
-                <input class="nhsuk-input nhsuk-input--width-10" id="catagory-code" name="catagory-code" type="text" value="3">
+                <input class="nhsuk-input nhsuk-input--width-10" id="catagory-code" name="catagory-code" type="text">
               </div>
           
               <div class="nhsuk-form-group">
                 <label class="nhsuk-label nhsuk-u-font-weight-bold" for="subcategory-code">
                   Subcategory Code
                 </label>
-                <input class="nhsuk-input nhsuk-input--width-10" id="subcategory-code" name="subcategory-code" type="text" value="46">
+                <input class="nhsuk-input nhsuk-input--width-10" id="subcategory-code" name="subcategory-code" type="text">
               </div>
 
               <div class="nhsuk-form-group">
@@ -214,7 +197,7 @@
                         <label class="nhsuk-label nhsuk-date-input__label" for="start-day">
                           Day
                         </label>
-                        <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="start-day" name="start-day" type="text" pattern="[0-9]*" inputmode="numeric" value="01">
+                        <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="start-day" name="start-day" type="text" pattern="[0-9]*" inputmode="numeric">
                       </div>
                     </div>
                     <div class="nhsuk-date-input__item">
@@ -222,7 +205,7 @@
                         <label class="nhsuk-label nhsuk-date-input__label" for="start-month">
                           Month
                         </label>
-                        <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="start-month" name="start-month" type="text" pattern="[0-9]*" inputmode="numeric" value="04">
+                        <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="start-month" name="start-month" type="text" pattern="[0-9]*" inputmode="numeric">
                       </div>
                     </div>
                     <div class="nhsuk-date-input__item">
@@ -230,7 +213,7 @@
                         <label class="nhsuk-label nhsuk-date-input__label" for="start-year">
                           Year
                         </label>
-                        <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="start-year" name="start-year" type="text" pattern="[0-9]*" inputmode="numeric" value="2006">
+                        <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="start-year" name="start-year" type="text" pattern="[0-9]*" inputmode="numeric">
                       </div>
                     </div>
                   </div>
@@ -277,8 +260,8 @@
                   Closure Reason
                 </label>
                 <select class="nhsuk-select" id="closure-reason" name="closure-reason">
-                  <option value="1">Select</option>
-                  <option value="2" selected>Option 1</option>
+                  <option value="1" selected>Select</option>
+                  <option value="2">Option 1</option>
                   <option value="3">Option 2</option>
                 </select>
               </div>
@@ -325,7 +308,7 @@
                 <label class="nhsuk-label nhsuk-u-font-weight-bold" for="local-dental-committee">
                   Local Dental Committee
                 </label>
-                <input class="nhsuk-input" id="local-dental-committee" name="local-dental-committee" type="text" value="LDC075">
+                <input class="nhsuk-input" id="local-dental-committee" name="local-dental-committee" type="text">
               </div>
           
               <div class="nhsuk-form-group">
@@ -333,9 +316,9 @@
                   Prison Indicator
                 </label>
                 <select class="nhsuk-select" id="prison-indicator" name="prison-indicator">
-                  <option value="1">Select</option>
+                  <option value="1" selected>Select</option>
                   <option value="2">Yes</option>
-                  <option value="3" selected>No</option>
+                  <option value="3">No</option>
                 </select>
               </div>
 
@@ -351,7 +334,7 @@
                         <label class="nhsuk-label nhsuk-date-input__label" for="provider-effective-day">
                           Day
                         </label>
-                        <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="provider-effective-day" name="provider-effective-day" type="text" pattern="[0-9]*" inputmode="numeric" value="01">
+                        <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="provider-effective-day" name="provider-effective-day" type="text" pattern="[0-9]*" inputmode="numeric">
                       </div>
                     </div>
                     <div class="nhsuk-date-input__item">
@@ -359,7 +342,7 @@
                         <label class="nhsuk-label nhsuk-date-input__label" for="provider-effective-month">
                           Month
                         </label>
-                        <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="provider-effective-month" name="provider-effective-month" type="text" pattern="[0-9]*" inputmode="numeric" value="12">
+                        <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="provider-effective-month" name="provider-effective-month" type="text" pattern="[0-9]*" inputmode="numeric">
                       </div>
                     </div>
                     <div class="nhsuk-date-input__item">
@@ -367,7 +350,7 @@
                         <label class="nhsuk-label nhsuk-date-input__label" for="provider-effective-year">
                           Year
                         </label>
-                        <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="provider-effective-year" name="provider-effective-year" type="text" pattern="[0-9]*" inputmode="numeric" value="2018">
+                        <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="provider-effective-year" name="provider-effective-year" type="text" pattern="[0-9]*" inputmode="numeric">
                       </div>
                     </div>
                   </div>
@@ -378,28 +361,28 @@
                 <label class="nhsuk-label nhsuk-u-font-weight-bold" for="landline-phone-number">
                   Landline Phone Number
                 </label>
-                <input class="nhsuk-input nhsuk-u-width-two-thirds" id="landline-phone-number" name="landline-phone-number" type="text" value="12345678">
+                <input class="nhsuk-input nhsuk-u-width-two-thirds" id="landline-phone-number" name="landline-phone-number" type="text">
               </div>
           
               <div class="nhsuk-form-group">
                 <label class="nhsuk-label nhsuk-u-font-weight-bold" for="mobile-phone-number">
                   Mobile Phone Number
                 </label>
-                <input class="nhsuk-input nhsuk-u-width-two-thirds" id="mobile-phone-number" name="mobile-phone-number" type="text" value="12345678">
+                <input class="nhsuk-input nhsuk-u-width-two-thirds" id="mobile-phone-number" name="mobile-phone-number" type="text">
               </div>
           
               <div class="nhsuk-form-group">
                 <label class="nhsuk-label nhsuk-u-font-weight-bold" for="email-address">
                   Email Address
                 </label>
-                <input class="nhsuk-input" id="email-address" name="email-address" type="text" value="DCSSTransformation@capita.com">
+                <input class="nhsuk-input" id="email-address" name="email-address" type="text">
               </div>
           
               <div class="nhsuk-form-group">
                 <label class="nhsuk-label nhsuk-u-font-weight-bold" for="website-address">
                   Website Address
                 </label>
-                <input class="nhsuk-input" id="website-address" name="website-address" type="text" value="www.nhsbsa.nhs.uk">
+                <input class="nhsuk-input" id="website-address" name="website-address" type="text">
               </div>
           
               <div class="nhsuk-form-group">
@@ -416,6 +399,9 @@
                 <textarea class="nhsuk-textarea" id="category-notes" name="category-notes" rows="5"></textarea>
               </div>
 
+              <a id="create-general-btn" class="nhsuk-button" data-module="nhsuk-button" href="#services-panel">
+                Next
+              </a>
             </div>
           </div>
         </div>
@@ -424,7 +410,7 @@
         <div class="nhsuk-tabs__panel nhsuk-tabs__panel--hidden" id="services-panel">
           <div id="service-page-1">
             <p>Please add a service to the contract</p>
-            <a class="nhsuk-button nhsuk-button--secondary nhsuk-u-margin-bottom-0" data-module="nhsuk-button" href="/contract-management/create/create-service">
+            <a class="nhsuk-button nhsuk-button--secondary nhsuk-u-margin-bottom-0" data-module="nhsuk-button" href="/commissioner/contract-management/create/create-service">
               Add Service
             </a>
           </div>
@@ -490,9 +476,9 @@
                   </td>
                   <td role="cell" class="nhsuk-table__cell">
                     <span class="nhsuk-table-responsive__heading">Action </span>
-                    <a href="/contract-management/create/create-contract#services-panel" class="nhsuk-link nhsuk-link--no-visited-state">Edit</a> 
+                    <a href="/commissioner/contract-management/create/create-contract#services-panel" class="nhsuk-link nhsuk-link--no-visited-state">Edit</a> 
                     / 
-                    <a id="delete-service" href="/contract-management/create/create-contract#services-panel" class="nhsuk-link nhsuk-link--no-visited-state">Delete</a>
+                    <a id="delete-service" href="/commissioner/contract-management/create/create-contract#services-panel" class="nhsuk-link nhsuk-link--no-visited-state">Delete</a>
                   </td>
                 </tr>
                 <tr role="row" class="nhsuk-table__row">
@@ -516,9 +502,9 @@
                   </td>
                   <td role="cell" class="nhsuk-table__cell">
                     <span class="nhsuk-table-responsive__heading">Action </span>
-                    <a href="/contract-management/create/create-contract#services-panel" class="nhsuk-link nhsuk-link--no-visited-state">Edit</a> 
+                    <a href="/commissioner/contract-management/create/create-contract#services-panel" class="nhsuk-link nhsuk-link--no-visited-state">Edit</a> 
                     / 
-                    <a id="delete-service-2" href="/contract-management/create/create-contract#services-panel" class="nhsuk-link nhsuk-link--no-visited-state">Delete</a>
+                    <a id="delete-service-2" href="/commissioner/contract-management/create/create-contract#services-panel" class="nhsuk-link nhsuk-link--no-visited-state">Delete</a>
                   </td>
                 </tr>
 
@@ -600,6 +586,9 @@
               </tbody>
             </table>
             <div class="nhsuk-button-group nhsuk-u-margin-top-4">
+              <a href="/commissioner/contract-management/create/create-contract#location-panel" class="nhsuk-button nhsuk-u-margin-bottom-0" data-module="nhsuk-button" type="submit">
+                Next
+              </a>
               <button class="nhsuk-button nhsuk-button--secondary nhsuk-u-margin-bottom-0" data-module="nhsuk-button" type="submit">
                 Add Another
               </button>
@@ -608,249 +597,230 @@
         </div>
         <!-- LOCATION -->
         <div class="nhsuk-tabs__panel nhsuk-tabs__panel--hidden" id="location-panel">
-          <table role="table" class="nhsuk-table-responsive">
-            <caption class="nhsuk-u-visually-hidden">Location Table</caption>
-            <thead role="rowgroup" class="nhsuk-table__head">
-              <tr role="row">
-                <th role="columnheader" class="" scope="col">
-                  Practice Name
-                </th>
-                <th role="columnheader" class="" scope="col">
-                  Address Line 1
-                </th>
-                <th role="columnheader" class="" scope="col">
-                  Address Line 2
-                </th>
-                <th role="columnheader" class="" scope="col">
-                  Address Line 3
-                </th>
-                <th role="columnheader" class="" scope="col">
-                  Start Date
-                </th>
-                <th role="columnheader" class="" scope="col">
-                  End Date
-                </th>
-                <th role="columnheader" class="" scope="col">
-                  <span class="nhsuk-u-visually-hidden">Action</span>
-                </th>
-              </tr>
-            </thead>
-            <tbody class="nhsuk-table__body">
-              <tr role="row" class="nhsuk-table__row">
-                <td role="cell" class="nhsuk-table__cell">
-                  <span class="nhsuk-table-responsive__heading">Practice Name </span>
-                </td>
-                <td role="cell" class="nhsuk-table__cell">
-                  <span class="nhsuk-table-responsive__heading">Address Line 1 </span>3 Pudding Plate Close
-                </td>
-                <td role="cell" class="nhsuk-table__cell">
-                  <span class="nhsuk-table-responsive__heading">Address Line 2 </span>Darlington
-                </td>
-                <td role="cell" class="nhsuk-table__cell">
-                  <span class="nhsuk-table-responsive__heading">Address Line 3 </span>Tonypandy
-                </td>
-                <td role="cell" class="nhsuk-table__cell">
-                  <span class="nhsuk-table-responsive__heading">Start Date </span>01/04/2006
-                </td>
-                <td role="cell" class="nhsuk-table__cell">
-                  <span class="nhsuk-table-responsive__heading">End Date </span>
-                </td>
-                <td role="cell" class="nhsuk-table__cell">
-                  <span class="nhsuk-table-responsive__heading">Action </span>
-                  <a href="#" class="nhsuk-link nhsuk-link--no-visited-state">Edit</a> 
-                  / 
-                  <a href="#" class="nhsuk-link nhsuk-link--no-visited-state">Delete</a>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <div class="nhsuk-button-group nhsuk-u-margin-top-4">
-            <button class="nhsuk-button nhsuk-button--secondary nhsuk-u-margin-bottom-0" data-module="nhsuk-button" type="submit">
-              Add Another
-            </button>
+          <div id="location-page-1">
+            <p>Please add a location to the contract</p>
+            <a class="nhsuk-button nhsuk-button--secondary nhsuk-u-margin-bottom-0" data-module="nhsuk-button" href="/commissioner/contract-management/create/create-location">
+              Add Location
+            </a>
+          </div>
+          <div id="location-page-2" style="display: none;">
+            <table role="table" class="nhsuk-table-responsive">
+              <caption class="nhsuk-u-visually-hidden">Location Table</caption>
+              <thead role="rowgroup" class="nhsuk-table__head">
+                <tr role="row">
+                  <th role="columnheader" class="" scope="col">
+                    Practice Name
+                  </th>
+                  <th role="columnheader" class="" scope="col">
+                    Address Line 1
+                  </th>
+                  <th role="columnheader" class="" scope="col">
+                    Address Line 2
+                  </th>
+                  <th role="columnheader" class="" scope="col">
+                    Address Line 3
+                  </th>
+                  <th role="columnheader" class="" scope="col">
+                    Start Date
+                  </th>
+                  <th role="columnheader" class="" scope="col">
+                    End Date
+                  </th>
+                  <th role="columnheader" class="" scope="col">
+                    <span class="nhsuk-u-visually-hidden">Action</span>
+                  </th>
+                </tr>
+              </thead>
+              <tbody class="nhsuk-table__body">
+                <tr role="row" class="nhsuk-table__row">
+                  <td role="cell" class="nhsuk-table__cell">
+                    <span class="nhsuk-table-responsive__heading">Practice Name </span>
+                  </td>
+                  <td role="cell" class="nhsuk-table__cell">
+                    <span class="nhsuk-table-responsive__heading">Address Line 1 </span>3 Pudding Plate Close
+                  </td>
+                  <td role="cell" class="nhsuk-table__cell">
+                    <span class="nhsuk-table-responsive__heading">Address Line 2 </span>Darlington
+                  </td>
+                  <td role="cell" class="nhsuk-table__cell">
+                    <span class="nhsuk-table-responsive__heading">Address Line 3 </span>Tonypandy
+                  </td>
+                  <td role="cell" class="nhsuk-table__cell">
+                    <span class="nhsuk-table-responsive__heading">Start Date </span>01/04/2006
+                  </td>
+                  <td role="cell" class="nhsuk-table__cell">
+                    <span class="nhsuk-table-responsive__heading">End Date </span>
+                  </td>
+                  <td role="cell" class="nhsuk-table__cell">
+                    <span class="nhsuk-table-responsive__heading">Action </span>
+                    <a href="/commissioner/contract-management/create/create-contract#location-panel" class="nhsuk-link nhsuk-link--no-visited-state">Edit</a> 
+                    / 
+                    <a id="delete-location" href="/commissioner/contract-management/create/create-contract#location-panel" class="nhsuk-link nhsuk-link--no-visited-state">Delete</a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="nhsuk-button-group nhsuk-u-margin-top-4">
+              <a href="/commissioner/contract-management/create/create-contract#performer-panel" class="nhsuk-button nhsuk-u-margin-bottom-0" data-module="nhsuk-button" type="submit">
+                Next
+              </a>
+              <button class="nhsuk-button nhsuk-button--secondary nhsuk-u-margin-bottom-0" data-module="nhsuk-button" type="submit">
+                Add Another
+              </button>
+            </div>
           </div>
         </div>
         <!-- PERFORMER -->
         <div class="nhsuk-tabs__panel nhsuk-tabs__panel--hidden" id="performer-panel">
-          <table role="table" class="nhsuk-table-responsive">
-            <caption class="nhsuk-u-visually-hidden">Performers Table</caption>
-            <thead role="rowgroup" class="nhsuk-table__head">
-              <tr role="row">
-                <th role="columnheader" class="" scope="col">
-                  Forename
-                </th>
-                <th role="columnheader" class="" scope="col">
-                  Surname
-                </th>
-                <th role="columnheader" class="" scope="col">
-                  GDC Number
-                </th>
-                <th role="columnheader" class="" scope="col">
-                  Correspondence Address
-                </th>
-                <th role="columnheader" class="" scope="col">
-                  Start Date
-                </th>
-                <th role="columnheader" class="" scope="col">
-                  End Date
-                </th>
-                <th role="columnheader" class="" scope="col">
-                  <span class="nhsuk-u-visually-hidden">Action</span>
-                </th>
-              </tr>
-            </thead>
-            <tbody class="nhsuk-table__body">
-              <tr role="row" class="nhsuk-table__row">
-                <td role="cell" class="nhsuk-table__cell">
-                  <span class="nhsuk-table-responsive__heading">Forename </span> Tom
-                </td>
-                <td role="cell" class="nhsuk-table__cell">
-                  <span class="nhsuk-table-responsive__heading">Surname </span>Holland
-                </td>
-                <td role="cell" class="nhsuk-table__cell">
-                  <span class="nhsuk-table-responsive__heading">GDC Number </span>12034
-                </td>
-                <td role="cell" class="nhsuk-table__cell">
-                  <span class="nhsuk-table-responsive__heading">Correspondence Address </span>Aylesbury
-                </td>
-                <td role="cell" class="nhsuk-table__cell">
-                  <span class="nhsuk-table-responsive__heading">Start Date </span>01/04/2006
-                </td>
-                <td role="cell" class="nhsuk-table__cell">
-                  <span class="nhsuk-table-responsive__heading">End Date </span>31/05/2006
-                </td>
-                <td role="cell" class="nhsuk-table__cell">
-                  <span class="nhsuk-table-responsive__heading">Action </span>
-                  <a href="#" class="nhsuk-link nhsuk-link--no-visited-state">Edit</a> 
-                  / 
-                  <a href="#" class="nhsuk-link nhsuk-link--no-visited-state">Delete</a>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <div class="nhsuk-button-group nhsuk-u-margin-top-4">
-            <button class="nhsuk-button nhsuk-button--secondary nhsuk-u-margin-bottom-0" data-module="nhsuk-button" type="submit">
-              Add Another
-            </button>
+          <div id="performer-page-1">
+            <p>Please add a performer to the contract</p>
+            <a class="nhsuk-button nhsuk-button--secondary nhsuk-u-margin-bottom-0" data-module="nhsuk-button" href="/commissioner/contract-management/create/add-performer">
+              Add Performer
+            </a>
+          </div>
+          <div id="performer-page-2" style="display: none;">
+            <table role="table" class="nhsuk-table-responsive">
+              <caption class="nhsuk-u-visually-hidden">Performers Table</caption>
+              <thead role="rowgroup" class="nhsuk-table__head">
+                <tr role="row">
+                  <th role="columnheader" class="" scope="col">
+                    Forename
+                  </th>
+                  <th role="columnheader" class="" scope="col">
+                    Surname
+                  </th>
+                  <th role="columnheader" class="" scope="col">
+                    GDC Number
+                  </th>
+                  <th role="columnheader" class="" scope="col">
+                    Correspondence Address
+                  </th>
+                  <th role="columnheader" class="" scope="col">
+                    Start Date
+                  </th>
+                  <th role="columnheader" class="" scope="col">
+                    End Date
+                  </th>
+                  <th role="columnheader" class="" scope="col">
+                    <span class="nhsuk-u-visually-hidden">Action</span>
+                  </th>
+                </tr>
+              </thead>
+              <tbody class="nhsuk-table__body">
+                <tr role="row" class="nhsuk-table__row">
+                  <td role="cell" class="nhsuk-table__cell">
+                    <span class="nhsuk-table-responsive__heading">Forename </span> Tom
+                  </td>
+                  <td role="cell" class="nhsuk-table__cell">
+                    <span class="nhsuk-table-responsive__heading">Surname </span>Holland
+                  </td>
+                  <td role="cell" class="nhsuk-table__cell">
+                    <span class="nhsuk-table-responsive__heading">GDC Number </span>12034
+                  </td>
+                  <td role="cell" class="nhsuk-table__cell">
+                    <span class="nhsuk-table-responsive__heading">Correspondence Address </span>Aylesbury
+                  </td>
+                  <td role="cell" class="nhsuk-table__cell">
+                    <span class="nhsuk-table-responsive__heading">Start Date </span>01/04/2006
+                  </td>
+                  <td role="cell" class="nhsuk-table__cell">
+                    <span class="nhsuk-table-responsive__heading">End Date </span>31/05/2006
+                  </td>
+                  <td role="cell" class="nhsuk-table__cell">
+                    <span class="nhsuk-table-responsive__heading">Action </span>
+                    <a href="/commissioner/contract-management/create/create-contract#performer-panel" class="nhsuk-link nhsuk-link--no-visited-state">Edit</a> 
+                    / 
+                    <a id="delete-performer" href="/commissioner/contract-management/create/create-contract#performer-panel" class="nhsuk-link nhsuk-link--no-visited-state">Delete</a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="nhsuk-button-group nhsuk-u-margin-top-4">
+              <a href="/commissioner/contract-management/create/create-contract#activity-panel" class="nhsuk-button nhsuk-u-margin-bottom-0" data-module="nhsuk-button" type="submit">
+                Next
+              </a>
+              <button class="nhsuk-button nhsuk-button--secondary nhsuk-u-margin-bottom-0" data-module="nhsuk-button" type="submit">
+                Add Another
+              </button>
+            </div>
           </div>
         </div>
         <!-- ACTIVITY -->
         <div class="nhsuk-tabs__panel nhsuk-tabs__panel--hidden" id="activity-panel">
-          <table role="table" class="nhsuk-table-responsive">
-            <caption class="nhsuk-u-visually-hidden">Performers Table</caption>
-            <thead role="rowgroup" class="nhsuk-table__head">
-              <tr role="row">
-                <th role="columnheader" class="" scope="col">
-                  Forename
-                </th>
-                <th role="columnheader" class="" scope="col">
-                  Surname
-                </th>
-                <th role="columnheader" class="" scope="col">
-                  GDC Number
-                </th>
-                <th role="columnheader" class="" scope="col">
-                  Activity Unit
-                </th>
-                <th role="columnheader" class="" scope="col">
-                  Financial Year
-                </th>
-                <th role="columnheader" class="" scope="col">
-                  Value
-                </th>
-                <th role="columnheader" class="" scope="col">
-                  <span class="nhsuk-u-visually-hidden">Action</span>
-                </th>
-              </tr>
-            </thead>
-            <tbody class="nhsuk-table__body">
-              <tr role="row" class="nhsuk-table__row">
-                <td role="cell" class="nhsuk-table__cell">
-                  <span class="nhsuk-table-responsive__heading">Forename </span> Tom
-                </td>
-                <td role="cell" class="nhsuk-table__cell">
-                  <span class="nhsuk-table-responsive__heading">Surname </span>Holland
-                </td>
-                <td role="cell" class="nhsuk-table__cell">
-                  <span class="nhsuk-table-responsive__heading">GDC Number </span>12034
-                </td>
-                <td role="cell" class="nhsuk-table__cell">
-                  <span class="nhsuk-table-responsive__heading">Activity Unit </span>12345
-                </td>
-                <td role="cell" class="nhsuk-table__cell">
-                  <span class="nhsuk-table-responsive__heading">Financial Year </span>2324
-                </td>
-                <td role="cell" class="nhsuk-table__cell">
-                  <span class="nhsuk-table-responsive__heading">Value </span>12300.00
-                </td>
-                <td role="cell" class="nhsuk-table__cell">
-                  <span class="nhsuk-table-responsive__heading">Action </span>
-                  <a href="#" class="nhsuk-link nhsuk-link--no-visited-state">Edit</a> 
-                  / 
-                  <a href="#" class="nhsuk-link nhsuk-link--no-visited-state">Delete</a>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <div class="nhsuk-button-group nhsuk-u-margin-top-4">
-            <button class="nhsuk-button nhsuk-button--secondary nhsuk-u-margin-bottom-0" data-module="nhsuk-button" type="submit">
-              Add Another
-            </button>
+          <div id="activity-page-1">
+            <p>Please add a performer activity to the contract</p>
+            <a class="nhsuk-button nhsuk-button--secondary nhsuk-u-margin-bottom-0" data-module="nhsuk-button" href="/commissioner/contract-management/create/add-performer-activity">
+              Add Performer Activity
+            </a>
+          </div>
+          <div id="activity-page-2" style="display: none;">
+            <table role="table" class="nhsuk-table-responsive">
+              <caption class="nhsuk-u-visually-hidden">Performers Table</caption>
+              <thead role="rowgroup" class="nhsuk-table__head">
+                <tr role="row">
+                  <th role="columnheader" class="" scope="col">
+                    Forename
+                  </th>
+                  <th role="columnheader" class="" scope="col">
+                    Surname
+                  </th>
+                  <th role="columnheader" class="" scope="col">
+                    GDC Number
+                  </th>
+                  <th role="columnheader" class="" scope="col">
+                    Activity Unit
+                  </th>
+                  <th role="columnheader" class="" scope="col">
+                    Financial Year
+                  </th>
+                  <th role="columnheader" class="" scope="col">
+                    Value
+                  </th>
+                  <th role="columnheader" class="" scope="col">
+                    <span class="nhsuk-u-visually-hidden">Action</span>
+                  </th>
+                </tr>
+              </thead>
+              <tbody class="nhsuk-table__body">
+                <tr role="row" class="nhsuk-table__row">
+                  <td role="cell" class="nhsuk-table__cell">
+                    <span class="nhsuk-table-responsive__heading">Forename </span> Tom
+                  </td>
+                  <td role="cell" class="nhsuk-table__cell">
+                    <span class="nhsuk-table-responsive__heading">Surname </span>Holland
+                  </td>
+                  <td role="cell" class="nhsuk-table__cell">
+                    <span class="nhsuk-table-responsive__heading">GDC Number </span>12034
+                  </td>
+                  <td role="cell" class="nhsuk-table__cell">
+                    <span class="nhsuk-table-responsive__heading">Activity Unit </span>12345
+                  </td>
+                  <td role="cell" class="nhsuk-table__cell">
+                    <span class="nhsuk-table-responsive__heading">Financial Year </span>2324
+                  </td>
+                  <td role="cell" class="nhsuk-table__cell">
+                    <span class="nhsuk-table-responsive__heading">Value </span>12300.00
+                  </td>
+                  <td role="cell" class="nhsuk-table__cell">
+                    <span class="nhsuk-table-responsive__heading">Action </span>
+                    <a href="/commissioner/contract-management/create/create-contract#activity-panel" class="nhsuk-link nhsuk-link--no-visited-state">Edit</a> 
+                    / 
+                    <a id="delete-activity" href="/commissioner/contract-management/create/create-contract#activity-panel" class="nhsuk-link nhsuk-link--no-visited-state">Delete</a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="nhsuk-button-group nhsuk-u-margin-top-4">
+              <a href="/commissioner/contract-management/create/summary" class="nhsuk-button nhsuk-u-margin-bottom-0" data-module="nhsuk-button" type="submit">
+                Summary
+              </a>
+              <button class="nhsuk-button nhsuk-button--secondary nhsuk-u-margin-bottom-0" data-module="nhsuk-button" type="submit">
+                Add Another
+              </button>
+            </div>
           </div>
         </div>
-        <!-- EVENT -->
-        <div class="nhsuk-tabs__panel nhsuk-tabs__panel--hidden" id="events-panel">
-          <table role="table" class="nhsuk-table-responsive">
-            <caption class="nhsuk-u-visually-hidden">Event Table</caption>
-            <thead role="rowgroup" class="nhsuk-table__head">
-              <tr role="row">
-                <th role="columnheader" class="" scope="col">
-                  Event Date
-                </th>
-                <th role="columnheader" class="" scope="col">
-                  Event Type
-                </th>
-                <th role="columnheader" class="" scope="col">
-                  Event Title
-                </th>
-                <th role="columnheader" class="" scope="col">
-                  <span class="nhsuk-u-visually-hidden">Action</span>
-                </th>
-              </tr>
-            </thead>
-            <tbody class="nhsuk-table__body">
-              <tr role="row" class="nhsuk-table__row">
-                <td role="cell" class="nhsuk-table__cell">
-                  <span class="nhsuk-table-responsive__heading">Event Date </span> Tom
-                </td>
-                <td role="cell" class="nhsuk-table__cell">
-                  <span class="nhsuk-table-responsive__heading">Event Type </span>Holland
-                </td>
-                <td role="cell" class="nhsuk-table__cell">
-                  <span class="nhsuk-table-responsive__heading">Event Title </span>12034
-                </td>
-                <td role="cell" class="nhsuk-table__cell">
-                  <span class="nhsuk-table-responsive__heading">Action </span>
-                  <a href="#" class="nhsuk-link nhsuk-link--no-visited-state">Edit</a> 
-                  / 
-                  <a href="#" class="nhsuk-link nhsuk-link--no-visited-state">Delete</a>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <div class="nhsuk-button-group nhsuk-u-margin-top-4">
-            <button class="nhsuk-button nhsuk-button--secondary nhsuk-u-margin-bottom-0" data-module="nhsuk-button" type="submit">
-              Add Event
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <div class="nhsuk-button-group nhsuk-u-margin-top-6">
-        <a href="/contract-management/9087654356/general-information/edit-summary" class="nhsuk-button" data-module="nhsuk-button" type="submit">
-          Save and view Summary
-        </a>
-        <a href="/contract-management/9087654356/general-information" class="nhsuk-link nhsuk-link--no-visited-state">Cancel</a>
+      
       </div>
 
     </div>
