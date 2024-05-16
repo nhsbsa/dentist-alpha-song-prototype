@@ -1,0 +1,201 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'default-layout.html' %}
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  Manage contracts
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+  {{ breadcrumb({
+    items: [
+      {
+        href: "/landing-page",
+        text: "Home"
+      },
+      {
+        href: "/contract-management/contracts",
+        text: "Contract Management"
+      },
+      {
+        href: "/contract-management/9087654356",
+        text: "9087654356"
+      }
+    ],
+    href: "/contract-management/9087654356/arr",
+    text: "ARR"
+  }) }}
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+      <!-- TITLE -->
+      <h1 class="nhsuk-u-margin-bottom-0">
+        ARR for Francescine Wilene Pimley
+        <span class="nhsuk-caption-xl nhsuk-caption--bottom">1st April 2018 to 31st March 2019</span>
+      </h1>
+      <!-- CALL OUT -->
+      <div class="nhsuk-warning-callout">
+        <h3 class="nhsuk-warning-callout__label">
+          <span role="text">
+            <span class="nhsuk-u-visually-hidden">Important: </span>
+            Requires action
+          </span>
+        </h3>
+        <p>Please confirm or reject the details of this ARR.</p>
+      </div>
+      <!-- SUMMARY TABLE -->
+      <dl class="nhsuk-summary-list">
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Performer Status
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            Accepted
+          </dd>
+        </div>
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Provider Status
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            Pending
+          </dd>
+        </div>
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Provider ID
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            527386
+          </dd>
+        </div>
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Name
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            Francescine Wilene Pimley
+          </dd>
+        </div>
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Start
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            01/04/2018
+          </dd>
+        </div>
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            End
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            <p>31/03/2019</p>
+          </dd>
+        </div>
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Financial Year
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            <p>1819</p>
+          </dd>
+        </div>
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Contract ID
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            <p>9087654365</p>
+          </dd>
+        </div>
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Contract Ceiling
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            <p>177532.29</p>
+          </dd>
+        </div>
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Performer NPEE
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            <p>50000</p>
+          </dd>
+        </div>
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Original NPE
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            <p>50000</p>
+          </dd>
+        </div>
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Actual NPE
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            <p>50000</p>
+          </dd>
+        </div>
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Proposed NPE
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            <p>50000</p>
+          </dd>
+        </div>
+      </dl>
+      <!-- DECLARATION -->
+      <form>
+        <div class="nhsuk-form-group">
+          <fieldset class="nhsuk-fieldset" aria-describedby="contact-hint">
+            <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+              <h1 class="nhsuk-fieldset__heading">
+                Declaration
+              </h1>
+            </legend>
+            <div class="nhsuk-body-s" id="contact-hint">
+              I understand that the administration of NHS Dental Services and responsibility for anti fraud work in the NHS are both responsibilities of the NHS Business Services Authority. I understand that NHS Dental Services may share the information on this form with NHS Protect, a devision of the NHS Business Services Authority, for the purposes of the prevention, detection, investigation and prosecution of fraud or any other unlawful activity affecting the health service.
+            </div>
+            <div class="nhsuk-checkboxes">
+              <div class="nhsuk-checkboxes__item">
+                <input id="arr-declaration" class="nhsuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="contact">
+                  I confirm
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+      </form>
+      <!-- ACTION BUTTONS -->
+      <button id="arr-accept-btn" class="nhsuk-button" data-module="nhsuk-button" type="submit" disabled>
+        Accept
+      </button>
+  
+      <button class="nhsuk-button nhsuk-button--secondary" data-module="nhsuk-button" type="submit">
+        Reject
+      </button>
+    </div>
+  </div>
+{% endblock %}

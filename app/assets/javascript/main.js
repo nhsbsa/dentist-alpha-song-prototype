@@ -182,6 +182,25 @@ if(deleteActivityBtn) {
 
 console.log("On load activity: ", hasActivity);
 
+/// ARR
+
+const arrDeclaration = document.getElementById('arr-declaration');
+const arrAcceptBtn = document.getElementById('arr-accept-btn');
+
+function validate() {
+  if (arrDeclaration.checked) {
+    arrAcceptBtn.disabled = false;
+  } else {
+    arrAcceptBtn.disabled = true;
+  }
+}
+
+if(arrDeclaration) {
+  arrDeclaration.addEventListener('click', ()=>{
+    validate()
+  });
+}
+
 /// ON PAGE LOAD
 
 window.onload = function() {
