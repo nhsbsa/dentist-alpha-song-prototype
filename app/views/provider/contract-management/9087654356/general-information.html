@@ -1,0 +1,676 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'default-layout.html' %}
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  Manage contracts
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+  {{ breadcrumb({
+    items: [
+      {
+        href: "/provider/landing-page",
+        text: "Home"
+      },
+      {
+        href: "/provider/contract-management/contracts",
+        text: "Contract Management"
+      },
+      {
+        href: "/provider/contract-management/9087654356",
+        text: "9087654356"
+      }
+    ],
+    href: "/provider/contract-management/9087654356/general-information",
+    text: "General Details"
+  }) }}
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+      <h1>
+        Contract Name General Details
+      </h1>
+
+      <div class="nhsuk-tabs" data-module="nhsuk-tabs">
+        <h2 class="nhsuk-tabs__title">
+          Contents
+        </h2>
+      
+        <ul class="nhsuk-tabs__list">
+          <li class="nhsuk-tabs__list-item nhsuk-tabs__list-item--selected">
+            <a class="nhsuk-tabs__tab" href="#summary-1">
+              General
+            </a>
+          </li>
+      
+          <li class="nhsuk-tabs__list-item">
+            <a class="nhsuk-tabs__tab" href="#summary-2">
+              Services
+            </a>
+          </li>
+      
+          <li class="nhsuk-tabs__list-item">
+            <a class="nhsuk-tabs__tab" href="#summary-3">
+              Location
+            </a>
+          </li>
+      
+          <li class="nhsuk-tabs__list-item">
+            <a class="nhsuk-tabs__tab" href="#summary-4">
+              Performers
+            </a>
+          </li>
+
+          <li class="nhsuk-tabs__list-item">
+            <a class="nhsuk-tabs__tab" href="#summary-5">
+              Activity
+            </a>
+          </li>
+      
+          <li class="nhsuk-tabs__list-item">
+            <a class="nhsuk-tabs__tab" href="#summary-6">
+              Events
+            </a>
+          </li>
+        </ul>
+      
+        <!-- Panel 1 -->
+        <div class="nhsuk-tabs__panel nhsuk-u-padding-top-4" id="summary-1">
+          <dl class="nhsuk-summary-list">
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">
+                Contract Number
+              </dt>
+              <dd class="nhsuk-summary-list__value">
+                99017500001
+              </dd>
+            </div>
+          
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">
+                Commissioner
+              </dt>
+              <dd class="nhsuk-summary-list__value">
+                QYG
+              </dd>
+            </div>
+          
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">
+                Contract Type
+              </dt>
+              <dd class="nhsuk-summary-list__value">
+                GDS
+              </dd>
+            </div>
+          
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">
+                Pilot
+              </dt>
+              <dd class="nhsuk-summary-list__value">
+                False
+              </dd>
+            </div>
+
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">
+                Provider
+              </dt>
+              <dd class="nhsuk-summary-list__value">
+                102827
+              </dd>
+            </div>
+          
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">
+                Contract Location
+              </dt>
+              <dd class="nhsuk-summary-list__value">
+                5612
+              </dd>
+            </div>
+          
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">
+                Address Title
+              </dt>
+              <dd class="nhsuk-summary-list__value">
+                
+              </dd>
+            </div>
+          
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">
+                Postcode
+              </dt>
+              <dd class="nhsuk-summary-list__value">
+                SA1 3EN
+              </dd>
+            </div>
+
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">
+                Address
+              </dt>
+              <dd class="nhsuk-summary-list__value">
+                <p>3 Pudding Plate Close</p>
+                <p>Darlington</p>
+                <p>Tonypandy</p>
+              </dd>
+            </div>
+          
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">
+                Catagory Code
+              </dt>
+              <dd class="nhsuk-summary-list__value">
+                3
+              </dd>
+            </div>
+          
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">
+                Subcategory Code
+              </dt>
+              <dd class="nhsuk-summary-list__value">
+                46
+              </dd>
+            </div>
+          
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">
+                Contract Start Date
+              </dt>
+              <dd class="nhsuk-summary-list__value">
+                01/04/2006
+              </dd>
+            </div>
+
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">
+                Contract End Date
+              </dt>
+              <dd class="nhsuk-summary-list__value">
+                
+              </dd>
+            </div>
+          
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">
+                Closure Reason
+              </dt>
+              <dd class="nhsuk-summary-list__value">
+                
+              </dd>
+            </div>
+          
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">
+                Not Paid By NHSBSA
+              </dt>
+              <dd class="nhsuk-summary-list__value">
+                False
+              </dd>
+            </div>
+          
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">
+                Data Collection Only Contract
+              </dt>
+              <dd class="nhsuk-summary-list__value">
+                False
+              </dd>
+            </div>
+
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">
+                Local Dental Committee
+              </dt>
+              <dd class="nhsuk-summary-list__value">
+                LDC075
+              </dd>
+            </div>
+          
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">
+                Prison Indicator
+              </dt>
+              <dd class="nhsuk-summary-list__value">
+                No
+              </dd>
+            </div>
+          
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">
+                Provider Effective Date
+              </dt>
+              <dd class="nhsuk-summary-list__value">
+                01/12/2018
+              </dd>
+            </div>
+          
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">
+                Landline Phone Number
+              </dt>
+              <dd class="nhsuk-summary-list__value">
+                12345678
+              </dd>
+            </div>
+
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">
+                Mobile Phone Number
+              </dt>
+              <dd class="nhsuk-summary-list__value">
+                12345678
+              </dd>
+            </div>
+          
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">
+                Email Address
+              </dt>
+              <dd class="nhsuk-summary-list__value">
+                DCSSTransformation@capita.com
+              </dd>
+            </div>
+          
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">
+                Website Address
+              </dt>
+              <dd class="nhsuk-summary-list__value">
+                www.nhsbsa.nhs.uk
+              </dd>
+            </div>
+          
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">
+                Contact Name
+              </dt>
+              <dd class="nhsuk-summary-list__value">
+                
+              </dd>
+            </div>
+
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">
+                Category Notes
+              </dt>
+              <dd class="nhsuk-summary-list__value">
+                
+              </dd>
+            </div>
+          
+          </dl>
+        </div>
+      
+        <!-- Panel 2 -->
+        <div class="nhsuk-tabs__panel nhsuk-tabs__panel--hidden" id="summary-2">
+      
+          <table role="table" class="nhsuk-table-responsive">
+            <caption class="nhsuk-u-visually-hidden">Services Table</caption>
+            <thead role="rowgroup" class="nhsuk-table__head">
+              <tr role="row">
+                <th role="columnheader" class="" scope="col">
+                  Service Name
+                </th>
+                <th role="columnheader" class="" scope="col">
+                  R/RN
+                </th>
+                <th role="columnheader" class="" scope="col">
+                  Start Date
+                </th>
+                <th role="columnheader" class="" scope="col">
+                  End Date
+                </th>
+                <th role="columnheader" class="" scope="col">
+                  Activity Unit
+                </th>
+                <th role="columnheader" class="" scope="col">
+                  Value
+                </th>
+              </tr>
+            </thead>
+            <tbody class="nhsuk-table__body">
+              <tr role="row" class="nhsuk-table__row">
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Service Name </span>High Street Dental Practice
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">R/NR </span>R
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Start Date </span>01/03/2018
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">End Date </span>31/03/2018
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Activity Unit </span>UDA
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Value </span>18516.82
+                </td>
+              </tr>
+              <tr role="row" class="nhsuk-table__row">
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Service Name </span>High Street Dental Practice
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">R/NR </span>NR
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Start Date </span>01/04/2019
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">End Date </span>31/06/2019
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Activity Unit </span>Locally Determined
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Value </span>0.00
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+
+          <ul class="nhsuk-grid-row nhsuk-card-group nhsuk-summary-card-custom">
+            <li class="nhsuk-grid-column-one-quarter nhsuk-card-group__item">
+              <div class="nhsuk-card nhsuk-card--blueborder nhsuk-u-margin-bottom-0">
+                <div class="nhsuk-card__content">
+                  <p class="nhsuk-heading-xl nhsuk-u-font-size-32 nhsuk-u-margin-bottom-1">£18516.82 <span class="nhsuk-u-visually-hidden">Recurring Total</span></p><p class="nhsuk-u-font-weight-normal nhsuk-u-font-size-19">Recurring Total</p>
+                </div>
+              </div>
+            </li>
+            <li class="nhsuk-grid-column-one-quarter nhsuk-card-group__item">
+              <div class="nhsuk-card nhsuk-card--blueborder nhsuk-u-margin-bottom-0">
+                <div class="nhsuk-card__content">
+                  <p class="nhsuk-heading-xl nhsuk-u-font-size-32 nhsuk-u-margin-bottom-1">£12000.00 <span class="nhsuk-u-visually-hidden">Non-Recurring Total</span></p><p class="nhsuk-u-font-weight-normal nhsuk-u-font-size-19">Non-Recurring Total</p>
+                </div>
+              </div>
+            </li>
+            <li class="nhsuk-grid-column-one-quarter nhsuk-card-group__item">
+              <div class="nhsuk-card nhsuk-card--blueborder nhsuk-u-margin-bottom-0">
+                <div class="nhsuk-card__content">
+                  <p class="nhsuk-heading-xl nhsuk-u-font-size-32 nhsuk-u-margin-bottom-1">£35016.82 <span class="nhsuk-u-visually-hidden">Total Contract Value</span></p><p class="nhsuk-u-font-weight-normal nhsuk-u-font-size-19">Total Contract Value</p>
+                </div>
+              </div>
+            </li>
+          </ul>
+
+          <table role="table" class="nhsuk-table-responsive">
+            <caption class="nhsuk-u-visually-hidden">Activity Table</caption>
+            <thead role="rowgroup" class="nhsuk-table__head">
+              <tr role="row">
+                <th role="columnheader" class="" scope="col">
+                  Activity Unit
+                </th>
+                <th role="columnheader" class="" scope="col">
+                  Recurring
+                </th>
+                <th role="columnheader" class="" scope="col">
+                  Non-Recurring
+                </th>
+                <th role="columnheader" class="" scope="col">
+                  Carry Over
+                </th>
+              </tr>
+            </thead>
+            <tbody class="nhsuk-table__body">
+              <tr role="row" class="nhsuk-table__row">
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Activity Unit </span>UDA
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Recurring </span>6000
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Non-Recurring </span>12000
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Carry Over </span>0.00
+                </td>
+              </tr>
+              <tr role="row" class="nhsuk-table__row">
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Activity Unit </span>Locally Determined
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Recurring </span>0
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Non-Recurring </span>0
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Carry Over </span>0.00
+                </td>
+              </tr>
+            </tbody>
+          </table>
+      
+        </div>
+      
+        <!-- Panel 3 -->
+        <div class="nhsuk-tabs__panel nhsuk-tabs__panel--hidden" id="summary-3">
+      
+          <table role="table" class="nhsuk-table-responsive">
+            <caption class="nhsuk-u-visually-hidden">Location Table</caption>
+            <thead role="rowgroup" class="nhsuk-table__head">
+              <tr role="row">
+                <th role="columnheader" class="" scope="col">
+                  Practice Name
+                </th>
+                <th role="columnheader" class="" scope="col">
+                  Address Line 1
+                </th>
+                <th role="columnheader" class="" scope="col">
+                  Address Line 2
+                </th>
+                <th role="columnheader" class="" scope="col">
+                  Address Line 3
+                </th>
+                <th role="columnheader" class="" scope="col">
+                  Start Date
+                </th>
+                <th role="columnheader" class="" scope="col">
+                  End Date
+                </th>
+              </tr>
+            </thead>
+            <tbody class="nhsuk-table__body">
+              <tr role="row" class="nhsuk-table__row">
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Practice Name </span>
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Address Line 1 </span>3 Pudding Plate Close
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Address Line 2 </span>Darlington
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Address Line 3 </span>Tonypandy
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Start Date </span>01/04/2006
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">End Date </span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+      
+        </div>
+      
+        <!-- Panel 4 -->
+        <div class="nhsuk-tabs__panel nhsuk-tabs__panel--hidden" id="summary-4">
+      
+          <table role="table" class="nhsuk-table-responsive">
+            <caption class="nhsuk-u-visually-hidden">Performers Table</caption>
+            <thead role="rowgroup" class="nhsuk-table__head">
+              <tr role="row">
+                <th role="columnheader" class="" scope="col">
+                  Forename
+                </th>
+                <th role="columnheader" class="" scope="col">
+                  Surname
+                </th>
+                <th role="columnheader" class="" scope="col">
+                  GDC Number
+                </th>
+                <th role="columnheader" class="" scope="col">
+                  Correspondence Address
+                </th>
+                <th role="columnheader" class="" scope="col">
+                  Start Date
+                </th>
+                <th role="columnheader" class="" scope="col">
+                  End Date
+                </th>
+              </tr>
+            </thead>
+            <tbody class="nhsuk-table__body">
+              <tr role="row" class="nhsuk-table__row">
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Forename </span> Tom
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Surname </span>Holland
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">GDC Number </span>12034
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Correspondence Address </span>Aylesbury
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Start Date </span>01/04/2006
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">End Date </span>31/05/2006
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        
+        </div>
+
+        <!-- Panel 5 -->
+        <div class="nhsuk-tabs__panel nhsuk-tabs__panel--hidden" id="summary-5">
+
+          <table role="table" class="nhsuk-table-responsive">
+            <caption class="nhsuk-u-visually-hidden">Activity Table</caption>
+            <thead role="rowgroup" class="nhsuk-table__head">
+              <tr role="row">
+                <th role="columnheader" class="" scope="col">
+                  Forename
+                </th>
+                <th role="columnheader" class="" scope="col">
+                  Surname
+                </th>
+                <th role="columnheader" class="" scope="col">
+                  GDC Number
+                </th>
+                <th role="columnheader" class="" scope="col">
+                  Activity Unit
+                </th>
+                <th role="columnheader" class="" scope="col">
+                  Financial Year
+                </th>
+                <th role="columnheader" class="" scope="col">
+                  Value
+                </th>
+              </tr>
+            </thead>
+            <tbody class="nhsuk-table__body">
+              <tr role="row" class="nhsuk-table__row">
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Forename </span> Tom
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Surname </span>Holland
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">GDC Number </span>12034
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Activity Unit </span>12345
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Financial Year </span>2324
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Value </span>12300.00
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+      
+        <!-- Panel 6 -->
+        <div class="nhsuk-tabs__panel nhsuk-tabs__panel--hidden" id="summary-6">
+      
+          <table role="table" class="nhsuk-table-responsive">
+            <caption class="nhsuk-u-visually-hidden">Event Table</caption>
+            <thead role="rowgroup" class="nhsuk-table__head">
+              <tr role="row">
+                <th role="columnheader" class="" scope="col">
+                  Event Date
+                </th>
+                <th role="columnheader" class="" scope="col">
+                  Event Type
+                </th>
+                <th role="columnheader" class="" scope="col">
+                  Event Title
+                </th>
+              </tr>
+            </thead>
+            <tbody class="nhsuk-table__body">
+              <tr role="row" class="nhsuk-table__row">
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Event Date </span> Tom
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Event Type </span>Holland
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Event Title </span>12034
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+      </div>
+
+      <a href="/provider/contract-management/9087654356/general-information/edit" class="nhsuk-button nhsuk-button--secondary nhsuk-u-margin-bottom-0" data-module="nhsuk-button" type="submit">
+        Edit
+      </a>
+
+    </div>
+  </div>
+{% endblock %}

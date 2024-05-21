@@ -1,0 +1,219 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'default-layout.html' %}
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  Manage contracts
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+  <div class="nhsuk-back-link nhsuk-u-padding-top-3 nhsuk-u-padding-top-0 nhsuk-u-margin-bottom-0">
+    <a class="nhsuk-back-link__link" href="/provider/contract-management/create/create-contract#location-panel">
+      <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
+        <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+      </svg>
+      Go back</a>
+  </div>
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1 class="nhsuk-u-margin-bottom-4">
+        Add Location
+      </h1>
+
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label nhsuk-u-font-weight-bold" for="location">
+          Location
+        </label>
+        <input class="nhsuk-input" id="location" name="location" type="text">
+      </div>
+
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label nhsuk-u-font-weight-bold" for="practice-name">
+          Practice Name
+        </label>
+        <input class="nhsuk-input" id="practice-name" name="practice-name" type="text">
+      </div>
+
+      <fieldset class="nhsuk-fieldset">
+        <legend class="nhsuk-u-visually-hidden">
+            Practice address
+        </legend>
+      
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label nhsuk-u-font-weight-bold" for="address-line-1">
+            Building and street <span class="nhsuk-u-visually-hidden">line 1 of 2</span>
+          </label>
+          <input class="nhsuk-input" id="address-line-1" name="address-line-1" type="text">
+        </div>
+      
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label nhsuk-u-font-weight-bold" for="address-line-2">
+            <span class="nhsuk-u-visually-hidden">Building and street line 2 of 2</span>
+          </label>
+          <input class="nhsuk-input" id="address-line-2" name="address-line-2" type="text">
+        </div>
+      
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label nhsuk-u-font-weight-bold" for="address-town">
+            Town or city
+          </label>
+          <input class="nhsuk-input nhsuk-u-width-two-thirds" id="address-town" name="address-town" type="text">
+        </div>
+      
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label nhsuk-u-font-weight-bold" for="address-county">
+            County
+          </label>
+          <input class="nhsuk-input nhsuk-u-width-two-thirds" id="address-county" name="address-county" type="text">
+        </div>
+      
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label nhsuk-u-font-weight-bold" for="address-postcode">
+            Postcode
+          </label>
+          <input class="nhsuk-input nhsuk-input--width-10" id="address-postcode" name="address-postcode" type="text">
+        </div>
+      </fieldset>
+
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label nhsuk-u-font-weight-bold" for="landline-phone-number">
+          Landline Phone Number
+        </label>
+        <input class="nhsuk-input" id="landline-phone-number" name="landline-phone-number" type="text">
+      </div>
+
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label nhsuk-u-font-weight-bold" for="mobile-phone-number">
+          Mobile Phone Number
+        </label>
+        <input class="nhsuk-input" id="mobile-phone-number" name="mobile-phone-number" type="text">
+      </div>
+
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label nhsuk-u-font-weight-bold" for="emergency-contact-number">
+          Emergency Contact Number
+        </label>
+        <input class="nhsuk-input" id="emergency-contact-number" name="emergency-contact-number" type="text">
+      </div>
+
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label nhsuk-u-font-weight-bold" for="emergency-contact-name">
+          Emergency Contact Name
+        </label>
+        <input class="nhsuk-input" id="emergency-contact-name" name="emergency-contact-name" type="text">
+      </div>
+
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label nhsuk-u-font-weight-bold" for="email-address">
+          Email Address
+        </label>
+        <input class="nhsuk-input" id="email-address" name="email-address" type="text">
+      </div>
+  
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label nhsuk-u-font-weight-bold" for="website-address">
+          Website Address
+        </label>
+        <input class="nhsuk-input" id="website-address" name="website-address" type="text">
+      </div>
+
+      <div class="nhsuk-form-group">
+        <fieldset class="nhsuk-fieldset" role="group">
+          <legend class="nhsuk-label nhsuk-u-font-weight-bold" for="treatment-location-start-date">
+            Treatment Location Start Date
+          </legend>
+  
+          <div class="nhsuk-date-input" id="treatment-location-start-date">
+            <div class="nhsuk-date-input__item">
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label nhsuk-date-input__label" for="start-day">
+                  Day
+                </label>
+                <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="start-day" name="start-day" type="text" pattern="[0-9]*" inputmode="numeric">
+              </div>
+            </div>
+            <div class="nhsuk-date-input__item">
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label nhsuk-date-input__label" for="start-month">
+                  Month
+                </label>
+                <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="start-month" name="start-month" type="text" pattern="[0-9]*" inputmode="numeric">
+              </div>
+            </div>
+            <div class="nhsuk-date-input__item">
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label nhsuk-date-input__label" for="start-year">
+                  Year
+                </label>
+                <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="start-year" name="start-year" type="text" pattern="[0-9]*" inputmode="numeric">
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+  
+      <div class="nhsuk-form-group">
+        <fieldset class="nhsuk-fieldset" role="group">
+          <legend class="nhsuk-label nhsuk-u-font-weight-bold" for="treatment-location-end-date">
+            Treatment Location End Date
+          </legend>
+  
+          <div class="nhsuk-date-input" id="treatment-location-end-date">
+            <div class="nhsuk-date-input__item">
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label nhsuk-date-input__label" for="end-day">
+                  Day
+                </label>
+                <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="end-day" name="end-day" type="text" pattern="[0-9]*" inputmode="numeric">
+              </div>
+            </div>
+            <div class="nhsuk-date-input__item">
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label nhsuk-date-input__label" for="end-month">
+                  Month
+                </label>
+                <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="end-month" name="end-month" type="text" pattern="[0-9]*" inputmode="numeric">
+              </div>
+            </div>
+            <div class="nhsuk-date-input__item">
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label nhsuk-date-input__label" for="end-year">
+                  Year
+                </label>
+                <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="end-year" name="end-year" type="text" pattern="[0-9]*" inputmode="numeric">
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="nhsuk-button-group nhsuk-u-margin-top-6">
+        <a id="location-add" href="/provider/contract-management/create/create-contract#location-panel" class="nhsuk-button nhsuk-u-margin-bottom-0" data-module="nhsuk-button" type="submit">
+          Add
+        </a>
+        <button class="nhsuk-button nhsuk-button--secondary nhsuk-u-margin-bottom-0" data-module="nhsuk-button" type="submit">
+          Add Another
+        </button>
+        <a href="/provider/contract-management/create/create-contract#location-panel" class="nhsuk-link nhsuk-link--no-visited-state">Cancel</a>
+      </div>
+
+    </div>
+  </div>
+{% endblock %}
