@@ -11,6 +11,10 @@
 
 /// UTILS
 
+.underline {
+    text-decoration: underline;
+}
+
 .display-flex {
     display: flex;
 }
@@ -209,10 +213,16 @@
 .nhsuk-plus-icon {
     background: url("data:image/svg+xml,%3Csvg class='nhsuk-icon nhsuk-icon__plus' xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 24 24' aria-hidden='true'%3E%3Ccircle cx='12' cy='12' r='10' fill='%23005eb8'%3E%3C/circle%3E%3Cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M12 8v8M8 12h8'%3E%3C/path%3E%3C/svg%3E%0A") left -2px center no-repeat;
   content: "";
-  display: inline-block;
-  height: 32px;
-  left: 0;
-  position: absolute;
-  top: calc(50% - 16px);
-  width: 32px;
+    display: inline-block;
+    height: 32px;
+    left: 0;
+    position: absolute;
+    top: calc(50% - 16px);
+    width: 32px;
+}
+
+.nhsuk-view-subheader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }

@@ -122,9 +122,6 @@ const performerAddBtn = document.getElementById('performer-add');
 const deletePerformerBtn = document.getElementById('delete-performer');
 const performerPageOne = document.getElementById('performer-page-1');
 const performerPageTwo = document.getElementById('performer-page-2');
-const addNpeBtn = document.getElementById('add-npe-npee-btn');
-const deleteNpeBtn = document.getElementById('delete-npe-npee-btn');
-const npeTableRow = document.getElementById('npe-npee-row');
 let hasPerformer = localStorage['hasPerformer'];
 
 if(performerAddBtn) {
@@ -139,6 +136,12 @@ if(deletePerformerBtn) {
     location.reload();
   });
 }
+
+/// ADD NPE OR NPEE
+
+const addNpeBtn = document.getElementById('add-npe-npee-btn');
+const deleteNpeBtn = document.getElementById('delete-npe-npee-btn');
+const npeTableRow = document.getElementById('npe-npee-row');
 
 if(addNpeBtn) {
   addNpeBtn.addEventListener('click', ()=>{
