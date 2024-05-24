@@ -15,19 +15,19 @@
   {{ breadcrumb({
     items: [
       {
-        href: "/provider/landing-page",
+        href: "/hygiene/landing-page",
         text: "Home"
       },
       {
-        href: "/provider/contract-management/contracts",
+        href: "/hygiene/contract-management/contracts",
         text: "Contract Management"
       },
       {
-        href: "/provider/contract-management/9087654356",
+        href: "/hygiene/contract-management/9087654356",
         text: "9087654356"
       }
     ],
-    href: "/provider/contract-management/9087654356/general-information",
+    href: "/hygiene/contract-management/9087654356/general-information",
     text: "General Details"
   }) }}
 {% endblock %}
@@ -40,13 +40,9 @@
 {% block content %}
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-full">
-      <div id="edit-callout" class="nhsuk-inset-text nhsuk-u-margin-bottom-3 nhsuk-u-margin-top-3" style="display: none;">
-        <span class="nhsuk-u-visually-hidden">Information: </span>
-        <p>You need to <a class="nhsuk-link--no-visited-state" href="#edit-cta">review and submit</a> your changes.</p>
-      </div>
+
       <h1>
-        General Details
-        <span class="nhsuk-caption-xl nhsuk-caption--bottom">Contract Name, 9087654356</span>
+        Contract Name General Details
       </h1>
 
       <div class="nhsuk-tabs" data-module="nhsuk-tabs">
@@ -56,50 +52,45 @@
       
         <ul class="nhsuk-tabs__list">
           <li class="nhsuk-tabs__list-item nhsuk-tabs__list-item--selected">
-            <a class="nhsuk-tabs__tab" href="#general-panel">
+            <a class="nhsuk-tabs__tab" href="#summary-1">
               General
             </a>
           </li>
       
           <li class="nhsuk-tabs__list-item">
-            <a class="nhsuk-tabs__tab" href="#services-panel">
+            <a class="nhsuk-tabs__tab" href="#summary-2">
               Services
             </a>
           </li>
       
           <li class="nhsuk-tabs__list-item">
-            <a class="nhsuk-tabs__tab" href="#location-panel">
+            <a class="nhsuk-tabs__tab" href="#summary-3">
               Location
             </a>
           </li>
       
           <li class="nhsuk-tabs__list-item">
-            <a class="nhsuk-tabs__tab" href="#clinician-panel">
-              Clinicians
+            <a class="nhsuk-tabs__tab" href="#summary-4">
+              Performers
             </a>
           </li>
 
           <li class="nhsuk-tabs__list-item">
-            <a class="nhsuk-tabs__tab" href="#activity-panel">
+            <a class="nhsuk-tabs__tab" href="#summary-5">
               Activity
             </a>
           </li>
       
           <li class="nhsuk-tabs__list-item">
-            <a class="nhsuk-tabs__tab" href="#events-panel">
+            <a class="nhsuk-tabs__tab" href="#summary-6">
               Events
             </a>
           </li>
         </ul>
       
         <!-- Panel 1 -->
-        <div class="nhsuk-tabs__panel nhsuk-u-padding-top-4" id="general-panel">
-          <div class="nhsuk-view-subheader">
-            <h3 class="nhsuk-u-margin-bottom-0">Basic Details</h3>
-            <a href="#" class="nhsuk-u-visually-hidden">Edit</a>
-          </div>
-          <hr class="nhsuk-u-margin-top-3 nhsuk-u-margin-bottom-1"/>
-          <dl class="nhsuk-summary-list nhsuk-summary-list--no-border">
+        <div class="nhsuk-tabs__panel nhsuk-u-padding-top-4" id="summary-1">
+          <dl class="nhsuk-summary-list">
             <div class="nhsuk-summary-list__row">
               <dt class="nhsuk-summary-list__key">
                 Contract Number
@@ -135,17 +126,10 @@
                 False
               </dd>
             </div>
-          </dl>
 
-          <div class="nhsuk-view-subheader">
-            <h3 class="nhsuk-u-margin-bottom-0">Clinician Details</h3>
-            <a href="#" class="nhsuk-u-visually-hidden">Edit</a>
-          </div>
-          <hr class="nhsuk-u-margin-top-3 nhsuk-u-margin-bottom-1"/>
-          <dl class="nhsuk-summary-list nhsuk-summary-list--no-border">
             <div class="nhsuk-summary-list__row">
               <dt class="nhsuk-summary-list__key">
-                Clinician
+                Provider
               </dt>
               <dd class="nhsuk-summary-list__value">
                 102827
@@ -166,10 +150,19 @@
                 Address Title
               </dt>
               <dd class="nhsuk-summary-list__value">
-                -
+                
               </dd>
             </div>
           
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">
+                Postcode
+              </dt>
+              <dd class="nhsuk-summary-list__value">
+                SA1 3EN
+              </dd>
+            </div>
+
             <div class="nhsuk-summary-list__row">
               <dt class="nhsuk-summary-list__key">
                 Address
@@ -180,48 +173,7 @@
                 <p>Tonypandy</p>
               </dd>
             </div>
-          </dl>
-
-          <div class="nhsuk-view-subheader">
-            <h3 class="nhsuk-u-margin-bottom-0">Tenure Details</h3>
-            <a href="#" class="nhsuk-u-visually-hidden">Edit</a>
-          </div>
-          <hr class="nhsuk-u-margin-top-3 nhsuk-u-margin-bottom-1"/>
-          <dl class="nhsuk-summary-list nhsuk-summary-list--no-border">
-            <div class="nhsuk-summary-list__row">
-              <dt class="nhsuk-summary-list__key">
-                Contract Start Date
-              </dt>
-              <dd class="nhsuk-summary-list__value">
-                01/04/2006
-              </dd>
-            </div>
           
-            <div class="nhsuk-summary-list__row">
-              <dt class="nhsuk-summary-list__key">
-                Contract Start Date
-              </dt>
-              <dd class="nhsuk-summary-list__value">
-                -
-              </dd>
-            </div>
-          
-            <div class="nhsuk-summary-list__row">
-              <dt class="nhsuk-summary-list__key">
-                Clinician Effective Date
-              </dt>
-              <dd class="nhsuk-summary-list__value">
-                01/12/2018
-              </dd>
-            </div>
-          </dl>
-
-          <div class="nhsuk-view-subheader">
-            <h3 class="nhsuk-u-margin-bottom-0">Catagory</h3>
-            <a href="#" class="nhsuk-u-visually-hidden">Edit</a>
-          </div>
-          <hr class="nhsuk-u-margin-top-3 nhsuk-u-margin-bottom-1"/>
-          <dl class="nhsuk-summary-list nhsuk-summary-list--no-border">
             <div class="nhsuk-summary-list__row">
               <dt class="nhsuk-summary-list__key">
                 Catagory Code
@@ -242,7 +194,34 @@
           
             <div class="nhsuk-summary-list__row">
               <dt class="nhsuk-summary-list__key">
-                Not Paid by NHSBSA
+                Contract Start Date
+              </dt>
+              <dd class="nhsuk-summary-list__value">
+                01/04/2006
+              </dd>
+            </div>
+
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">
+                Contract End Date
+              </dt>
+              <dd class="nhsuk-summary-list__value">
+                
+              </dd>
+            </div>
+          
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">
+                Closure Reason
+              </dt>
+              <dd class="nhsuk-summary-list__value">
+                
+              </dd>
+            </div>
+          
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">
+                Not Paid By NHSBSA
               </dt>
               <dd class="nhsuk-summary-list__value">
                 False
@@ -260,38 +239,31 @@
 
             <div class="nhsuk-summary-list__row">
               <dt class="nhsuk-summary-list__key">
+                Local Dental Committee
+              </dt>
+              <dd class="nhsuk-summary-list__value">
+                LDC075
+              </dd>
+            </div>
+          
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">
                 Prison Indicator
               </dt>
               <dd class="nhsuk-summary-list__value">
                 No
               </dd>
             </div>
-          </dl>
-
-          <div class="nhsuk-view-subheader">
-            <h3 class="nhsuk-u-margin-bottom-0">Contact Details</h3>
-            <a href="#" class="nhsuk-u-visually-hidden">Edit</a>
-          </div>
-          <hr class="nhsuk-u-margin-top-3 nhsuk-u-margin-bottom-1"/>
-          <dl class="nhsuk-summary-list nhsuk-summary-list--no-border">
-            <div class="nhsuk-summary-list__row">
-              <dt class="nhsuk-summary-list__key">
-                Primary Contact
-              </dt>
-              <dd class="nhsuk-summary-list__value">
-                Name
-              </dd>
-            </div>
           
             <div class="nhsuk-summary-list__row">
               <dt class="nhsuk-summary-list__key">
-                Email
+                Provider Effective Date
               </dt>
               <dd class="nhsuk-summary-list__value">
-                example@email.com
+                01/12/2018
               </dd>
             </div>
-
+          
             <div class="nhsuk-summary-list__row">
               <dt class="nhsuk-summary-list__key">
                 Landline Phone Number
@@ -300,7 +272,7 @@
                 12345678
               </dd>
             </div>
-          
+
             <div class="nhsuk-summary-list__row">
               <dt class="nhsuk-summary-list__key">
                 Mobile Phone Number
@@ -309,11 +281,48 @@
                 12345678
               </dd>
             </div>
+          
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">
+                Email Address
+              </dt>
+              <dd class="nhsuk-summary-list__value">
+                DCSSTransformation@capita.com
+              </dd>
+            </div>
+          
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">
+                Website Address
+              </dt>
+              <dd class="nhsuk-summary-list__value">
+                www.nhsbsa.nhs.uk
+              </dd>
+            </div>
+          
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">
+                Contact Name
+              </dt>
+              <dd class="nhsuk-summary-list__value">
+                
+              </dd>
+            </div>
+
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">
+                Category Notes
+              </dt>
+              <dd class="nhsuk-summary-list__value">
+                
+              </dd>
+            </div>
+          
           </dl>
         </div>
       
         <!-- Panel 2 -->
-        <div class="nhsuk-tabs__panel nhsuk-tabs__panel--hidden" id="services-panel">
+        <div class="nhsuk-tabs__panel nhsuk-tabs__panel--hidden" id="summary-2">
       
           <table role="table" class="nhsuk-table-responsive">
             <caption class="nhsuk-u-visually-hidden">Services Table</caption>
@@ -461,7 +470,7 @@
         </div>
       
         <!-- Panel 3 -->
-        <div class="nhsuk-tabs__panel nhsuk-tabs__panel--hidden" id="location-panel">
+        <div class="nhsuk-tabs__panel nhsuk-tabs__panel--hidden" id="summary-3">
       
           <table role="table" class="nhsuk-table-responsive">
             <caption class="nhsuk-u-visually-hidden">Location Table</caption>
@@ -514,14 +523,17 @@
         </div>
       
         <!-- Panel 4 -->
-        <div class="nhsuk-tabs__panel nhsuk-tabs__panel--hidden" id="clinician-panel">
+        <div class="nhsuk-tabs__panel nhsuk-tabs__panel--hidden" id="summary-4">
       
           <table role="table" class="nhsuk-table-responsive">
-            <caption class="nhsuk-u-visually-hidden">Clinician Table</caption>
+            <caption class="nhsuk-u-visually-hidden">Performers Table</caption>
             <thead role="rowgroup" class="nhsuk-table__head">
               <tr role="row">
                 <th role="columnheader" class="" scope="col">
-                  Name
+                  Forename
+                </th>
+                <th role="columnheader" class="" scope="col">
+                  Surname
                 </th>
                 <th role="columnheader" class="" scope="col">
                   GDC Number
@@ -535,15 +547,15 @@
                 <th role="columnheader" class="" scope="col">
                   End Date
                 </th>
-                <th role="columnheader" class="" scope="col">
-                  <span class="nhsuk-u-visually-hidden">Action</span>
-                </th>
               </tr>
             </thead>
             <tbody class="nhsuk-table__body">
               <tr role="row" class="nhsuk-table__row">
                 <td role="cell" class="nhsuk-table__cell">
-                  <span class="nhsuk-table-responsive__heading">Name </span> Tom Holland
+                  <span class="nhsuk-table-responsive__heading">Forename </span> Tom
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Surname </span>Holland
                 </td>
                 <td role="cell" class="nhsuk-table__cell">
                   <span class="nhsuk-table-responsive__heading">GDC Number </span>12034
@@ -557,22 +569,14 @@
                 <td role="cell" class="nhsuk-table__cell">
                   <span class="nhsuk-table-responsive__heading">End Date </span>31/05/2006
                 </td>
-                <td role="cell" class="nhsuk-table__cell">
-                  <span class="nhsuk-table-responsive__heading">Action </span>
-                  <a href="/provider/contract-management/9087654356/general-information/clinician-edit" class="nhsuk-link nhsuk-link--no-visited-state">Edit</a> 
-                  / 
-                  <a id="" href="#" class="nhsuk-link nhsuk-link--no-visited-state">Delete</a>
-                </td>
               </tr>
             </tbody>
           </table>
-          <a href="/provider/contract-management/9087654356/general-information/clinician-new" class="nhsuk-button nhsuk-button--secondary nhsuk-u-margin-bottom-0 nhsuk-u-margin-top-4" data-module="nhsuk-button">
-            Add Another
-          </a>
+        
         </div>
 
         <!-- Panel 5 -->
-        <div class="nhsuk-tabs__panel nhsuk-tabs__panel--hidden" id="activity-panel">
+        <div class="nhsuk-tabs__panel nhsuk-tabs__panel--hidden" id="summary-5">
 
           <table role="table" class="nhsuk-table-responsive">
             <caption class="nhsuk-u-visually-hidden">Activity Table</caption>
@@ -625,7 +629,7 @@
         </div>
       
         <!-- Panel 6 -->
-        <div class="nhsuk-tabs__panel nhsuk-tabs__panel--hidden" id="events-panel">
+        <div class="nhsuk-tabs__panel nhsuk-tabs__panel--hidden" id="summary-6">
       
           <table role="table" class="nhsuk-table-responsive">
             <caption class="nhsuk-u-visually-hidden">Event Table</caption>
@@ -659,62 +663,11 @@
 
         </div>
       </div>
-      <div id="edit-cta" class="nhsuk-button-group nhsuk-u-margin-top-6" style="display: none;">
-        <a id="review-changes" href="/provider/contract-management/9087654356/general-information/edit-summary" class="nhsuk-button nhsuk-u-margin-bottom-0" data-module="nhsuk-button" type="submit">
-          Review Changes
-        </a>
-        <a id="edit-cancel" href="#" class="nhsuk-link nhsuk-link--no-visited-state">Cancel Changes</a>
-      </div>
+
+      <a href="/hygiene/contract-management/9087654356/general-information/edit" class="nhsuk-button nhsuk-button--secondary nhsuk-u-margin-bottom-0" data-module="nhsuk-button" type="submit">
+        Edit
+      </a>
+
     </div>
   </div>
-{% endblock %}
-
-{% block pageScripts %}
-  <script>
-    const editCTA = document.getElementById('edit-cta');
-    const editCallout = document.getElementById('edit-callout');
-    const editCancel = document.getElementById('edit-cancel');
-    const stayBtn = document.getElementById('stay-btn');
-    const leaveBtn = document.getElementById('leave-btn');
-    const modal = document.getElementById('nhsuk-modal');
-    let breadCrumbs = document.querySelectorAll(".nhsuk-breadcrumb__link");
-    
-    // REMOVE CALL TO ACTION GROUP
-    editCancel.addEventListener('click', ()=>{
-      localStorage['hasContractEdit'] = 'No';
-      location.reload();
-    });
-    
-    // ADD CALL TO ACTION GROUP
-    window.onload = function() {
-      if(localStorage['hasContractEdit'] == "Yes") {
-        editCTA.style.display = 'flex';
-        editCallout.style.display = 'block';
-      } else {
-        editCTA.style.display = 'none';
-      };
-    }
-
-    // POPUP FUNCTION
-    function windowPopUp() {
-      if (confirm("Are you sure you want to leave the page?")) {
-        localStorage['hasContractEdit'] = 'No';
-        window.location.href = '/provider/contract-management/9087654356';
-      } else {
-
-      }
-    }
-    
-    // DISPLAY POPUP IF EDIT HAS BEEN MADE
-    if(localStorage['hasContractEdit'] == "Yes") {
-      for (let i = 0; i < breadCrumbs.length; i++) {
-        breadCrumbs[i].addEventListener("click", function() {
-          // PREVENT PAGE CHANGE
-          window.event.preventDefault();
-          // DISPLAY POPUP
-          windowPopUp();
-        });
-      }
-    }
-  </script>
 {% endblock %}
