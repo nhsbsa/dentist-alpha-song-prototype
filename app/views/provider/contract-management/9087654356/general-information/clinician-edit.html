@@ -38,31 +38,31 @@
           </h1>
 
           <div class="nhsuk-form-group">
-            <label class="nhsuk-label nhsuk-u-font-weight-bold" for="performer-id">
-              Performer ID
+            <label class="nhsuk-label nhsuk-u-font-weight-bold" for="clinician-id">
+              Clinician ID
             </label>
-            <input class="nhsuk-input" id="performer-id" name="performer-id" type="text" value="123456789">
+            <input class="nhsuk-input" id="clinician-id" name="clinician-id" type="text" value="123456789">
           </div>
 
           <div class="nhsuk-form-group">
             <label class="nhsuk-label nhsuk-u-font-weight-bold" for="forename">
               Forename
             </label>
-            <input class="nhsuk-input" id="forename" name="forename" type="text" value="Tom">
+            <input class="nhsuk-input" id="forename" name="forename" type="text" value="Tom" disabled>
           </div>
 
           <div class="nhsuk-form-group">
             <label class="nhsuk-label nhsuk-u-font-weight-bold" for="surname">
               Surname
             </label>
-            <input class="nhsuk-input" id="surname" name="surname" type="text" value="Holland">
+            <input class="nhsuk-input" id="surname" name="surname" type="text" value="Holland" disabled>
           </div>
 
           <div class="nhsuk-form-group">
             <label class="nhsuk-label nhsuk-u-font-weight-bold" for="gdc-number">
               GDC Number
             </label>
-            <input class="nhsuk-input" id="gdc-number" name="gdc-number" type="text" value="12034">
+            <input class="nhsuk-input" id="gdc-number" name="gdc-number" type="text" value="12034" disabled>
           </div>
 
           <div class="nhsuk-form-group">
@@ -360,6 +360,18 @@
 
     addClinicianBtn.addEventListener('click', ()=>{
       localStorage['hasContractEdit'] = 'Yes';
+    });
+
+    const addNpeBtn = document.getElementById('add-npe-npee-btn');
+    const deleteNpeBtn = document.getElementById('delete-npe-npee-btn');
+    const npeTableRow = document.getElementById('npe-npee-row');
+
+    addNpeBtn.addEventListener('click', ()=>{
+      npeTableRow.style.display = 'table-row';
+    });
+
+    deleteNpeBtn.addEventListener('click', ()=>{
+      npeTableRow.style.display = 'none';
     });
   </script>
 {% endblock %}
