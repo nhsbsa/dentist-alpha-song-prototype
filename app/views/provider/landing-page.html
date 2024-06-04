@@ -6,160 +6,266 @@
 {% extends 'default-layout.html' %}
 
 <!-- Set the page title -->
-{% block pageTitle %}
-  Landing page
-{% endblock %}
+{% block pageTitle %} Landing page {% endblock %}
 
 <!-- Breadcrumbs -->
-{% block beforeContent %}
-
-{% endblock %}
+{% block beforeContent %} {% endblock %}
 
 <!-- Back link -->
-{% block outerContent %}
-{% endblock %}
+{% block outerContent %} {% endblock %}
 
 <!-- Content -->
 {% block content %}
-  <div class="nhsuk-grid-row">
-    <div class="nhsuk-grid-column-full">
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+    <!-- Add your content here -->
+    <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
 
-      <!-- Add your content here -->
-      <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+    <h1 class="nhsuk-heading-l nhsuk-u-margin-bottom-0">Hello, Holly Wilson</h1>
+    <p class="nhsuk-body-s nhsuk-u-margin-bottom-0">
+      <span class="nhsuk-u-font-weight-bold">Email Address:</span>
+      holly.wilson@northwooddental.co.uk
+    </p>
+    <p class="nhsuk-body-s">
+      <span class="nhsuk-u-font-weight-bold">Role:</span> Provider
+    </p>
 
-      <h1 class="nhsuk-heading-l nhsuk-u-margin-bottom-0">
-        Hello, Jamil Simon
-      </h1>
-      <p class="nhsuk-body-s nhsuk-u-margin-bottom-0">
-        <span class="nhsuk-u-font-weight-bold">Email Address:</span> DCSSTransformation@capita.co.uk
-      </p>
-      <p class="nhsuk-body-s">
-        <span class="nhsuk-u-font-weight-bold">Security Role:</span> Provider
-      </p>
+    <hr class="nhsuk-section-break nhsuk-section-break--l nhsuk-section-break--visible" />
 
-      <hr class="nhsuk-section-break nhsuk-section-break--l nhsuk-section-break--visible">
-
-      <!-- Summary Cards -->
-      <ul class="nhsuk-grid-row nhsuk-card-group">
-        <li class="nhsuk-grid-column-one-quarter nhsuk-card-group__item">
-          <div class="nhsuk-card nhsuk-card--clickable">
-            <div class="nhsuk-card__content">
-              <p class="nhsuk-heading-xl nhsuk-u-font-size-32 nhsuk-u-margin-bottom-1">91 <span class="nhsuk-u-visually-hidden">Active Contracts</span></p><a href="#" class="nhsuk-card__link nhsuk-u-font-weight-normal nhsuk-u-font-size-19 nhsuk-link--no-visited-state">Active Contracts</a>
-            </div>
+    <!-- Summary Cards -->
+    <ul class="nhsuk-grid-row nhsuk-card-group">
+      <li class="nhsuk-grid-column-one-quarter nhsuk-card-group__item">
+        <div class="nhsuk-card nhsuk-card--clickable">
+          <div class="nhsuk-card__content">
+            <p class="nhsuk-heading-xl nhsuk-u-font-size-32 nhsuk-u-margin-bottom-1">
+              10 <span class="nhsuk-u-visually-hidden">Active Contracts</span>
+            </p>
+            <a href="#"
+              class="nhsuk-card__link nhsuk-u-font-weight-normal nhsuk-u-font-size-19 nhsuk-link--no-visited-state">Active
+              Contracts</a>
           </div>
-        </li>
-        <li class="nhsuk-grid-column-one-quarter nhsuk-card-group__item">
-          <div class="nhsuk-card nhsuk-card--clickable">
-            <div class="nhsuk-card__content">
-              <p class="nhsuk-heading-xl nhsuk-u-font-size-32 nhsuk-u-margin-bottom-1">£250,000 <span class="nhsuk-u-visually-hidden">Total Debt</span></p><a href="#" class="nhsuk-card__link nhsuk-u-font-weight-normal nhsuk-u-font-size-19 nhsuk-link--no-visited-state">Total Debt</a>
-            </div>
+        </div>
+      </li>
+      <li class="nhsuk-grid-column-one-quarter nhsuk-card-group__item">
+        <div class="nhsuk-card nhsuk-card--clickable">
+          <div class="nhsuk-card__content">
+            <p class="nhsuk-heading-xl nhsuk-u-font-size-32 nhsuk-u-margin-bottom-1">
+              2 <span class="nhsuk-u-visually-hidden">Contracts in debt</span>
+            </p>
+            <a href="#" class="nhsuk-card__link nhsuk-u-font-weight-normal nhsuk-u-font-size-19
+              nhsuk-link--no-visited-state">Contracts in debt</a>
           </div>
-        </li>
-        <li class="nhsuk-grid-column-one-quarter nhsuk-card-group__item">
-          <div class="nhsuk-card nhsuk-card--clickable">
-            <div class="nhsuk-card__content">
-              <p class="nhsuk-heading-xl nhsuk-u-font-size-32 nhsuk-u-margin-bottom-1">8 <span class="nhsuk-u-visually-hidden">Pending Approval</span></p><a href="#" class="nhsuk-card__link nhsuk-u-font-weight-normal nhsuk-u-font-size-19 nhsuk-link--no-visited-state">Pending Approval</a>
-            </div>
+        </div>
+      </li>
+      <li class="nhsuk-grid-column-one-quarter nhsuk-card-group__item">
+        <div class="nhsuk-card nhsuk-card--clickable">
+          <div class="nhsuk-card__content">
+            <p class="nhsuk-heading-xl nhsuk-u-font-size-32 nhsuk-u-margin-bottom-1">
+              £30k <span class="nhsuk-u-visually-hidden">Total Debt</span>
+            </p>
+            <a href="#"
+              class="nhsuk-card__link nhsuk-u-font-weight-normal nhsuk-u-font-size-19 nhsuk-link--no-visited-state">Total
+              Debt</a>
           </div>
-        </li>
-        <li class="nhsuk-grid-column-one-quarter nhsuk-card-group__item">
-          <div class="nhsuk-card nhsuk-card--clickable">
-            <div class="nhsuk-card__content">
-              <p class="nhsuk-heading-xl nhsuk-u-font-size-32 nhsuk-u-margin-bottom-1">33 <span class="nhsuk-u-visually-hidden">Messages</span></p><a href="#" class="nhsuk-card__link nhsuk-u-font-weight-normal nhsuk-u-font-size-19 nhsuk-link--no-visited-state">Messages</a>
-            </div>
+        </div>
+      </li>
+      <li class="nhsuk-grid-column-one-quarter nhsuk-card-group__item">
+        <div class="nhsuk-card nhsuk-card--clickable">
+          <div class="nhsuk-card__content">
+            <p class="nhsuk-heading-xl nhsuk-u-font-size-32 nhsuk-u-margin-bottom-1">
+              33 <span class="nhsuk-u-visually-hidden">More</span>
+            </p>
+            <a href="#"
+              class="nhsuk-card__link nhsuk-u-font-weight-normal nhsuk-u-font-size-19 nhsuk-link--no-visited-state">Messages</a>
           </div>
-        </li>
-      </ul>
+        </div>
+      </li>
+    </ul>
 
+    <div>
+      <div class="nhsuk-multi-link-row-one">
+        <h2 class="nhsuk-heading-m">Contracts in debt</h2>
+        <p><a href="/provider/debt-management/debt-contracts">View all contracts in debt</a></p>
+      </div>
       <div>
-        <div class="nhsuk-multi-link-row-one">
-          <h2 class="nhsuk-heading-m">Manage contracts</h2>
-          <p><a href="#">View all</a></p>
+        <div class="nhsuk-card nhsuk-card--clickable nhsuk-card-custom-container">
+          <div class="nhsuk-card__content nhsuk-card__content--primary nhsuk-card-custom-content
+            nhsuk-card-custom-list_summary">
+            <h3 class="nhsuk-card__heading nhsuk-heading-xs nhsuk-u-margin-bottom-0">
+              Contract 1 is £15k in debt
+            </h3>
+            <p class="nhsuk-u-width-one-quarter nhsuk-card-custom-list_summary--item">
+              <a class="nhsuk-card__link nhsuk-link--no-visited-state" href="/provider/monthly-statements">Pay now</a>
+              <a class="nhsuk-card__link nhsuk-link--no-visited-state" href="/provider/monthly-statements">View
+                details</a>
+            </p>
+          </div>
         </div>
-        <div>
-          <div class="nhsuk-card nhsuk-card--clickable nhsuk-card-custom-container">
-            <div class="nhsuk-card__content nhsuk-card__content--primary nhsuk-card-custom-content">
-              <h3 class="nhsuk-card__heading nhsuk-heading-xs nhsuk-u-margin-bottom-0">
-                <a class="nhsuk-card__link nhsuk-link--no-visited-state" href="/provider/contract-management/contracts">View all contracts</a>
-              </h3>
-              <svg class="nhsuk-icon nhsuk-icon nhsuk-icon__chevron-right-circle nhsuk-card-custom-icon" xmlns="http://www.w3.org/2000/svg" width="27" height="27" aria-hidden="true" focusable="false">
-                <circle cx="13.333" cy="13.333" r="13.333" fill="" />
-                <g data-name="Group 1" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2.667">
-                  <path d="M15.438 13l-3.771 3.771" />
-                  <path data-name="Path" d="M11.667 9.229L15.438 13" />
-                </g>
-              </svg>
-            </div>
-          </div>
-          <div class="nhsuk-card nhsuk-card--clickable nhsuk-card-custom-container">
-            <div class="nhsuk-card__content nhsuk-card__content--primary nhsuk-card-custom-content">
-              <h3 class="nhsuk-card__heading nhsuk-heading-xs nhsuk-u-margin-bottom-0">
-                <a class="nhsuk-card__link nhsuk-link--no-visited-state" href="/provider/contract-management/create/create-contract">Create contract</a>
-              </h3>
-              <svg class="nhsuk-icon nhsuk-icon nhsuk-icon__chevron-right-circle nhsuk-card-custom-icon" xmlns="http://www.w3.org/2000/svg" width="27" height="27" aria-hidden="true" focusable="false">
-                <circle cx="13.333" cy="13.333" r="13.333" fill="" />
-                <g data-name="Group 1" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2.667">
-                  <path d="M15.438 13l-3.771 3.771" />
-                  <path data-name="Path" d="M11.667 9.229L15.438 13" />
-                </g>
-              </svg>
-            </div>
-          </div>
-          <div class="nhsuk-card nhsuk-card--clickable nhsuk-card-custom-container">
-            <div class="nhsuk-card__content nhsuk-card__content--primary nhsuk-card-custom-content">
-              <h3 class="nhsuk-card__heading nhsuk-heading-xs nhsuk-u-margin-bottom-0">
-                <a class="nhsuk-card__link nhsuk-link--no-visited-state" href="#">My contracts</a>
-              </h3>
-              <svg class="nhsuk-icon nhsuk-icon nhsuk-icon__chevron-right-circle nhsuk-card-custom-icon" xmlns="http://www.w3.org/2000/svg" width="27" height="27" aria-hidden="true" focusable="false">
-                <circle cx="13.333" cy="13.333" r="13.333" fill="" />
-                <g data-name="Group 1" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2.667">
-                  <path d="M15.438 13l-3.771 3.771" />
-                  <path data-name="Path" d="M11.667 9.229L15.438 13" />
-                </g>
-              </svg>
-            </div>
+        <div class="nhsuk-card nhsuk-card--clickable nhsuk-card-custom-container">
+          <div class="nhsuk-card__content nhsuk-card__content--primary nhsuk-card-custom-content
+            nhsuk-card-custom-list_summary">
+            <h3 class="nhsuk-card__heading nhsuk-heading-xs nhsuk-u-margin-bottom-0">
+              Contract 1 is £15k in debt
+            </h3>
+            <p class="nhsuk-u-width-one-quarter nhsuk-card-custom-list_summary--item">
+              <a class="nhsuk-card__link nhsuk-link--no-visited-state" href="#">Pay now</a>
+              <a class="nhsuk-card__link nhsuk-link--no-visited-state" href="#">View
+                details</a>
+            </p>
           </div>
         </div>
       </div>
-
-      <div class=" nhsuk-u-margin-top-5">
-        <div class="nhsuk-multi-link-row-one">
-          <h2 class="nhsuk-heading-m">Manage debt</h2>
-          <p><a href="#">View all</a></p>
-        </div>
-        <div>
-          <div class="nhsuk-card nhsuk-card--clickable nhsuk-card-custom-container">
-            <div class="nhsuk-card__content nhsuk-card__content--primary nhsuk-card-custom-content">
-              <h3 class="nhsuk-card__heading nhsuk-heading-xs nhsuk-u-margin-bottom-0">
-                <a class="nhsuk-card__link nhsuk-link--no-visited-state" href="/provider/monthly-statements">Link 1</a>
-              </h3>
-              <svg class="nhsuk-icon nhsuk-icon nhsuk-icon__chevron-right-circle nhsuk-card-custom-icon" xmlns="http://www.w3.org/2000/svg" width="27" height="27" aria-hidden="true" focusable="false">
-                <circle cx="13.333" cy="13.333" r="13.333" fill="" />
-                <g data-name="Group 1" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2.667">
-                  <path d="M15.438 13l-3.771 3.771" />
-                  <path data-name="Path" d="M11.667 9.229L15.438 13" />
-                </g>
-              </svg>
-            </div>
-          </div>
-          <div class="nhsuk-card nhsuk-card--clickable nhsuk-card-custom-container">
-            <div class="nhsuk-card__content nhsuk-card__content--primary nhsuk-card-custom-content">
-              <h3 class="nhsuk-card__heading nhsuk-heading-xs nhsuk-u-margin-bottom-0">
-                <a class="nhsuk-card__link nhsuk-link--no-visited-state" href="#">Link 2</a>
-              </h3>
-              <svg class="nhsuk-icon nhsuk-icon nhsuk-icon__chevron-right-circle nhsuk-card-custom-icon" xmlns="http://www.w3.org/2000/svg" width="27" height="27" aria-hidden="true" focusable="false">
-                <circle cx="13.333" cy="13.333" r="13.333" fill="" />
-                <g data-name="Group 1" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2.667">
-                  <path d="M15.438 13l-3.771 3.771" />
-                  <path data-name="Path" d="M11.667 9.229L15.438 13" />
-                </g>
-              </svg>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- End of content -->
     </div>
+    <div class="nhsuk-u-margin-top-5">
+      <div class="nhsuk-multi-link-row-one">
+        <h2 class="nhsuk-heading-m">UDA performance by contract</h2>
+      </div>
+      <div>
+        <div class="nhsuk-card nhsuk-card--clickable nhsuk-card-custom-container">
+          <div class="nhsuk-card__content nhsuk-card__content--primary nhsuk-card-custom-content">
+            <figure class="nhsuk-image">
+              <img class="nhsuk-image__img"
+                src="./assets/images/chart.jpg"
+                alt="bar chart">
+
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="nhsuk-u-margin-top-5">
+      <div class="nhsuk-multi-link-row-one">
+        <h2 class="nhsuk-heading-m">Contracts</h2>
+      </div>
+      <div>
+        <div class="nhsuk-card nhsuk-card--clickable nhsuk-card-custom-container">
+          <div class="nhsuk-card__content nhsuk-card__content--primary nhsuk-card-custom-content">
+            <h3 class="nhsuk-card__heading nhsuk-heading-xs nhsuk-u-margin-bottom-0">
+              <a class="nhsuk-card__link nhsuk-link--no-visited-state" href="/provider/monthly-statements">My contracts
+              </a>
+            </h3>
+            <svg class="nhsuk-icon nhsuk-icon nhsuk-icon__chevron-right-circle nhsuk-card-custom-icon"
+              xmlns="http://www.w3.org/2000/svg" width="27" height="27" aria-hidden="true" focusable="false">
+              <circle cx="13.333" cy="13.333" r="13.333" fill="" />
+              <g data-name="Group 1" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10"
+                stroke-width="2.667">
+                <path d="M15.438 13l-3.771 3.771" />
+                <path data-name="Path" d="M11.667 9.229L15.438 13" />
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="nhsuk-u-margin-top-5">
+      <div class="nhsuk-multi-link-row-one">
+        <h2 class="nhsuk-heading-m">Payments</h2>
+      </div>
+      <div>
+        <div class="nhsuk-card nhsuk-card--clickable nhsuk-card-custom-container">
+          <div class="nhsuk-card__content nhsuk-card__content--primary nhsuk-card-custom-content">
+            <h3 class="nhsuk-card__heading nhsuk-heading-xs nhsuk-u-margin-bottom-0">
+              <a class="nhsuk-card__link nhsuk-link--no-visited-state" href="/provider/monthly-statements">Pay
+                statements</a>
+            </h3>
+            <svg class="nhsuk-icon nhsuk-icon nhsuk-icon__chevron-right-circle nhsuk-card-custom-icon"
+              xmlns="http://www.w3.org/2000/svg" width="27" height="27" aria-hidden="true" focusable="false">
+              <circle cx="13.333" cy="13.333" r="13.333" fill="" />
+              <g data-name="Group 1" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10"
+                stroke-width="2.667">
+                <path d="M15.438 13l-3.771 3.771" />
+                <path data-name="Path" d="M11.667 9.229L15.438 13" />
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="nhsuk-u-margin-top-5">
+      <div class="nhsuk-multi-link-row-one">
+        <h2 class="nhsuk-heading-m">Activity</h2>
+      </div>
+      <div>
+        <div class="nhsuk-card nhsuk-card--clickable nhsuk-card-custom-container">
+          <div class="nhsuk-card__content nhsuk-card__content--primary nhsuk-card-custom-content">
+            <h3 class="nhsuk-card__heading nhsuk-heading-xs nhsuk-u-margin-bottom-0">
+              <a class="nhsuk-card__link nhsuk-link--no-visited-state" href="/provider/monthly-statements">Submit a new
+                activity</a>
+            </h3>
+            <svg class="nhsuk-icon nhsuk-icon nhsuk-icon__chevron-right-circle nhsuk-card-custom-icon"
+              xmlns="http://www.w3.org/2000/svg" width="27" height="27" aria-hidden="true" focusable="false">
+              <circle cx="13.333" cy="13.333" r="13.333" fill="" />
+              <g data-name="Group 1" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10"
+                stroke-width="2.667">
+                <path d="M15.438 13l-3.771 3.771" />
+                <path data-name="Path" d="M11.667 9.229L15.438 13" />
+              </g>
+            </svg>
+          </div>
+        </div>
+        <div class="nhsuk-card nhsuk-card--clickable nhsuk-card-custom-container">
+          <div class="nhsuk-card__content nhsuk-card__content--primary nhsuk-card-custom-content">
+            <h3 class="nhsuk-card__heading nhsuk-heading-xs nhsuk-u-margin-bottom-0">
+              <a class="nhsuk-card__link nhsuk-link--no-visited-state" href="/provider/monthly-statements">Activity
+                actuals</a>
+            </h3>
+            <svg class="nhsuk-icon nhsuk-icon nhsuk-icon__chevron-right-circle nhsuk-card-custom-icon"
+              xmlns="http://www.w3.org/2000/svg" width="27" height="27" aria-hidden="true" focusable="false">
+              <circle cx="13.333" cy="13.333" r="13.333" fill="" />
+              <g data-name="Group 1" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10"
+                stroke-width="2.667">
+                <path d="M15.438 13l-3.771 3.771" />
+                <path data-name="Path" d="M11.667 9.229L15.438 13" />
+              </g>
+            </svg>
+          </div>
+        </div>
+        <div class="nhsuk-card nhsuk-card--clickable nhsuk-card-custom-container">
+          <div class="nhsuk-card__content nhsuk-card__content--primary nhsuk-card-custom-content">
+            <h3 class="nhsuk-card__heading nhsuk-heading-xs nhsuk-u-margin-bottom-0">
+              <a class="nhsuk-card__link nhsuk-link--no-visited-state" href="/provider/monthly-statements">Clinician
+                statements</a>
+            </h3>
+            <svg class="nhsuk-icon nhsuk-icon nhsuk-icon__chevron-right-circle nhsuk-card-custom-icon"
+              xmlns="http://www.w3.org/2000/svg" width="27" height="27" aria-hidden="true" focusable="false">
+              <circle cx="13.333" cy="13.333" r="13.333" fill="" />
+              <g data-name="Group 1" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10"
+                stroke-width="2.667">
+                <path d="M15.438 13l-3.771 3.771" />
+                <path data-name="Path" d="M11.667 9.229L15.438 13" />
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="nhsuk-u-margin-top-5">
+      <div class="nhsuk-multi-link-row-one">
+        <h2 class="nhsuk-heading-m">Got a question?</h2>
+      </div>
+      <div>
+        <div class="nhsuk-card nhsuk-card--clickable nhsuk-card-custom-container">
+          <div class="nhsuk-card__content nhsuk-card__content--primary nhsuk-card-custom-content">
+            <h3 class="nhsuk-card__heading nhsuk-heading-xs nhsuk-u-margin-bottom-0">
+              <a class="nhsuk-card__link nhsuk-link--no-visited-state" href="/provider/monthly-statements">Knowledge
+                base</a>
+            </h3>
+            <svg class="nhsuk-icon nhsuk-icon nhsuk-icon__chevron-right-circle nhsuk-card-custom-icon"
+              xmlns="http://www.w3.org/2000/svg" width="27" height="27" aria-hidden="true" focusable="false">
+              <circle cx="13.333" cy="13.333" r="13.333" fill="" />
+              <g data-name="Group 1" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10"
+                stroke-width="2.667">
+                <path d="M15.438 13l-3.771 3.771" />
+                <path data-name="Path" d="M11.667 9.229L15.438 13" />
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- End of content -->
   </div>
+</div>
 {% endblock %}
