@@ -12,41 +12,53 @@
 
 <!-- Breadcrumbs -->
 {% block beforeContent %}
-  {{ breadcrumb({
-    items: [
-      {
-        href: "/provider/landing-page",
-        text: "Home"
-      },
-      {
-        href: "/provider/contract-management/contracts",
-        text: "Contract Management"
-      },
-      {
-        href: "/provider/contract-management/9087654356",
-        text: "9087654356"
-      }
-    ],
-    href: "/provider/contract-management/9087654356/arr",
-    text: "ARR"
-  }) }}
 {% endblock %}
 
 <!-- Back link -->
 {% block outerContent %}
+  <div class="nhsuk-back-link nhsuk-u-padding-top-3 nhsuk-u-margin-bottom-0">
+    <a class="nhsuk-back-link__link" href="/provider/contract-management/9087654356">
+      <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
+        <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+      </svg>
+      Go back</a>
+  </div>
 {% endblock %}
 
 <!-- Content -->
 {% block content %}
   <div class="nhsuk-grid-row">
-    <div class="nhsuk-grid-column-two-thirds">
-
-      <table role="table" class="nhsuk-table-responsive">
-        <caption class="nhsuk-table__caption">ARR Table</caption>
+    <div class="nhsuk-grid-column-full">
+      <div id="success-message" class="nhsuk-inset-text nhsuk-u-margin-top-0" style="display: none;">
+        <span class="nhsuk-u-visually-hidden">Information: </span>
+        <p>Confirmed NPE/NPEE have been sent to the contracts clinicians.</p>
+      </div>
+      <!-- ERROR MESSAGE -->
+      <div id="error-message" class="nhsuk-error-summary" aria-labelledby="error-summary-npe" role="alert" tabindex="-1" style="display: none;">
+        <h2 class="nhsuk-error-summary__title" id="error-summary-npe">
+          There is a problem
+        </h2>
+        <div class="nhsuk-error-summary__body">
+          <p>
+            The sum of Proposed NPE/NPEE for all clinicians must not exceed the contract ceiling.
+          </p>
+          <ul class="nhsuk-list nhsuk-error-summary__list" role="list">
+            <li>
+              <a href="#">Please provide a NPE/NPEE total equal to or below the ceiling value.</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <h1 class="nhsuk-u-margin-bottom-0">
+        ARR for financial year 2023/2024
+        <span class="nhsuk-caption-xl nhsuk-caption--bottom">Contract Name, 9087654356</span>
+      </h1>
+      <table role="table" class="nhsuk-table-responsive nhsuk-u-margin-top-4">
+        <caption class="nhsuk-u-visually-hidden">ARR Table</caption>
         <thead role="rowgroup" class="nhsuk-table__head">
           <tr role="row">
             <th role="columnheader" class="" scope="col">
-              Performer ID
+              Clinician ID
             </th>
             <th role="columnheader" class="" scope="col">
               Name
@@ -58,49 +70,321 @@
               End
             </th>
             <th role="columnheader" class="" scope="col">
-              Performer Status
+              Estimated NPE
             </th>
             <th role="columnheader" class="" scope="col">
-              Provider Status
+              Estimated NPEE
             </th>
             <th role="columnheader" class="" scope="col">
-              ARR Status
+              Confirmed NPE/NPEE
             </th>
             <th role="columnheader" class="" scope="col">
-              <span class="nhsuk-u-visually-hidden">Action</span>
+              Clinician Status
             </th>
           </tr>
         </thead>
         <tbody class="nhsuk-table__body">
           <tr role="row" class="nhsuk-table__row">
             <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">Performer ID </span>527386
+              <span class="nhsuk-table-responsive__heading">Clinician ID </span>527386
             </td>
             <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">Name </span>Blake Pumeres
+              <span class="nhsuk-table-responsive__heading">Name </span>Ella Purnell
             </td>
             <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">Start </span>01/04/18
+              <span class="nhsuk-table-responsive__heading">Start </span>01/04/23
             </td>
             <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">End </span>31/04/19
+              <span class="nhsuk-table-responsive__heading">End </span>30/07/23
             </td>
             <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">Performer Status </span>Accepted
+              <span class="nhsuk-table-responsive__heading">Estimated NPE </span>£10,000
             </td>
             <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">Provider Status </span>Waiting
+              <span class="nhsuk-table-responsive__heading">Estimated NPEE </span>£0
             </td>
             <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">ARR Status </span>Submitted
+              <span class="nhsuk-table-responsive__heading">Confirmed NPE/NPEE </span>
+              <label class="nhsuk-u-visually-hidden" for="confirmed-1">
+                Ella Purnell Confirmed NPE/NPEE
+              </label>
+              <div class="nhsuk-input__wrapper">
+                <div class="nhsuk-input__prefix" aria-hidden="true">£</div>
+                <input class="nhsuk-input nhsuk-input--width-6" value="0" id="confirmed-1" name="confirmed-1" type="number" oninput="resultRefresh()" onkeypress="return isNumberKey(event)">
+              </div>
             </td>
             <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">Action </span><a class="nhsuk-link--no-visited-state" href="/provider/contract-management/9087654356/arr/arr-view">View</a>
+              <span class="nhsuk-table-responsive__heading">Clinician Status </span>
+              <span id="na-1">N/A</span>
+              <strong id="tag-waiting-1" class="nhsuk-tag nhsuk-tag--yellow" style="display: none;">
+                Waiting
+              </strong>
+              <strong id="tag-accepted-1" class="nhsuk-tag nhsuk-tag--green" style="display: none;">
+                Accepted
+              </strong>
+            </td>
+          </tr>
+          <tr role="row" class="nhsuk-table__row">
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Clinician ID </span>527386
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Name </span>Ella Purnell
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Start </span>01/04/23
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">End </span>30/07/23
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Estimated NPE </span>£0
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Estimated NPEE </span>£30,000
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Confirmed NPE/NPEE </span>
+              <label class="nhsuk-u-visually-hidden" for="confirmed-2">
+                Ella Purnell Confirmed NPE/NPEE
+              </label>
+              <div class="nhsuk-input__wrapper">
+                <div class="nhsuk-input__prefix" aria-hidden="true">£</div>
+                <input class="nhsuk-input nhsuk-input--width-6" value="0" id="confirmed-2" name="confirmed-2" type="text" oninput="resultRefresh()" onkeypress="return isNumberKey(event)">
+              </div>
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Clinician Status </span>
+              <span id="na-2">N/A</span>
+              <strong id="tag-waiting-2" class="nhsuk-tag nhsuk-tag--yellow" style="display: none;">
+                Waiting
+              </strong>
+            </td>
+          </tr>
+          <tr role="row" class="nhsuk-table__row">
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Clinician ID </span>527386
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Name </span>Tom Hardy
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Start </span>01/04/23
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">End </span>30/07/23
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Estimated NPE </span>£55,000
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Estimated NPEE </span>£50,000
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Confirmed NPE/NPEE </span>
+              <label class="nhsuk-u-visually-hidden" for="confirmed-3">
+                Tom Hardy Confirmed NPE/NPEE
+              </label>
+              <div class="nhsuk-input__wrapper">
+                <div class="nhsuk-input__prefix" aria-hidden="true">£</div>
+                <input class="nhsuk-input nhsuk-input--width-6" value="0" id="confirmed-3" name="confirmed-3" type="text" oninput="resultRefresh()" onkeypress="return isNumberKey(event)">
+              </div>
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Clinician Status </span>
+              <span id="na-3">N/A</span>
+              <strong id="tag-waiting-3" class="nhsuk-tag nhsuk-tag--yellow" style="display: none;">
+                Waiting
+              </strong>
+              <div id="tag-rejected-3" style="display: none;">
+                <strong class="nhsuk-tag nhsuk-tag--red">
+                  Rejected
+                </strong>
+                £52,000 proposed
+              </div>
             </td>
           </tr>
         </tbody>
       </table>
+
+      <button id="edit-npe-btn" class="nhsuk-button nhsuk-button--secondary nhsuk-u-margin-top-5 nhsuk-u-margin-bottom-0" data-module="nhsuk-button" type="submit">
+        Edit NPE/NPEE
+      </button>
+
+      <div class="nhsuk-npe-summary nhsuk-u-margin-top-5 nhsuk-u-margin-bottom-2">
+        <p class="nhsuk-u-font-weight-bold nhsuk-u-margin-0">Ceiling (43.9% of total contract value):</p>
+        <p class="nhsuk-u-margin-0">£90,000.00</p>
+      </div>
+      <div class="nhsuk-npe-summary nhsuk-u-margin-bottom-2">
+        <p class="nhsuk-u-font-weight-bold nhsuk-u-margin-0">Total of NPE/NPEE values:</p>
+        <p id="total-text" class="nhsuk-u-margin-0">£0</p>
+      </div>
+      <p id="error-message-2" class="nhsuk-error-message" style="display: none;">Total of NPE/NPEE values is over the ceiling limit</p>
+
+      <div id="cta-container">
+        <h2 class="nhsuk-u-margin-top-4">Declaration</h2>
+        <p>
+          I understand that the administration of NHS Dental Services and responsibility for anti fraud work in the NHS are both responsibilities of the NHS Business Services 
+          Authority. I understand that NHS Dental Services may share the information on this form with NHS Protect, a devision of the NHS Business Services Authority, 
+          for the purposes of the prevention, detection, investigation and prosecution of fraud or any other unlawful activity affecting the health service.
+        </p>
+        <form>
+          <div class="nhsuk-form-group">
+            <fieldset class="nhsuk-fieldset">
+              <legend class="nhsuk-u-visually-hidden">
+                Declaration confirm checkbox
+              </legend>
       
+              <div class="nhsuk-checkboxes">
+                <div class="nhsuk-checkboxes__item">
+                  <input class="nhsuk-checkboxes__input" id="declaration-confirm" name="declaration-confirm" type="checkbox" value="true">
+                  <label class="nhsuk-label nhsuk-u-font-weight-bold nhsuk-checkboxes__label" for="declaration-confirm">
+                    I confirm
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+        </form>
+  
+        <div class="nhsuk-button-group nhsuk-u-margin-top-4">
+          <button id="arr-submit" class="nhsuk-button nhsuk-u-margin-bottom-0" data-module="nhsuk-button" type="submit" disabled>
+            Submit
+          </button>
+          <a href="/provider/contract-management/9087654356" class="nhsuk-link nhsuk-link--no-visited-state">
+            Cancel
+          </a>
+        </div>
+      </div>
     </div>
   </div>
+{% endblock %}
+
+{% block pageScripts %}
+  <script>
+    const ctaContainer = document.getElementById('cta-container');
+    const declaration = document.getElementById('declaration-confirm');
+    const submitBtn = document.getElementById('arr-submit');
+    const successMessage = document.getElementById('success-message');
+    const errorMessage = document.getElementById('error-message');
+    const errorMessageTwo = document.getElementById('error-message-2');
+    const naOne = document.getElementById('na-1');
+    const naTwo = document.getElementById('na-2');
+    const naThree = document.getElementById('na-3');
+    const tagWaitingOne = document.getElementById('tag-waiting-1');
+    const tagAcceptedOne = document.getElementById('tag-accepted-1');
+    const tagWaitingTwo = document.getElementById('tag-waiting-2');
+    const tagWaitingThree = document.getElementById('tag-waiting-3');
+    const tagRejectedThree = document.getElementById('tag-rejected-3');
+    const confirmedOneInput = document.getElementById('confirmed-1');
+    const confirmedTwoInput = document.getElementById('confirmed-2');
+    const confirmedThreeInput = document.getElementById('confirmed-3');
+    const editNpeBtn = document.getElementById('edit-npe-btn');
+    let totalText = document.getElementById('total-text');
+    let totalValue;
+
+    window.onload = function() {
+      if(localStorage['hasNpeResponse'] == "Yes") {
+        naOne.style.display = 'none';
+        naTwo.style.display = 'none';
+        naThree.style.display = 'none';
+        confirmedOneInput.disabled = true;
+        confirmedTwoInput.disabled = true;
+        confirmedThreeInput.disabled = true;
+        confirmedOneInput.value = "50000";
+        confirmedTwoInput.value = "10000";
+        confirmedThreeInput.value = "30000";
+        ctaContainer.style.display = 'none';
+        tagWaitingOne.style.display = 'none';
+        tagAcceptedOne.style.display = 'inline-block';
+        tagWaitingTwo.style.display = 'inline-block';
+        tagRejectedThree.style.display = 'block';
+        resultRefresh();
+      } 
+    };
+
+    // PREVENT ANYTHING OTHER THAN NUMBERS & FULL STOPS
+    function isNumberKey(evt) {
+      let charCode = (evt.which) ? evt.which : evt.keyCode
+      if (charCode > 31 && (charCode != 46 &&(charCode < 48 || charCode > 57)))
+        return false;
+      return true;
+    }
+
+    // UPDATE TOTAL VALUE
+    function resultRefresh() {
+      let confirmedOne = document.getElementById('confirmed-1').value;
+      let confirmedTwo = document.getElementById('confirmed-2').value;
+      let confirmedThree = document.getElementById('confirmed-3').value;
+
+      doMath(confirmedOne, confirmedTwo, confirmedThree);
+      
+      totalText.innerText = "£" + formatMoney(totalValue);
+    }
+
+    // CHANGE SUBMIT BUTTON STATE 
+    declaration.addEventListener('click', ()=>{
+      if(declaration.checked) {
+        submitBtn.disabled = false;
+      } else {
+        submitBtn.disabled = true;
+      }
+    });
+
+    // WHEN EDIT BUTTON IS CLICKED
+    editNpeBtn.addEventListener('click', ()=>{
+      ctaContainer.style.display = 'block';
+      confirmedOneInput.disabled = false;
+      confirmedTwoInput.disabled = false;
+      confirmedThreeInput.disabled = false;
+      editNpeBtn.style.display = 'none';
+    });
+
+    // REFER TO FUNCTION NAME
+    function doMath(x, y, z) {
+      totalValue = Number(x) + Number(y) + Number(z);
+    }
+
+    // FORMATS TOTAL VALUE INTO CURRANCY
+    function formatMoney(amount, decimalCount = 2, decimal = ".", thousands = ",") {
+      try {
+        decimalCount = Math.abs(decimalCount);
+        decimalCount = isNaN(decimalCount) ? 2 : decimalCount;
+
+        const negativeSign = amount < 0 ? "-" : "";
+
+        let i = parseInt(amount = Math.abs(Number(amount) || 0).toFixed(decimalCount)).toString();
+        let j = (i.length > 3) ? i.length % 3 : 0;
+
+        return negativeSign +
+          (j ? i.substr(0, j) + thousands : '') +
+          i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + thousands) +
+          (decimalCount ? decimal + Math.abs(amount - i).toFixed(decimalCount).slice(2) : "");
+      } catch (e) {
+        console.log(e)
+      }
+    };
+
+    // CALL TO ACTION OUTCOME
+    submitBtn.addEventListener('click', ()=>{
+      if(Number(totalValue) > 90000) {
+        errorMessage.style.display = 'block';
+        errorMessageTwo.style.display = 'block';
+        successMessage.style.display = 'none';
+      } else {
+        errorMessage.style.display = 'none';
+        errorMessageTwo.style.display = 'none';
+        successMessage.style.display = 'block';
+        naOne.style.display = 'none';
+        naTwo.style.display = 'none';
+        naThree.style.display = 'none';
+        tagWaitingOne.style.display = 'inline-block';
+        tagWaitingTwo.style.display = 'inline-block';
+        tagWaitingThree.style.display = 'inline-block';
+        tagRejectedThree.style.display = 'none';
+        tagAcceptedOne.style.display = 'none';
+      }
+      scroll(0,0);
+    });
+  </script>
 {% endblock %}
