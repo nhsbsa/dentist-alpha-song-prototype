@@ -163,7 +163,7 @@
           </tr>
           <tr role="row" class="nhsuk-table__row">
             <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">Clinician ID </span>527386
+              <span class="nhsuk-table-responsive__heading">Clinician ID </span>577386
             </td>
             <td role="cell" class="nhsuk-table__cell">
               <span class="nhsuk-table-responsive__heading">Name </span>Tom Hardy
@@ -207,7 +207,7 @@
         </tbody>
       </table>
 
-      <button id="edit-npe-btn" class="nhsuk-button nhsuk-button--secondary nhsuk-u-margin-top-5 nhsuk-u-margin-bottom-0" data-module="nhsuk-button" type="submit">
+      <button id="edit-npe-btn" class="nhsuk-button nhsuk-button--secondary nhsuk-u-margin-top-5 nhsuk-u-margin-bottom-0" data-module="nhsuk-button" type="submit" style="display: none;">
         Edit NPE/NPEE
       </button>
 
@@ -299,6 +299,7 @@
         tagAcceptedOne.style.display = 'inline-block';
         tagWaitingTwo.style.display = 'inline-block';
         tagRejectedThree.style.display = 'block';
+        editNpeBtn.style.display = 'block';
         resultRefresh();
       } 
     };
