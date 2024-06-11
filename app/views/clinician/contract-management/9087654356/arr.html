@@ -77,7 +77,7 @@
               <span class="nhsuk-table-responsive__heading">Pay </span>£10,000
             </td>
             <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">Status </span>Action required
+              <span class="nhsuk-table-responsive__heading">Status </span><span id="action-required">Action required</span><span id="action-submitted" style="display: none;">Submitted</span>
             </td>
             <td role="cell" class="nhsuk-table__cell">
               <span class="nhsuk-table-responsive__heading">Action </span>
@@ -136,4 +136,18 @@
       </table>
     </div>
   </div>
+{% endblock %}
+
+{% block pageScripts %}
+  <script>
+    const required = document.getElementById('action-required');
+    const submitted = document.getElementById('action-submitted');
+
+    window.onload = function() {
+      if(localStorage['hasNpeResponse'] == "Yes") {
+        required.style.display = 'none';
+        submitted.style.display = 'block';
+      } 
+    };
+  </script>
 {% endblock %}
