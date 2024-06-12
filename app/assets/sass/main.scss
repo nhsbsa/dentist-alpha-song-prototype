@@ -205,6 +205,10 @@
       align-items: center;
     }
   }
+  &-action_list {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .nhsuk-card--blueborder {
