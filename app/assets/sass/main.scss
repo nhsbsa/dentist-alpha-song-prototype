@@ -4,6 +4,7 @@
 // Components that are not in the NHS.UK frontend library
 @import "components/list-border";
 @import "components/related-nav";
+@import "components/warning-text";
 
 ///////////////////////////////////////////
 // Add your custom CSS/Sass styles below...
@@ -151,6 +152,10 @@
     font-size: 3rem;
     line-height: 1.0416666667;
   }
+}
+.nhsuk-panel--confirmation {
+  color: #fff;
+  background: #00703c;
 }
 
 .nhsuk-user-text {
