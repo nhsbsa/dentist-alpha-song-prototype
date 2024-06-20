@@ -90,9 +90,9 @@
           <label class="nhsuk-label nhsuk-u-font-weight-bold" for="number-on-the-account">
             Card number
           </label>
-          <input class="nhsuk-input" id="number-on-the-account" name="numberOnTheAccount" type="text" spellcheck="false"
-            autocomplete="name" placeholder="card number">
-          <figure class="nhsuk-image nhsuk-u-margin-top-3 nhsuk-u-margin-bottom-3">
+          <input class="nhsuk-input nhsuk-u-padding-left-3" id="number-on-the-account" name="numberOnTheAccount"
+            type="text" spellcheck="false" autocomplete="name" placeholder="Card number">
+          <figure class="nhsuk-image nhsuk-no-border nhsuk-u-margin-top-3 nhsuk-u-margin-bottom-3">
             <img class="nhsuk-image__img" src="/images/cards.png" alt="supported cards">
           </figure>
           <p class="nhsuk-hint">Accepted credit and debit card types</p>
@@ -119,8 +119,8 @@
                 <label class="nhsuk-label nhsuk-date-input__label" for="expiry-year">
                   Year
                 </label>
-                <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="expiry-year"
-                  name="expiry-year" type="text" pattern="[0-9]*" inputmode="numeric" placeholder="yy">
+                <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2 nhsuk-u-padding-left-3"
+                  id="expiry-year" name="expiry-year" type="text" pattern="[0-9]*" inputmode="numeric" placeholder="yy">
               </div>
             </div>
           </div>
@@ -129,8 +129,8 @@
           <label class="nhsuk-label nhsuk-u-font-weight-bold nhsuk-u-margin-top-5" for="card-name-on-the-account">
             Name on card
           </label>
-          <input class="nhsuk-input" id="card-name-on-the-account" name="cardnameOnTheAccount" type="text"
-            spellcheck="false" autocomplete="name" placeholder="Card holder name">
+          <input class="nhsuk-input nhsuk-u-padding-left-3" id="card-name-on-the-account" name="cardnameOnTheAccount"
+            type="text" spellcheck="false" autocomplete="name" placeholder="Card holder name">
         </div>
         <div class="nhsuk-form-group nhsuk-u-margin-top-5">
           <label class="nhsuk-label nhsuk-u-font-weight-bold" for="card-security-code">
@@ -140,16 +140,18 @@
             The last 3 digits on the back of the card
           </div>
           <div class="nhsuk-input__wrapper">
-            <input class="nhsuk-input nhsuk-input--width-5 nhsuk-input--extra-letter-spacing  nhsuk-u-margin-top-3"
+            <input
+              class="nhsuk-input nhsuk-input--width-4 nhsuk-input--extra-letter-spacing  nhsuk-u-margin-top-3 nhsuk-u-padding-left-2"
               id="card-security-code" name="securityCode" type="text" spellcheck="false"
               aria-describedby="csc-code-hint" inputmode="numeric" placeholder="***">
-            <figure class="nhsuk-image nhsuk-u-padding-left-5 nhsuk-u-margin-top-3 nhsuk-u-margin-bottom-3">
+            <figure
+              class="nhsuk-image nhsuk-no-border nhsuk-u-padding-left-5 nhsuk-u-margin-top-3 nhsuk-u-margin-bottom-3">
               <img class="nhsuk-image__img" src="/images/cvv.png" alt="security code" width="60"
                 style="max-width: fit-content;" height="39">
             </figure>
           </div>
         </div>
-        <h3 class="nhsuk-heading-m nhsuk-u-margin-top-5" id="debt-card-details">
+        <h3 class="nhsuk-heading-m nhsuk-u-margin-top-5nhsuk-u-margin-bottom-2" id="debt-card-details">
           Contact details
         </h3>
         <div class="nhsuk-form-group">
@@ -161,9 +163,9 @@
           </label>
           <input class="nhsuk-input" id="debt-email-details-1" name="account-email-detail" type="text"
             spellcheck="false" aria-describedby="email-with-hint-text-hint" value="john.doe@email.com">
-          <div class="nhsuk-inset-text">
+          <div class="nhsuk-inset-text nhsuk-u-margin-top-3">
             <span class="nhsuk-u-visually-hidden nhsuk-u-margin-top-2">Information: </span>
-            <p>An email will be sent to <strong>john.doe@email.com</strong></p>
+            <p class="nhsuk-body">An email will be sent to <strong>john.doe@email.com</strong></p>
           </div>
         </div>
         <!-- ACTION BUTTONS -->
@@ -213,10 +215,10 @@
             </div>
           </div>
         </div>
-        <h2 class="nhsuk-heading-m" id="debt-card-details">
+        <h2 class="nhsuk-heading-m" id="debt-card-details nhsuk-u-margin-bottom-0">
           Contact details
         </h2>
-        <div class="nhsuk-form-group nhsuk-u-margin-top-5">
+        <div class="nhsuk-form-group nhsuk-u-margin-top-0">
           <div class="nhsuk-hint" id="email-with-hint-text-hint-1">
             We'll send your payment confirmation here
           </div>
@@ -225,9 +227,9 @@
           </label>
           <input class="nhsuk-input" id="debt-email-details" name="account-email-detail" type="text" spellcheck="false"
             aria-describedby="email-with-hint-text-hint-1" value="john.doe@email.com">
-          <div class="nhsuk-inset-text">
-            <span class="nhsuk-u-visually-hidden">Information: </span>
-            <p>An email will be sent to <strong>john.doe@email.com</strong></p>
+          <div class="nhsuk-inset-text nhsuk-u-margin-top-3">
+            <span class="nhsuk-u-visually-hidden nhsuk-u-margin-top-2">Information: </span>
+            <p class="nhsuk-body">An email will be sent to <strong>john.doe@email.com</strong></p>
           </div>
         </div>
         <!-- ACTION BUTTONS -->

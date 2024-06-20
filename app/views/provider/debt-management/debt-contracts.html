@@ -13,15 +13,15 @@ Manage contracts
 <!-- Breadcrumbs -->
 {% block beforeContent %}
 {{ breadcrumb({
-    items: [
-      {
-        href: "/provider/landing-page",
-        text: "Home"
-      }
-    ],
-    href: "/provider/debt-management/debt-contracts",
-    text: "Contracts in debt"
-  }) }}
+items: [
+{
+href: "/provider/landing-page",
+text: "Home"
+}
+],
+href: "/provider/debt-management/debt-contracts",
+text: "Contracts in debt"
+}) }}
 {% endblock %}
 
 <!-- Back link -->
@@ -37,9 +37,9 @@ Manage contracts
     </h1>
 
     <div class="nhsuk-custom-search-filter-container">
-      <div class="nhsuk-custom-search">
-        <input class="nhsuk-search__input nhsuk-custom-search-input" id="contract-search" name="contract-search"
-          type="search" placeholder="Enter contract ID or practise name" autocomplete="off">
+      <div class="nhsuk-custom-search nhsuk-u-width-one-half">
+        <input class="nhsuk-search__input nhsuk-custom-search-input nhsuk-u-width-full" id="contract-search"
+          name="contract-search" type="search" placeholder="Enter contract ID or practise name" autocomplete="off">
         <button class="nhsuk-search__submit nhsuk-custom-search-icon" type="submit">
           <svg class="nhsuk-icon nhsuk-custom-search-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
             aria-hidden="true" focusable="false">
@@ -127,7 +127,7 @@ Manage contracts
       </button>
     </div>
 
-    <hr>
+    <hr class="nhsuk-section-break--visible" />
 
     <table class="nhsuk-table">
       <caption class="nhsuk-table__caption" style="display: none;">Contracts</caption>
@@ -152,7 +152,6 @@ Manage contracts
             Last payment made
           </th>
           <th role="columnheader" class="" scope="col">
-
           </th>
         </tr>
       </thead>

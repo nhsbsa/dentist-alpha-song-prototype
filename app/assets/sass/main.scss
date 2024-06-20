@@ -279,3 +279,12 @@
     align-items: center;
   }
 }
+.nhsuk-no-border {
+  border: none;
+  & thead th {
+    border: none;
+  }
+  & tbody td {
+    border: none;
+  }
+}
