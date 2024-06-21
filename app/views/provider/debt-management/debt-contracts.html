@@ -6,30 +6,25 @@
 {% extends 'default-layout.html' %}
 
 <!-- Set the page title -->
-{% block pageTitle %}
-Manage contracts
-{% endblock %}
+{% block pageTitle %}Contracts in debt{% endblock %}
 
 <!-- Breadcrumbs -->
 {% block beforeContent %}
-{{ breadcrumb({
-items: [
-{
-href: "/provider/landing-page",
-text: "Home"
-}
-],
-href: "/provider/debt-management/debt-contracts",
-text: "Contracts in debt"
-}) }}
+  {{ breadcrumb({
+    items: [
+      {
+        href: "/provider/landing-page",
+        text: "Home"
+      }
+      ],
+        href: "/provider/debt-management/debt-contracts",
+        text: "Contracts in debt"
+  }) }}
 {% endblock %}
 
 <!-- Back link -->
-{% block outerContent %}
-{% endblock %}
+{% block outerContent %} {% endblock %} {% block content %}
 
-<!-- Content -->
-{% block content %}
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-full">
     <h1>

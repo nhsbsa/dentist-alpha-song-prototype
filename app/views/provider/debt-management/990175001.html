@@ -6,34 +6,29 @@
 {% extends 'default-layout.html' %}
 
 <!-- Set the page title -->
-{% block pageTitle %}
-Contract details
-{% endblock %}
+{% block pageTitle %}Contract name{% endblock %}
 
 <!-- Breadcrumbs -->
 {% block beforeContent %}
-{{ breadcrumb({
-items: [
-{
-href: "/provider/landing-page",
-text: "Home"
-},
-{
-href: "/provider/debt-management/debt-contracts",
-text: "Contracts in debt"
-}
-],
-href: "/provider/debt-management/990175001",
-text: "990175001"
-}) }}
+  {{ breadcrumb({
+    items: [
+      {
+        href: "/provider/landing-page",
+        text: "Home"
+      },
+      {
+        href: "/provider/debt-management/debt-contracts",
+        text: "Contracts in debt"
+      }
+      ],
+        href: "/provider/debt-management/990175001",
+        text: "990175001"
+  }) }}
 {% endblock %}
 
 <!-- Back link -->
-{% block outerContent %}
+{% block outerContent %} {% endblock %} {% block content %}
 
-{% endblock %}
-
-{% block content %}
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-full">
     <h1 class="nhsuk-u-margin-bottom-0">
@@ -71,14 +66,12 @@ text: "990175001"
               <li>
                 <a href="#"
                   class="nhsuk-card__link nhsuk-u-font-weight-normal nhsuk-u-font-size-19 nhsuk-link--no-visited-state">View
-                  pay
-                  statements</a>
+                  pay statements</a>
               </li>
               <li>
                 <a href="#"
                   class="nhsuk-card__link nhsuk-u-font-weight-normal nhsuk-u-font-size-19 nhsuk-link--no-visited-state">View
-                  full
-                  contract history</a>
+                  full contract history</a>
               </li>
             </ul>
           </div>
@@ -88,8 +81,7 @@ text: "990175001"
     <div id="debtPlan" class="nhsuk-u-margin-top-5">
       <h2 class="nhsuk-card__heading">
         Debt recovery plan
-        <span class="nhsuk-caption-m nhsuk-caption--bottom">Your debt is being automatically recovered through
-          monthly
+        <span class="nhsuk-caption-m nhsuk-caption--bottom">Your debt is being automatically recovered through monthly
           payment deductions.</span>
       </h2>
       <p class="nhsuk-body nhsuk-u-margin-bottom-0 nhsuk-u-font-weight-bold">Monthly recovery amount</p>
@@ -97,20 +89,13 @@ text: "990175001"
       <p class="nhsuk-body nhsuk-u-margin-bottom-0 nhsuk-u-font-weight-bold">Remaining recovery duration</p>
       <p class="nhsuk-body nhsuk-u-font-size-32 nhsuk-u-font-weight-bold ">5 months</p>
       <ul class="nhsuk-list">
-        <!-- <li>
-          <a class="nhsuk-u-font-weight-normal nhsuk-u-font-size-19 nhsuk-link--no-visited-state" href="#">Manage
-            debt
-            recovery plan</a>
-        </li> -->
         <li>
           <a class="nhsuk-u-font-weight-normal nhsuk-u-font-size-19 nhsuk-link--no-visited-state"
-            href="/provider/debt-management/990175001/debt-payment">Make a
-            one-off payment</a>
+            href="/provider/debt-management/990175001/debt-payment"> Make a one-off payment </a>
         </li>
         <li>
-          <a class="nhsuk-u-font-weight-normal nhsuk-u-font-size-19 nhsuk-link--no-visited-state" href="#">View
-            payment
-            history</a>
+          <a class="nhsuk-u-font-weight-normal nhsuk-u-font-size-19 nhsuk-link--no-visited-state" href="#"> View payment
+            history </a>
         </li>
       </ul>
       <div class="nhsuk-u-margin-top-5">
@@ -203,14 +188,9 @@ text: "990175001"
               href="/provider/debt-management/990175001/debt-payment">Make
               payment</a>
           </li>
-          <!-- <li>
-            <a class="nhsuk-u-font-weight-normal nhsuk-u-font-size-19 nhsuk-link--no-visited-state" href="#">Create debt
-              recovery plan</a>
-          </li> -->
           <li>
             <a class="nhsuk-u-font-weight-normal nhsuk-u-font-size-19 nhsuk-link--no-visited-state" href="#">View
-              payment
-              history</a>
+              payment history</a>
           </li>
         </ul>
       </div>
@@ -290,25 +270,24 @@ text: "990175001"
         </li>
       </ul>
     </div>
-
-  </div>
-</div>
-{% endblock %}
-{% block pageScripts %}
-<script>
-  window.onload = function () {
-    // check query param showDebtPlan value
-    const urlParams = new URLSearchParams(window.location.search);
-    //  console.log(urlParams.toString());
-    const DebtPlanDisplay = (urlParams.get('showDebtPlan') === 'true') || false;
-    const debtPlanDiv = document.getElementById('debtPlan');
-    const totalDebtDiv = document.getElementById('totalDebt');
-    if (DebtPlanDisplay === true) {
-      debtPlanDiv.style.display = 'block';
-      totalDebtDiv.style.display = 'none';
-    } else {
-      debtPlanDiv.style.display = 'none';
-    }
-  }
-</script>
-{% endblock %}
+    
+    </div>
+    </div>
+    {% endblock %}
+    {% block pageScripts %}
+    <script>
+      window.onload = function () {
+        // check query param showDebtPlan value
+        const urlParams = new URLSearchParams(window.location.search);
+        const DebtPlanDisplay = (urlParams.get('showDebtPlan') === 'true') || false;
+        const debtPlanDiv = document.getElementById('debtPlan');
+        const totalDebtDiv = document.getElementById('totalDebt');
+        if (DebtPlanDisplay === true) {
+          debtPlanDiv.style.display = 'block';
+          totalDebtDiv.style.display = 'none';
+        } else {
+          debtPlanDiv.style.display = 'none';
+        }
+      }
+    </script>
+    {% endblock %}

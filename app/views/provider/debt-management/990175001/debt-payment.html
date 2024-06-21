@@ -6,7 +6,7 @@
 {% extends 'default-layout.html' %}
 
 <!-- Set the page title -->
-{% block pageTitle %} Contract details {% endblock %}
+{% block pageTitle %} Debt Payment {% endblock %}
 
 
 <!-- Back link -->
@@ -70,7 +70,7 @@
             <div class="nhsuk-radios__item">
               <input class="nhsuk-radios__input" id="debt-credit-option" name="debt-prefer-payment" type="radio"
                 value="yes">
-              <label class="nhsuk-label nhsuk-radios__label" for="debt-total-yes">
+              <label class="nhsuk-label nhsuk-radios__label" for="debt-credit-option">
                 Credit or debit card
               </label>
             </div>
@@ -78,7 +78,7 @@
             <div class="nhsuk-radios__item">
               <input class="nhsuk-radios__input" id="debt-bacs-option" name="debt-prefer-payment" type="radio"
                 value="no">
-              <label class="nhsuk-label nhsuk-radios__label" for="debt-total-no">
+              <label class="nhsuk-label nhsuk-radios__label" for="debt-bacs-option">
                 Bacs transfer
               </label>
             </div>
@@ -93,13 +93,6 @@
           </label>
           <input class="nhsuk-input" id="number-on-the-account" name="numberOnTheAccount" type="text" spellcheck="false"
             autocomplete="name" placeholder="Card number">
-          <div>
-
-          </div>
-          <!-- <div class="">
-            <img class="nhsuk-image__img" height="40" width="50" src="/images/cards/Amex.svg" alt="supported cards">
-
-          </div> -->
           <figure class="nhsuk-image nhsuk-no-border nhsuk-u-margin-top-3 nhsuk-u-margin-bottom-3">
             <img class="nhsuk-image__img" src="/images/cards.png" alt="supported cards">
           </figure>
@@ -271,12 +264,6 @@
     });
 
   };
-  function submitPaymentConfirmation() {
-    alert('hi');
-    document.getElementById('confirm-payment-btn').addEventListener('click', () => {
-      window.location.href = '/provider/debt-management/990175001/debt-payment-confirmation';
-    });
-  }
 
 </script>
 {% endblock %}
