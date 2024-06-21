@@ -36,93 +36,103 @@
           <h1 class="nhsuk-u-margin-bottom-4">
             Edit Clinician
           </h1>
-
-          <div class="nhsuk-form-group">
-            <label class="nhsuk-label nhsuk-u-font-weight-bold" for="clinician-id">
-              Clinician ID
-            </label>
-            <input class="nhsuk-input" id="clinician-id" name="clinician-id" type="text" value="123456789">
+          <!-- FOR NEW CLINICIAN -->
+          <div style="display: none;">
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label nhsuk-u-font-weight-bold" for="clinician-id">
+                Clinician ID
+              </label>
+              <input class="nhsuk-input" id="clinician-id" name="clinician-id" type="text" value="123456789" oninput="filterInputFunction(value)">
+              <div id="filter-input" class="nhsuk-filter-input-box" style="display: none;">
+                <a id="filter-input-row-1" class="nhsuk-link nhsuk-link--no-visited-state nhsuk-filter-input-link">123456789, Tom Holland</a>
+                <a id="filter-input-row-2" class="nhsuk-link nhsuk-link--no-visited-state nhsuk-filter-input-link">123456784, Ella Purnell</a>
+              </div>
+            </div>
+            <details id="clinician-detail" class="nhsuk-details">
+              <summary class="nhsuk-details__summary">
+                <span class="nhsuk-details__summary-text">
+                  I don’t know the Clinician’s ID
+                </span>
+              </summary>
+              <div class="nhsuk-details__text">
+                <p class="nhsuk-u-font-weight-bold nhsuk-u-margin-bottom-2">What is the clinician’s name?</p>
+                <div class="nhsuk-custom-search">
+                  <input class="nhsuk-search__input nhsuk-custom-search-input" id="contract-search" name="contract-search" type="search" placeholder="Search" autocomplete="off">
+                  <button id="clinician-name-search" class="nhsuk-search__submit nhsuk-custom-search-icon" type="submit">
+                    <svg class="nhsuk-icon nhsuk-custom-search-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                      <path d="M19.71 18.29l-4.11-4.1a7 7 0 1 0-1.41 1.41l4.1 4.11a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42zM5 10a5 5 0 1 1 5 5 5 5 0 0 1-5-5z"></path>
+                    </svg>
+                    <span class="nhsuk-u-visually-hidden">Search</span>
+                  </button>
+                </div>
+  
+                <table role="table" class="nhsuk-table-responsive">
+                  <caption class="nhsuk-u-visually-hidden">Clinicians table</caption>
+                  <thead role="rowgroup" class="nhsuk-table__head">
+                    <tr role="row">
+                      <th role="columnheader" class="" scope="col">
+                        Name
+                      </th>
+                      <th role="columnheader" class="" scope="col">
+                        Clinician ID
+                      </th>
+                      <th role="columnheader" class="" scope="col">
+                        GDC Number
+                      </th>
+                      <th role="columnheader" class="" scope="col">
+                        Location
+                      </th>
+                      <th role="columnheader" class="" scope="col">
+                        <span class="nhsuk-u-visually-hidden">Action</span>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody class="nhsuk-table__body">
+                    <tr id="clinician-name-results" role="row" class="nhsuk-table__row" style="display: none;">
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Name </span> Ella Purnell
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Clinician ID </span>123456784
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">GDC Number </span>5432457
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Location </span>London
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Action </span>
+                        <a id="ella-select" href="#" class="nhsuk-link nhsuk-link--no-visited-state">Select</a> 
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </details>
           </div>
 
-          <details class="nhsuk-details">
-            <summary class="nhsuk-details__summary">
-              <span class="nhsuk-details__summary-text">
-                I don’t know the Clinician’s ID
-              </span>
-            </summary>
-            <div class="nhsuk-details__text">
-              <p class="nhsuk-u-font-weight-bold nhsuk-u-margin-bottom-2">What is the clinician’s name?</p>
-              <div class="nhsuk-custom-search">
-                <input class="nhsuk-search__input nhsuk-custom-search-input" id="contract-search" name="contract-search" type="search" placeholder="Search" autocomplete="off">
-                <button class="nhsuk-search__submit nhsuk-custom-search-icon" type="submit">
-                  <svg class="nhsuk-icon nhsuk-custom-search-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                    <path d="M19.71 18.29l-4.11-4.1a7 7 0 1 0-1.41 1.41l4.1 4.11a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42zM5 10a5 5 0 1 1 5 5 5 5 0 0 1-5-5z"></path>
-                  </svg>
-                  <span class="nhsuk-u-visually-hidden">Search</span>
-                </button>
-              </div>
-
-              <table role="table" class="nhsuk-table-responsive">
-                <caption class="nhsuk-u-visually-hidden">Clinicians table</caption>
-                <thead role="rowgroup" class="nhsuk-table__head">
-                  <tr role="row">
-                    <th role="columnheader" class="" scope="col">
-                      Name
-                    </th>
-                    <th role="columnheader" class="" scope="col">
-                      Clinician ID
-                    </th>
-                    <th role="columnheader" class="" scope="col">
-                      GDC Number
-                    </th>
-                    <th role="columnheader" class="" scope="col">
-                      Location
-                    </th>
-                    <th role="columnheader" class="" scope="col">
-                      <span class="nhsuk-u-visually-hidden">Action</span>
-                    </th>
-                  </tr>
-                </thead>
-                <tbody class="nhsuk-table__body">
-                  <tr role="row" class="nhsuk-table__row">
-                    <td role="cell" class="nhsuk-table__cell">
-                      <span class="nhsuk-table-responsive__heading">Name </span> Tom Holland
-                    </td>
-                    <td role="cell" class="nhsuk-table__cell">
-                      <span class="nhsuk-table-responsive__heading">Clinician ID </span>12034
-                    </td>
-                    <td role="cell" class="nhsuk-table__cell">
-                      <span class="nhsuk-table-responsive__heading">GDC Number </span>6497356
-                    </td>
-                    <td role="cell" class="nhsuk-table__cell">
-                      <span class="nhsuk-table-responsive__heading">Location </span>London
-                    </td>
-                    <td role="cell" class="nhsuk-table__cell">
-                      <span class="nhsuk-table-responsive__heading">Action </span>
-                      <a href="#" class="nhsuk-link nhsuk-link--no-visited-state">Select</a> 
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+          <p class="nhsuk-u-font-weight-bold nhsuk-u-margin-bottom-2">Clinician’s ID</p>
+          <p id="details-name-1">123456789</p>
           
-            </div>
-          </details>
-
           <p class="nhsuk-u-font-weight-bold nhsuk-u-margin-bottom-2">Clinician’s name</p>
-          <p>Tom Holland</p>
+          <p id="details-name-1">Tom Holland</p>
+          <p id="details-name-2" style="display: none;">Ella Purnell</p>
 
           <p class="nhsuk-u-font-weight-bold nhsuk-u-margin-bottom-2">GDC number</p>
-          <p>6497356</p>
+          <p id="details-gdc-1">6497356</p>
+          <p id="details-gdc-2" style="display: none;">5432457</p>
 
           <p class="nhsuk-u-font-weight-bold nhsuk-u-margin-bottom-2">Role type</p>
           <p>DCP</p>
 
-          <hr />
+          <p class="nhsuk-u-font-weight-bold nhsuk-u-margin-bottom-2">Opted into the pension scheme?</p>
+          <p>Yes</p>
 
           <div class="nhsuk-form-group">
             <fieldset class="nhsuk-fieldset" role="group">
               <legend class="nhsuk-label nhsuk-u-font-weight-bold" for="performer-start-date">
-                Performer Start Date
+                What is their start date on the contract?
               </legend>
       
               <div class="nhsuk-date-input" id="performer-start-date">
@@ -157,7 +167,7 @@
           <div class="nhsuk-form-group">
             <fieldset class="nhsuk-fieldset" role="group">
               <legend class="nhsuk-label nhsuk-u-font-weight-bold" for="performer-end-date">
-                Performer End Date
+                What is their end date on the contract?
               </legend>
       
               <div class="nhsuk-date-input" id="performer-end-date">
@@ -189,39 +199,29 @@
             </fieldset>
           </div>
 
-          <fieldset class="nhsuk-fieldset nhsuk-u-margin-top-6">
-            <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
-              <h2 class="nhsuk-fieldset__heading">Correspondence Address</h2>
-            </legend>
+          <div class="nhsuk-form-group" style="display:none;">
+            <fieldset class="nhsuk-fieldset">
+              <legend class="nhsuk-label nhsuk-u-font-weight-bold">
+                Is the clinician currently opted into the pension scheme?
+              </legend>
           
-            <div class="nhsuk-form-group">
-              <label class="nhsuk-label nhsuk-u-font-weight-bold" for="address-line-1">
-                Building and street <span class="nhsuk-u-visually-hidden">line 1 of 2</span>
-              </label>
-              <input class="nhsuk-input" id="address-line-1" name="address-line-1" type="text" value="3 Pudding Plate Close">
-            </div>
+              <div class="nhsuk-radios">
+                <div class="nhsuk-radios__item">
+                  <input class="nhsuk-radios__input" id="pension-opt-1" name="pension-opt" type="radio" value="yes">
+                  <label class="nhsuk-label nhsuk-radios__label" for="pension-opt-1">
+                    Yes
+                  </label>
+                </div>
           
-            <div class="nhsuk-form-group">
-              <label class="nhsuk-label nhsuk-u-font-weight-bold" for="address-town">
-                Town or city
-              </label>
-              <input class="nhsuk-input nhsuk-u-width-two-thirds" id="address-town" name="address-town" type="text" value="Darlington">
-            </div>
-          
-            <div class="nhsuk-form-group">
-              <label class="nhsuk-label nhsuk-u-font-weight-bold" for="address-county">
-                County
-              </label>
-              <input class="nhsuk-input nhsuk-u-width-two-thirds" id="address-county" name="address-county" type="text" value="Durham">
-            </div>
-          
-            <div class="nhsuk-form-group nhsuk-u-margin-bottom-0">
-              <label class="nhsuk-label nhsuk-u-font-weight-bold" for="address-postcode">
-                Postcode
-              </label>
-              <input class="nhsuk-input nhsuk-input--width-10" id="address-postcode" name="address-postcode" type="text" value="SA1 3EN">
-            </div>
-          </fieldset>
+                <div class="nhsuk-radios__item">
+                  <input class="nhsuk-radios__input" id="pension-opt-2" name="pension-opt" type="radio" value="no">
+                  <label class="nhsuk-label nhsuk-radios__label" for="pension-opt-2">
+                    No
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
         </div>
       </div>
 
@@ -231,7 +231,7 @@
       <div class="nhsuk-grid-row">
         <div class="nhsuk-grid-column-two-thirds">
           <!-- CARD 1 -->
-          <div class="nhsuk-npe-card">
+          <div id="npe-1" class="nhsuk-npe-card">
             <h3 class="nhsuk-u-margin-bottom-0">NPE 1</h3>
             <dl class="nhsuk-summary-list nhsuk-summary-list--no-border nhsuk-u-margin-bottom-3">
               <div class="nhsuk-summary-list__row">
@@ -344,10 +344,10 @@
                 </dd>
               </div>
             </dl>
-            <a href="#" class="nhsuk-link link-red nhsuk-link--no-visited-state">Remove</a>
+            <a id="remove-1" href="#" class="nhsuk-link link-red nhsuk-link--no-visited-state">Remove</a>
           </div>
           <!-- CARD 2 -->
-          <div class="nhsuk-npe-card nhsuk-u-margin-top-4">
+          <div id="npe-2" class="nhsuk-npe-card nhsuk-u-margin-top-4">
             <h3 class="nhsuk-u-margin-bottom-0">NPE 2</h3>
             <dl class="nhsuk-summary-list nhsuk-summary-list--no-border nhsuk-u-margin-bottom-3">
               <div class="nhsuk-summary-list__row">
@@ -460,12 +460,128 @@
                 </dd>
               </div>
             </dl>
-            <a href="#" class="nhsuk-link link-red nhsuk-link--no-visited-state">Remove</a>
+            <a id="remove-2" href="#" class="nhsuk-link link-red nhsuk-link--no-visited-state">Remove</a>
+          </div>
+          <!-- CARD 3 -->
+          <div id="npe-3" class="nhsuk-npe-card nhsuk-u-margin-top-4" style="display: none;">
+            <h3 class="nhsuk-u-margin-bottom-0">NPE</h3>
+            <dl class="nhsuk-summary-list nhsuk-summary-list--no-border nhsuk-u-margin-bottom-3">
+              <div class="nhsuk-summary-list__row">
+                <dt class="nhsuk-summary-list__key vertical-align">
+                  Start Date
+                </dt>
+                <dd class="nhsuk-summary-list__value">
+                  <div class="nhsuk-form-group">
+                    <fieldset class="nhsuk-fieldset" role="group">
+                      <legend class="nhsuk-u-visually-hidden" for="npe-npee-start-date">
+                        NPE/NPEE Start Date
+                      </legend>
+                      <div class="nhsuk-date-input" id="npe-npee-start-date">
+                        <div class="nhsuk-date-input__item">
+                          <div class="nhsuk-form-group">
+                            <label class="nhsuk-label nhsuk-date-input__label" for="start-day">
+                              Day
+                            </label>
+                            <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="start-day" name="start-day" type="text" pattern="[0-9]*" inputmode="numeric">
+                          </div>
+                        </div>
+                        <div class="nhsuk-date-input__item">
+                          <div class="nhsuk-form-group">
+                            <label class="nhsuk-label nhsuk-date-input__label" for="start-month">
+                              Month
+                            </label>
+                            <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="start-month" name="start-month" type="text" pattern="[0-9]*" inputmode="numeric">
+                          </div>
+                        </div>
+                        <div class="nhsuk-date-input__item">
+                          <div class="nhsuk-form-group">
+                            <label class="nhsuk-label nhsuk-date-input__label" for="start-year">
+                              Year
+                            </label>
+                            <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="start-year" name="start-year" type="text" pattern="[0-9]*" inputmode="numeric">
+                          </div>
+                        </div>
+                      </div>
+                    </fieldset>
+                  </div>
+                </dd>
+              </div>
+              <div class="nhsuk-summary-list__row">
+                <dt class="nhsuk-summary-list__key vertical-align">
+                  End Date
+                </dt>
+                <dd class="nhsuk-summary-list__value">
+                  <div class="nhsuk-form-group">
+                    <fieldset class="nhsuk-fieldset" role="group">
+                      <legend class="nhsuk-u-visually-hidden" for="npe-npee-end-date">
+                        NPE/NPEE end Date
+                      </legend>
+                      <div class="nhsuk-date-input" id="npe-npee-end-date">
+                        <div class="nhsuk-date-input__item">
+                          <div class="nhsuk-form-group">
+                            <label class="nhsuk-label nhsuk-date-input__label" for="end-day">
+                              Day
+                            </label>
+                            <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="end-day" name="end-day" type="text" pattern="[0-9]*" inputmode="numeric">
+                          </div>
+                        </div>
+                        <div class="nhsuk-date-input__item">
+                          <div class="nhsuk-form-group">
+                            <label class="nhsuk-label nhsuk-date-input__label" for="end-month">
+                              Month
+                            </label>
+                            <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="end-month" name="end-month" type="text" pattern="[0-9]*" inputmode="numeric">
+                          </div>
+                        </div>
+                        <div class="nhsuk-date-input__item">
+                          <div class="nhsuk-form-group">
+                            <label class="nhsuk-label nhsuk-date-input__label" for="end-year">
+                              Year
+                            </label>
+                            <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="end-year" name="end-year" type="text" pattern="[0-9]*" inputmode="numeric">
+                          </div>
+                        </div>
+                      </div>
+                    </fieldset>
+                  </div>
+                </dd>
+              </div>
+              <div class="nhsuk-summary-list__row">
+                <dt class="nhsuk-summary-list__key vertical-align">
+                  Employment Type
+                </dt>
+                <dd class="nhsuk-summary-list__value">
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-u-visually-hidden" for="employment-type">
+                      Employment Type
+                    </label>
+                    <select class="nhsuk-select" id="employment-type" name="employment-type">
+                      <option value="1" selected>Select</option>
+                      <option value="2">Option 1</option>
+                      <option value="3">Option 2</option>
+                    </select>
+                  </div>
+                </dd>
+            
+              </div>
+              <div class="nhsuk-summary-list__row">
+                <dt class="nhsuk-summary-list__key vertical-align">
+                  NPE value
+                </dt>
+                <dd class="nhsuk-summary-list__value">
+                  <div class="nhsuk-input__wrapper">
+                    <div class="nhsuk-input__prefix" aria-hidden="true">£</div>
+                    <input class="nhsuk-input nhsuk-input--width-5" id="value" name="value" type="text">
+                  </div>
+                </dd>
+              </div>
+            </dl>
+            <a id="remove-3" href="#" class="nhsuk-link link-red nhsuk-link--no-visited-state">Remove</a>
           </div>
         </div>
       </div>
 
-      <a id="" href="#" class="nhsuk-button nhsuk-button--secondary nhsuk-u-margin-bottom-0 nhsuk-u-margin-top-4" data-module="nhsuk-button" type="submit">
+      <a id="add-npe-npee-btn" href="#" class="nhsuk-button nhsuk-button--secondary nhsuk-u-margin-bottom-0 nhsuk-u-margin-top-4" data-module="nhsuk-button" type="submit">
         Add NPE/NPEE
       </a>
 
@@ -485,22 +601,93 @@
 {% block pageScripts %}
   <script>
     const addClinicianBtn = document.getElementById('add-clinician');
+    const addNpeBtn = document.getElementById('add-npe-npee-btn');
+    const detailsName1 = document.getElementById('details-name-1');
+    const detailsName2 = document.getElementById('details-name-2');
+    const detailsGdc1 = document.getElementById('details-gdc-1');
+    const detailsGdc2 = document.getElementById('details-gdc-2');
+    const clinicianId = document.getElementById('clinician-id');
+    const filterInput = document.getElementById('filter-input');
+    const filterInputR1 = document.getElementById('filter-input-row-1');
+    const filterInputR2 = document.getElementById('filter-input-row-2');
+    const clinicianNameSearch = document.getElementById('clinician-name-search');
+    const clinicianNameResults = document.getElementById('clinician-name-results');
+    const ellaSelect = document.getElementById('ella-select');
+    const clinicianDetail = document.getElementById('clinician-detail');
+    const npe1 = document.getElementById('npe-1');
+    const npe2 = document.getElementById('npe-2');
+    const npe3 = document.getElementById('npe-3');
+    const remove1 = document.getElementById('remove-1');
+    const remove2 = document.getElementById('remove-2');
+    const remove3 = document.getElementById('remove-3');
     let hasContractEdit = localStorage['hasContractEdit'];
+
+    function filterInputFunction(value) {
+      filterInput.style.display = 'flex';
+      if (value === "123456784") {
+        filterInputR1.style.display = 'none';
+      } else {
+        filterInputR1.style.display = 'block';
+      }
+    }
+
+    filterInputR1.addEventListener('click', ()=>{
+      filterInput.style.display = 'none';
+      clinicianId.value = '123456789'
+      detailsName1.style.display = 'block';
+      detailsGdc1.style.display = 'block';
+      detailsName2.style.display = 'none';
+      detailsGdc2.style.display = 'none';
+    });
+
+    filterInputR2.addEventListener('click', ()=>{
+      filterInput.style.display = 'none';
+      clinicianId.value = '123456784'
+      detailsName1.style.display = 'none';
+      detailsGdc1.style.display = 'none';
+      detailsName2.style.display = 'block';
+      detailsGdc2.style.display = 'block';
+    });
+
+    clinicianNameSearch.addEventListener('click', ()=>{
+      clinicianNameResults.style.display = 'table-row';
+    });
+
+    ellaSelect.addEventListener('click', ()=>{
+      window.event.preventDefault();
+      clinicianId.value = '123456784'
+      detailsName1.style.display = 'none';
+      detailsGdc1.style.display = 'none';
+      detailsName2.style.display = 'block';
+      detailsGdc2.style.display = 'block';
+      clinicianDetail.removeAttribute('open')
+    });
+
+    remove1.addEventListener('click', ()=>{
+      window.event.preventDefault();
+      remove2.style.display = 'none';
+      npe1.style.display = 'none';
+    });
+
+    remove2.addEventListener('click', ()=>{
+      window.event.preventDefault();
+      remove1.style.display = 'none';
+      npe2.style.display = 'none';
+    });
+
+    remove3.addEventListener('click', ()=>{
+      window.event.preventDefault();
+      npe3.style.display = 'none';
+    });
+
+    addNpeBtn.addEventListener('click', ()=>{
+      window.event.preventDefault();
+      npe3.style.display = 'block';
+    });
 
     addClinicianBtn.addEventListener('click', ()=>{
       localStorage['hasContractEdit'] = 'Yes';
     });
 
-    const addNpeBtn = document.getElementById('add-npe-npee-btn');
-    const deleteNpeBtn = document.getElementById('delete-npe-npee-btn');
-    const npeTableRow = document.getElementById('npe-npee-row');
-
-    addNpeBtn.addEventListener('click', ()=>{
-      npeTableRow.style.display = 'table-row';
-    });
-
-    deleteNpeBtn.addEventListener('click', ()=>{
-      npeTableRow.style.display = 'none';
-    });
   </script>
 {% endblock %}

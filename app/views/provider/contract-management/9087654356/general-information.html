@@ -152,14 +152,14 @@
           </dl>
 
           <div class="nhsuk-view-subheader">
-            <h3 class="nhsuk-u-margin-bottom-0">Clinician Details</h3>
-            <a href="#" class="nhsuk-link--no-visited-state">Edit</a>
+            <h3 class="nhsuk-u-margin-bottom-0">Provider Details</h3>
+            <a href="/provider/contract-management/9087654356/general-information/edit/provider" class="nhsuk-link--no-visited-state">Edit</a>
           </div>
           <hr class="nhsuk-u-margin-top-3 nhsuk-u-margin-bottom-1"/>
           <dl class="nhsuk-summary-list nhsuk-summary-list--no-border">
             <div class="nhsuk-summary-list__row">
               <dt class="nhsuk-summary-list__key">
-                Clinician
+                Provider
               </dt>
               <dd class="nhsuk-summary-list__value">
                 102827
@@ -181,6 +181,15 @@
               </dt>
               <dd class="nhsuk-summary-list__value">
                 -
+              </dd>
+            </div>
+
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">
+                Postcode
+              </dt>
+              <dd class="nhsuk-summary-list__value">
+                SA1 3EN
               </dd>
             </div>
           
@@ -613,32 +622,127 @@
 
         <!-- Panel 5 -->
         <div class="nhsuk-tabs__panel nhsuk-tabs__panel--hidden" id="events-panel">
-      
+          <ul class="nhsuk-grid-row nhsuk-card-group nhsuk-summary-card-custom">
+            <li class="nhsuk-grid-column-one-quarter nhsuk-card-group__item nhsuk-summary-card-custom-list">
+              <div class="nhsuk-card nhsuk-card--blueborder nhsuk-u-margin-bottom-0">
+                <div class="nhsuk-card__content">
+                  <p class="nhsuk-heading-xl nhsuk-u-font-size-32 nhsuk-u-margin-bottom-1">£120,000.00 <span class="nhsuk-u-visually-hidden">Financial Year</span></p><p class="nhsuk-u-font-weight-normal nhsuk-u-font-size-19">Financial Year</p>
+                </div>
+              </div>
+            </li>
+            <li class="nhsuk-grid-column-one-quarter nhsuk-card-group__item nhsuk-summary-card-custom-list">
+              <div class="nhsuk-card nhsuk-card--blueborder nhsuk-u-margin-bottom-0">
+                <div class="nhsuk-card__content">
+                  <p class="nhsuk-heading-xl nhsuk-u-font-size-32 nhsuk-u-margin-bottom-1">£100,000.00 <span class="nhsuk-u-visually-hidden">Contract Ceiling</span></p><p class="nhsuk-u-font-weight-normal nhsuk-u-font-size-19">Contract Ceiling</p>
+                </div>
+              </div>
+            </li>
+            <li class="nhsuk-grid-column-one-quarter nhsuk-card-group__item nhsuk-summary-card-custom-list">
+              <div class="nhsuk-card nhsuk-card--blueborder nhsuk-u-margin-bottom-0">
+                <div class="nhsuk-card__content">
+                  <p class="nhsuk-heading-xl nhsuk-u-font-size-32 nhsuk-u-margin-bottom-1">£5000.00 <span class="nhsuk-u-visually-hidden">Ceiling Remaining</span></p><p class="nhsuk-u-font-weight-normal nhsuk-u-font-size-19">Ceiling Remaining</p>
+                </div>
+              </div>
+            </li>
+          </ul>
           <table role="table" class="nhsuk-table-responsive">
             <caption class="nhsuk-u-visually-hidden">Event Table</caption>
             <thead role="rowgroup" class="nhsuk-table__head">
               <tr role="row">
                 <th role="columnheader" class="" scope="col">
-                  Event Date
+                  Name
                 </th>
                 <th role="columnheader" class="" scope="col">
-                  Event Type
+                  Clinician ID
                 </th>
                 <th role="columnheader" class="" scope="col">
-                  Event Title
+                  Start Date
+                </th>
+                <th role="columnheader" class="" scope="col">
+                  End Date
+                </th>
+                <th role="columnheader" class="" scope="col">
+                  Estimated NPE
+                </th>
+                <th role="columnheader" class="" scope="col">
+                  Estimated NPEE
+                </th>
+                <th role="columnheader" class="" scope="col">
+                  <span class="nhsuk-u-visually-hidden">Action</span>
                 </th>
               </tr>
             </thead>
             <tbody class="nhsuk-table__body">
               <tr role="row" class="nhsuk-table__row">
                 <td role="cell" class="nhsuk-table__cell">
-                  <span class="nhsuk-table-responsive__heading">Event Date </span> Tom
+                  <span class="nhsuk-table-responsive__heading">Name </span> Tom Holland
                 </td>
                 <td role="cell" class="nhsuk-table__cell">
-                  <span class="nhsuk-table-responsive__heading">Event Type </span>Holland
+                  <span class="nhsuk-table-responsive__heading">Clinician ID </span>12035
                 </td>
                 <td role="cell" class="nhsuk-table__cell">
-                  <span class="nhsuk-table-responsive__heading">Event Title </span>12034
+                  <span class="nhsuk-table-responsive__heading">Start Date </span>01/04/2023
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">End Date </span>30/07/2023
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Estimated NPE </span>£10,000
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Estimated NPEE </span>£0
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Action </span>
+                  <a href="/provider/contract-management/9087654356/general-information/edit/npe" class="nhsuk-link nhsuk-link--no-visited-state">Edit</a> 
+                </td>
+              </tr>
+              <tr role="row" class="nhsuk-table__row">
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Name </span> Tom Holland
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Clinician ID </span>12035
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Start Date </span>01/06/2023
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">End Date </span>30/03/2024
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Estimated NPE </span>£0
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Estimated NPEE </span>£30,000
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Action </span>
+                  <a href="/provider/contract-management/9087654356/general-information/edit/npe" class="nhsuk-link nhsuk-link--no-visited-state">Edit</a> 
+                </td>
+              </tr>
+              <tr role="row" class="nhsuk-table__row">
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Name </span> Ella Purnell
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Clinician ID </span>12035
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Start Date </span>01/08/2023
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">End Date </span>30/09/2024
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Estimated NPE </span>£55,000
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Estimated NPEE </span>£0
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Action </span>
+                  <a href="/provider/contract-management/9087654356/general-information/edit/npe" class="nhsuk-link nhsuk-link--no-visited-state">Edit</a> 
                 </td>
               </tr>
             </tbody>
