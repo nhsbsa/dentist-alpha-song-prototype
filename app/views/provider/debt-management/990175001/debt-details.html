@@ -22,10 +22,10 @@
   <div class="nhsuk-grid-column-full">
     <h1 class="nhsuk-u-margin-bottom-0">
       Debt details
-      <span class="nhsuk-caption-m nhsuk-caption--bottom">Contract Name, 99017500001</span>
+      <span class="nhsuk-caption-xl nhsuk-caption--bottom">Contract Name, 99017500001</span>
     </h1>
 
-    <hr class="nhsuk-section-break  nhsuk-section-break--m" />
+    <hr class="nhsuk-section-break  nhsuk-section-break--l" />
     <div class="nhsuk-u-margin-top-5">
       <div class="nhsuk-multi-link-row-one">
         <h2 class="nhsuk-heading-m">Debt commencement timeline
@@ -219,8 +219,8 @@
             type="submit">
             Download pay statement
           </button>
-          <a href="#" class="nhsuk-link nhsuk-u-font-weight-bold nhsuk-link--no-visited-state nhsuk-u-margin-left-4">
-            Cancel
+          <a href="/provider/debt-management/990175001" class="nhsuk-link nhsuk-link--no-visited-state">
+            Back
           </a>
         </div>
       </div>
@@ -296,7 +296,7 @@
         <div class="nhsuk-expander-group">
           <details class="nhsuk-details nhsuk-expander">
             <summary class="nhsuk-details__summary">
-              <span class="nhsuk-details__summary-text">
+              <span id="firstMonthExpander" class="nhsuk-details__summary-text">
                 Jan 2024
               </span>
             </summary>
@@ -527,7 +527,7 @@
             type="submit">
             Download pay statement
           </button>
-          <a href="#" class="nhsuk-link nhsuk-u-font-weight-bold nhsuk-link--no-visited-state nhsuk-u-margin-left-4">
+          <a href="/provider/debt-management/990175001" class="nhsuk-link nhsuk-link--no-visited-state ">
             Back
           </a>
         </div>
@@ -565,6 +565,7 @@
   function ShowAllMonthDetails(event) {
     event.preventDefault();
     document.querySelectorAll('.nhsuk-details__summary').forEach(expander => expander.click());
+    document.querySelector('.nhsuk-details__summary').click();
   }
 </script>
 {% endblock %}

@@ -38,7 +38,7 @@ text: "990175001"
   <div class="nhsuk-grid-column-full">
     <h1 class="nhsuk-u-margin-bottom-0">
       Debt Status
-      <span class="nhsuk-caption-m nhsuk-caption--bottom">Contract Name, 99017500001</span>
+      <span class="nhsuk-caption-xl nhsuk-caption--bottom">Contract Name, 99017500001</span>
     </h1>
 
     <hr class="nhsuk-section-break  nhsuk-section-break--l " />
@@ -67,12 +67,20 @@ text: "990175001"
         <div class="nhsuk-card nhsuk-no-border">
           <div class="nhsuk-card__content nhsuk-card-custom-action_list">
             <p class="nhsuk-heading-s nhsuk-u-margin-bottom-1">History</p>
-            <a href="#"
-              class="nhsuk-card__link nhsuk-u-font-weight-normal nhsuk-u-font-size-19 nhsuk-link--no-visited-state">View
-              pay statements</a>
-            <a href="#"
-              class="nhsuk-card__link nhsuk-u-font-weight-normal nhsuk-u-font-size-19 nhsuk-link--no-visited-state">View
-              full contract history</a>
+            <ul class="nhsuk-list">
+              <li>
+                <a href="#"
+                  class="nhsuk-card__link nhsuk-u-font-weight-normal nhsuk-u-font-size-19 nhsuk-link--no-visited-state">View
+                  pay
+                  statements</a>
+              </li>
+              <li>
+                <a href="#"
+                  class="nhsuk-card__link nhsuk-u-font-weight-normal nhsuk-u-font-size-19 nhsuk-link--no-visited-state">View
+                  full
+                  contract history</a>
+              </li>
+            </ul>
           </div>
         </div>
       </li>
@@ -113,7 +121,7 @@ text: "990175001"
           <span class="nhsuk-u-visually-hidden">Information: </span>
           <p class="nhsuk-hint">These indicative figures may be subject to change </p>
         </div>
-        <table class="nhsuk-table nhsuk-no-border">
+        <table class="nhsuk-table nhsuk-table-responsive">
           <caption class="nhsuk-table__caption" style="display: none;">Estimated payment</caption>
           <thead role="rowgroup" class="nhsuk-table__head">
             <tr role="row">
@@ -202,7 +210,7 @@ text: "990175001"
           <span class="nhsuk-u-visually-hidden">Information: </span>
           <p class="nhsuk-hint">These indicative figures may be subject to change </p>
         </div>
-        <table class="nhsuk-table nhsuk-no-border">
+        <table class="nhsuk-table">
           <caption class="nhsuk-table__caption" style="display: none;">Estimated payment</caption>
           <thead role="rowgroup" class="nhsuk-table__head">
             <tr role="row">
@@ -231,7 +239,7 @@ text: "990175001"
         </table>
       </div>
     </div>
-    <div class="nhsuk-u-margin-top-9">
+    <div class="nhsuk-u-margin-top-5">
       <h2 class="nhsuk-card__heading ">
         Help and Information
       </h2>
@@ -255,7 +263,7 @@ text: "990175001"
   window.onload = function () {
     // check query param showDebtPlan value
     const urlParams = new URLSearchParams(window.location.search);
-    console.log(urlParams.toString());
+    //  console.log(urlParams.toString());
     const DebtPlanDisplay = (urlParams.get('showDebtPlan') === 'true') || false;
     const debtPlanDiv = document.getElementById('debtPlan');
     const totalDebtDiv = document.getElementById('totalDebt');
@@ -265,7 +273,6 @@ text: "990175001"
     } else {
       debtPlanDiv.style.display = 'none';
     }
-    console.log(DebtPlanDisplay); //condtional display of div
   }
 </script>
 {% endblock %}

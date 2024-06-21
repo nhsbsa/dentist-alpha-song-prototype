@@ -23,15 +23,16 @@
 </div>
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds">
-    <form action="/provider/debt-management/990175001/debt-payment-confirmation">
+    <form>
       <h1 class="nhsuk-u-margin-bottom-0">
         Debt Payment
-        <span class="nhsuk-caption-m nhsuk-caption--bottom">Contract Name, 99017500001</span>
+        <span class="nhsuk-caption-xl nhsuk-caption--bottom">Contract Name, 99017500001</span>
       </h1>
+      <hr class="nhsuk-section-break  nhsuk-section-break--l" />
       <div class="nhsuk-form-group nhsuk-u-margin-top-5">
         <fieldset class="nhsuk-fieldset">
           <legend class="nhsuk-fieldset__legend nhsuk-u-font-weight-bold">
-            Is this a partial payment or payment of full debt amount?
+            How would you prefer to proceed with the payment: in full or partially?
           </legend>
           <div class="nhsuk-radios">
             <div class="nhsuk-radios__item">
@@ -90,8 +91,15 @@
           <label class="nhsuk-label nhsuk-u-font-weight-bold" for="number-on-the-account">
             Card number
           </label>
-          <input class="nhsuk-input nhsuk-u-padding-left-3" id="number-on-the-account" name="numberOnTheAccount"
-            type="text" spellcheck="false" autocomplete="name" placeholder="Card number">
+          <input class="nhsuk-input" id="number-on-the-account" name="numberOnTheAccount" type="text" spellcheck="false"
+            autocomplete="name" placeholder="Card number">
+          <div>
+
+          </div>
+          <!-- <div class="">
+            <img class="nhsuk-image__img" height="40" width="50" src="/images/cards/Amex.svg" alt="supported cards">
+
+          </div> -->
           <figure class="nhsuk-image nhsuk-no-border nhsuk-u-margin-top-3 nhsuk-u-margin-bottom-3">
             <img class="nhsuk-image__img" src="/images/cards.png" alt="supported cards">
           </figure>
@@ -119,8 +127,8 @@
                 <label class="nhsuk-label nhsuk-date-input__label" for="expiry-year">
                   Year
                 </label>
-                <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2 nhsuk-u-padding-left-3"
-                  id="expiry-year" name="expiry-year" type="text" pattern="[0-9]*" inputmode="numeric" placeholder="yy">
+                <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="expiry-year"
+                  name="expiry-year" type="text" pattern="[0-9]*" inputmode="numeric" placeholder="yy">
               </div>
             </div>
           </div>
@@ -129,8 +137,8 @@
           <label class="nhsuk-label nhsuk-u-font-weight-bold nhsuk-u-margin-top-5" for="card-name-on-the-account">
             Name on card
           </label>
-          <input class="nhsuk-input nhsuk-u-padding-left-3" id="card-name-on-the-account" name="cardnameOnTheAccount"
-            type="text" spellcheck="false" autocomplete="name" placeholder="Card holder name">
+          <input class="nhsuk-input" id="card-name-on-the-account" name="cardnameOnTheAccount" type="text"
+            spellcheck="false" autocomplete="name" placeholder="Card holder name">
         </div>
         <div class="nhsuk-form-group nhsuk-u-margin-top-5">
           <label class="nhsuk-label nhsuk-u-font-weight-bold" for="card-security-code">
@@ -140,22 +148,20 @@
             The last 3 digits on the back of the card
           </div>
           <div class="nhsuk-input__wrapper">
-            <input
-              class="nhsuk-input nhsuk-input--width-4 nhsuk-input--extra-letter-spacing  nhsuk-u-margin-top-3 nhsuk-u-padding-left-2"
+            <input class="nhsuk-input nhsuk-input--width-4 nhsuk-input--extra-letter-spacing  nhsuk-u-margin-top-3 "
               id="card-security-code" name="securityCode" type="text" spellcheck="false"
               aria-describedby="csc-code-hint" inputmode="numeric" placeholder="***">
-            <figure
-              class="nhsuk-image nhsuk-no-border nhsuk-u-padding-left-5 nhsuk-u-margin-top-3 nhsuk-u-margin-bottom-3">
+            <figure class="nhsuk-no-border  nhsuk-u-margin-top-3 nhsuk-u-margin-bottom-3">
               <img class="nhsuk-image__img" src="/images/cvv.png" alt="security code" width="60"
                 style="max-width: fit-content;" height="39">
             </figure>
           </div>
         </div>
-        <h3 class="nhsuk-heading-m nhsuk-u-margin-top-5nhsuk-u-margin-bottom-2" id="debt-card-details">
+        <h3 class="nhsuk-heading-m nhsuk-u-margin-top-5 nhsuk-u-margin-bottom-2" id="debt-card-details">
           Contact details
         </h3>
         <div class="nhsuk-form-group">
-          <div class="nhsuk-hint" id="email-with-hint-text-hint nhsuk-u-margin-top-2">
+          <div class="nhsuk-hint" id="email-with-hint-text-hint">
             We'll send your payment confirmation here
           </div>
           <label class="nhsuk-label" for="debt-email-details-1">
@@ -171,11 +177,11 @@
         <!-- ACTION BUTTONS -->
         <div class="nhsuk-u-margin-top-5">
           <div class="nhsuk-button-group nhsuk-u-margin-top-4">
-            <button id="confirm-payment-btn" class="nhsuk-button nhsuk-u-margin-bottom-0" data-module="nhsuk-button"
-              type="submit">
+            <a id="confirm-payment-btn" href="/provider/debt-management/990175001/debt-payment-confirmation"
+              class="nhsuk-button" data-module="nhsuk-button" type="submit">
               Confirm payment
-            </button>
-            <a href="#" class="nhsuk-link nhsuk-u-font-weight-bold nhsuk-link--no-visited-state">
+            </a>
+            <a href="#" class="nhsuk-link nhsuk-link--no-visited-state">
               Cancel
             </a>
           </div>
@@ -185,36 +191,12 @@
       <div id="debt-bacs-contact-details" style="display: none;">
         <h2 class="nhsuk-heading-m" id="debt-bank-details">Enter bank details</h2>
         <div class="nhsuk-form-group">
-          <label class="nhsuk-label nhsuk-u-font-weight-bold" for="sort-code-account">
-            Sort code
-          </label>
-          <input class="nhsuk-input" id="sort-code-account" name="sortCodeAccount" inputmode="numeric" type="text"
-            spellcheck="false" value="10-88-00">
+          <p class="nhsuk-body"><strong>Sort code</strong></br>10-88-00</p>
+          <p class="nhsuk-body"><strong>Account number</strong></br>0012345</p>
+          <p class="nhsuk-body"><strong>Account holder number</strong></br>NHS BSA</p>
+
         </div>
-        <div class="nhsuk-form-group nhsuk-u-margin-top-5">
-          <label class="nhsuk-label nhsuk-u-font-weight-bold nhsuk-u-margin-top-5" for="account-number">
-            Account number
-          </label>
-          <input class="nhsuk-input" id="account-number" name="account" spellcheck="false" inputmode="numeric"
-            type="text" value="00012345">
-        </div>
-        <div class="nhsuk-form-group nhsuk-u-margin-top-5">
-          <label class="nhsuk-label nhsuk-u-font-weight-bold nhsuk-u-margin-top-5" for="account-holder-name">
-            Account holder name
-          </label>
-          <input class="nhsuk-input" id="account-holder-name" name="account-name" spellcheck="false" type="text"
-            value="NHS BSA">
-        </div>
-        <div class="nhsuk-form-group nhsuk-u-margin-top-5">
-          <div class="nhsuk-checkboxes">
-            <div class="nhsuk-checkboxes__item">
-              <input class="nhsuk-checkboxes__input" id="bacs-confirm" name="bacs-confirm" type="checkbox" value="true">
-              <label class="nhsuk-label nhsuk-checkboxes__label" for="bacs-confirm">
-                I confirm that the bank details provided and shown above are correct
-              </label>
-            </div>
-          </div>
-        </div>
+
         <h2 class="nhsuk-heading-m" id="debt-card-details nhsuk-u-margin-bottom-0">
           Contact details
         </h2>
@@ -235,11 +217,11 @@
         <!-- ACTION BUTTONS -->
         <div class="nhsuk-u-margin-top-5">
           <div class="nhsuk-button-group nhsuk-u-margin-top-4">
-            <button id="confirm-payment-btn" class="nhsuk-button nhsuk-u-margin-bottom-0" data-module="nhsuk-button"
-              type="submit">
-              Confirm payment
-            </button>
-            <a href="#" class="nhsuk-link nhsuk-u-font-weight-bold nhsuk-link--no-visited-state">
+            <a id="confirm-view-debt-btn" href="/provider/debt-management/990175001" class="nhsuk-button"
+              data-module="nhsuk-button" type="submit">
+              View debt status
+            </a>
+            <a href="#" class="nhsuk-link nhsuk-link--no-visited-state">
               Cancel
             </a>
           </div>
@@ -279,14 +261,22 @@
         debtBacsContactDetailsDiv.style.display = 'block';
       }
     }
-
     radiosOption1.forEach(radio => {
+      radio.checked = false;
       radio.addEventListener('change', handleRadioChange1);
     });
     radiosOption2.forEach(radio => {
+      radio.checked = false;
       radio.addEventListener('change', handleRadioChange2);
     });
 
   };
+  function submitPaymentConfirmation() {
+    alert('hi');
+    document.getElementById('confirm-payment-btn').addEventListener('click', () => {
+      window.location.href = '/provider/debt-management/990175001/debt-payment-confirmation';
+    });
+  }
+
 </script>
 {% endblock %}
