@@ -20,6 +20,14 @@
   display: flex;
 }
 
+.vertical-align {
+  vertical-align: middle;
+}
+
+.link-red {
+  color: #d5281b !important;
+}
+
 .nhsuk-header-secondary-divider {
   color: #fff;
   padding: 5px;
@@ -31,9 +39,18 @@
 }
 
 .nhsuk-npe-summary {
-    display: flex;
-    width: 60%;
-    justify-content: space-between;
+  display: flex;
+  width: 60%;
+  justify-content: space-between;
+}
+
+.nhsuk-npe-card {
+  background-color: white;
+  border: solid 1px #d8dde0;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  padding: 15px 35px;
 }
 
 .nhsuk-button-group {
@@ -87,11 +104,26 @@
   }
 }
 
+.nhsuk-filter-input {
+  &-box {
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #d8dde0;
+    cursor: pointer;
+  }
+  &-link {
+    padding: 15px 7px;
+    border-bottom: 1px solid #d8dde0;
+  }
+}
+
 .nhsuk-custom-search {
   display: flex;
 
   &-input {
     border: 1px solid #000;
+    border-radius: 0;
   }
 
   &-filter-container {
@@ -105,11 +137,12 @@
   }
 
   &-icon {
-    background-color: #007f3b;
+    background-color: #005eb8;
     border: 1px solid #000;
+    border-radius: 0;
     border-left: 0;
     &:hover {
-      background-color: #00401e;
+      background-color: #002f5c;
       border: 1px solid #000;
       border-left: 0;
     }
@@ -185,6 +218,9 @@
   padding: 0;
   margin-top: 35px;
   justify-content: center;
+  &-list {
+    width: 30%;
+  }
 }
 
 .nhsuk-multi-link {
