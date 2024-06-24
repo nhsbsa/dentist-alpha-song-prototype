@@ -211,6 +211,29 @@
   }
 }
 
+.nhsuk-details {
+  &-summary-name {
+    display: flex;
+    align-items: center;
+  }
+  &-secondardy-text {
+    text-decoration: none;
+    color:#4c6272;
+    margin-left: 15px;
+    &:hover {
+      color:#4c6272;
+    }
+  }
+}
+
+.nhsuk-inset-text--blue {
+  border-left: 8px solid #ccdff1;
+}
+
+.nhsuk-inset-text--green {
+  border-left: 8px solid #cce5d8;;
+}
+
 .nhsuk-summary-card-custom {
   display: flex;
   flex-wrap: wrap;

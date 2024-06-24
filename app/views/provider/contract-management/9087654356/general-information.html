@@ -45,6 +45,11 @@
         <p>You need to <a class="nhsuk-link--no-visited-state" href="#edit-cta">review and submit</a> your changes.</p>
       </div>
 
+      <div id="amended-callout" class="nhsuk-inset-text nhsuk-inset-text--green nhsuk-u-margin-bottom-3 nhsuk-u-margin-top-3" style="display: none;">
+        <span class="nhsuk-u-visually-hidden">Information: </span>
+        <p>Your changes have been submitted successfully and you will be notified once the assigned commissioner has authorised your changes within the next 10 working days.</p>
+      </div>
+
       <h1 class="nhsuk-u-margin-bottom-0">
         Contract Details
         <span class="nhsuk-caption-xl nhsuk-caption--bottom">Contract name, 9087654356</span>
@@ -816,6 +821,7 @@
   <script>
     const editCTA = document.getElementById('edit-cta');
     const editCallout = document.getElementById('edit-callout');
+    const amendedCallout = document.getElementById('amended-callout');
     const editCancel = document.getElementById('edit-cancel');
     const stayBtn = document.getElementById('stay-btn');
     const leaveBtn = document.getElementById('leave-btn');
@@ -835,6 +841,11 @@
         editCallout.style.display = 'block';
       } else {
         editCTA.style.display = 'none';
+      };
+      if(localStorage['hasAmendmentWaiting'] == "Yes") {
+        amendedCallout.style.display = 'block';
+      } else {
+        amendedCallout.style.display = 'none';
       };
     }
 
