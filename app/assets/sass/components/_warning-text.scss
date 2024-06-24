@@ -1,0 +1,70 @@
+// ==========================================================================
+// COMPONENTS / #WARNING-TEXT
+// ==========================================================================
+.nhsuk-custom-warning-text__icon {
+  font-weight: 700;
+  box-sizing: border-box;
+  display: inline-block;
+  position: absolute;
+  min-width: 35px;
+  min-height: 35px;
+  margin-top: -7px;
+  border: 3px solid #0b0c0c;
+  border-radius: 50%;
+  color: #ffffff;
+  background: #0b0c0c;
+  font-size: 30px;
+  line-height: 29px;
+  text-align: center;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  forced-color-adjust: none;
+}
+@media (min-width: 40.0625em) {
+  .nhsuk-custom-warning-text {
+    margin-bottom: 30px;
+  }
+}
+
+@media (min-width: 40.0625em) {
+  .nhsuk-custom-warning-text {
+    font-size: 1.1875rem;
+    line-height: 1.3157894737;
+  }
+}
+
+.nhsuk-custom-warning-text {
+  font-family: GDS Transport, arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.25;
+  margin-bottom: 20px;
+  position: relative;
+  padding: 10px 0;
+}
+@media (min-width: 40.0625em) {
+  .nhsuk-custom-warning-text__icon {
+    margin-top: -5px;
+  }
+}
+@media screen and (forced-colors: active) {
+  .nhsuk-custom-warning-text__icon {
+    border-color: #0b0c0c;
+    color: #fff;
+    background: transparent;
+  }
+}
+
+.nhsuk-custom-warning-text__text {
+  color: #0b0c0c;
+  display: block;
+  padding-left: 45px;
+}
+@media print {
+  .nhsuk-custom-warning-text__text {
+    color: #000000;
+  }
+}

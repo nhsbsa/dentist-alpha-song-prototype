@@ -6,40 +6,34 @@
 {% extends 'default-layout.html' %}
 
 <!-- Set the page title -->
-{% block pageTitle %}
-Manage contracts
-{% endblock %}
+{% block pageTitle %}Contracts in debt{% endblock %}
 
 <!-- Breadcrumbs -->
 {% block beforeContent %}
-{{ breadcrumb({
+  {{ breadcrumb({
     items: [
       {
         href: "/provider/landing-page",
         text: "Home"
       }
-    ],
-    href: "/provider/debt-management/debt-contracts",
-    text: "Contracts in debt"
+      ],
+        href: "/provider/debt-management/debt-contracts",
+        text: "Contracts in debt"
   }) }}
-{% endblock %}
+{% endblock %} 
 
 <!-- Back link -->
-{% block outerContent %}
-{% endblock %}
+{% block outerContent %} {% endblock %} {% block content %}
 
-<!-- Content -->
-{% block content %}
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-full">
     <h1>
       Contracts in debt
     </h1>
-
     <div class="nhsuk-custom-search-filter-container">
-      <div class="nhsuk-custom-search">
-        <input class="nhsuk-search__input nhsuk-custom-search-input" id="contract-search" name="contract-search"
-          type="search" placeholder="Enter contract ID or practise name" autocomplete="off">
+      <div class="nhsuk-custom-search nhsuk-u-width-one-half">
+        <input class="nhsuk-search__input nhsuk-custom-search-input nhsuk-u-width-full" id="contract-search"
+          name="contract-search" type="search" placeholder="Enter contract ID or practise name" autocomplete="off">
         <button class="nhsuk-search__submit nhsuk-custom-search-icon" type="submit">
           <svg class="nhsuk-icon nhsuk-custom-search-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
             aria-hidden="true" focusable="false">
@@ -51,11 +45,6 @@ Manage contracts
         </button>
       </div>
       <div class="nhsuk-custom-search-filter-text">
-        <p id="expand-contract-filters" class="nhsuk-filter-text nhsuk-u-margin-bottom-0">Filters</p>
-        <p id="close-contract-filters" class="nhsuk-filter-text nhsuk-u-margin-bottom-0" style="display: none;">Close
-          filters</p>
-        <p id="clear-contract-filters" class="nhsuk-filter-text nhsuk-u-margin-bottom-0 nhsuk-u-margin-left-4"
-          style="display: none;">Clear filters</p>
       </div>
     </div>
 
@@ -127,7 +116,7 @@ Manage contracts
       </button>
     </div>
 
-    <hr>
+    <hr class="nhsuk-section-break--visible" />
 
     <table class="nhsuk-table">
       <caption class="nhsuk-table__caption" style="display: none;">Contracts</caption>
@@ -143,16 +132,15 @@ Manage contracts
             Debt start date
           </th>
           <th role="columnheader" class="" scope="col">
-            Repayment tenure
-          </th>
-          <th role="columnheader" class="" scope="col">
-            Due date
-          </th>
-          <th role="columnheader" class="" scope="col">
             Outstanding Debt
           </th>
           <th role="columnheader" class="" scope="col">
-
+            Debt recovery plan
+          </th>
+          <th role="columnheader" class="" scope="col">
+            Last payment made
+          </th>
+          <th role="columnheader" class="" scope="col">
           </th>
         </tr>
       </thead>
@@ -161,19 +149,21 @@ Manage contracts
           <td class="nhsuk-table__cell">990175001</td>
           <td class="nhsuk-table__cell ">Northwood Practise</td>
           <td class="nhsuk-table__cell">20/03/24</td>
-          <td class="nhsuk-table__cell">5 months</td>
-          <td class="nhsuk-table__cell">20/03/24</td>
           <td class="nhsuk-table__cell">£15,000.00</td>
-          <td class="nhsuk-table__cell"><a class="nhsuk-link--no-visited-state" href="#">View</a></td>
+          <td class="nhsuk-table__cell">Yes</td>
+          <td class="nhsuk-table__cell">22/04/2023</td>
+          <td class="nhsuk-table__cell"><a class="nhsuk-link--no-visited-state"
+              href="/provider/debt-management/990175001?showDebtPlan=true">View</a></td>
         </tr>
         <tr role="row" class="nhsuk-table__row">
           <td class="nhsuk-table__cell">990175001</td>
           <td class="nhsuk-table__cell ">Lakeside center</td>
           <td class="nhsuk-table__cell">30/04/24</td>
-          <td class="nhsuk-table__cell">10 months</td>
-          <td class="nhsuk-table__cell">30/04/24</td>
           <td class="nhsuk-table__cell">£15,000.00</td>
-          <td class="nhsuk-table__cell"><a class="nhsuk-link--no-visited-state" href="#">View</a></td>
+          <td class="nhsuk-table__cell">No</td>
+          <td class="nhsuk-table__cell">22/04/2023</td>
+          <td class="nhsuk-table__cell"><a class="nhsuk-link--no-visited-state"
+              href="/provider/debt-management/990175001?showDebtPlan=false">View</a></td>
         </tr>
       </tbody>
     </table>
