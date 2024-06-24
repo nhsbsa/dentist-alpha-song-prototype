@@ -6,11 +6,16 @@
 {% extends 'default-layout.html' %}
 
 <!-- Set the page title -->
-{% block pageTitle %} Debt Payment {% endblock %}
+{% block pageTitle %} 
+Debt Payment 
+{% endblock %}
 
 
 <!-- Back link -->
-{% block outerContent %} {% endblock %} {% block content %}
+{% block outerContent %} 
+{% endblock %} 
+
+{% block content %}
 <div class="nhsuk-back-link">
   <a class="nhsuk-back-link__link" href="/provider/debt-management/990175001">
     <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
@@ -19,7 +24,8 @@
         d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z">
       </path>
     </svg>
-    Back</a> 
+    Back
+  </a> 
 </div>
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds">
@@ -41,7 +47,6 @@
                 Total amount £765.00
               </label>
             </div>
-
             <div class="nhsuk-radios__item">
               <input class="nhsuk-radios__input" id="debt-total-no" name="debt-payment" type="radio" value="no">
               <label class="nhsuk-label nhsuk-radios__label" for="debt-total-no">
@@ -74,7 +79,6 @@
                 Credit or debit card
               </label>
             </div>
-
             <div class="nhsuk-radios__item">
               <input class="nhsuk-radios__input" id="debt-bacs-option" name="debt-prefer-payment" type="radio"
                 value="no">
@@ -93,7 +97,7 @@
           </label>
           <input class="nhsuk-input" id="number-on-the-account" name="numberOnTheAccount" type="text" spellcheck="false"
             autocomplete="name" placeholder="Card number">
-          <figure class="nhsuk-image nhsuk-no-border nhsuk-u-margin-top-3 nhsuk-u-margin-bottom-3">
+          <figure class="nhsuk-image nhsuk-no-border nhsuk-no-background-color nhsuk-u-margin-top-3 nhsuk-u-margin-bottom-3">
             <img class="nhsuk-image__img" src="/images/cards.png" alt="supported cards">
           </figure>
           <p class="nhsuk-hint">Accepted credit and debit card types</p>
@@ -180,16 +184,13 @@
           </div>
         </div>
       </div>
-
       <div id="debt-bacs-contact-details" style="display: none;">
         <h2 class="nhsuk-heading-m" id="debt-bank-details">Enter bank details</h2>
         <div class="nhsuk-form-group">
           <p class="nhsuk-body"><strong>Sort code</strong></br>10-88-00</p>
           <p class="nhsuk-body"><strong>Account number</strong></br>0012345</p>
           <p class="nhsuk-body"><strong>Account holder number</strong></br>NHS BSA</p>
-
         </div>
-
         <h2 class="nhsuk-heading-m" id="debt-card-details nhsuk-u-margin-bottom-0">
           Contact details
         </h2>
@@ -219,13 +220,14 @@
             </a>
           </div>
         </div>
-
       </div>
     </form>
-
   </div>
 </div>
-{% endblock %} {% block pageScripts %}
+
+{% endblock %} 
+
+{% block pageScripts %}
 <script>
   window.onload = function () {
     const radiosOption1 = document.querySelectorAll('input[name="debt-payment"]');
