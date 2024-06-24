@@ -6,7 +6,9 @@
 {% extends 'default-layout.html' %}
 
 <!-- Set the page title -->
-{% block pageTitle %}Contract name{% endblock %}
+{% block pageTitle %}
+Contract name
+{% endblock %}
 
 <!-- Breadcrumbs -->
 {% block beforeContent %}
@@ -27,7 +29,9 @@
 {% endblock %} 
 
 <!-- Back link -->
-{% block outerContent %} {% endblock %} {% block content %}
+{% block outerContent %} {% endblock %} 
+
+{% block content %}
 
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-full">
@@ -35,7 +39,6 @@
       Debt Status
       <span class="nhsuk-caption-xl nhsuk-caption--bottom">Contract Name, 99017500001</span>
     </h1>
-
     <hr class="nhsuk-section-break  nhsuk-section-break--l " />
     <!-- Summary Cards -->
     <ul class="nhsuk-grid-row nhsuk-card-group">
@@ -45,8 +48,9 @@
             <p class="nhsuk-heading-s nhsuk-u-margin-bottom-1">Total debt</p>
             <p class="nhsuk-body nhsuk-u-margin-bottom-1">£15,000</p>
             <a href="/provider/debt-management/990175001/debt-details"
-              class="nhsuk-card__link nhsuk-u-font-weight-normal nhsuk-u-font-size-19 nhsuk-link--no-visited-state">Check
-              what you owe</a>
+              class="nhsuk-card__link nhsuk-u-font-weight-normal nhsuk-u-font-size-19 nhsuk-link--no-visited-state">
+              Check what you owe
+            </a>
           </div>
         </div>
       </li>
@@ -64,14 +68,14 @@
             <p class="nhsuk-heading-s nhsuk-u-margin-bottom-1">History</p>
             <ul class="nhsuk-list">
               <li>
-                <a href="#"
-                  class="nhsuk-card__link nhsuk-u-font-weight-normal nhsuk-u-font-size-19 nhsuk-link--no-visited-state">View
-                  pay statements</a>
+                <a href="#" class="nhsuk-card__link nhsuk-u-font-weight-normal nhsuk-u-font-size-19 nhsuk-link--no-visited-state">
+                  View pay statements
+                </a>
               </li>
               <li>
-                <a href="#"
-                  class="nhsuk-card__link nhsuk-u-font-weight-normal nhsuk-u-font-size-19 nhsuk-link--no-visited-state">View
-                  full contract history</a>
+                <a href="#" class="nhsuk-card__link nhsuk-u-font-weight-normal nhsuk-u-font-size-19 nhsuk-link--no-visited-state">
+                  View full contract history
+                </a>
               </li>
             </ul>
           </div>
@@ -82,7 +86,8 @@
       <h2 class="nhsuk-card__heading">
         Debt recovery plan
         <span class="nhsuk-caption-m nhsuk-caption--bottom">Your debt is being automatically recovered through monthly
-          payment deductions.</span>
+          payment deductions.
+        </span>
       </h2>
       <p class="nhsuk-body nhsuk-u-margin-bottom-0 nhsuk-u-font-weight-bold">Monthly recovery amount</p>
       <p class="nhsuk-body nhsuk-u-font-size-32 nhsuk-u-font-weight-bold ">£3000</p>
@@ -94,8 +99,9 @@
             href="/provider/debt-management/990175001/debt-payment"> Make a one-off payment </a>
         </li>
         <li>
-          <a class="nhsuk-u-font-weight-normal nhsuk-u-font-size-19 nhsuk-link--no-visited-state" href="#"> View payment
-            history </a>
+          <a class="nhsuk-u-font-weight-normal nhsuk-u-font-size-19 nhsuk-link--no-visited-state" href="#"> 
+            View payment history 
+          </a>
         </li>
       </ul>
       <div class="nhsuk-u-margin-top-5">
@@ -184,13 +190,15 @@
         </h2>
         <ul class="nhsuk-list">
           <li>
-            <a class="nhsuk-u-font-weight-normal nhsuk-u-font-size-19 nhsuk-link--no-visited-state"
-              href="/provider/debt-management/990175001/debt-payment">Make
-              payment</a>
+            <a class="nhsuk-u-font-weight-normal nhsuk-u-font-size-19 nhsuk-link--no-visited-state" 
+              href="/provider/debt-management/990175001/debt-payment">
+              Make payment
+            </a>
           </li>
           <li>
-            <a class="nhsuk-u-font-weight-normal nhsuk-u-font-size-19 nhsuk-link--no-visited-state" href="#">View
-              payment history</a>
+            <a class="nhsuk-u-font-weight-normal nhsuk-u-font-size-19 nhsuk-link--no-visited-state" href="#">
+              View payment history
+            </a>
           </li>
         </ul>
       </div>
@@ -261,33 +269,35 @@
       </h2>
       <ul class="nhsuk-list">
         <li>
-          <a class="nhsuk-u-font-weight-normal nhsuk-u-font-size-19 nhsuk-link--no-visited-state" href="#">Access
-            contact information of payment team</a>
+          <a class="nhsuk-u-font-weight-normal nhsuk-u-font-size-19 nhsuk-link--no-visited-state" href="#">
+            Access contact information of payment team
+          </a>
         </li>
         <li>
-          <a class="nhsuk-u-font-weight-normal nhsuk-u-font-size-19 nhsuk-link--no-visited-state" href="#">More about
-            automatic debt recoveries</a>
+          <a class="nhsuk-u-font-weight-normal nhsuk-u-font-size-19 nhsuk-link--no-visited-state" href="#">
+            More about automatic debt recoveries
+          </a>
         </li>
       </ul>
     </div>
-    
-    </div>
-    </div>
-    {% endblock %}
-    {% block pageScripts %}
-    <script>
-      window.onload = function () {
-        // check query param showDebtPlan value
-        const urlParams = new URLSearchParams(window.location.search);
-        const DebtPlanDisplay = (urlParams.get('showDebtPlan') === 'true') || false;
-        const debtPlanDiv = document.getElementById('debtPlan');
-        const totalDebtDiv = document.getElementById('totalDebt');
-        if (DebtPlanDisplay === true) {
-          debtPlanDiv.style.display = 'block';
-          totalDebtDiv.style.display = 'none';
-        } else {
-          debtPlanDiv.style.display = 'none';
-        }
-      }
-    </script>
-    {% endblock %}
+  </div>
+</div>
+
+{% endblock %}
+{% block pageScripts %}
+<script>
+  window.onload = function () {
+    // check query param showDebtPlan value
+    const urlParams = new URLSearchParams(window.location.search);
+    const DebtPlanDisplay = (urlParams.get('showDebtPlan') === 'true') || false;
+    const debtPlanDiv = document.getElementById('debtPlan');
+    const totalDebtDiv = document.getElementById('totalDebt');
+    if (DebtPlanDisplay === true) {
+      debtPlanDiv.style.display = 'block';
+      totalDebtDiv.style.display = 'none';
+    } else {
+      debtPlanDiv.style.display = 'none';
+    }
+  }
+</script>
+{% endblock %}

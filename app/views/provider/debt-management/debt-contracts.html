@@ -6,7 +6,9 @@
 {% extends 'default-layout.html' %}
 
 <!-- Set the page title -->
-{% block pageTitle %}Contracts in debt{% endblock %}
+{% block pageTitle %} 
+Contracts in debt
+{% endblock %}
 
 <!-- Breadcrumbs -->
 {% block beforeContent %}
@@ -23,7 +25,10 @@
 {% endblock %} 
 
 <!-- Back link -->
-{% block outerContent %} {% endblock %} {% block content %}
+{% block outerContent %} 
+{% endblock %} 
+
+{% block content %}
 
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-full">
@@ -47,10 +52,8 @@
       <div class="nhsuk-custom-search-filter-text">
       </div>
     </div>
-
     <div id="filter-contract-container" class="nhsuk-filter-container">
       <h2 class="nhsuk-heading-s">Filters</h2>
-
       <div class="nhsuk-grid-row nhsuk-filter-box">
         <div class="nhsuk-grid-column-one-quarter">
           <div class="nhsuk-form-group">
@@ -109,15 +112,12 @@
           </div>
         </div>
       </div>
-
       <button id="apply-contract-button" class="nhsuk-button nhsuk-button--secondary nhsuk-u-margin-bottom-0"
         data-module="nhsuk-button" type="submit">
         Apply filter
       </button>
     </div>
-
     <hr class="nhsuk-section-break--visible" />
-
     <table class="nhsuk-table">
       <caption class="nhsuk-table__caption" style="display: none;">Contracts</caption>
       <thead role="rowgroup" class="nhsuk-table__head">
@@ -153,7 +153,9 @@
           <td class="nhsuk-table__cell">Yes</td>
           <td class="nhsuk-table__cell">22/04/2023</td>
           <td class="nhsuk-table__cell"><a class="nhsuk-link--no-visited-state"
-              href="/provider/debt-management/990175001?showDebtPlan=true">View</a></td>
+              href="/provider/debt-management/990175001?showDebtPlan=true">View
+            </a>
+          </td>
         </tr>
         <tr role="row" class="nhsuk-table__row">
           <td class="nhsuk-table__cell">990175001</td>
@@ -162,14 +164,16 @@
           <td class="nhsuk-table__cell">£15,000.00</td>
           <td class="nhsuk-table__cell">No</td>
           <td class="nhsuk-table__cell">22/04/2023</td>
-          <td class="nhsuk-table__cell"><a class="nhsuk-link--no-visited-state"
-              href="/provider/debt-management/990175001?showDebtPlan=false">View</a></td>
+          <td class="nhsuk-table__cell">
+            <a class="nhsuk-link--no-visited-state"
+              href="/provider/debt-management/990175001?showDebtPlan=false">View
+            </a>
+          </td>
         </tr>
       </tbody>
     </table>
-
     <!-- End of content -->
-
   </div>
 </div>
+
 {% endblock %}

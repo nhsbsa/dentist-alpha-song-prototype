@@ -6,13 +6,17 @@
 {% extends 'default-layout.html' %}
 
 <!-- Set the page title -->
-{% block pageTitle %} Landing page {% endblock %}
+{% block pageTitle %} 
+Landing page 
+{% endblock %}
 
 <!-- Breadcrumbs -->
-{% block beforeContent %} {% endblock %}
+{% block beforeContent %} 
+{% endblock %}
 
 <!-- Back link -->
-{% block outerContent %} {% endblock %}
+{% block outerContent %}
+{% endblock %}
 
 <!-- Content -->
 {% block content %}
@@ -20,8 +24,7 @@
   <div class="nhsuk-grid-column-full">
     <!-- Add your content here -->
     <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
-
-    <h1  class="nhsuk-heading-l nhsuk-u-margin-bottom-0">Hello, Holly Wilson</h1>
+    <h1 class="nhsuk-heading-l nhsuk-u-margin-bottom-0">Hello, Holly Wilson</h1>
     <p class="nhsuk-body-s nhsuk-u-margin-bottom-0">
       <span class="nhsuk-u-font-weight-bold">Email Address:</span>
       holly.wilson@northwooddental.co.uk
@@ -29,9 +32,7 @@
     <p class="nhsuk-body-s">
       <span class="nhsuk-u-font-weight-bold">Role:</span> Provider
     </p>
-
     <hr class="nhsuk-section-break nhsuk-section-break--l nhsuk-section-break--visible" />
-
     <!-- Summary Cards -->
     <ul class="nhsuk-grid-row nhsuk-card-group">
       <li class="nhsuk-grid-column-one-quarter nhsuk-card-group__item">
@@ -61,11 +62,13 @@
         <div class="nhsuk-card nhsuk-card--clickable">
           <div class="nhsuk-card__content">
             <p class="nhsuk-heading-xl nhsuk-u-font-size-32 nhsuk-u-margin-bottom-1">
-              £30k <span class="nhsuk-u-visually-hidden">Total Debt</span>
+              £30k 
+              <span class="nhsuk-u-visually-hidden">Total Debt</span>
             </p>
             <a href="#"
-              class="nhsuk-card__link nhsuk-u-font-weight-normal nhsuk-u-font-size-19 nhsuk-link--no-visited-state">Total
-              Debt</a>
+              class="nhsuk-card__link nhsuk-u-font-weight-normal nhsuk-u-font-size-19 nhsuk-link--no-visited-state">
+              Total Debt
+            </a>
           </div>
         </div>
       </li>
@@ -73,57 +76,63 @@
         <div class="nhsuk-card nhsuk-card--clickable">
           <div class="nhsuk-card__content">
             <p class="nhsuk-heading-xl nhsuk-u-font-size-32 nhsuk-u-margin-bottom-1">
-              33 <span class="nhsuk-u-visually-hidden">More</span>
+              33 
+              <span class="nhsuk-u-visually-hidden">More</span>
             </p>
-            <a href="#"
-              class="nhsuk-card__link nhsuk-u-font-weight-normal nhsuk-u-font-size-19 nhsuk-link--no-visited-state">Messages</a>
+            <a href="#" class="nhsuk-card__link nhsuk-u-font-weight-normal nhsuk-u-font-size-19 nhsuk-link--no-visited-state">Messages
+            </a>
           </div>
         </div>
       </li>
     </ul>
-
     <div>
       <div class="nhsuk-multi-link-row-one">
         <h2 class="nhsuk-heading-m">Contracts in debt</h2>
-        <p><a class="nhsuk-link nhsuk-link--no-visited-state" href="/provider/debt-management/debt-contracts">View all
-            contracts in debt</a></p>
+        <p>
+          <a class="nhsuk-link nhsuk-link--no-visited-state" href="/provider/debt-management/debt-contracts">
+            View all contracts in debt
+          </a>
+        </p>
       </div>
       <div class="nhsuk-card nhsuk-card-custom-container">
         <div class="nhsuk-card__content nhsuk-card__content--primary nhsuk-card-custom-content
-            nhsuk-card-custom-list_summary">
+          nhsuk-card-custom-list_summary">
           <h3 class="nhsuk-card__heading nhsuk-heading-xs nhsuk-u-margin-bottom-0">
             Contract 1 is £15k in debt
           </h3>
           <p class="nhsuk-u-width-one-quarter nhsuk-card-custom-list_summary--item">
             <a class="nhsuk-card__link nhsuk-link--no-visited-state" href="#">Pay now</a>
-            <a class="nhsuk-card__link nhsuk-link--no-visited-state" href="/provider/debt-management/990175001">View
-              details</a>
+            <a class="nhsuk-card__link nhsuk-link--no-visited-state" href="/provider/debt-management/990175001">
+              View details
+            </a>
           </p>
         </div>
       </div>
       <div class="nhsuk-card nhsuk-card-custom-container">
         <div class="nhsuk-card__content nhsuk-card__content--primary nhsuk-card-custom-content
-            nhsuk-card-custom-list_summary">
+          nhsuk-card-custom-list_summary">
           <h3 class="nhsuk-card__heading nhsuk-heading-xs nhsuk-u-margin-bottom-0">
             Contract 2 is £15k in debt
           </h3>
           <p class="nhsuk-u-width-one-quarter nhsuk-card-custom-list_summary--item">
             <a class="nhsuk-card__link nhsuk-link--no-visited-state" href="#">Pay now</a>
-            <a class="nhsuk-card__link nhsuk-link--no-visited-state" href="#">View
-              details</a>
+            <a class="nhsuk-card__link nhsuk-link--no-visited-state" href="#">
+              View details
+            </a>
           </p>
         </div>
       </div>
       <div class="nhsuk-card nhsuk-card-custom-container">
         <div class="nhsuk-card__content nhsuk-card__content--primary nhsuk-card-custom-content
-            nhsuk-card-custom-list_summary">
+          nhsuk-card-custom-list_summary">
           <h3 class="nhsuk-card__heading nhsuk-heading-xs nhsuk-u-margin-bottom-0">
             Contract 3 is £15k in debt
           </h3>
           <p class="nhsuk-u-width-one-quarter nhsuk-card-custom-list_summary--item">
             <a class="nhsuk-card__link nhsuk-link--no-visited-state" href="#">Pay now</a>
-            <a class="nhsuk-card__link nhsuk-link--no-visited-state" href="#">View
-              details</a>
+            <a class="nhsuk-card__link nhsuk-link--no-visited-state" href="#">
+              View details
+            </a>
           </p>
         </div>
       </div>
@@ -137,7 +146,6 @@
         <div class="nhsuk-card__content nhsuk-card__content--primary nhsuk-card-custom-content nhsuk-u-padding-0">
           <figure class="nhsuk-image">
             <img class="nhsuk-image__img" src="/images/chart.jpg" alt="bar chart">
-
           </figure>
         </div>
       </div>
@@ -150,7 +158,8 @@
         <div class="nhsuk-card nhsuk-card--clickable nhsuk-card-custom-container">
           <div class="nhsuk-card__content nhsuk-card__content--primary nhsuk-card-custom-content">
             <h3 class="nhsuk-card__heading nhsuk-heading-xs nhsuk-u-margin-bottom-0">
-              <a class="nhsuk-card__link nhsuk-link--no-visited-state" href="/provider/contract-management/contracts">My contracts
+              <a class="nhsuk-card__link nhsuk-link--no-visited-state" href="/provider/contract-management/contracts">
+                My contracts
               </a>
             </h3>
             <svg class="nhsuk-icon nhsuk-icon nhsuk-icon__chevron-right-circle nhsuk-card-custom-icon"
@@ -174,8 +183,9 @@
         <div class="nhsuk-card nhsuk-card--clickable nhsuk-card-custom-container">
           <div class="nhsuk-card__content nhsuk-card__content--primary nhsuk-card-custom-content">
             <h3 class="nhsuk-card__heading nhsuk-heading-xs nhsuk-u-margin-bottom-0">
-              <a class="nhsuk-card__link nhsuk-link--no-visited-state" href="/provider/monthly-statements">Pay
-                statements</a>
+              <a class="nhsuk-card__link nhsuk-link--no-visited-state" href="/provider/monthly-statements">
+                Pay statements
+              </a>
             </h3>
             <svg class="nhsuk-icon nhsuk-icon nhsuk-icon__chevron-right-circle nhsuk-card-custom-icon"
               xmlns="http://www.w3.org/2000/svg" width="27" height="27" aria-hidden="true" focusable="false">
@@ -190,7 +200,6 @@
         </div>
       </div>
     </div>
-
     <div class="nhsuk-u-margin-top-5">
       <div class="nhsuk-multi-link-row-one">
         <h2 class="nhsuk-heading-m">Activity</h2>
@@ -199,8 +208,9 @@
         <div class="nhsuk-card nhsuk-card--clickable nhsuk-card-custom-container">
           <div class="nhsuk-card__content nhsuk-card__content--primary nhsuk-card-custom-content">
             <h3 class="nhsuk-card__heading nhsuk-heading-xs nhsuk-u-margin-bottom-0">
-              <a class="nhsuk-card__link nhsuk-link--no-visited-state" href="/provider/monthly-statements">Submit a new
-                activity</a>
+              <a class="nhsuk-card__link nhsuk-link--no-visited-state" href="/provider/monthly-statements">
+                Submit a new activity
+              </a>
             </h3>
             <svg class="nhsuk-icon nhsuk-icon nhsuk-icon__chevron-right-circle nhsuk-card-custom-icon"
               xmlns="http://www.w3.org/2000/svg" width="27" height="27" aria-hidden="true" focusable="false">
@@ -216,8 +226,9 @@
         <div class="nhsuk-card nhsuk-card--clickable nhsuk-card-custom-container">
           <div class="nhsuk-card__content nhsuk-card__content--primary nhsuk-card-custom-content">
             <h3 class="nhsuk-card__heading nhsuk-heading-xs nhsuk-u-margin-bottom-0">
-              <a class="nhsuk-card__link nhsuk-link--no-visited-state" href="/provider/monthly-statements">Activity
-                actuals</a>
+              <a class="nhsuk-card__link nhsuk-link--no-visited-state" href="/provider/monthly-statements">
+                Activity actuals
+              </a>
             </h3>
             <svg class="nhsuk-icon nhsuk-icon nhsuk-icon__chevron-right-circle nhsuk-card-custom-icon"
               xmlns="http://www.w3.org/2000/svg" width="27" height="27" aria-hidden="true" focusable="false">
@@ -233,8 +244,9 @@
         <div class="nhsuk-card nhsuk-card--clickable nhsuk-card-custom-container">
           <div class="nhsuk-card__content nhsuk-card__content--primary nhsuk-card-custom-content">
             <h3 class="nhsuk-card__heading nhsuk-heading-xs nhsuk-u-margin-bottom-0">
-              <a class="nhsuk-card__link nhsuk-link--no-visited-state" href="/provider/monthly-statements">Clinician
-                statements</a>
+              <a class="nhsuk-card__link nhsuk-link--no-visited-state" href="/provider/monthly-statements">
+                Clinician statements
+              </a>
             </h3>
             <svg class="nhsuk-icon nhsuk-icon nhsuk-icon__chevron-right-circle nhsuk-card-custom-icon"
               xmlns="http://www.w3.org/2000/svg" width="27" height="27" aria-hidden="true" focusable="false">
@@ -257,8 +269,9 @@
         <div class="nhsuk-card nhsuk-card--clickable nhsuk-card-custom-container">
           <div class="nhsuk-card__content nhsuk-card__content--primary nhsuk-card-custom-content">
             <h3 class="nhsuk-card__heading nhsuk-heading-xs nhsuk-u-margin-bottom-0">
-              <a class="nhsuk-card__link nhsuk-link--no-visited-state" href="/provider/monthly-statements">Knowledge
-                base</a>
+              <a class="nhsuk-card__link nhsuk-link--no-visited-state" href="/provider/monthly-statements">
+                Knowledge base
+              </a>
             </h3>
             <svg class="nhsuk-icon nhsuk-icon nhsuk-icon__chevron-right-circle nhsuk-card-custom-icon"
               xmlns="http://www.w3.org/2000/svg" width="27" height="27" aria-hidden="true" focusable="false">
@@ -273,8 +286,8 @@
         </div>
       </div>
     </div>
-
     <!-- End of content -->
   </div>
 </div>
+
 {% endblock %}
