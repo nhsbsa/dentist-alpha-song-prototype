@@ -1,0 +1,207 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'default-layout.html' %}
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  Contract name
+{% endblock %}
+
+<!-- Breadcrumbs -->
+{% block beforeContent %}
+  {{ breadcrumb({
+    items: [
+      {
+        href: "/provider/landing-page",
+        text: "Home"
+      },
+      {
+        href: "/provider/debt-management/debt-contracts",
+        text: "Contracts in debt"
+      }
+      ],
+        href: "/provider/debt-management/990175001/debt-payment-failed",
+        text: "990175001"
+  }) }}
+{% endblock %} 
+
+<!-- Back link -->
+{% block outerContent %} {% endblock %} 
+
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+      <h1 class="nhsuk-u-margin-bottom-0">
+        Debt Status
+        <span class="nhsuk-caption-xl nhsuk-caption--bottom">Contract Name, 99017500001</span>
+      </h1>
+      <div class="nhsuk-warning-callout">
+        <h2 class="nhsuk-warning-callout__label nhsuk-heading-m ">
+          <span role="text">
+            <span class="nhsuk-u-visually-hidden">Important: </span>
+              Important Payment Update: Action Required
+          </span>
+        </h2>
+        <p>The payment expected by <strong>May 28th</strong> has not appeared in our account yet. If the payment is not reflected before the Pay
+          Calcs <strong>cut-off date</strong>, your contract will be in debt by <strong>£3,000</strong>.
+        </p>
+      </div>
+      <hr class="nhsuk-section-break  nhsuk-section-break--l " />
+      <!-- Summary Cards -->
+      <ul class="nhsuk-grid-row nhsuk-card-group">
+        <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+          <div class="nhsuk-card nhsuk-no-border">
+            <div class="nhsuk-card__content">
+              <p class="nhsuk-heading-s nhsuk-u-margin-bottom-1">Total debt</p>
+              <p class="nhsuk-body nhsuk-u-margin-bottom-1">£1,500</p>
+              <a href="/provider/debt-management/990175001/debt-details" class="nhsuk-card__link nhsuk-u-font-weight-normal nhsuk-u-font-size-19 nhsuk-link--no-visited-state">
+                Check what you owe
+              </a>
+            </div>
+          </div>
+        </li>
+        <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+          <div class="nhsuk-card nhsuk-no-border">
+            <div class="nhsuk-card__content">
+              <p class="nhsuk-heading-s  nhsuk-u-margin-bottom-1">Cut-off date</p>
+              <p class="nhsuk-body nhsuk-u-margin-bottom-1">19 Jun 2024 </p>
+            </div>
+          </div>
+        </li>
+        <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+          <div class="nhsuk-card nhsuk-no-border">
+            <div class="nhsuk-card__content nhsuk-card-custom-action_list">
+              <p class="nhsuk-heading-s nhsuk-u-margin-bottom-1">History</p>
+              <ul class="nhsuk-list">
+                <li>
+                  <a href="#" class="nhsuk-card__link nhsuk-u-font-weight-normal nhsuk-u-font-size-19 nhsuk-link--no-visited-state">
+                    View pay statements
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="nhsuk-card__link nhsuk-u-font-weight-normal nhsuk-u-font-size-19 nhsuk-link--no-visited-state">
+                    View full contract history
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <div id="totalDebt" class="nhsuk-u-margin-top-5">
+        <h2 class="nhsuk-card__heading">
+          Total Debt
+          <span class="nhsuk-caption-m nhsuk-caption--bottom">Your contract has been in debt since April 2024</span>
+        </h2>
+        <p class="nhsuk-body nhsuk-u-margin-bottom-0">Debt amount</p>
+        <p class="nhsuk-body nhsuk-u-font-size-32 nhsuk-u-font-weight-bold ">£1500</p>
+        <div class="nhsuk-u-margin-top-5">
+          <h2 class="nhsuk-card__heading ">
+            Manage your debt
+          </h2>
+          <ul class="nhsuk-list">
+            <li>
+              <a class="nhsuk-u-font-weight-normal nhsuk-u-font-size-19 nhsuk-link--no-visited-state" href="/provider/debt-management/990175001/debt-payment">
+                Make payment
+              </a>
+            </li>
+            <li>
+              <a class="nhsuk-u-font-weight-normal nhsuk-u-font-size-19 nhsuk-link--no-visited-state" href="#">
+                View payment history
+              </a>
+            </li>
+            <li>
+              <a class="nhsuk-u-font-weight-normal nhsuk-u-font-size-19 nhsuk-link--no-visited-state" href="#">
+                View published letters
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="nhsuk-u-margin-top-5">
+          <h2 class="nhsuk-card__heading nhsuk-u-margin-bottom-0">
+            Estimated upcoming payments
+          </h2>
+          <div class="nhsuk-inset-text nhsuk-u-margin-top-2 nhsuk-u-margin-bottom-2">
+            <span class="nhsuk-u-visually-hidden">Information: </span>
+            <p class="nhsuk-hint">These indicative figures may be subject to change </p>
+          </div>
+          <table class="nhsuk-table nhsuk-table-responsive">
+            <caption class="nhsuk-table__caption" style="display: none;">Estimated payment</caption>
+            <thead role="rowgroup" class="nhsuk-table__head">
+              <tr role="row">
+                <th role="columnheader" class="" scope="col">
+                  Date
+                </th>
+                <th role="columnheader" class="" scope="col">
+                  Withhold payment
+                </th>
+                <th role="columnheader" class="" scope="col">
+                  Estimated payment
+                </th>
+              </tr>
+            </thead>
+            <tbody class="nhsuk-table__body">
+              <tr role="row" class="nhsuk-table__row">
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading" aria-hidden="true">Date </span>23 July 2024
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading" aria-hidden="true">Withhold payment </span>£2,000
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading" aria-hidden="true">Estimated payment </span>£17,050
+                </td>
+              </tr>
+              <tr role="row" class="nhsuk-table__row">
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading" aria-hidden="true">Date </span>24 August 2024
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading" aria-hidden="true">Withhold payment </span>£2,000
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading" aria-hidden="true">Estimated payment </span>£22,542
+                </td>
+              </tr>
+              <tr role="row" class="nhsuk-table__row">
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading" aria-hidden="true">Date </span>23 September 2024
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading" aria-hidden="true">Withhold payment </span>£2,000
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading" aria-hidden="true">Estimated payment </span>£18,900
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="nhsuk-u-margin-top-5">
+        <h2 class="nhsuk-card__heading ">
+          Help and Information
+        </h2>
+        <ul class="nhsuk-list">
+          <li>
+            <a class="nhsuk-u-font-weight-normal nhsuk-u-font-size-19 nhsuk-link--no-visited-state" href="#">
+              Access contact information of payment team
+            </a>
+          </li>
+          <li>
+            <a class="nhsuk-u-font-weight-normal nhsuk-u-font-size-19 nhsuk-link--no-visited-state" href="#">
+              More about automatic debt recoveries
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}
+{% block pageScripts %}
+{% endblock %}
