@@ -96,7 +96,7 @@
               </div>
             </fieldset>
             <div class="nhsuk-u-margin-top-5">
-              <button class="nhsuk-button nhsuk-button--secondary" data-module="nhsuk-button" type="submit">
+              <button class="nhsuk-button nhsuk-button--secondary" data-module="nhsuk-button" onclick="handleRadioChange();" type="submit">
                 Update table
               </button>
             </div>
@@ -243,9 +243,6 @@
             <div class="nhsuk-details__text">
               <div class="nhsuk-u-margin-top-5">
                 <table role="table" class="nhsuk-table-responsive">
-                  <caption class="nhsuk-table__caption">
-                    Breakdown of the payments and deductions for the selected month
-                  </caption>
                   <thead role="rowgroup" class="nhsuk-table__head">
                     <tr role="row">
                       <th role="columnheader" class="" scope="col">Type</th>
@@ -366,9 +363,6 @@
             <div class="nhsuk-details__text">
               <div class="nhsuk-u-margin-top-5">
                 <table role="table" class="nhsuk-table-responsive">
-                  <caption class="nhsuk-table__caption">
-                    Breakdown of the payments and deductions for the selected month
-                  </caption>
                   <thead role="rowgroup" class="nhsuk-table__head">
                     <tr role="row">
                       <th role="columnheader" class="" scope="col">Type</th>
@@ -487,6 +481,117 @@
               </span>
             </summary>
             <div class="nhsuk-details__text">
+              <div class="nhsuk-u-margin-top-5">
+                <table role="table" class="nhsuk-table-responsive">
+                  <thead role="rowgroup" class="nhsuk-table__head">
+                    <tr role="row">
+                      <th role="columnheader" class="" scope="col">Type</th>
+                      <th role="columnheader" class="" scope="col">Payments</th>
+                      <th role="columnheader" class="" scope="col">Deductions</th>
+                    </tr>
+                  </thead>
+                  <tbody class="nhsuk-table__body">
+                    <tr role="row" class="nhsuk-table__row">
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Type </span>
+                        Monthly Pay
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Payments </span>
+                        £16,730
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Deductions </span>
+                        £0
+                      </td>
+                    </tr>
+                    <tr role="row" class="nhsuk-table__row">
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Type
+                        </span>
+                        Non-Superannuable deductions
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Payments </span>
+                        £0
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Deductions </span>
+                        £15.93
+                      </td>
+                    </tr>
+                    <tr role="row" class="nhsuk-table__row">
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Type </span>
+                        Superannuation contributions
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Payments </span>
+                        £0
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Deductions </span>
+                        £540.42
+                      </td>
+                    </tr>
+                    <tr role="row" class="nhsuk-table__row">
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Type </span>
+                        Patients charges
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Payments </span>
+                        £0
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Deductions</span>
+                        £14703.65
+                      </td>
+                    </tr>
+                    <tr role="row" class="nhsuk-table__row">
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Type </span>
+                        Remissions
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Payments </span>
+                        £0
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Deductions </span>
+                        £0
+                      </td>
+                    </tr>
+                    <tr role="row" class="nhsuk-table__row">
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Type </span>
+                        Sub totals
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Payments </span>
+                        £14,495
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Deductions </span>
+                        £15,260
+                      </td>
+                    </tr>
+                    <tr role="row" class="nhsuk-table__row">
+                      <td role="cell" class="nhsuk-table__cell nhsuk-u-font-weight-bold">
+                        <span class="nhsuk-table-responsive__heading">Type </span>
+                        Total net pay
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell nhsuk-u-font-weight-bold">
+                        <span class="nhsuk-table-responsive__heading">Payments </span>
+                        - £3000.00
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Deductions </span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
           </details>
         </div>
@@ -525,9 +630,6 @@
             <div class="nhsuk-details__text">
               <div class="nhsuk-u-margin-top-5">
                 <table role="table" class="nhsuk-table-responsive">
-                  <caption class="nhsuk-table__caption">
-                    Breakdown of the payments and deductions for the selected month
-                  </caption>
                   <thead role="rowgroup" class="nhsuk-table__head">
                     <tr role="row">
                       <th role="columnheader" class="" scope="col">Type</th>
@@ -647,9 +749,6 @@
             <div class="nhsuk-details__text">
               <div class="nhsuk-u-margin-top-5">
                 <table role="table" class="nhsuk-table-responsive">
-                  <caption class="nhsuk-table__caption">
-                    Breakdown of the payments and deductions for the selected month
-                  </caption>
                   <thead role="rowgroup" class="nhsuk-table__head">
                     <tr role="row">
                       <th role="columnheader" class="" scope="col">Type</th>
@@ -815,23 +914,29 @@
 {% endblock %} 
 {% block pageScripts %}
 <script>
-  window.onload = function () {
-    const radios = document.querySelectorAll('input[name="debt-period-select"]');
-    const debtLast3MonthView = document.getElementById('debt-last-3months-view');
-    const debtLast6MonthView = document.getElementById('debt-last-6months-view');
-    const debtLastMonthView = document.getElementById('debt-last-month-view');
-    const debtfirstOf3Month = document.querySelector('#debt-last-3months-view .nhsuk-expander');
-    const debtfirstOf6Month = document.querySelector('#debt-last-6months-view .nhsuk-expander');    
+  const radios = document.querySelectorAll('input[name="debt-period-select"]');
+  const debtLast3MonthView = document.getElementById('debt-last-3months-view');
+  const debtLast6MonthView = document.getElementById('debt-last-6months-view');
+  const debtLastMonthView = document.getElementById('debt-last-month-view');
+  const debtfirstOf3Month = document.querySelector('#debt-last-3months-view .nhsuk-expander');
+  const debtfirstOf6Month = document.querySelector('#debt-last-6months-view .nhsuk-expander');
 
-    function handleRadioChange() {
+  const debtshowAll3Month = document.querySelectorAll('#debt-last-3months-view .nhsuk-expander');
+  const debtshowAll6Month = document.querySelectorAll('#debt-last-6months-view .nhsuk-expander');
+  const showAll3MonthLinkSelect = document.getElementById('showAll3MonthLink');
+  const hideAll3MonthLinkSelect = document.getElementById('hideAll3MonthLink');
+  const showAll6MonthLinkSelect = document.getElementById('showAll6MonthLink');
+  const hideAll6MonthLinkSelect = document.getElementById('hideAll6MonthLink');
+
+  function handleRadioChange() {
       if (document.getElementById('debt-3-month').checked) {
         debtLast3MonthView.style.display = 'block';
         debtLast6MonthView.style.display = 'none';
         debtLastMonthView.style.display = 'none';
-        debtfirstOf3Month.setAttribute("open","");
+        debtfirstOf3Month.setAttribute("open", "");
         debtfirstOf6Month.removeAttribute("open");
         collapseHideAllMonthDetails();
-      } else if(document.getElementById('debt-6-month').checked) {
+      } else if (document.getElementById('debt-6-month').checked) {
         debtLast3MonthView.style.display = 'none';
         debtLast6MonthView.style.display = 'block';
         debtLastMonthView.style.display = 'none';
@@ -845,19 +950,10 @@
         debtfirstOf3Month.removeAttribute("open");
         debtfirstOf6Month.removeAttribute("open");
       }
-    }
-    radios.forEach(radio => {
-        radio.addEventListener('change', handleRadioChange);
-    });
-    // Initial check on page load
-    handleRadioChange();
-  };
-  const debtshowAll3Month = document.querySelectorAll('#debt-last-3months-view .nhsuk-expander');
-  const debtshowAll6Month = document.querySelectorAll('#debt-last-6months-view .nhsuk-expander');
-  const showAll3MonthLinkSelect = document.getElementById('showAll3MonthLink');
-  const hideAll3MonthLinkSelect = document.getElementById('hideAll3MonthLink');
-  const showAll6MonthLinkSelect = document.getElementById('showAll6MonthLink');
-  const hideAll6MonthLinkSelect = document.getElementById('hideAll6MonthLink');
+  }
+  
+  handleRadioChange();
+
   function showAll3MonthDetails(event) {
       event.preventDefault();
       debtshowAll3Month.forEach(expander => expander.setAttribute("open", ""));

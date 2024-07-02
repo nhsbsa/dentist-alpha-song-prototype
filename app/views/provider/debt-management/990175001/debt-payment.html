@@ -225,7 +225,7 @@
           <!-- ACTION BUTTONS -->
           <div class="nhsuk-u-margin-top-5">
             <div class="nhsuk-button-group nhsuk-u-margin-top-4">
-              <a id="confirm-view-debt-btn" href="/provider/debt-management/990175001/debt-payment-confirmation" class="nhsuk-button"
+              <a id="confirm-view-debt-btn" href="#" class="nhsuk-button"
                 data-module="nhsuk-button" type="submit">
                 Pay now
               </a>
@@ -256,6 +256,7 @@
       if (document.getElementById('debt-total-yes').checked) {
         debtPreferredModeDiv.style.display = 'block';
         debtAmountPayDiv.style.display = 'none';
+        debtOverpmtAlert.style.display = 'none';
       } else if (document.getElementById('debt-total-no').checked) {
         debtPreferredModeDiv.style.display = 'block';
         debtAmountPayDiv.style.display = 'block';

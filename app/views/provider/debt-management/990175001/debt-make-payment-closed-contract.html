@@ -29,6 +29,22 @@
   </div>
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
+      <div class="nhsuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" style="display: none;">
+        <h2 class="nhsuk-error-summary__title" id="error-summary-title" >
+          There is a problem
+        </h2>
+        <div class="nhsuk-error-summary__body">
+          <p>
+            Since your contract is closed, you cannot make a payment that exceeds the amount you owe. Ensure your payment matches or
+            is less than your outstanding debt.
+          </p>
+          <ul class="nhsuk-list nhsuk-error-summary__list" role="list">
+            <li>
+              <a href="#debt-payment-amount">The amount should not exceed the debt that you owe.</a>
+            </li>
+          </ul>
+        </div>
+      </div>
       <form>
         <h1 class="nhsuk-u-margin-bottom-0">
           Debt Payment
@@ -231,7 +247,7 @@
           <!-- ACTION BUTTONS -->
           <div class="nhsuk-u-margin-top-5">
             <div class="nhsuk-button-group nhsuk-u-margin-top-4">
-              <a id="confirm-view-debt-btn" href="/provider/debt-management/990175001/debt-payment-confirm-closed-contract" class="nhsuk-button"
+              <a id="confirm-view-debt-btn" href="#" class="nhsuk-button"
                 data-module="nhsuk-button" type="submit">
                 Pay now
               </a>
@@ -262,6 +278,7 @@
       if (document.getElementById('debt-total-yes').checked) {
         debtPreferredModeDiv.style.display = 'block';
         debtAmountPayDiv.style.display = 'none';
+        debtOverpmtAlert.style.display = 'none';
       } else if (document.getElementById('debt-total-no').checked) {
         debtPreferredModeDiv.style.display = 'block';
         debtAmountPayDiv.style.display = 'block';
@@ -288,7 +305,7 @@
   };
   let debounceTimeout;
   const debtAmtToPay = document.getElementById('debt-payment-amount');
-  const debtOverpmtAlert = document.getElementById('debt-closed-contract-alert'); 
+  const debtOverpmtAlert = document.querySelector('.nhsuk-error-summary'); 
   const debtOverpmtError = document.getElementById('debt-pmt-exceed-error'); 
   debtAmtToPay.addEventListener('input', checkValue);
 
