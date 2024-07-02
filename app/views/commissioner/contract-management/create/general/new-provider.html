@@ -1,0 +1,201 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'default-layout.html' %}
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  Create Contract
+{% endblock %}
+
+<!-- Breadcrumbs -->
+{% block beforeContent %}
+  {{ breadcrumb({
+    items: [
+      {
+        href: "/commissioner/landing-page",
+        text: "Home"
+      }
+    ],
+    href: "/commissioner/contract-management/create/start-create-contract",
+    text: "Create Contract"
+  }) }}
+{% endblock %}
+
+<!-- Back link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- Content -->
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+      <div class="nhsuk-form-group">
+        <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+          <h1 class="nhsuk-fieldset__heading" for="clinician-id">
+            What is the Provider’s ID?
+          </h1>
+        </legend>
+        <input class="nhsuk-input" id="clinician-id" name="clinician-id" type="text" oninput="filterInputFunction(value)">
+        <div id="filter-input" class="nhsuk-filter-input-box" style="display: none;">
+          <a id="filter-input-row-1" class="nhsuk-link nhsuk-link--no-visited-state nhsuk-filter-input-link">123456789, Tom Holland</a>
+          <a id="filter-input-row-2" class="nhsuk-link nhsuk-link--no-visited-state nhsuk-filter-input-link">123456784, Ella Purnell</a>
+        </div>
+      </div>
+      <details id="clinician-detail" class="nhsuk-details">
+        <summary class="nhsuk-details__summary">
+          <span class="nhsuk-details__summary-text">
+            I don’t know the Provider's ID
+          </span>
+        </summary>
+        <div class="nhsuk-details__text">
+          <p class="nhsuk-u-font-weight-bold nhsuk-u-margin-bottom-2">What is the provider's name?</p>
+          <div class="nhsuk-custom-search">
+            <input class="nhsuk-search__input nhsuk-custom-search-input" id="contract-search" name="contract-search" type="search" placeholder="Search" autocomplete="off">
+            <button id="clinician-name-search" class="nhsuk-search__submit nhsuk-custom-search-icon" type="submit">
+              <svg class="nhsuk-icon nhsuk-custom-search-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M19.71 18.29l-4.11-4.1a7 7 0 1 0-1.41 1.41l4.1 4.11a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42zM5 10a5 5 0 1 1 5 5 5 5 0 0 1-5-5z"></path>
+              </svg>
+              <span class="nhsuk-u-visually-hidden">Search</span>
+            </button>
+          </div>
+
+          <table role="table" class="nhsuk-table-responsive">
+            <caption class="nhsuk-u-visually-hidden">Providers table</caption>
+            <thead role="rowgroup" class="nhsuk-table__head">
+              <tr role="row">
+                <th role="columnheader" class="" scope="col">
+                  Name
+                </th>
+                <th role="columnheader" class="" scope="col">
+                  Provider ID
+                </th>
+                <th role="columnheader" class="" scope="col">
+                  GDC Number
+                </th>
+                <th role="columnheader" class="" scope="col">
+                  Location
+                </th>
+                <th role="columnheader" class="" scope="col">
+                  <span class="nhsuk-u-visually-hidden">Action</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody class="nhsuk-table__body">
+              <tr id="clinician-name-results" role="row" class="nhsuk-table__row" style="display: none;">
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Name </span> Ella Purnell
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Provider ID </span>123456784
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">GDC Number </span>5432457
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Location </span>London
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Action </span>
+                  <a id="ella-select" href="#" class="nhsuk-link nhsuk-link--no-visited-state">Select</a> 
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </details>
+
+    </div>
+  </div>
+{% endblock %}
+
+{% block pageScripts %}
+  <script>
+    const addClinicianBtn = document.getElementById('add-clinician');
+    const addNpeBtn = document.getElementById('add-npe-npee-btn');
+    const detailsName1 = document.getElementById('details-name-1');
+    const detailsName2 = document.getElementById('details-name-2');
+    const detailsGdc1 = document.getElementById('details-gdc-1');
+    const detailsGdc2 = document.getElementById('details-gdc-2');
+    const clinicianId = document.getElementById('clinician-id');
+    const filterInput = document.getElementById('filter-input');
+    const filterInputR1 = document.getElementById('filter-input-row-1');
+    const filterInputR2 = document.getElementById('filter-input-row-2');
+    const clinicianNameSearch = document.getElementById('clinician-name-search');
+    const clinicianNameResults = document.getElementById('clinician-name-results');
+    const ellaSelect = document.getElementById('ella-select');
+    const clinicianDetail = document.getElementById('clinician-detail');
+    const npe1 = document.getElementById('npe-1');
+    const npe2 = document.getElementById('npe-2');
+    const npe3 = document.getElementById('npe-3');
+    const remove1 = document.getElementById('remove-1');
+    const remove2 = document.getElementById('remove-2');
+    const remove3 = document.getElementById('remove-3');
+
+    function filterInputFunction(value) {
+      filterInput.style.display = 'flex';
+      if (value === "123456784") {
+        filterInputR1.style.display = 'none';
+      } else {
+        filterInputR1.style.display = 'block';
+      }
+    }
+
+    filterInputR1.addEventListener('click', ()=>{
+      filterInput.style.display = 'none';
+      clinicianId.value = '123456789'
+      detailsName1.style.display = 'block';
+      detailsGdc1.style.display = 'block';
+      detailsName2.style.display = 'none';
+      detailsGdc2.style.display = 'none';
+    });
+
+    filterInputR2.addEventListener('click', ()=>{
+      filterInput.style.display = 'none';
+      clinicianId.value = '123456784'
+      detailsName1.style.display = 'none';
+      detailsGdc1.style.display = 'none';
+      detailsName2.style.display = 'block';
+      detailsGdc2.style.display = 'block';
+    });
+
+    clinicianNameSearch.addEventListener('click', ()=>{
+      clinicianNameResults.style.display = 'table-row';
+    });
+
+    ellaSelect.addEventListener('click', ()=>{
+      window.event.preventDefault();
+      clinicianId.value = '123456784'
+      detailsName1.style.display = 'none';
+      detailsGdc1.style.display = 'none';
+      detailsName2.style.display = 'block';
+      detailsGdc2.style.display = 'block';
+      clinicianDetail.removeAttribute('open')
+    });
+
+    remove1.addEventListener('click', ()=>{
+      window.event.preventDefault();
+      remove2.style.display = 'none';
+      npe1.style.display = 'none';
+    });
+
+    remove2.addEventListener('click', ()=>{
+      window.event.preventDefault();
+      remove1.style.display = 'none';
+      npe2.style.display = 'none';
+    });
+
+    remove3.addEventListener('click', ()=>{
+      window.event.preventDefault();
+      npe3.style.display = 'none';
+    });
+
+    addNpeBtn.addEventListener('click', ()=>{
+      window.event.preventDefault();
+      npe3.style.display = 'block';
+    });
+
+  </script>
+{% endblock %}
