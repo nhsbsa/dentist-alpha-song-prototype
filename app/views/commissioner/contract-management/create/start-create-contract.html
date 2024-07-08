@@ -7,7 +7,7 @@
 
 <!-- Set the page title -->
 {% block pageTitle %}
-  Landing page
+  Create Contract
 {% endblock %}
 
 <!-- Breadcrumbs -->
@@ -42,34 +42,34 @@
             <a class="nhsuk-task-list-details-link nhsuk-link--no-visited-state" href="/commissioner/contract-management/create/general/new-provider" aria-describedby="company-details-1-hint company-details-1-status">
               General
             </a>
-            <div id="company-details-1-hint" class="nhsuk-task-list-details-text">
-              This section requires the basic details of your contract. Information you will need:
-              <ul class="nhsuk-list nhsuk-list nhsuk-list--bullet nhsuk-u-margin-bottom-0 nhsuk-u-font-size-16">
-                <li>Contract type, category and subcategory code, Provider ID, contract start date, local dental committee</li>
-              </ul>
-            </div>
+            <p id="company-details-1-hint" class="nhsuk-task-list-details-text">
+              This section requires the basic details of your contract. Information you will need: Contract type, category and subcategory code, Provider ID, contract start date, local dental committee.
+            </p>
           </div>
           <div class="nhsuk-task-list-status" id="company-details-1-status">
-            <strong class="nhsuk-tag nhsuk-tag--grey">
+            <strong id="general-incomplete" class="nhsuk-tag nhsuk-tag--grey">
               Incomplete
+            </strong>
+            <strong id="general-complete" class="nhsuk-tag nhsuk-tag--green" style="display: none;">
+              Complete
             </strong>
           </div>
         </li>
         <li class="nhsuk-task-list-item">
           <div class="nhsuk-task-list-details">
-            <a class="nhsuk-task-list-details-link nhsuk-link--no-visited-state" href="#" aria-describedby="company-details-2-hint company-details-2-status">
+            <a class="nhsuk-task-list-details-link nhsuk-link--no-visited-state" href="/commissioner/contract-management/create/services/new-service" aria-describedby="company-details-2-hint company-details-2-status">
               Services
             </a>
-            <div id="company-details-2-hint" class="nhsuk-task-list-details-text">
-              This section requires the basic details of your contract. Information you will need:
-              <ul class="nhsuk-list nhsuk-list nhsuk-list--bullet nhsuk-u-margin-bottom-0 nhsuk-u-font-size-16">
-                <li>Contract type, category and subcategory code, Provider ID, contract start date, local dental committee</li>
-              </ul>
-            </div>
+            <p id="company-details-2-hint" class="nhsuk-task-list-details-text">
+              This section requires details about service lines on the contract. Information you will need about each service line: name, type (reoccurring or non-reoccurring), start date, financial value and contracted activity. 
+            </p>
           </div>
           <div class="nhsuk-task-list-status" id="company-details-2-status">
-            <strong class="nhsuk-tag nhsuk-tag--grey">
+            <strong id="service-incomplete" class="nhsuk-tag nhsuk-tag--grey">
               Incomplete
+            </strong>
+            <strong id="service-complete" class="nhsuk-tag nhsuk-tag--green" style="display: none;">
+              Complete
             </strong>
           </div>
         </li>
@@ -78,12 +78,9 @@
             <a class="nhsuk-task-list-details-link nhsuk-link--no-visited-state" href="#" aria-describedby="company-details-3-hint company-details-3-status">
               Treatment locations
             </a>
-            <div id="company-details-3-hint" class="nhsuk-task-list-details-text">
-              This section requires the basic details of your contract. Information you will need:
-              <ul class="nhsuk-list nhsuk-list nhsuk-list--bullet nhsuk-u-margin-bottom-0 nhsuk-u-font-size-16">
-                <li>Contract type, category and subcategory code, Provider ID, contract start date, local dental committee</li>
-              </ul>
-            </div>
+            <p id="company-details-3-hint" class="nhsuk-task-list-details-text">
+              This section requires details about the treatment locations on the contract. Information you will need about each treatment location: practice name, treatment location ID, the practice’s email address and phone number.
+            </p>
           </div>
           <div class="nhsuk-task-list-status" id="company-details-3-status">
             <strong class="nhsuk-tag nhsuk-tag--grey">
@@ -96,4 +93,23 @@
 
     </div>
   </div>
+{% endblock %}
+
+{% block pageScripts %}
+  <script>
+    const generalTag1 = document.getElementById('general-incomplete');
+    const generalTag2 = document.getElementById('general-complete');
+    const serviceTag1 = document.getElementById('service-incomplete');
+    const serviceTag2 = document.getElementById('service-complete');
+    window.onload = function() {
+      if(localStorage['hasNewGeneral'] == "Yes") {
+        generalTag1.style.display = 'none';
+        generalTag2.style.display = 'block';
+      }
+      if(localStorage['hasNewService'] == "Yes") {
+        serviceTag1.style.display = 'none';
+        serviceTag2.style.display = 'block';
+      } 
+    };
+  </script>
 {% endblock %}

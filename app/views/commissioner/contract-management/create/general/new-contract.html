@@ -1,0 +1,390 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'default-layout.html' %}
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  Create Contract
+{% endblock %}
+
+<!-- Breadcrumbs -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Back link -->
+{% block outerContent %}
+<div class="nhsuk-back-link nhsuk-u-padding-top-3 nhsuk-u-margin-bottom-0">
+  <a class="nhsuk-back-link__link" href="/commissioner/contract-management/create/general/new-provider">
+    <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
+      <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+    </svg>
+    Back
+  </a>
+</div>
+{% endblock %}
+
+<!-- Content -->
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+      <h1>
+        General contract details
+      </h1>
+
+      <!-- QUESTION 1 -->
+      <div class="nhsuk-form-group">
+        <fieldset class="nhsuk-fieldset">
+          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+            <h2 class="nhsuk-fieldset__heading">
+              Select the contract type?
+            </h2>
+          </legend>
+          <div class="nhsuk-radios">
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="contract-type-1" name="contract-type" type="radio" value="gds">
+              <label class="nhsuk-label nhsuk-radios__label" for="contract-type-1">
+                GDS
+              </label>
+            </div>
+      
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="contract-type-2" name="contract-type" type="radio" value="pds">
+              <label class="nhsuk-label nhsuk-radios__label" for="contract-type-2">
+                PDS
+              </label>
+            </div>
+
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="contract-type-3" name="contract-type" type="radio" value="pds plus">
+              <label class="nhsuk-label nhsuk-radios__label" for="contract-type-3">
+                PDS Plus
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <!-- QUESTION 2 -->
+      <div id="q2" class="nhsuk-form-group" style="display: none;">
+        <fieldset class="nhsuk-fieldset">
+          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+            <h2 class="nhsuk-fieldset__heading">
+              Is this a prison contract?
+            </h2>
+          </legend>
+          <div class="nhsuk-radios">
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="contract-prison-1" name="contract-prison" type="radio" value="yes">
+              <label class="nhsuk-label nhsuk-radios__label" for="contract-prison-1">
+                Yes
+              </label>
+            </div>
+      
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="contract-prison-2" name="contract-prison" type="radio" value="no">
+              <label class="nhsuk-label nhsuk-radios__label" for="contract-prison-2">
+                No
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <!-- QUESTION 3 -->
+      <div id="q3" class="nhsuk-form-group" style="display: none;">
+        <fieldset class="nhsuk-fieldset">
+          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+            <h2 class="nhsuk-fieldset__heading">
+              What is the contract’s category code?
+            </h2>
+          </legend>
+          <div class="nhsuk-radios">
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="contract-category-1" name="contract-category" type="radio" value="category 1">
+              <label class="nhsuk-label nhsuk-radios__label" for="contract-category-1">
+                Category 1
+              </label>
+            </div>
+      
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="contract-category-2" name="contract-category" type="radio" value="category 2">
+              <label class="nhsuk-label nhsuk-radios__label" for="contract-category-2">
+                Category 2
+              </label>
+            </div>
+
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="contract-category-3" name="contract-category" type="radio" value="category 3">
+              <label class="nhsuk-label nhsuk-radios__label" for="contract-category-3">
+                Category 3
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <!-- QUESTION 4 -->
+      <div id="q4" class="nhsuk-form-group" style="display: none;">
+        <fieldset class="nhsuk-fieldset">
+          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+            <h2 class="nhsuk-fieldset__heading">
+              What is the contract’s subcategory code?
+            </h2>
+          </legend>
+          <div class="nhsuk-radios">
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="contract-subcategory-1" name="contract-subcategory" type="radio" value="subcategory 1">
+              <label class="nhsuk-label nhsuk-radios__label" for="contract-subcategory-1">
+                Subcategory 1
+              </label>
+            </div>
+      
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="contract-subcategory-2" name="contract-subcategory" type="radio" value="subcategory 2">
+              <label class="nhsuk-label nhsuk-radios__label" for="contract-subcategory-2">
+                Subcategory 2
+              </label>
+            </div>
+
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="contract-subcategory-3" name="contract-subcategory" type="radio" value="subcategory 3">
+              <label class="nhsuk-label nhsuk-radios__label" for="contract-subcategory-3">
+                Subcategory 3
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <!-- QUESTION 5 -->
+      <div id="q5" class="nhsuk-form-group" style="display: none;">
+        <fieldset class="nhsuk-fieldset" role="group">
+          <legend class="nhsuk-fieldset__legend nhsuk-label--l">
+            <h2 class="nhsuk-fieldset__heading">
+              What is the contract’s start date?
+            </h2>
+          </legend>
+      
+          <div class="nhsuk-date-input" id="start-date">
+            <div class="nhsuk-date-input__item">
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label nhsuk-date-input__label" for="start-date-day">
+                  Day
+                </label>
+                <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="start-date-day" name="start-date-day" type="text" pattern="[0-9]*" inputmode="numeric">
+              </div>
+            </div>
+            <div class="nhsuk-date-input__item">
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label nhsuk-date-input__label" for="start-date-month">
+                  Month
+                </label>
+                <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="start-date-month" name="start-date-month" type="text" pattern="[0-9]*" inputmode="numeric">
+              </div>
+            </div>
+            <div class="nhsuk-date-input__item">
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label nhsuk-date-input__label" for="start-date-year">
+                  Year
+                </label>
+                <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="start-date-year" name="start-date-year" type="text" pattern="[0-9]*" inputmode="numeric">
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <!-- QUESTION 6 -->
+      <div id="q6" class="nhsuk-form-group" style="display: none;">
+        <fieldset class="nhsuk-fieldset">
+          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+            <h2 class="nhsuk-fieldset__heading">
+              Is there a contract end date?
+            </h2>
+          </legend>
+          <div class="nhsuk-radios">
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="contract-isenddate-1" name="contract-isenddate" type="radio" value="yes">
+              <label class="nhsuk-label nhsuk-radios__label" for="contract-isenddate-1">
+                Yes
+              </label>
+            </div>
+      
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="contract-isenddate-2" name="contract-isenddate" type="radio" value="no">
+              <label class="nhsuk-label nhsuk-radios__label" for="contract-isenddate-2">
+                No
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <!-- QUESTION 7 -->
+      <div id="q7" class="nhsuk-form-group" style="display: none;">
+        <fieldset class="nhsuk-fieldset" role="group">
+          <legend class="nhsuk-fieldset__legend nhsuk-label--l">
+            <h2 class="nhsuk-fieldset__heading">
+              What is the contract’s end date?
+            </h2>
+          </legend>
+      
+          <div class="nhsuk-date-input" id="end-date">
+            <div class="nhsuk-date-input__item">
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label nhsuk-date-input__label" for="end-date-day">
+                  Day
+                </label>
+                <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="end-date-day" name="end-date-day" type="text" pattern="[0-9]*" inputmode="numeric">
+              </div>
+            </div>
+            <div class="nhsuk-date-input__item">
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label nhsuk-date-input__label" for="end-date-month">
+                  Month
+                </label>
+                <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="end-date-month" name="end-date-month" type="text" pattern="[0-9]*" inputmode="numeric">
+              </div>
+            </div>
+            <div class="nhsuk-date-input__item">
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label nhsuk-date-input__label" for="end-date-year">
+                  Year
+                </label>
+                <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="end-date-year" name="end-date-year" type="text" pattern="[0-9]*" inputmode="numeric">
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <!-- QUESTION 8 -->
+      <div id="q8" class="nhsuk-form-group" style="display: none;">
+        <label class="nhsuk-fieldset__legend nhsuk-label--l">
+          <h2 class="nhsuk-fieldset__heading">
+            Select the local dental committee associated with this contract?
+          </h2>
+        </label>
+        <select class="nhsuk-select" id="contract-committee" name="contract-committee">
+          <option value="1" selected>Select</option>
+          <option value="2">Manchester LDC</option>
+          <option value="3">Option 3</option>
+        </select>
+      </div>
+
+      <div class="nhsuk-button-group nhsuk-u-margin-top-6">
+        <a id="contract-submit" href="/commissioner/contract-management/create/general/summary" class="nhsuk-button nhsuk-u-margin-bottom-0" data-module="nhsuk-button" type="submit" disabled>
+          Next
+        </a>
+        <a href="/commissioner/contract-management/create/start-create-contract" class="nhsuk-button nhsuk-button--secondary nhsuk-u-margin-bottom-0" data-module="nhsuk-button" type="submit">
+          Save and exit
+        </a>
+        <a href="/commissioner/contract-management/create/start-create-contract" class="nhsuk-link nhsuk-link--no-visited-state">Cancel</a>
+      </div>
+
+    </div>
+  </div>
+{% endblock %}
+
+{% block pageScripts %}
+  <script>
+    const type1 = document.getElementById('contract-type-1');
+    const type2 = document.getElementById('contract-type-2');
+    const type3 = document.getElementById('contract-type-3');
+    const q2 = document.getElementById('q2');
+    const prison1 = document.getElementById('contract-prison-1');
+    const prison2 = document.getElementById('contract-prison-2');
+    const q3 = document.getElementById('q3');
+    const category1 = document.getElementById('contract-category-1');
+    const category2 = document.getElementById('contract-category-2');
+    const category3 = document.getElementById('contract-category-3');
+    const q4 = document.getElementById('q4');
+    const subcategory1 = document.getElementById('contract-subcategory-1');
+    const subcategory2 = document.getElementById('contract-subcategory-2');
+    const subcategory3 = document.getElementById('contract-subcategory-3');
+    const q5 = document.getElementById('q5');
+    const startDateInput = document.getElementById('start-date-year');
+    const q8 = document.getElementById('q8');
+    const q6 = document.getElementById('q6');
+    const isenddate1 = document.getElementById('contract-isenddate-1');
+    const isenddate2 = document.getElementById('contract-isenddate-2');
+    const q7 = document.getElementById('q7');
+    const endDateInput = document.getElementById('end-date-year');
+    const contractCommittee = document.getElementById('contract-committee');
+    const contractSubmit = document.getElementById('contract-submit');
+
+    type1.addEventListener('click', ()=>{
+      q2.style.display = 'block';
+    });
+
+    type2.addEventListener('click', ()=>{
+      q2.style.display = 'block';
+    });
+
+    type3.addEventListener('click', ()=>{
+      q2.style.display = 'block';
+    });
+
+    prison1.addEventListener('click', ()=>{
+      q3.style.display = 'block';
+    });
+
+    prison2.addEventListener('click', ()=>{
+      q3.style.display = 'block';
+    });
+
+    category1.addEventListener('click', ()=>{
+      q4.style.display = 'block';
+    });
+
+    category2.addEventListener('click', ()=>{
+      q4.style.display = 'block';
+    });
+
+    category3.addEventListener('click', ()=>{
+      q4.style.display = 'block';
+    });
+
+    subcategory1.addEventListener('click', ()=>{
+      q5.style.display = 'block';
+    });
+
+    subcategory2.addEventListener('click', ()=>{
+      q5.style.display = 'block';
+    });
+
+    subcategory3.addEventListener('click', ()=>{
+      q5.style.display = 'block';
+    });
+
+    startDateInput.addEventListener('change', ()=>{
+      if(type1.checked) {
+        q8.style.display = 'block';
+      } else {
+        q6.style.display = 'block';
+      }
+    });
+
+    isenddate1.addEventListener('click', ()=>{
+      q7.style.display = 'block';
+      q8.style.display = 'none';
+    });
+
+    isenddate2.addEventListener('click', ()=>{
+      q8.style.display = 'block';
+      q7.style.display = 'none';
+    });
+
+    endDateInput.addEventListener('change', ()=>{
+      q8.style.display = 'block';
+    });
+
+    contractCommittee.onchange = (event) => {
+      contractSubmit.removeAttribute("disabled");
+    }
+
+  </script>
+{% endblock %}
