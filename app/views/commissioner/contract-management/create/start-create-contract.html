@@ -75,7 +75,7 @@
         </li>
         <li class="nhsuk-task-list-item">
           <div class="nhsuk-task-list-details">
-            <a class="nhsuk-task-list-details-link nhsuk-link--no-visited-state" href="#" aria-describedby="company-details-3-hint company-details-3-status">
+            <a class="nhsuk-task-list-details-link nhsuk-link--no-visited-state" href="/commissioner/contract-management/create/location/new-location" aria-describedby="company-details-3-hint company-details-3-status">
               Treatment locations
             </a>
             <p id="company-details-3-hint" class="nhsuk-task-list-details-text">
@@ -83,8 +83,11 @@
             </p>
           </div>
           <div class="nhsuk-task-list-status" id="company-details-3-status">
-            <strong class="nhsuk-tag nhsuk-tag--grey">
+            <strong id="location-incomplete" class="nhsuk-tag nhsuk-tag--grey">
               Incomplete
+            </strong>
+            <strong id="location-complete" class="nhsuk-tag nhsuk-tag--green" style="display: none;">
+              Complete
             </strong>
           </div>
         </li>
@@ -101,6 +104,8 @@
     const generalTag2 = document.getElementById('general-complete');
     const serviceTag1 = document.getElementById('service-incomplete');
     const serviceTag2 = document.getElementById('service-complete');
+    const locationTag1 = document.getElementById('location-incomplete');
+    const locationTag2 = document.getElementById('location-complete');
     window.onload = function() {
       if(localStorage['hasNewGeneral'] == "Yes") {
         generalTag1.style.display = 'none';
@@ -109,6 +114,10 @@
       if(localStorage['hasNewService'] == "Yes") {
         serviceTag1.style.display = 'none';
         serviceTag2.style.display = 'block';
+      }
+      if(localStorage['hasNewLocation'] == "Yes") {
+        locationTag1.style.display = 'none';
+        locationTag2.style.display = 'block';
       } 
     };
   </script>
