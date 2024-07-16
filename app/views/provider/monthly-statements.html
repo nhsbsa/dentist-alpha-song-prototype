@@ -17,10 +17,6 @@ Monthly Clinician Statements
       {
         href: "/provider/landing-page",
         text: "Home"
-      },
-      {
-        href: "/provider/monthly-statements",
-        text: "Payments"
       }
     ],
     href: "/provider/monthly-statements",
@@ -64,28 +60,27 @@ Monthly Clinician Statements
         <div class="nhsuk-grid-row nhsuk-filter-box">
           <div class="nhsuk-grid-column-one-quarter">
             <div class="nhsuk-form-group">
-              <fieldset class="nhsuk-fieldset">
-                <legend class="nhsuk-fieldset__legend">
-                  Example Filter 1
+              <fieldset class="nhsuk-fieldset" role="group">
+                <legend class="nhsuk-label nhsuk-u-font-weight-bold" for="published-after">
+                  Statements published on and after
                 </legend>
-                <div class="nhsuk-checkboxes">
-                  <div class="nhsuk-checkboxes__item">
-                    <input class="nhsuk-checkboxes__input" id="example-filter-option-1" name="example-filter-1" type="checkbox" value="active">
-                    <label class="nhsuk-label nhsuk-checkboxes__label" for="example-filter-option-1">
-                      Option 1
-                    </label>
+        
+                <div class="nhsuk-date-input" id="published-after">
+                  <div class="nhsuk-date-input__item">
+                    <div class="nhsuk-form-group">
+                      <label class="nhsuk-label nhsuk-date-input__label" for="published-after-month">
+                        Month
+                      </label>
+                      <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="published-after-month" name="published-after-month" type="text" pattern="[0-9]*" inputmode="numeric">
+                    </div>
                   </div>
-                  <div class="nhsuk-checkboxes__item">
-                    <input class="nhsuk-checkboxes__input" id="example-filter-option-2" name="example-filter-1" type="checkbox" value="completed">
-                    <label class="nhsuk-label nhsuk-checkboxes__label" for="example-filter-option-2">
-                      Option 2
-                    </label>
-                  </div>
-                  <div class="nhsuk-checkboxes__item">
-                    <input class="nhsuk-checkboxes__input" id="example-filter-option-3" name="example-filter-1" type="checkbox" value="error">
-                    <label class="nhsuk-label nhsuk-checkboxes__label" for="example-filter-option-3">
-                      Option 3
-                    </label>
+                  <div class="nhsuk-date-input__item">
+                    <div class="nhsuk-form-group">
+                      <label class="nhsuk-label nhsuk-date-input__label" for="published-after-year">
+                        Year
+                      </label>
+                      <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="published-after-year" name="published-after-year" type="text" pattern="[0-9]*" inputmode="numeric">
+                    </div>
                   </div>
                 </div>
               </fieldset>
@@ -93,14 +88,30 @@ Monthly Clinician Statements
           </div>
           <div class="nhsuk-grid-column-one-quarter">
             <div class="nhsuk-form-group">
-              <label class="nhsuk-label" for="example-filter-2">
-                Example Filter 2
-              </label>
-              <select class="nhsuk-select" id="example-filter-2" name="example-filter-2">
-                <option value="1" selected>Select</option>
-                <option value="2">Option 1</option>
-                <option value="3">Option 2</option>
-              </select>
+              <fieldset class="nhsuk-fieldset" role="group">
+                <legend class="nhsuk-label nhsuk-u-font-weight-bold" for="published-before">
+                  Statements published on and before
+                </legend>
+        
+                <div class="nhsuk-date-input" id="published-before">
+                  <div class="nhsuk-date-input__item">
+                    <div class="nhsuk-form-group">
+                      <label class="nhsuk-label nhsuk-date-input__label" for="published-before-month">
+                        Month
+                      </label>
+                      <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="published-before-month" name="published-before-month" type="text" pattern="[0-9]*" inputmode="numeric">
+                    </div>
+                  </div>
+                  <div class="nhsuk-date-input__item">
+                    <div class="nhsuk-form-group">
+                      <label class="nhsuk-label nhsuk-date-input__label" for="published-before-year">
+                        Year
+                      </label>
+                      <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="published-before-year" name="published-before-year" type="text" pattern="[0-9]*" inputmode="numeric">
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
             </div>
           </div>
         </div>
@@ -110,23 +121,21 @@ Monthly Clinician Statements
         </button>
       </div>
 
-      <hr>
-
-      <table role="table" class="nhsuk-table-responsive">
+      <table role="table" class="nhsuk-table-responsive nhsuk-u-margin-top-4">
         <caption class="nhsuk-u-visually-hidden">Monthly Pay Statements Table</caption>
         <thead role="rowgroup" class="nhsuk-table__head">
           <tr role="row">
             <th role="columnheader" class="" scope="col">
+              Practice Name
+            </th>
+            <th role="columnheader" class="" scope="col">
+              Month
+            </th>
+            <th role="columnheader" class="" scope="col">
+              Year
+            </th>
+            <th role="columnheader" class="" scope="col">
               Contract ID
-            </th>
-            <th role="columnheader" class="" scope="col">
-              Performer ID
-            </th>
-            <th role="columnheader" class="" scope="col">
-              Tenure
-            </th>
-            <th role="columnheader" class="" scope="col">
-              Payment Period
             </th>
             <th role="columnheader" class="" scope="col">
               <span class="nhsuk-u-visually-hidden">Action</span>
@@ -136,16 +145,16 @@ Monthly Clinician Statements
         <tbody class="nhsuk-table__body">
           <tr role="row" class="nhsuk-table__row">
             <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Practice Name </span>Elite Dental Eastbourne Clinic
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Month </span>November
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Year </span>2023
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
               <span class="nhsuk-table-responsive__heading">Contract ID </span>1868560001
-            </td>
-            <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">Performer ID </span>265850
-            </td>
-            <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">Tenure </span>01/04/2013 - 14/03/2023
-            </td>
-            <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">Payment Period </span>21/12/2020
             </td>
             <td role="cell" class="nhsuk-table__cell">
               <span class="nhsuk-table-responsive__heading">Action </span>
@@ -154,16 +163,16 @@ Monthly Clinician Statements
           </tr>
           <tr role="row" class="nhsuk-table__row">
             <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Practice Name </span>Elite Dental Eastbourne Clinic
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Month </span>October
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Year </span>2023
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
               <span class="nhsuk-table-responsive__heading">Contract ID </span>1868560001
-            </td>
-            <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">Performer ID </span>265850
-            </td>
-            <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">Tenure </span>01/04/2013 - 14/03/2023
-            </td>
-            <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">Payment Period </span>21/12/2020
             </td>
             <td role="cell" class="nhsuk-table__cell">
               <span class="nhsuk-table-responsive__heading">Action </span>
@@ -172,16 +181,16 @@ Monthly Clinician Statements
           </tr>
           <tr role="row" class="nhsuk-table__row">
             <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Practice Name </span>Elite Dental Eastbourne Clinic
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Month </span>November
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Year </span>2023
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
               <span class="nhsuk-table-responsive__heading">Contract ID </span>1868560001
-            </td>
-            <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">Performer ID </span>265850
-            </td>
-            <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">Tenure </span>01/04/2013 - 14/03/2023
-            </td>
-            <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">Payment Period </span>21/12/2020
             </td>
             <td role="cell" class="nhsuk-table__cell">
               <span class="nhsuk-table-responsive__heading">Action </span>
@@ -190,16 +199,16 @@ Monthly Clinician Statements
           </tr>
           <tr role="row" class="nhsuk-table__row">
             <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Practice Name </span>Elite Dental Eastbourne Clinic
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Month </span>September
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Year </span>2023
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
               <span class="nhsuk-table-responsive__heading">Contract ID </span>1868560001
-            </td>
-            <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">Performer ID </span>265850
-            </td>
-            <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">Tenure </span>01/04/2013 - 14/03/2023
-            </td>
-            <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">Payment Period </span>21/12/2020
             </td>
             <td role="cell" class="nhsuk-table__cell">
               <span class="nhsuk-table-responsive__heading">Action </span>
@@ -208,16 +217,16 @@ Monthly Clinician Statements
           </tr>
           <tr role="row" class="nhsuk-table__row">
             <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Practice Name </span>Elite Dental Eastbourne Clinic
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Month </span>August
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Year </span>2023
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
               <span class="nhsuk-table-responsive__heading">Contract ID </span>1868560001
-            </td>
-            <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">Performer ID </span>265850
-            </td>
-            <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">Tenure </span>01/04/2013 - 14/03/2023
-            </td>
-            <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">Payment Period </span>21/12/2020
             </td>
             <td role="cell" class="nhsuk-table__cell">
               <span class="nhsuk-table-responsive__heading">Action </span>
@@ -226,16 +235,16 @@ Monthly Clinician Statements
           </tr>
           <tr role="row" class="nhsuk-table__row">
             <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Practice Name </span>Elite Dental Eastbourne Clinic
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Month </span>June
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Year </span>2023
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
               <span class="nhsuk-table-responsive__heading">Contract ID </span>1868560001
-            </td>
-            <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">Performer ID </span>265850
-            </td>
-            <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">Tenure </span>01/04/2013 - 14/03/2023
-            </td>
-            <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">Payment Period </span>21/12/2020
             </td>
             <td role="cell" class="nhsuk-table__cell">
               <span class="nhsuk-table-responsive__heading">Action </span>
@@ -244,16 +253,70 @@ Monthly Clinician Statements
           </tr>
           <tr role="row" class="nhsuk-table__row">
             <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Practice Name </span>Elite Dental Eastbourne Clinic
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Month </span>May
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Year </span>2023
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
               <span class="nhsuk-table-responsive__heading">Contract ID </span>1868560001
             </td>
             <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">Performer ID </span>265850
+              <span class="nhsuk-table-responsive__heading">Action </span>
+              <a href="#" class="nhsuk-link nhsuk-link--no-visited-state">View</a>
+            </td>
+          </tr>
+          <tr role="row" class="nhsuk-table__row">
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Practice Name </span>Elite Dental Eastbourne Clinic
             </td>
             <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">Tenure </span>01/04/2013 - 14/03/2023
+              <span class="nhsuk-table-responsive__heading">Month </span>April
             </td>
             <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading">Payment Period </span>21/12/2020
+              <span class="nhsuk-table-responsive__heading">Year </span>2023
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Contract ID </span>1868560001
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Action </span>
+              <a href="#" class="nhsuk-link nhsuk-link--no-visited-state">View</a>
+            </td>
+          </tr>
+          <tr role="row" class="nhsuk-table__row">
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Practice Name </span>Elite Dental Eastbourne Clinic
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Month </span>April
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Year </span>2023
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Contract ID </span>1868560001
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Action </span>
+              <a href="#" class="nhsuk-link nhsuk-link--no-visited-state">View</a>
+            </td>
+          </tr>
+          <tr role="row" class="nhsuk-table__row">
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Practice Name </span>Elite Dental Eastbourne Clinic
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Month </span>February
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Year </span>2023
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Contract ID </span>1868560001
             </td>
             <td role="cell" class="nhsuk-table__cell">
               <span class="nhsuk-table-responsive__heading">Action </span>
@@ -262,6 +325,51 @@ Monthly Clinician Statements
           </tr>
         </tbody>
       </table>
+      <nav class="nhsuk-table-pagination nhsuk-u-margin-top-3" aria-label="Pagination">
+        <div class="nhsuk-table-pagination__prev">
+          <a class="nhsuk-link nhsuk-link--no-visited-state  nhsuk-table-pagination__link" href="#" rel="prev">
+            <svg class="nhsuk-table-pagination__icon nhsuk-table-pagination__icon--prev" xmlns="http://www.w3.org/2000/svg" height="13"
+              width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+              <path
+                d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z">
+              </path>
+            </svg>
+            <span class="nhsuk-table-pagination__link-title">
+              Previous<span class="govuk-visually-hidden"> page</span>
+            </span>
+          </a>
+        </div>
+        <ul class="nhsuk-table-pagination__list">
+          <li class="nhsuk-table-pagination__item nhsuk-table-pagination__item--current">
+            <a class="nhsuk-link nhsuk-link--no-visited-state  nhsuk-table-pagination__link" href="#" aria-label="Page 1">
+              1
+            </a>
+          </li>
+          <li class="nhsuk-table-pagination__item">
+            <a class="nhsuk-link nhsuk-link--no-visited-state  nhsuk-table-pagination__link" href="#" aria-label="Page 2" aria-current="page">
+              2
+            </a>
+          </li>
+          <li class="nhsuk-table-pagination__item">
+            <a class="nhsuk-link nhsuk-link--no-visited-state  nhsuk-table-pagination__link" href="#" aria-label="Page 3">
+              3
+            </a>
+          </li>
+        </ul>
+        <div class="nhsuk-table-pagination__next">
+          <a class="nhsuk-link nhsuk-link--no-visited-state  nhsuk-table-pagination__link" href="#" rel="next">
+            <span class="nhsuk-table-pagination__link-title">
+              Next<span class="govuk-visually-hidden"> page</span>
+            </span>
+            <svg class="nhsuk-table-pagination__icon nhsuk-table-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13"
+              width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+              <path
+                d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z">
+              </path>
+            </svg>
+          </a>
+        </div>
+      </nav>
 
       <!-- End of content -->
 
