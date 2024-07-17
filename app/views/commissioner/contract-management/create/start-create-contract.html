@@ -93,7 +93,11 @@
         </li>
       </ul>
 
-
+      <div class="nhsuk-button-group nhsuk-u-margin-top-6">
+        <a id="summary" href="/commissioner/contract-management/create/create-summary" class="nhsuk-button nhsuk-u-margin-bottom-0" data-module="nhsuk-button" type="submit" disabled>
+          Summary
+        </a>
+      </div>
     </div>
   </div>
 {% endblock %}
@@ -106,6 +110,7 @@
     const serviceTag2 = document.getElementById('service-complete');
     const locationTag1 = document.getElementById('location-incomplete');
     const locationTag2 = document.getElementById('location-complete');
+    const summary = document.getElementById('summary');
     window.onload = function() {
       if(localStorage['hasNewGeneral'] == "Yes") {
         generalTag1.style.display = 'none';
@@ -118,6 +123,7 @@
       if(localStorage['hasNewLocation'] == "Yes") {
         locationTag1.style.display = 'none';
         locationTag2.style.display = 'block';
+        summary.removeAttribute("disabled");
       } 
     };
   </script>
