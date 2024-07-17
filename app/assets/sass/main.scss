@@ -280,6 +280,10 @@
     display: flex;
     flex-direction: column;
   }
+  &-list_summary_action--align {
+  display: flex;
+  justify-content: end;
+  }
 }
 
 .nhsuk-card--blueborder {
