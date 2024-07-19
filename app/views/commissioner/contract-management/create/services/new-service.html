@@ -32,7 +32,7 @@
     <div class="nhsuk-grid-column-two-thirds">
       <div id="service-added-message" class="nhsuk-inset-text nhsuk-u-margin-bottom-4 nhsuk-u-margin-top-0" style="display: none;">
         <span class="nhsuk-u-visually-hidden">Information: </span>
-        <p>The reoccurring Clinical Audit service line with start date 20/03/24 has been saved</p>
+        <p>The recurring Clinical Audit service line with start date 20/03/24 has been saved</p>
       </div>
       <h1>Add a service line</h1>
       <div id="q1" class="nhsuk-form-group">
@@ -98,21 +98,21 @@
         <fieldset class="nhsuk-fieldset">
           <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
             <h2 class="nhsuk-fieldset__heading">
-              Is this a reoccurring service line?
+              Is this a recurring service line?
             </h2>
           </legend>
       
           <div class="nhsuk-radios">
             <div class="nhsuk-radios__item">
-              <input class="nhsuk-radios__input" id="reoccurring-1" name="reoccurring" type="radio" value="yes">
-              <label class="nhsuk-label nhsuk-radios__label" for="reoccurring-1">
+              <input class="nhsuk-radios__input" id="recurring-1" name="recurring" type="radio" value="yes">
+              <label class="nhsuk-label nhsuk-radios__label" for="recurring-1">
                 Yes
               </label>
             </div>
       
             <div class="nhsuk-radios__item">
-              <input class="nhsuk-radios__input" id="reoccurring-2" name="reoccurring" type="radio" value="no">
-              <label class="nhsuk-label nhsuk-radios__label" for="reoccurring-2">
+              <input class="nhsuk-radios__input" id="recurring-2" name="recurring" type="radio" value="no">
+              <label class="nhsuk-label nhsuk-radios__label" for="recurring-2">
                 No
               </label>
             </div>
@@ -247,14 +247,6 @@
         </div>
       </div>
 
-      <div id="q9" class="nhsuk-form-group" style="display: none;">
-        <label class="nhsuk-label nhsuk-label--l" for="additional-detail">
-          Additional service line details? (Optional)
-        </label>
-        <textarea class="nhsuk-textarea" id="additional-detail" name="additional-detail" rows="5"></textarea>
-      </div>
-      
-
       <div class="nhsuk-button-group nhsuk-u-margin-top-6">
         <a id="service-next" href="/commissioner/contract-management/create/services/summary" class="nhsuk-button nhsuk-u-margin-bottom-0" data-module="nhsuk-button" type="submit" disabled>
           Next
@@ -279,8 +271,8 @@
     const serviceSelect = document.getElementById('service-select');
     const q2 = document.getElementById('q2');
     const q3 = document.getElementById('q3');
-    const reoccurring1 = document.getElementById('reoccurring-1');
-    const reoccurring2 = document.getElementById('reoccurring-2');
+    const recurring1 = document.getElementById('recurring-1');
+    const recurring2 = document.getElementById('recurring-2');
     const q4 = document.getElementById('q4');
     const q5 = document.getElementById('q5');
     const startDateYear = document.getElementById('start-date-year');
@@ -290,7 +282,6 @@
     const q7 = document.getElementById('q7');
     const activityMeasured1 = document.getElementById('activity-measured-1');
     const q8 = document.getElementById('q8');
-    const q9 = document.getElementById('q9');
     const contractedActivity = document.getElementById('contracted-activity');
     const serviceNext = document.getElementById('service-next');
     const addAnother = document.getElementById('add-another');
@@ -325,12 +316,12 @@
       q3.style.display = 'block';
     }
 
-    reoccurring1.addEventListener('click', ()=>{
+    recurring1.addEventListener('click', ()=>{
       q4.style.display = 'block';
       q5.style.display = 'none';
     });
 
-    reoccurring2.addEventListener('click', ()=>{
+    recurring2.addEventListener('click', ()=>{
       q4.style.display = 'block';
       q5.style.display = 'block';
     });
@@ -349,7 +340,6 @@
 
     activityMeasured1.addEventListener('click', ()=>{
       q8.style.display = 'block';
-      q9.style.display = 'block';
     });
 
     contractedActivity.addEventListener('change', ()=>{

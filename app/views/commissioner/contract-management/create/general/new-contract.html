@@ -275,6 +275,32 @@
         </select>
       </div>
 
+      <!-- QUESTION 9 -->
+      <div id="q9" class="nhsuk-form-group" style="display: none;">
+        <fieldset class="nhsuk-fieldset">
+          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+            <h2 class="nhsuk-fieldset__heading">
+              Is this contract paid by NHS BSA?
+            </h2>
+          </legend>
+          <div class="nhsuk-radios">
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="contract-paid-1" name="contract-paid" type="radio" value="yes">
+              <label class="nhsuk-label nhsuk-radios__label" for="contract-paid-1">
+                Yes
+              </label>
+            </div>
+      
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="contract-paid-2" name="contract-paid" type="radio" value="no">
+              <label class="nhsuk-label nhsuk-radios__label" for="contract-paid-2">
+                No
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
       <div class="nhsuk-button-group nhsuk-u-margin-top-6">
         <a id="contract-submit" href="/commissioner/contract-management/create/general/summary" class="nhsuk-button nhsuk-u-margin-bottom-0" data-module="nhsuk-button" type="submit" disabled>
           Next
@@ -312,6 +338,9 @@
     const isenddate1 = document.getElementById('contract-isenddate-1');
     const isenddate2 = document.getElementById('contract-isenddate-2');
     const q7 = document.getElementById('q7');
+    const contractPaid1 = document.getElementById('contract-paid-1');
+    const contractPaid2 = document.getElementById('contract-paid-2');
+    const q9 = document.getElementById('q9');
     const endDateInput = document.getElementById('end-date-year');
     const contractCommittee = document.getElementById('contract-committee');
     const contractSubmit = document.getElementById('contract-submit');
@@ -382,9 +411,17 @@
       q8.style.display = 'block';
     });
 
-    contractCommittee.onchange = (event) => {
+    contractCommittee.addEventListener('change', ()=>{
+      q9.style.display = 'block';
+    });
+
+    contractPaid1.addEventListener('change', ()=>{
       contractSubmit.removeAttribute("disabled");
-    }
+    });
+
+    contractPaid2.addEventListener('change', ()=>{
+      contractSubmit.removeAttribute("disabled");
+    });
 
   </script>
 {% endblock %}
