@@ -355,3 +355,53 @@
 .nhsuk-no-background-color {
   background-color: transparent;
 }
+
+.nhsuk-summary-edit-link {
+  display: flex;
+  justify-content: end;
+}
+
+.nhsuk-task-list {
+  padding: 0;
+  list-style-type: none;
+  margin-top: 40px;
+
+  &-item {
+    display: flex;
+    border-bottom: 1px solid #4c6272;
+    padding: 10px 0;
+    margin-bottom: 0;
+    cursor: pointer;
+    &:first-child {
+      border-top: 1px solid #4c6272;
+    }
+    &:hover {
+      background: #DCDCDC;
+    }
+  }
+
+  &-details {
+    &-link {
+      font-size: 22px;
+      &:after {
+        content: "";
+        display: block;
+        position: absolute;
+      }
+    }
+    &-text {
+      color: #4c6272;
+      margin-top: 5px;
+      font-size: 16px;
+      padding-right: 5px;
+    }
+  }
+}
+
+@media (min-width: 40.0625em) {
+  .govuk-task-list {
+    font-size: 1.1875rem;
+    line-height: 1.3157894737;
+    margin-bottom: 30px;
+  }
+}

@@ -1,0 +1,362 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'default-layout.html' %}
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  Create Contract
+{% endblock %}
+
+<!-- Breadcrumbs -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Back link -->
+{% block outerContent %}
+  <div class="nhsuk-back-link nhsuk-u-padding-top-3 nhsuk-u-margin-bottom-0">
+    <a class="nhsuk-back-link__link" href="/commissioner/contract-management/create/start-create-contract">
+      <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
+        <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+      </svg>
+      Back
+    </a>
+  </div>
+{% endblock %}
+
+<!-- Content -->
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+      <div id="service-added-message" class="nhsuk-inset-text nhsuk-u-margin-bottom-4 nhsuk-u-margin-top-0" style="display: none;">
+        <span class="nhsuk-u-visually-hidden">Information: </span>
+        <p>The recurring Clinical Audit service line with start date 20/03/24 has been saved</p>
+      </div>
+      <h1>Add a service line</h1>
+      <div id="q1" class="nhsuk-form-group">
+        <fieldset class="nhsuk-fieldset">
+          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+            <h2 class="nhsuk-fieldset__heading">
+              What is the service line name?
+            </h2>
+          </legend>
+      
+          <div class="nhsuk-radios">
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="service-name-1" name="service-name" type="radio" value="high street dental practice">
+              <label class="nhsuk-label nhsuk-radios__label" for="service-name-1">
+                High Street Dental Practice
+              </label>
+            </div>
+      
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="service-name-2" name="service-name" type="radio" value="dental public health">
+              <label class="nhsuk-label nhsuk-radios__label" for="service-name-2">
+                Dental Public Health
+              </label>
+            </div>
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="service-name-3" name="service-name" type="radio" value="orthodontics">
+              <label class="nhsuk-label nhsuk-radios__label" for="service-name-3">
+                Orthodontics
+              </label>
+            </div>
+      
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="service-name-4" name="service-name" type="radio" value="prosthodontics">
+              <label class="nhsuk-label nhsuk-radios__label" for="service-name-4">
+                Prosthodontics
+              </label>
+            </div>
+
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="service-name-5" name="service-name" type="radio" value="other">
+              <label class="nhsuk-label nhsuk-radios__label" for="service-name-5">
+                Other
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <div id="q2" class="nhsuk-form-group" style="display: none;">
+        <label class="nhsuk-fieldset__legend nhsuk-label--l">
+          <h2 class="nhsuk-fieldset__heading">
+            Select the service line name
+          </h2>
+        </label>
+        <select class="nhsuk-select" id="service-select" name="service-select">
+          <option value="1" selected>Select</option>
+          <option value="2">£50m National Investment</option>
+          <option value="3">Access - in hours</option>
+        </select>
+      </div>
+
+      <div id="q3" class="nhsuk-form-group" style="display: none;">
+        <fieldset class="nhsuk-fieldset">
+          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+            <h2 class="nhsuk-fieldset__heading">
+              Is this a recurring service line?
+            </h2>
+          </legend>
+      
+          <div class="nhsuk-radios">
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="recurring-1" name="recurring" type="radio" value="yes">
+              <label class="nhsuk-label nhsuk-radios__label" for="recurring-1">
+                Yes
+              </label>
+            </div>
+      
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="recurring-2" name="recurring" type="radio" value="no">
+              <label class="nhsuk-label nhsuk-radios__label" for="recurring-2">
+                No
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <div id="q4" class="nhsuk-form-group" style="display: none;">
+        <fieldset class="nhsuk-fieldset" role="group">
+          <legend class="nhsuk-fieldset__legend nhsuk-label--l">
+            <h2 class="nhsuk-fieldset__heading">
+              What is the service line’s start date?
+            </h2>
+          </legend>
+      
+          <div class="nhsuk-date-input" id="start-date">
+            <div class="nhsuk-date-input__item">
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label nhsuk-date-input__label" for="start-date-day">
+                  Day
+                </label>
+                <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="start-date-day" name="start-date-day" type="text" pattern="[0-9]*" inputmode="numeric">
+              </div>
+            </div>
+            <div class="nhsuk-date-input__item">
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label nhsuk-date-input__label" for="start-date-month">
+                  Month
+                </label>
+                <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="start-date-month" name="start-date-month" type="text" pattern="[0-9]*" inputmode="numeric">
+              </div>
+            </div>
+            <div class="nhsuk-date-input__item">
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label nhsuk-date-input__label" for="start-date-year">
+                  Year
+                </label>
+                <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="start-date-year" name="start-date-year" type="text" pattern="[0-9]*" inputmode="numeric">
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <div id="q5" class="nhsuk-form-group" style="display: none;">
+        <fieldset class="nhsuk-fieldset" role="group">
+          <legend class="nhsuk-fieldset__legend nhsuk-label--l">
+            <h2 class="nhsuk-fieldset__heading">
+              What is the service line’s end date?
+            </h2>
+          </legend>
+      
+          <div class="nhsuk-date-input" id="end-date">
+            <div class="nhsuk-date-input__item">
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label nhsuk-date-input__label" for="end-date-day">
+                  Day
+                </label>
+                <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="end-date-day" name="end-date-day" type="text" pattern="[0-9]*" inputmode="numeric">
+              </div>
+            </div>
+            <div class="nhsuk-date-input__item">
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label nhsuk-date-input__label" for="end-date-month">
+                  Month
+                </label>
+                <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="end-date-month" name="end-date-month" type="text" pattern="[0-9]*" inputmode="numeric">
+              </div>
+            </div>
+            <div class="nhsuk-date-input__item">
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label nhsuk-date-input__label" for="end-date-year">
+                  Year
+                </label>
+                <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="end-date-year" name="end-date-year" type="text" pattern="[0-9]*" inputmode="numeric">
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <div id="q6" class="nhsuk-form-group" style="display: none;">
+        <label class="nhsuk-label nhsuk-label--l" for="annual-value">
+          What is the annual value of this service line?
+        </label>
+        <div class="nhsuk-input__wrapper">
+          <div class="nhsuk-input__prefix" aria-hidden="true">£</div>
+          <input class="nhsuk-input nhsuk-input--width-5" id="annual-value" name="annual-value" type="text">
+        </div>
+      </div>
+
+      <div id="q7" class="nhsuk-form-group" style="display: none;">
+        <fieldset class="nhsuk-fieldset">
+          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+            <h2 class="nhsuk-fieldset__heading">
+              How will activity be measured for this service line?
+            </h2>
+          </legend>
+      
+          <div class="nhsuk-radios">
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="activity-measured-1" name="activity-measured" type="radio" value="uda">
+              <label class="nhsuk-label nhsuk-radios__label" for="activity-measured-1">
+                UDA
+              </label>
+            </div>
+      
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="activity-measured-2" name="activity-measured" type="radio" value="Option 2">
+              <label class="nhsuk-label nhsuk-radios__label" for="activity-measured-2">
+                Option 2
+              </label>
+            </div>
+
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="activity-measured-3" name="activity-measured" type="radio" value="Option 3">
+              <label class="nhsuk-label nhsuk-radios__label" for="activity-measured-3">
+                Option 3
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <div id="q8" class="nhsuk-form-group" style="display: none;">
+        <label class="nhsuk-label nhsuk-label--l" for="contracted-activity">
+          What is the contracted activity for this service line?
+        </label>
+        <div class="nhsuk-input__wrapper">
+          <input class="nhsuk-input nhsuk-input--width-5" id="contracted-activity" name="contracted-activity" type="text">
+          <div class="nhsuk-input__suffix" aria-hidden="true">UDAs</div>
+        </div>
+      </div>
+
+      <div class="nhsuk-button-group nhsuk-u-margin-top-6">
+        <a id="service-next" href="/commissioner/contract-management/create/services/summary" class="nhsuk-button nhsuk-u-margin-bottom-0" data-module="nhsuk-button" type="submit" disabled>
+          Next
+        </a>
+        <a id="add-another" href="#" class="nhsuk-button nhsuk-button--secondary nhsuk-u-margin-bottom-0" data-module="nhsuk-button" type="submit" disabled>
+          Save and add another
+        </a>
+        <a href="/commissioner/contract-management/create/start-create-contract" class="nhsuk-link nhsuk-link--no-visited-state">Cancel</a>
+      </div>
+
+    </div>
+  </div>
+{% endblock %}
+
+{% block pageScripts %}
+  <script>
+    const serviceName1 = document.getElementById('service-name-1');
+    const serviceName2 = document.getElementById('service-name-2');
+    const serviceName3 = document.getElementById('service-name-3');
+    const serviceName4 = document.getElementById('service-name-4');
+    const serviceName5 = document.getElementById('service-name-5');
+    const serviceSelect = document.getElementById('service-select');
+    const q2 = document.getElementById('q2');
+    const q3 = document.getElementById('q3');
+    const recurring1 = document.getElementById('recurring-1');
+    const recurring2 = document.getElementById('recurring-2');
+    const q4 = document.getElementById('q4');
+    const q5 = document.getElementById('q5');
+    const startDateYear = document.getElementById('start-date-year');
+    const endDateYear = document.getElementById('end-date-year');
+    const q6 = document.getElementById('q6');
+    const annualValue = document.getElementById('annual-value');
+    const q7 = document.getElementById('q7');
+    const activityMeasured1 = document.getElementById('activity-measured-1');
+    const q8 = document.getElementById('q8');
+    const contractedActivity = document.getElementById('contracted-activity');
+    const serviceNext = document.getElementById('service-next');
+    const addAnother = document.getElementById('add-another');
+    const serviceAddedMessage = document.getElementById('service-added-message');
+    let addedNewService = localStorage['addedNewService'];
+
+    serviceName1.addEventListener('click', ()=>{
+      q3.style.display = 'block';
+      q2.style.display = 'none';
+    });
+
+    serviceName2.addEventListener('click', ()=>{
+      q3.style.display = 'block';
+      q2.style.display = 'none';
+    });
+
+    serviceName3.addEventListener('click', ()=>{
+      q3.style.display = 'block';
+      q2.style.display = 'none';
+    });
+
+    serviceName4.addEventListener('click', ()=>{
+      q3.style.display = 'block';
+      q2.style.display = 'none';
+    });
+
+    serviceName5.addEventListener('click', ()=>{
+      q2.style.display = 'block';
+    });
+
+    serviceSelect.onchange = (event) => {
+      q3.style.display = 'block';
+    }
+
+    recurring1.addEventListener('click', ()=>{
+      q4.style.display = 'block';
+      q5.style.display = 'none';
+    });
+
+    recurring2.addEventListener('click', ()=>{
+      q4.style.display = 'block';
+      q5.style.display = 'block';
+    });
+
+    startDateYear.addEventListener('change', ()=>{
+      q6.style.display = 'block';
+    });
+
+    endDateYear.addEventListener('change', ()=>{
+      q6.style.display = 'block';
+    });
+
+    annualValue.addEventListener('change', ()=>{
+      q7.style.display = 'block';
+    });
+
+    activityMeasured1.addEventListener('click', ()=>{
+      q8.style.display = 'block';
+    });
+
+    contractedActivity.addEventListener('change', ()=>{
+      serviceNext.removeAttribute("disabled");
+      addAnother.removeAttribute("disabled");
+    });
+
+    addAnother.addEventListener('click', ()=>{
+      localStorage['addedNewService'] = 'Yes';
+      location.reload(true);
+    });
+
+    window.onload = function() {
+      if(localStorage['addedNewService'] == "Yes") {
+        serviceAddedMessage.style.display = 'block';
+      }
+    };
+
+  </script>
+{% endblock %}
