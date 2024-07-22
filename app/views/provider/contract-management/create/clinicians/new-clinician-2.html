@@ -168,14 +168,14 @@
       
           <div class="nhsuk-radios">
             <div class="nhsuk-radios__item">
-              <input class="nhsuk-radios__input" id="q5-option-1" name="pension-scheme" type="radio" value="yes">
+              <input class="nhsuk-radios__input" id="q5-option-1" name="pension-scheme" type="radio" value="yes" checked disabled>
               <label class="nhsuk-label nhsuk-radios__label" for="q5-option-1">
-                UDA
+                Yes
               </label>
             </div>
       
             <div class="nhsuk-radios__item">
-              <input class="nhsuk-radios__input" id="q5-option-2" name="pension-scheme" type="radio" value="no">
+              <input class="nhsuk-radios__input" id="q5-option-2" name="pension-scheme" type="radio" value="no" disabled>
               <label class="nhsuk-label nhsuk-radios__label" for="q5-option-2">
                 No
               </label>
@@ -348,6 +348,8 @@
 
     clinicianActivity.addEventListener('change', ()=>{
       q5.style.display = 'block';
+      q6.style.display = 'block';
+      q6.style.display = 'block';
     });
 
     q5Option1.addEventListener('click', ()=>{
