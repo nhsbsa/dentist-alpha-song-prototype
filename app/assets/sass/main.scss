@@ -74,6 +74,19 @@
   }
 }
 
+.nhsuk-warning-callout {
+  &--blue-variant {
+    background-color: #fff;
+    color: #000;
+    border-color: #005eb8;
+  }
+
+  &__label--blue-variant {
+    background-color: #005eb8;
+    color: #fff;
+  }
+}
+
 .nhsuk-filter {
   &-container {
     margin-top: 25px;
@@ -283,6 +296,9 @@
   &-list_summary_action--align {
   display: flex;
   justify-content: end;
+  }
+  &--textonly {
+    width: 300px;
   }
 }
 
