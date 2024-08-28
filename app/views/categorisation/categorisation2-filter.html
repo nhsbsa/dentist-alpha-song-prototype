@@ -1,0 +1,182 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'default-layout.html' %}
+
+<!-- Breadcrumbs -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Back link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- Content -->
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+      <!-- Subcategory selection-->
+
+      <div class="nhsuk-form-group">
+        <fieldset class="nhsuk-fieldset">
+          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--xl">
+            <span class="nhsuk-caption-xl">Mid-year review</span>
+            <h1 class="nhsuk-fieldset__heading">
+              Which subcategory would you like to review?
+            </h1>
+          </legend>
+
+          <div class="nhsuk-hint" id="example-hint">
+            Only one category or subcategory can be applied at one time.
+          </div>
+      
+          <div class="nhsuk-radios">
+      
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="Category one" name="Subcategory-selection" type="radio" value="yes">
+              <label class="nhsuk-label nhsuk-radios__label" for="Category one">
+                Category one - BSA recommended
+              </label>
+            </div>
+      
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="Non-recurring activity: Category two" name="Subcategory-selection" type="radio" value="no">
+              <label class="nhsuk-label nhsuk-radios__label" for="Non-recurring activity: Category two">
+                Non-recurring activity: Category two - BSA recommended
+              </label>
+            </div>
+
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="Open in-year: Category two" name="Subcategory-selection" type="radio" value="no">
+              <label class="nhsuk-label nhsuk-radios__label" for="Open in-year: Category two">
+                Open in-year: Category two - BSA recommended
+              </label>
+            </div>
+
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="FM Outstanding: Category two" name="Subcategory-selection" type="radio" value="no">
+              <label class="nhsuk-label nhsuk-radios__label" for="FM Outstanding: Category two">
+                FM Outstanding: Category two - BSA recommended
+              </label>
+            </div>
+
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="Transfer UDA/UOA to alernative contract: Category two" name="Subcategory-selection" type="radio" value="no">
+              <label class="nhsuk-label nhsuk-radios__label" for="Transfer UDA/UOA to alernative contract: Category two">
+                Transfer UDA/UOA to alernative contract: Category two - BSA recommended
+              </label>
+            </div>
+
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="Category three" name="Subcategory-selection" type="radio" value="no">
+              <label class="nhsuk-label nhsuk-radios__label" for="Category three">
+                Category three - BSA recommended
+              </label>
+            </div>
+
+          </div>
+        </fieldset>
+      </div>
+
+      <!-- SUBFILTERS TITLE -->
+        
+      <h2 class="nhsuk-heading-l nhsuk-u-margin-top-8">Refine results</h2>
+
+      <!-- CHECKBOX 1 -->
+
+      <div class="nhsuk-form-group">
+      
+        <fieldset class="nhsuk-fieldset" aria-describedby="Select status of contracts you want to see">
+          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+            <h3 class="nhsuk-fieldset__heading ">
+              Select status of contracts you want to see
+            </h3>
+          </legend>
+    
+          <div class="nhsuk-checkboxes">
+    
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="Not reviewed" name="Not reviewed" type="checkbox" value="email" checked>
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="Not reviewed">
+                Not reviewed
+              </label>
+            </div>
+
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="In progress" name="In progress" type="checkbox" value="email" checked>
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="In progress">
+                In progress
+              </label>
+            </div>
+    
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="Reviewed" name="Reviewed" type="checkbox" value="phone">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="Reviewed">
+                Reviewed 
+              </label>
+            </div>
+    
+          </div>
+        </fieldset>
+      </div>
+        
+
+      <!-- CHECKBOX 2 -->
+
+        <div class="nhsuk-form-group">
+      
+          <fieldset class="nhsuk-fieldset nhsuk-u-margin-top-4" aria-describedby="Select service line type">
+            <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+              <h3 class="nhsuk-fieldset__heading">
+                Select service line type
+              </h3>
+            </legend>
+      
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="UDA service line" name="UDA service line" type="checkbox" value="text message" checked>
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="UDA service line">
+                UDA service line
+              </label>
+            </div>
+
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="UOA service line" name="UOA service line" type="checkbox" value="text message" checked>
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="UOA service line">
+                UOA service line
+              </label>
+            </div>
+      
+          </fieldset>
+        </div>
+
+      <!-- ICB DROPDOWN -->
+
+        <div class="nhsuk-form-group">
+          <label for="select-1">
+            <h3 class="nhsuk-u-margin-bottom-2 nhsuk-u-margin-top-4">  Select locality or specific ICB</h3> 
+          </label>
+          <select class="nhsuk-select" id="select-1" name="select-1">
+            <option value="1">Locality 1</option>
+            <option value="2" selected>Locality 1: ICB example 1</option>
+            <option value="3">Locality 1: ICB example 2</option>
+          </select>
+        </div>
+      
+
+      <!-- CTA -->
+
+      <div class="nhsuk-button-group nhsuk-u-margin-top-6">
+        <a id="Review contract subcategories" href="/categorisation/categorisation4-FMoutstanding" class="nhsuk-button nhsuk-u-margin-bottom-0" data-module="nhsuk-button" type="submit">
+          Review contracts
+        </a>
+      </div>
+    
+  
+    </div>
+  </div>
+{% endblock %}
+
+{% block pageScripts %}
+  <script>
+    
+  </script>
+{% endblock %}
