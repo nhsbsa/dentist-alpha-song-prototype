@@ -85,7 +85,7 @@
 
       <div class="nhsuk-form-group">
       
-        <fieldset class="nhsuk-fieldset" aria-describedby="Select status of contracts you want to see">
+        <fieldset class="nhsuk-fieldset">
           <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
             <h3 class="nhsuk-fieldset__heading ">
               Select status of contracts you want to see
@@ -95,21 +95,21 @@
           <div class="nhsuk-checkboxes">
     
             <div class="nhsuk-checkboxes__item">
-              <input class="nhsuk-checkboxes__input" id="Not reviewed" name="Not reviewed" type="checkbox" value="email" checked>
-              <label class="nhsuk-label nhsuk-checkboxes__label" for="Not reviewed">
+              <input class="nhsuk-checkboxes__input" id="not-reviewed" name="status" type="checkbox" value="email" checked>
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="not-reviewed">
                 Not reviewed
               </label>
             </div>
 
             <div class="nhsuk-checkboxes__item">
-              <input class="nhsuk-checkboxes__input" id="In progress" name="In progress" type="checkbox" value="email" checked>
-              <label class="nhsuk-label nhsuk-checkboxes__label" for="In progress">
+              <input class="nhsuk-checkboxes__input" id="in-progress" name="status" type="checkbox" value="email" checked>
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="in-progress">
                 In progress
               </label>
             </div>
     
             <div class="nhsuk-checkboxes__item">
-              <input class="nhsuk-checkboxes__input" id="Reviewed" name="Reviewed" type="checkbox" value="phone">
+              <input class="nhsuk-checkboxes__input" id="Reviewed" name="status" type="checkbox" value="phone">
               <label class="nhsuk-label nhsuk-checkboxes__label" for="Reviewed">
                 Reviewed 
               </label>
@@ -124,27 +124,27 @@
 
         <div class="nhsuk-form-group">
       
-          <fieldset class="nhsuk-fieldset nhsuk-u-margin-top-4" aria-describedby="Select service line type">
+          <fieldset class="nhsuk-fieldset nhsuk-u-margin-top-4">
             <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
               <h3 class="nhsuk-fieldset__heading">
                 Select service line type
               </h3>
             </legend>
-      
-            <div class="nhsuk-checkboxes__item">
-              <input class="nhsuk-checkboxes__input" id="UDA service line" name="UDA service line" type="checkbox" value="text message" checked>
-              <label class="nhsuk-label nhsuk-checkboxes__label" for="UDA service line">
-                UDA service line
-              </label>
+            <div class="nhsuk-checkboxes">
+              <div class="nhsuk-checkboxes__item">
+                <input class="nhsuk-checkboxes__input" id="uda" name="service-line" type="checkbox" value="text message" checked>
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="uda">
+                  UDA service line
+                </label>
+              </div>
+  
+              <div class="nhsuk-checkboxes__item">
+                <input class="nhsuk-checkboxes__input" id="uoa" name="service-line" type="checkbox" value="text message" checked>
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="uoa">
+                  UOA service line
+                </label>
+              </div>
             </div>
-
-            <div class="nhsuk-checkboxes__item">
-              <input class="nhsuk-checkboxes__input" id="UOA service line" name="UOA service line" type="checkbox" value="text message" checked>
-              <label class="nhsuk-label nhsuk-checkboxes__label" for="UOA service line">
-                UOA service line
-              </label>
-            </div>
-      
           </fieldset>
         </div>
 
@@ -152,7 +152,7 @@
 
         <div class="nhsuk-form-group">
           <label for="select-1">
-            <h3 class="nhsuk-u-margin-bottom-2 nhsuk-u-margin-top-4">  Select locality or specific ICB</h3> 
+            <h3 class="nhsuk-u-margin-bottom-2 nhsuk-u-margin-top-4">Select locality or specific ICB</h3> 
           </label>
           <select class="nhsuk-select" id="select-1" name="select-1">
             <option value="1">Locality 1</option>
