@@ -1,0 +1,402 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'default-layout.html' %}
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  Manage contracts
+{% endblock %}
+
+<!-- Breadcrumbs -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Back link -->
+{% block outerContent %}
+  <div class="nhsuk-back-link nhsuk-u-padding-top-3 nhsuk-u-margin-bottom-0">
+    <a class="nhsuk-back-link__link" href="/3-contract-management/contract-search-view-amend/v1/contract-view">
+      <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
+        <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+      </svg>
+      Back</a>
+  </div>
+{% endblock %}
+
+<!-- Content -->
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+      <h1>
+        Contract Amend Summary
+        <span class="nhsuk-caption-xl nhsuk-caption--bottom">Contract Name, 9087654356</span>
+      </h1>
+
+      <div class="nhsuk-warning-callout">
+        <h2 class="nhsuk-warning-callout__label">
+          <span role="text">
+            <span class="nhsuk-u-visually-hidden">Important: </span>
+            Commissioner to review changes
+          </span>
+        </h2>
+        <p>Any changes made will be reviewed by a commissioner before it can be finalised.</p>
+      </div>
+
+      <!-- EXPANDERS -->
+      <div class="nhsuk-expander-group">
+        <!-- GENERAL DETAILS -->
+        <details class="nhsuk-details nhsuk-expander">
+          <summary class="nhsuk-details__summary">
+            <p class="nhsuk-details__summary-text nhsuk-u-margin-0">
+              General
+            </p>
+            <span class="nhsuk-details-secondardy-text">1 change has been made</span>
+          </summary>
+          <div class="nhsuk-details__text">
+            <div class="nhsuk-grid-row">
+              <div class="nhsuk-grid-column-two-thirds">
+                <div class="nhsuk-inset-text nhsuk-inset-text--blue nhsuk-u-margin-0">
+                  <div class="nhsuk-details-summary-name nhsuk-u-margin-bottom-3">
+                    <h3 class="nhsuk-u-margin-bottom-0">John Doe</h3>
+                    <strong class="nhsuk-tag nhsuk-tag--blue nhsuk-u-margin-left-3">
+                      New
+                    </strong>
+                  </div>
+                  <dl class="nhsuk-summary-list">
+                    <div class="nhsuk-summary-list__row">
+                      <dt class="nhsuk-summary-list__key">
+                        Clinician ID
+                      </dt>
+                      <dd class="nhsuk-summary-list__value">
+                        12345678
+                      </dd>
+                    </div>
+                    <div class="nhsuk-summary-list__row">
+                      <dt class="nhsuk-summary-list__key">
+                        GDC number
+                      </dt>
+                      <dd class="nhsuk-summary-list__value">
+                        863823789
+                      </dd>
+                    </div>
+                    <div class="nhsuk-summary-list__row">
+                      <dt class="nhsuk-summary-list__key">
+                        Start Date
+                      </dt>
+                      <dd class="nhsuk-summary-list__value">
+                        01/04/2018
+                      </dd>
+                    </div>
+                    <div class="nhsuk-summary-list__row">
+                      <dt class="nhsuk-summary-list__key">
+                        Start End
+                      </dt>
+                      <dd class="nhsuk-summary-list__value">
+                        30/03/2019
+                      </dd>
+                    </div>
+                  </dl>
+                </div>
+              </div>
+            </div>
+          </div>
+        </details>
+      
+        <!-- CLINICIANS DETAILS -->
+        <details class="nhsuk-details nhsuk-expander">
+          <summary class="nhsuk-details__summary">
+            <p class="nhsuk-details__summary-text nhsuk-u-margin-0">
+              Clinicians
+            </p>
+            <span class="nhsuk-details-secondardy-text">2 changes have been made</span>
+          </summary>
+          <div class="nhsuk-details__text">
+            <div class="nhsuk-grid-row">
+              <div class="nhsuk-grid-column-two-thirds">
+                <div class="nhsuk-inset-text nhsuk-inset-text--green nhsuk-u-margin-0 nhsuk-u-margin-bottom-4">
+                  <div class="nhsuk-details-summary-name nhsuk-u-margin-bottom-3">
+                    <h3 class="nhsuk-u-margin-bottom-0">Tom Holland</h3>
+                    <strong class="nhsuk-tag nhsuk-tag--green nhsuk-u-margin-left-3">
+                      Modified
+                    </strong>
+                  </div>
+
+                  <table role="table" class="nhsuk-table-responsive">
+                    <caption class="nhsuk-u-visually-hidden">Modified table</caption>
+                    <thead role="rowgroup" class="nhsuk-table__head">
+                      <tr role="row">
+                        <th role="columnheader" class="" scope="col">
+                          Data
+                        </th>
+                        <th role="columnheader" class="" scope="col">
+                          Old Value
+                        </th>
+                        <th role="columnheader" class="" scope="col">
+                          New Value
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody class="nhsuk-table__body">
+                      <tr role="row" class="nhsuk-table__row">
+                        <td role="cell" class="nhsuk-table__cell">
+                          <span class="nhsuk-table-responsive__heading" aria-hidden="true">Data </span>Start Date
+                        </td>
+                        <td role="cell" class="nhsuk-table__cell">
+                          <span class="nhsuk-table-responsive__heading" aria-hidden="true">Old Value </span>01/04/2018
+                        </td>
+                        <td role="cell" class="nhsuk-table__cell">
+                          <span class="nhsuk-table-responsive__heading" aria-hidden="true">New Value </span>30/10/2018
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  
+                </div>
+                <div class="nhsuk-inset-text nhsuk-inset-text--blue nhsuk-u-margin-0">
+                  <div class="nhsuk-details-summary-name nhsuk-u-margin-bottom-3">
+                    <h3 class="nhsuk-u-margin-bottom-0">John Doe</h3>
+                    <strong class="nhsuk-tag nhsuk-tag--blue nhsuk-u-margin-left-3">
+                      New
+                    </strong>
+                  </div>
+                  <dl class="nhsuk-summary-list">
+                    <div class="nhsuk-summary-list__row">
+                      <dt class="nhsuk-summary-list__key">
+                        Clinician ID
+                      </dt>
+                      <dd class="nhsuk-summary-list__value">
+                        12345678
+                      </dd>
+                    </div>
+                    <div class="nhsuk-summary-list__row">
+                      <dt class="nhsuk-summary-list__key">
+                        GDC number
+                      </dt>
+                      <dd class="nhsuk-summary-list__value">
+                        863823789
+                      </dd>
+                    </div>
+                    <div class="nhsuk-summary-list__row">
+                      <dt class="nhsuk-summary-list__key">
+                        Start Date
+                      </dt>
+                      <dd class="nhsuk-summary-list__value">
+                        01/04/2018
+                      </dd>
+                    </div>
+                    <div class="nhsuk-summary-list__row">
+                      <dt class="nhsuk-summary-list__key">
+                        Start End
+                      </dt>
+                      <dd class="nhsuk-summary-list__value">
+                        30/03/2019
+                      </dd>
+                    </div>
+                  </dl>
+                </div>
+              </div>
+            </div>
+          </div>
+        </details>
+
+        <!-- NPE DETAILS -->
+        <details class="nhsuk-details nhsuk-expander">
+          <summary class="nhsuk-details__summary">
+            <p class="nhsuk-details__summary-text nhsuk-u-margin-0">
+              NPE/NPEE
+            </p>
+            <span class="nhsuk-details-secondardy-text">1 change has been made</span>
+          </summary>
+          <div class="nhsuk-details__text">
+            <div class="nhsuk-grid-row">
+              <div class="nhsuk-grid-column-two-thirds">
+                <div class="nhsuk-inset-text nhsuk-inset-text--blue nhsuk-u-margin-0">
+                  <div class="nhsuk-details-summary-name nhsuk-u-margin-bottom-3">
+                    <h3 class="nhsuk-u-margin-bottom-0">John Doe</h3>
+                    <strong class="nhsuk-tag nhsuk-tag--blue nhsuk-u-margin-left-3">
+                      New
+                    </strong>
+                  </div>
+                  <dl class="nhsuk-summary-list">
+                    <div class="nhsuk-summary-list__row">
+                      <dt class="nhsuk-summary-list__key">
+                        Clinician ID
+                      </dt>
+                      <dd class="nhsuk-summary-list__value">
+                        12345678
+                      </dd>
+                    </div>
+                    <div class="nhsuk-summary-list__row">
+                      <dt class="nhsuk-summary-list__key">
+                        GDC number
+                      </dt>
+                      <dd class="nhsuk-summary-list__value">
+                        863823789
+                      </dd>
+                    </div>
+                    <div class="nhsuk-summary-list__row">
+                      <dt class="nhsuk-summary-list__key">
+                        Start Date
+                      </dt>
+                      <dd class="nhsuk-summary-list__value">
+                        01/04/2018
+                      </dd>
+                    </div>
+                    <div class="nhsuk-summary-list__row">
+                      <dt class="nhsuk-summary-list__key">
+                        Start End
+                      </dt>
+                      <dd class="nhsuk-summary-list__value">
+                        30/03/2019
+                      </dd>
+                    </div>
+                  </dl>
+                </div>
+              </div>
+            </div>
+          </div>
+        </details>
+      </div>
+
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-two-thirds">
+
+          <h2>Declaration</h2>
+
+          <ul class="nhsuk-list nhsuk-list--bullet">
+            <li>All clinicians are included on, and not suspended from, the NHS England Performer List</li>
+            <li>All clinicians are included on, and not suspended from, the GDC register</li>
+            <li>All clinicians have the necessary clinical experience and training to enable them to adequately perform clinical services</li>
+            <li>All clinicians have the necessary clinical experience and training to enable them to adequately perform clinical services</li>
+            <li>Indemnity cover for all clinicians has been verified, commensurate with the level and type of clinical services to be performed</li>
+            <li>All clinicians have provided written confirmation of Hepatitis B and C, TB, HIV and other appropriate immunisations </li>
+          </ul>
+
+          <form class="nhsuk-u-margin-top-6">
+            <div class="nhsuk-form-group">
+              <fieldset class="nhsuk-fieldset">
+                <legend class="nhsuk-u-visually-hidden">
+                  I confirm the above is correct 
+                </legend>
+          
+                <div class="nhsuk-checkboxes">
+                  <div class="nhsuk-checkboxes__item">
+                    <input class="nhsuk-checkboxes__input" id="information-correct-chk" name="information-correct-chk" type="checkbox" value="yes">
+                    <label class="nhsuk-label nhsuk-checkboxes__label" for="information-correct-chk">
+                      I confirm the above is correct for all newly assigned clinicians to the contract
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+          </form>
+
+          <div id="performer-list" class="nhsuk-form-group" style="display: none;">
+            <fieldset class="nhsuk-fieldset">
+              <legend class="nhsuk-fieldset__legend">
+                Is the clinician included on NHS England Performer List or GDC register with conditions or have any agreed undertakings?
+              </legend>
+          
+              <div class="nhsuk-radios">
+                <div class="nhsuk-radios__item">
+                  <input class="nhsuk-radios__input" id="performer-list-1" name="performer-list" type="radio" value="yes">
+                  <label class="nhsuk-label nhsuk-radios__label" for="performer-list-1">
+                    Yes
+                  </label>
+                </div>
+          
+                <div class="nhsuk-radios__item">
+                  <input class="nhsuk-radios__input" id="performer-list-2" name="performer-list" type="radio" value="no">
+                  <label class="nhsuk-label nhsuk-radios__label" for="performer-list-2">
+                    No
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+          <form id="compliance" class="nhsuk-u-margin-top-6" style="display: none;">
+            <div class="nhsuk-form-group">
+              <fieldset class="nhsuk-fieldset">
+                <legend class="nhsuk-fieldset__legend">
+                  I will ensure compliance with these conditions stated on NHS England Performer List or GDC register for all relevant clinicians
+                </legend>
+          
+                <div class="nhsuk-checkboxes">
+                  <div class="nhsuk-checkboxes__item">
+                    <input class="nhsuk-checkboxes__input" id="compliance-chk" name="compliance-chk" type="checkbox" value="yes">
+                    <label class="nhsuk-label nhsuk-checkboxes__label" for="compliance-chk">
+                      I confirm
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+          </form>
+
+          <div id="conditions" class="nhsuk-form-group nhsuk-u-margin-top-6" style="display: none;">
+            <label class="nhsuk-label" for="conditions-text-area">
+              Describe all conditions or undertakings stated on NHS England Performer List or GDC register for clinicians newly assigned to contract.
+            </label>
+            <textarea class="nhsuk-textarea" id="conditions-text-area" name="conditions-text-area" rows="5"></textarea>
+          </div>
+
+          <div class="nhsuk-button-group nhsuk-u-margin-top-6">
+            <a id="submit-approval" href="/3-contract-management/contract-search-view-amend/v1/contract-view" class="nhsuk-button nhsuk-u-margin-bottom-0" data-module="nhsuk-button" type="submit" disabled>
+              Submit for Approval
+            </a>
+            <a href="/3-contract-management/contract-search-view-amend/v1/contract-view" class="nhsuk-link nhsuk-link--no-visited-state">Back to edit</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block pageScripts %}
+  <script>
+    const informationCorrect = document.getElementById('information-correct-chk');
+    const performerList = document.getElementById('performer-list');
+    const performerList1 = document.getElementById('performer-list-1');
+    const performerList2 = document.getElementById('performer-list-2');
+    const compliance = document.getElementById('compliance');
+    const complianceChk = document.getElementById('compliance-chk');
+    const conditions = document.getElementById('conditions');
+    const submit = document.getElementById('submit-approval');
+    let hasContractEdit = localStorage['hasContractEdit'];
+    let hasAmendmentWaiting = localStorage['hasAmendmentWaiting'];
+
+    informationCorrect.addEventListener('click', ()=>{
+      if (informationCorrect.checked) {
+        performerList.style.display = 'block';
+      } else {
+        performerList.style.display = 'none';
+      }
+    });
+
+    performerList1.addEventListener('click', ()=>{
+      compliance.style.display = 'block';
+    });
+    performerList2.addEventListener('click', ()=>{
+      compliance.style.display = 'block';
+    });
+
+    complianceChk.addEventListener('click', ()=>{
+      if (complianceChk.checked) {
+        conditions.style.display = 'block';
+        submit.removeAttribute('disabled');
+      } else {
+        conditions.style.display = 'none';
+        submit.disabled = true;
+      }
+    });
+
+    submit.addEventListener('click', ()=>{
+      localStorage['hasContractEdit'] = 'No';
+      localStorage['hasAmendmentWaiting'] = 'Yes';
+    });
+  </script>
+{% endblock %}

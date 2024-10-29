@@ -1,0 +1,126 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'default-layout.html' %}
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  Contract Management
+{% endblock %}
+
+<!-- Breadcrumbs -->
+{% block beforeContent %}
+
+{% endblock %}
+
+<!-- Back link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- Content -->
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+
+    <!-- Add your content here -->
+    <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+
+    <h1 class="nhsuk-heading-xl">Contract Management</h1>
+    
+    <hr>
+
+    <h1 class="nhsuk-heading-m">
+      Contract creation (commissioner step)
+    </h1>
+
+    <ul>
+      <li>
+        This is journey that the Commissioner completes to initiate the creation of a new contract on the New Dental System (NDS)
+      </li>
+    </ul>
+
+    <a class="nhsuk-link--no-visited-state" href="/3-contract-management/contract-create/v0-5/create/create-contract#general-panel">Version 0.5 (Alpha)</a> <br>
+    <a class="nhsuk-link--no-visited-state" href="/3-contract-management/contract-create/v1/start-create-contract">Version 1.0 (Alpha)</a>
+
+    <hr>
+
+    <h1 class="nhsuk-heading-m">
+      Contract creation (provider step)
+    </h1>
+
+    <ul>
+      <li>
+        This is the journey that the Provider completes on the New Dental System (NDS) to finish the creation of a contract once a Commissioner has initiated its creation
+      </li>
+    </ul>
+
+    <a class="nhsuk-link--no-visited-state" href="/3-contract-management/contract-create/v1-provider/create/start-create-contract">Version 1.0 (Alpha)</a>
+
+    <hr>
+  
+
+    <h1 class="nhsuk-heading-m">
+      Contract search and view (clinician)
+    </h1>
+
+    <ul>
+      <li>
+        What a Clinician sees when they search for and open a contract in NDS
+      </li>
+    </ul>
+
+    <a class="nhsuk-link--no-visited-state" href="/3-contract-management/contract-search-view-clinician/contract-search">Version 0.5 (Alpha)</a> 
+
+    <hr>
+
+
+    <h1 class="nhsuk-heading-m">
+      Contract search, view and amend (provider, practice manager, body corporate)
+    </h1>
+
+    <ul>
+      <li>
+        This is the journey a Provider completes to search, view and amend a contract on NDS
+      </li>
+    </ul>
+
+    <a class="nhsuk-link--no-visited-state" href="/3-contract-management/contract-search-view-amend/v0-5/contract-search">Version 0.5 (Alpha)</a> <br>
+    <a class="nhsuk-link--no-visited-state" href="/3-contract-management/contract-search-view-amend/v1/contract-search">Version 1.0 (Alpha)</a>
+
+    <hr>
+
+    <h1 class="nhsuk-heading-m">
+      Monthly clinician activity statement search
+    </h1>
+
+    <ul>
+      <li>
+        Clinicians can search for their monthly activity statements
+      </li>
+    </ul>
+
+    <a class="nhsuk-link--no-visited-state" href="/3-contract-management/activity-statement-search/activity-statement-search-v0-5">Version 0.5 (Alpha)</a> <br>
+    <a class="nhsuk-link--no-visited-state" href="/3-contract-management/activity-statement-search/activity-statement-search-v1">Version 1.0 (Alpha)</a>
+
+    <hr>
+
+    <h1 class="nhsuk-heading-m">
+      Activity actuals (provider, practice manager, body corporate)
+    </h1>
+
+    <ul>
+      <li>
+        Providers can view live activity data associated with their contract
+      </li>
+    </ul>
+
+    <a class="nhsuk-link--no-visited-state" href="/3-contract-management/activity-actuals/activity-actuals">Version 1.0 (Alpha)</a>
+
+    <hr>
+
+  </div>
+</div>
+<!-- End of content --> 
+{% endblock %}
