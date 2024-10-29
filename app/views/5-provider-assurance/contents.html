@@ -1,0 +1,67 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'default-layout.html' %}
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  Landing page
+{% endblock %}
+
+<!-- Breadcrumbs -->
+{% block beforeContent %}
+
+{% endblock %}
+
+<!-- Back link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- Content -->
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+
+    <!-- Add your content here -->
+    <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+
+    <h1 class="nhsuk-heading-xl">Provider Assurance</h1>
+    
+    <hr>
+
+    <h1 class="nhsuk-heading-m">
+      Mid year review: general (provider, practice manager, body corporate)
+    </h1>
+
+    <ul>
+      <li>
+        Providers can see the outcomes of the mid year review and action any oustanding tasks
+      </li>
+    </ul>
+
+    <a class="nhsuk-link--no-visited-state" href="/5-provider-assurance/mid-year-review/action">Version 2.0 (Alpha)</a>
+
+    <hr>
+
+    <h1 class="nhsuk-heading-m">
+      Mid year review: contract categorisation (commissioner)
+    </h1>
+
+
+
+    <ul>
+      <li>
+        Commissioners can categorise their contracts through the New Dental System (NDS)
+      </li>
+    </ul>
+
+    <a class="nhsuk-link--no-visited-state" href="/5-provider-assurance/categorisation/categorisation1-status">Version 3.0 (Alpha)</a>
+
+    <hr>
+    
+  </div>
+</div>
+<!-- End of content --> 
+{% endblock %}

@@ -1,0 +1,68 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'default-layout.html' %}
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  General
+{% endblock %}
+
+<!-- Breadcrumbs -->
+{% block beforeContent %}
+
+{% endblock %}
+
+<!-- Back link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- Content -->
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+
+    <!-- Add your content here -->
+    <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+
+    <h1 class="nhsuk-heading-xl">General</h1>
+    
+    <hr>
+
+    <h1 class="nhsuk-heading-m">
+      Landing page (commissioner)
+    </h1>
+
+    <a class="nhsuk-link--no-visited-state" href="/1-general/landing-page/v0-5/landing-page">Version 0.5 (Alpha)</a> <br>
+    <a class="nhsuk-link--no-visited-state" href="/1-general/landing-page/v1/landing-page-commissioner">Version 1.0 (Alpha)</a>
+
+    <hr>
+
+
+    <h1 class="nhsuk-heading-m">
+      Landing page (provider, practice manager, body corporate)
+    </h1>
+
+    <a class="nhsuk-link--no-visited-state" href="/1-general/landing-page/v0-5/landing-page">Version 0.5 (Alpha)</a> <br>
+    <a class="nhsuk-link--no-visited-state" href="/1-general/landing-page/v1/landing-page-provider">Version 1.0 (Alpha)</a>
+
+    <hr>
+
+
+    <h1 class="nhsuk-heading-m">
+      Landing page (clinician)
+    </h1>
+
+
+    <a class="nhsuk-link--no-visited-state" href="/1-general/landing-page/v0-5/landing-page">Version 0.5 (Alpha)</a> <br>
+    <a class="nhsuk-link--no-visited-state" href="/1-general/landing-page/v1/landing-page-clinician">Version 1.0 (Alpha)</a>
+
+    <hr>
+
+
+  </div>
+</div>
+<!-- End of content --> 
+{% endblock %}

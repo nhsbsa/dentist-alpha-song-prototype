@@ -1,0 +1,510 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'default-layout.html' %}
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  Manage contracts
+{% endblock %}
+
+<!-- Breadcrumbs -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Back link -->
+{% block outerContent %}
+  <div class="nhsuk-back-link nhsuk-u-padding-top-3 nhsuk-u-margin-bottom-0">
+    <a class="nhsuk-back-link__link" href="/3-contract-management/contract-search-view-amend/v1/contract-view">
+      <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
+        <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+      </svg>
+      Back</a>
+  </div>
+{% endblock %}
+
+<!-- Content -->
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1 class="nhsuk-u-margin-bottom-4">
+        NPE/NPEE estimations for Tom Holland for FY2024/25
+      </h1>
+
+      <details id="clinician-detail" class="nhsuk-details">
+        <summary class="nhsuk-details__summary">
+          <span class="nhsuk-details__summary-text">
+            Clinician details
+          </span>
+        </summary>
+        <div class="nhsuk-details__text">
+          <dl class="nhsuk-summary-list">
+
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">
+                ID
+              </dt>
+              <dd class="nhsuk-summary-list__value">
+                123456789
+              </dd>
+            </div>
+          
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">
+                Name
+              </dt>
+              <dd class="nhsuk-summary-list__value">
+                Tom Holland
+              </dd>
+            </div>
+          
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">
+                GDC Number
+              </dt>
+              <dd class="nhsuk-summary-list__value">
+                12345
+              </dd>
+            </div>
+          
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">
+                Role Type
+              </dt>
+              <dd class="nhsuk-summary-list__value">
+                DCP
+              </dd>
+            </div>
+
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">
+                Start Date
+              </dt>
+              <dd class="nhsuk-summary-list__value">
+                03/02/2014
+              </dd>
+            </div>
+
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">
+                Opted into pension scheme?
+              </dt>
+              <dd class="nhsuk-summary-list__value">
+                Yes
+              </dd>
+            </div>
+          
+          </dl>
+        </div>
+      </details>
+
+      <!-- CARD 1 -->
+      <div id="npe-1" class="nhsuk-npe-card">
+        <h3 class="nhsuk-u-margin-bottom-0">NPE 1</h3>
+        <dl class="nhsuk-summary-list nhsuk-summary-list--no-border nhsuk-u-margin-bottom-3">
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key vertical-align">
+              Start Date
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+              <div class="nhsuk-form-group">
+                <fieldset class="nhsuk-fieldset" role="group">
+                  <legend class="nhsuk-u-visually-hidden" for="npe-npee-start-date">
+                    NPE/NPEE Start Date
+                  </legend>
+                  <div class="nhsuk-date-input" id="npe-npee-start-date">
+                    <div class="nhsuk-date-input__item">
+                      <div class="nhsuk-form-group">
+                        <label class="nhsuk-label nhsuk-date-input__label" for="start-day">
+                          Day
+                        </label>
+                        <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="start-day" name="start-day" type="text" pattern="[0-9]*" inputmode="numeric" value="04">
+                      </div>
+                    </div>
+                    <div class="nhsuk-date-input__item">
+                      <div class="nhsuk-form-group">
+                        <label class="nhsuk-label nhsuk-date-input__label" for="start-month">
+                          Month
+                        </label>
+                        <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="start-month" name="start-month" type="text" pattern="[0-9]*" inputmode="numeric" value="03">
+                      </div>
+                    </div>
+                    <div class="nhsuk-date-input__item">
+                      <div class="nhsuk-form-group">
+                        <label class="nhsuk-label nhsuk-date-input__label" for="start-year">
+                          Year
+                        </label>
+                        <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="start-year" name="start-year" type="text" pattern="[0-9]*" inputmode="numeric" value="23">
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+            </dd>
+          </div>
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key vertical-align">
+              End Date
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+              <div class="nhsuk-form-group">
+                <fieldset class="nhsuk-fieldset" role="group">
+                  <legend class="nhsuk-u-visually-hidden" for="npe-npee-end-date">
+                    NPE/NPEE end Date
+                  </legend>
+                  <div class="nhsuk-date-input" id="npe-npee-end-date">
+                    <div class="nhsuk-date-input__item">
+                      <div class="nhsuk-form-group">
+                        <label class="nhsuk-label nhsuk-date-input__label" for="end-day">
+                          Day
+                        </label>
+                        <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="end-day" name="end-day" type="text" pattern="[0-9]*" inputmode="numeric" value="01">
+                      </div>
+                    </div>
+                    <div class="nhsuk-date-input__item">
+                      <div class="nhsuk-form-group">
+                        <label class="nhsuk-label nhsuk-date-input__label" for="end-month">
+                          Month
+                        </label>
+                        <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="end-month" name="end-month" type="text" pattern="[0-9]*" inputmode="numeric" value="06">
+                      </div>
+                    </div>
+                    <div class="nhsuk-date-input__item">
+                      <div class="nhsuk-form-group">
+                        <label class="nhsuk-label nhsuk-date-input__label" for="end-year">
+                          Year
+                        </label>
+                        <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="end-year" name="end-year" type="text" pattern="[0-9]*" inputmode="numeric" value="24">
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+            </dd>
+          </div>
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key vertical-align">
+              Employment Type
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-u-visually-hidden" for="employment-type">
+                  Employment Type
+                </label>
+                <select class="nhsuk-select" id="employment-type" name="employment-type">
+                  <option value="1">Select</option>
+                  <option value="2" selected>Option 1</option>
+                  <option value="3">Option 2</option>
+                </select>
+              </div>
+            </dd>
+        
+          </div>
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key vertical-align">
+              NPE value
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+              <div class="nhsuk-input__wrapper">
+                <div class="nhsuk-input__prefix" aria-hidden="true">£</div>
+                <input class="nhsuk-input nhsuk-input--width-5" id="value" name="value" type="text" value="50,000">
+              </div>
+            </dd>
+          </div>
+        </dl>
+        <a id="remove-1" href="#" class="nhsuk-link link-red nhsuk-link--no-visited-state">Remove</a>
+      </div>
+      <!-- CARD 2 -->
+      <div id="npe-2" class="nhsuk-npe-card nhsuk-u-margin-top-4">
+        <h3 class="nhsuk-u-margin-bottom-0">NPE 2</h3>
+        <dl class="nhsuk-summary-list nhsuk-summary-list--no-border nhsuk-u-margin-bottom-3">
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key vertical-align">
+              Start Date
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+              <div class="nhsuk-form-group">
+                <fieldset class="nhsuk-fieldset" role="group">
+                  <legend class="nhsuk-u-visually-hidden" for="npe-npee-start-date">
+                    NPE/NPEE Start Date
+                  </legend>
+                  <div class="nhsuk-date-input" id="npe-npee-start-date">
+                    <div class="nhsuk-date-input__item">
+                      <div class="nhsuk-form-group">
+                        <label class="nhsuk-label nhsuk-date-input__label" for="start-day">
+                          Day
+                        </label>
+                        <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="start-day" name="start-day" type="text" pattern="[0-9]*" inputmode="numeric" value="01">
+                      </div>
+                    </div>
+                    <div class="nhsuk-date-input__item">
+                      <div class="nhsuk-form-group">
+                        <label class="nhsuk-label nhsuk-date-input__label" for="start-month">
+                          Month
+                        </label>
+                        <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="start-month" name="start-month" type="text" pattern="[0-9]*" inputmode="numeric" value="06">
+                      </div>
+                    </div>
+                    <div class="nhsuk-date-input__item">
+                      <div class="nhsuk-form-group">
+                        <label class="nhsuk-label nhsuk-date-input__label" for="start-year">
+                          Year
+                        </label>
+                        <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="start-year" name="start-year" type="text" pattern="[0-9]*" inputmode="numeric" value="23">
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+            </dd>
+          </div>
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key vertical-align">
+              End Date
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+              <div class="nhsuk-form-group">
+                <fieldset class="nhsuk-fieldset" role="group">
+                  <legend class="nhsuk-u-visually-hidden" for="npe-npee-end-date">
+                    NPE/NPEE end Date
+                  </legend>
+                  <div class="nhsuk-date-input" id="npe-npee-end-date">
+                    <div class="nhsuk-date-input__item">
+                      <div class="nhsuk-form-group">
+                        <label class="nhsuk-label nhsuk-date-input__label" for="end-day">
+                          Day
+                        </label>
+                        <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="end-day" name="end-day" type="text" pattern="[0-9]*" inputmode="numeric" value="30">
+                      </div>
+                    </div>
+                    <div class="nhsuk-date-input__item">
+                      <div class="nhsuk-form-group">
+                        <label class="nhsuk-label nhsuk-date-input__label" for="end-month">
+                          Month
+                        </label>
+                        <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="end-month" name="end-month" type="text" pattern="[0-9]*" inputmode="numeric" value="10">
+                      </div>
+                    </div>
+                    <div class="nhsuk-date-input__item">
+                      <div class="nhsuk-form-group">
+                        <label class="nhsuk-label nhsuk-date-input__label" for="end-year">
+                          Year
+                        </label>
+                        <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="end-year" name="end-year" type="text" pattern="[0-9]*" inputmode="numeric" value="24">
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+            </dd>
+          </div>
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key vertical-align">
+              Employment Type
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-u-visually-hidden" for="employment-type">
+                  Employment Type
+                </label>
+                <select class="nhsuk-select" id="employment-type" name="employment-type">
+                  <option value="1">Select</option>
+                  <option value="2">Option 1</option>
+                  <option value="3" selected>Option 2</option>
+                </select>
+              </div>
+            </dd>
+        
+          </div>
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key vertical-align">
+              NPE value
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+              <div class="nhsuk-input__wrapper">
+                <div class="nhsuk-input__prefix" aria-hidden="true">£</div>
+                <input class="nhsuk-input nhsuk-input--width-5" id="value" name="value" type="text" value="55,000">
+              </div>
+            </dd>
+          </div>
+        </dl>
+        <a id="remove-2" href="#" class="nhsuk-link link-red nhsuk-link--no-visited-state">Remove</a>
+      </div>
+      <!-- CARD 3 -->
+      <div id="npe-3" class="nhsuk-npe-card nhsuk-u-margin-top-4" style="display: none;">
+        <h3 class="nhsuk-u-margin-bottom-0">NPE</h3>
+        <dl class="nhsuk-summary-list nhsuk-summary-list--no-border nhsuk-u-margin-bottom-3">
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key vertical-align">
+              Start Date
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+              <div class="nhsuk-form-group">
+                <fieldset class="nhsuk-fieldset" role="group">
+                  <legend class="nhsuk-u-visually-hidden" for="npe-npee-start-date">
+                    NPE/NPEE Start Date
+                  </legend>
+                  <div class="nhsuk-date-input" id="npe-npee-start-date">
+                    <div class="nhsuk-date-input__item">
+                      <div class="nhsuk-form-group">
+                        <label class="nhsuk-label nhsuk-date-input__label" for="start-day">
+                          Day
+                        </label>
+                        <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="start-day" name="start-day" type="text" pattern="[0-9]*" inputmode="numeric">
+                      </div>
+                    </div>
+                    <div class="nhsuk-date-input__item">
+                      <div class="nhsuk-form-group">
+                        <label class="nhsuk-label nhsuk-date-input__label" for="start-month">
+                          Month
+                        </label>
+                        <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="start-month" name="start-month" type="text" pattern="[0-9]*" inputmode="numeric">
+                      </div>
+                    </div>
+                    <div class="nhsuk-date-input__item">
+                      <div class="nhsuk-form-group">
+                        <label class="nhsuk-label nhsuk-date-input__label" for="start-year">
+                          Year
+                        </label>
+                        <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="start-year" name="start-year" type="text" pattern="[0-9]*" inputmode="numeric">
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+            </dd>
+          </div>
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key vertical-align">
+              End Date
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+              <div class="nhsuk-form-group">
+                <fieldset class="nhsuk-fieldset" role="group">
+                  <legend class="nhsuk-u-visually-hidden" for="npe-npee-end-date">
+                    NPE/NPEE end Date
+                  </legend>
+                  <div class="nhsuk-date-input" id="npe-npee-end-date">
+                    <div class="nhsuk-date-input__item">
+                      <div class="nhsuk-form-group">
+                        <label class="nhsuk-label nhsuk-date-input__label" for="end-day">
+                          Day
+                        </label>
+                        <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="end-day" name="end-day" type="text" pattern="[0-9]*" inputmode="numeric">
+                      </div>
+                    </div>
+                    <div class="nhsuk-date-input__item">
+                      <div class="nhsuk-form-group">
+                        <label class="nhsuk-label nhsuk-date-input__label" for="end-month">
+                          Month
+                        </label>
+                        <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="end-month" name="end-month" type="text" pattern="[0-9]*" inputmode="numeric">
+                      </div>
+                    </div>
+                    <div class="nhsuk-date-input__item">
+                      <div class="nhsuk-form-group">
+                        <label class="nhsuk-label nhsuk-date-input__label" for="end-year">
+                          Year
+                        </label>
+                        <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="end-year" name="end-year" type="text" pattern="[0-9]*" inputmode="numeric">
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+            </dd>
+          </div>
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key vertical-align">
+              Employment Type
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-u-visually-hidden" for="employment-type">
+                  Employment Type
+                </label>
+                <select class="nhsuk-select" id="employment-type" name="employment-type">
+                  <option value="1" selected>Select</option>
+                  <option value="2">Option 1</option>
+                  <option value="3">Option 2</option>
+                </select>
+              </div>
+            </dd>
+        
+          </div>
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key vertical-align">
+              NPE value
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+              <div class="nhsuk-input__wrapper">
+                <div class="nhsuk-input__prefix" aria-hidden="true">£</div>
+                <input class="nhsuk-input nhsuk-input--width-5" id="value" name="value" type="text">
+              </div>
+            </dd>
+          </div>
+        </dl>
+        <a id="remove-3" href="#" class="nhsuk-link link-red nhsuk-link--no-visited-state">Remove</a>
+      </div>
+
+      <a id="add-npe-npee-btn" href="#" class="nhsuk-button nhsuk-button--secondary nhsuk-u-margin-bottom-0 nhsuk-u-margin-top-4" data-module="nhsuk-button" type="submit">
+        Add NPE/NPEE
+      </a>
+
+      <hr />
+
+      <div class="nhsuk-button-group nhsuk-u-margin-top-6">
+        <a id="update-npe" href="/3-contract-management/contract-search-view-amend/v1/contract-view#events-panel" class="nhsuk-button nhsuk-u-margin-bottom-0" data-module="nhsuk-button" type="submit">
+          Update
+        </a>
+        <a href="/3-contract-management/contract-search-view-amend/v1/contract-view#events-panel" class="nhsuk-link nhsuk-link--no-visited-state">Cancel</a>
+      </div>
+
+    </div>
+  </div>
+{% endblock %}
+
+{% block pageScripts %}
+  <script>
+    const updateNpeBtn = document.getElementById('update-npe');
+    const addNpeBtn = document.getElementById('add-npe-npee-btn');
+    const npe1 = document.getElementById('npe-1');
+    const npe2 = document.getElementById('npe-2');
+    const npe3 = document.getElementById('npe-3');
+    const remove1 = document.getElementById('remove-1');
+    const remove2 = document.getElementById('remove-2');
+    const remove3 = document.getElementById('remove-3');
+    let hasContractEdit = localStorage['hasContractEdit'];
+
+    remove1.addEventListener('click', ()=>{
+      window.event.preventDefault();
+      remove2.style.display = 'none';
+      npe1.style.display = 'none';
+    });
+
+    remove2.addEventListener('click', ()=>{
+      window.event.preventDefault();
+      remove1.style.display = 'none';
+      npe2.style.display = 'none';
+    });
+
+    remove3.addEventListener('click', ()=>{
+      window.event.preventDefault();
+      npe3.style.display = 'none';
+    });
+
+    addNpeBtn.addEventListener('click', ()=>{
+      window.event.preventDefault();
+      npe3.style.display = 'block';
+    });
+
+    updateNpeBtn.addEventListener('click', ()=>{
+      localStorage['hasContractEdit'] = 'Yes';
+    });
+
+  </script>
+{% endblock %}
