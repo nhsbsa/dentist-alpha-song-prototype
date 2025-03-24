@@ -1,0 +1,121 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  {{ serviceName }}
+{% endblock %}
+
+{% block beforeContent %}
+{{ breadcrumb({
+  href: "/",
+  text: "Home"
+}) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+                <h1 class="nhsuk-heading-xl">
+                    <span class="nhsuk-caption-xl">Allocate foundation dentist funding</span>
+                    Review Jane’s funding allocation
+                  </h1>
+                <p>
+                    Based on their training pattern the proposed allocation is:
+                </p>
+                </div>
+
+                <div class="nhsuk-grid-column-three-quarters">
+                  <table class="nhsuk-table">
+                      <caption class="nhsuk-table__caption">Contract 99017500001 (Green Park Dental)</caption>
+                      <thead role="rowgroup" class="nhsuk-table__head">
+                        <tr role="row">
+                          <th role="columnheader" class="" scope="col">
+                            Trainer
+                          </th>
+                          <th role="columnheader" class="" scope="col">
+                            Start date
+                          </th>
+                          <th role="columnheader" class="" scope="col">
+                            End date
+                          </th>
+                          <th role="columnheader" class="" scope="col">
+                            Grant
+                          </th>
+                          <th role="columnheader" class="" scope="col">
+                            Service cost
+                          </th>
+                          <th role="columnheader" class="" scope="col">
+                            UDAs
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody class="nhsuk-table__body">
+                        <tr role="row" class="nhsuk-table__row">
+                          <td class="nhsuk-table__cell"><strong>Joe Bloggs</strong><br>(GDC: 123457)</td>
+                          <td class="nhsuk-table__cell ">30 July 2025</td>
+                          <td class="nhsuk-table__cell ">29 July 2025</td>
+                          <td class="nhsuk-table__cell ">£1,625</td>
+                          <td class="nhsuk-table__cell ">£8,911.66</td>
+                          <td class="nhsuk-table__cell ">1,234</td>
+                        </tr>
+                        <tr role="row" class="nhsuk-table__row">
+                          <td class="nhsuk-table__cell"><strong>Beth Williams</strong><br>(GDC: 123456)</td>
+                          <td class="nhsuk-table__cell ">1 Oct 2025</td>
+                          <td class="nhsuk-table__cell ">31 Dec 2025</td>
+                          <td class="nhsuk-table__cell ">£1,625</td>
+                          <td class="nhsuk-table__cell ">£8,911.66</td>
+                          <td class="nhsuk-table__cell ">1,234</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                
+                <div class="nhsuk-grid-column-two-thirds">
+                <p>
+                    This is because:
+                </p>
+
+                <ul class="nhsuk-list nhsuk-list--number">
+                    <li>
+                        this performer’s foundation period is 1 year
+                    </li>
+                    <li>
+                        this training starts on {{ data.oneToOneStartDateDay }}/{{ data.oneToOneStartDateMonth }}/{{ data.oneToOneStartDateYear }} and ends on {{ data.oneToOneEndDateDay }}/{{ data.oneToOneEndDateMonth }}/{{ data.oneToOneEndDateYear }} 
+                    </li>
+                    <li>
+                      their overall training grant payment is £11,700
+                    </li>
+                    <li>
+                      their overall service cost payment is £64,164
+                    </li>
+                    <li>
+                      we divided the training grant and service cost payments by the length of their foundation period (1 year) to get annual payments
+                    </li>
+                    <li>
+                      50% of their time will be allocated to Joe Bloggs
+                    </li>
+                    <li>
+                      50% of their time will be allocated to Beth Williams
+                    </li>
+                    <li>
+                      we calculated a proportional training grant payment and service cost payment based on their annual payments, the training period and the percentage of time they will be assigned to this trainer (80%)
+                    </li>
+                    <li>
+                      50% of the grant is £5,850 and 50% of the service cost is £32,082
+                    </li>
+                    <li>
+                      50% of the grant is £5,850 and 50% of the service cost is £32,082
+                    </li>
+                  </ul>
+                </div>
+          
+           
+  </div><br>
+  <a href="performer-view" class="nhsuk-button" data-module="nhsuk-button" type="submit">Finish</a>
+
+</div>
+{% endblock %}
+
+
+

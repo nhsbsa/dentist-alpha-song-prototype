@@ -1,0 +1,56 @@
+{% extends 'layout.html' %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+
+
+{% block outerContent %}
+{{ backLink({
+  href: "#",
+  text: "Go back"
+}) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <form action="/contract-amount" method="post" class="form">
+
+        <span class="nhsuk-caption-xl">Allocate foundation dentist funding</span>
+        {{ radios({
+          "idPrefix": "example",
+          "name": "contractAmount",
+          "fieldset": {
+            "legend": {
+              "text": "How many contracts will they be assigned to in their foundation period?",
+              "classes": "nhsuk-fieldset__legend--xl",
+              "isPageHeading": true
+            }
+          },
+          "items": [
+            {
+              "value": "One",
+              "text": "One"
+            },
+            {
+              "value": "More than one",
+              "text": "More than one"
+            }
+          ]
+        }) }}
+
+        {{ button({
+          "text": "Continue",
+          "id": "btn_submit"
+        }) }}
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

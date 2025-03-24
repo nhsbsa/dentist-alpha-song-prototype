@@ -1,0 +1,41 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  {{ serviceName }}
+{% endblock %}
+
+{% block beforeContent %}
+{{ breadcrumb({
+  href: "/",
+  text: "Home"
+}) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+        <h1 class="nhsuk-heading-xl">
+            <span class="nhsuk-caption-xl">Change contract end date</span>
+            Before you start
+          </h1>
+      
+      <p>To change the contract end date you will need:</p>
+      <ul>
+        <li>the proposed end date</li>
+        <li>reason why the end date is changing</li>
+      </ul>
+
+      <p>
+        If the existing provider holds more than one contract you will be able to change the other contracts’ end dates as part of your request. <br>
+        <br>Changing the contract end date needs to be checked by an authorised reviewer. A reviewer will be notified when you complete the request.
+      </p>
+
+
+      <a href="transfer-date" class="nhsuk-button">
+        Continue
+      </a>
+
+    </div>
+
+  </div>
+{% endblock %}

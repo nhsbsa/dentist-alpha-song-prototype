@@ -1,0 +1,114 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  {{ serviceName }}
+{% endblock %}
+
+{% block outerContent %}
+{{ backLink({
+  href: "#",
+  text: "Go back"
+}) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+        <form>
+
+            <div class="nhsuk-form-group">
+          
+              <fieldset class="nhsuk-fieldset" aria-describedby="example-hint">
+                <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+                  <h1 class="nhsuk-fieldset__heading">
+                    <span class="nhsuk-caption-xl">Allocate foundation dentist funding</span>
+                    Tell us about Jane's training
+                  </h1>
+                </legend>
+                <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+                  <h2 class="nhsuk-fieldset__heading">
+                    Contract 1 of 2
+                  </h2>
+                </legend>
+                <p>
+                  99017500001, Green Park Dental
+                </p>
+                <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+                    <h2 class="nhsuk-fieldset__heading">
+                        As part of of this contract, who will be training Jane?
+                    </h2>
+                  </legend>
+          
+                <div class="nhsuk-hint" id="example-hint">
+                  Choose one or more approved trainers on this contract
+                </div>
+          
+                <div class="nhsuk-checkboxes">
+          
+                  <div class="nhsuk-checkboxes__item">
+                    <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
+                    <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
+                        Joe Bloggs (GDC:<strong>12345</strong>)
+                    </label>
+                  </div>
+          
+                  <div class="nhsuk-checkboxes__item">
+                    <input class="nhsuk-checkboxes__input" id="example-2" name="example" type="checkbox" value="phone">
+                    <label class="nhsuk-label nhsuk-checkboxes__label" for="example-2">
+                        Adam Scott (GDC:<strong>12345</strong>)
+                    </label>
+                  </div>
+          
+                  <div class="nhsuk-checkboxes__item">
+                    <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message">
+                    <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+                        Jane Williams (GDC:<strong>12345</strong>)
+                    </label>
+                  </div>
+
+                  <div class="nhsuk-checkboxes__divider">or</div>
+
+                  <div class="nhsuk-checkboxes__item">
+                    <input class="nhsuk-checkboxes__input" id="confirm-6" name="confirm" type="checkbox" value="phone" aria-controls="conditional-confirm-6" aria-expanded="true">
+                    <label class="nhsuk-label nhsuk-checkboxes__label" for="confirm-6">
+                    find another trainer
+                    </label>
+                  </div>
+            
+                  <div class="nhsuk-checkboxes__conditional" id="conditional-confirm-6">
+            
+                    <div class="nhsuk-form-group">
+                      <div class="nhsuk-form-group">
+                        <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
+                          <div class="nhsuk-date-input" id="example">
+                            <div class="nhsuk-date-input__item">
+                              <div class="nhsuk-form-group">
+                                <div class="nhsuk-form-group">
+                                  <label class="nhsuk-label--s" for="close-justification">
+                                    GDC number <span class="nhsuk-u-visually-hidden"></span>
+                                  </label>
+                                  <input class="nhsuk-input" id="close-justification" name="close-justification" type="text">
+                                </div>
+                              
+                            </div>
+                          </div>
+                        </fieldset>
+                      
+                      </div>
+                    </div>
+            
+                  </div>
+          
+                </div>
+              </fieldset>
+          
+            </div>
+          
+          </form>
+    </div>
+  </div>
+  <a href="contract2-choose-trainers" class="nhsuk-button" data-module="nhsuk-button" type="submit">Save and continue</a>
+
+</div>
+{% endblock %}
+

@@ -1,0 +1,65 @@
+{% extends 'layout.html' %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block outerContent %}
+{{ backLink({
+  href: "#",
+  text: "Go back"
+}) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+      <span class="nhsuk-caption-xl">Transfer contract</span>
+      <form action="/transfer-date" method="post" class="form">
+
+        {{ dateInput({
+          id: "example",
+          name: "transferDate",
+          fieldset: {
+            legend: {
+              text: "When are the contracts to be transferred?",
+              classes: "nhsuk-label--xl",
+              isPageHeading: true
+            }
+          },
+          hint: {
+            text: "For example, 15 3 2026"
+          },
+          items: [
+            {
+              id: "transferDay",
+              name: "Day",
+              classes: "nhsuk-input--width-2"
+            },
+            {
+              id: "transferMonth",  
+              name: "Month",
+              classes: "nhsuk-input--width-2"
+            },
+            {
+              id: "transferYear",
+              name: "Year",
+              classes: "nhsuk-input--width-4"
+            }
+          ]
+        }) }}
+
+        {{ button({
+          "text": "Save and continue",
+          "id": "btn_submit"
+         
+        }) }}
+      </form>
+    </div>
+  </div>
+
+{% endblock %}
+
+

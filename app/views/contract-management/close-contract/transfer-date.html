@@ -1,0 +1,66 @@
+{% extends 'layout.html' %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block outerContent %}
+{{ backLink({
+  href: "#",
+  text: "Go back"
+}) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <form action="/close-contract-date" method="post" class="form">
+        <span class="nhsuk-caption-xl">Change contract end date</span>
+
+      {{ dateInput({
+        id: "example",
+        values: "closeContractDate",
+        fieldset: {
+          legend: {
+            text: "What is the proposed end date for contract 99017500001?",
+            classes: "nhsuk-label--xl",
+            isPageHeading: true
+          }
+        },
+        hint: {
+          text: "For example, 15 3 1984"
+        },
+        items: [
+          {
+            name: "day",
+            classes: "nhsuk-input--width-2",
+            values:"closeContractDay"
+          },
+          {
+            name: "month",
+            classes: "nhsuk-input--width-2",
+            values:"month"
+          },
+          {
+            name: "year",
+            classes: "nhsuk-input--width-4",
+            values: "year"
+          }
+        ]
+      }) }}
+
+        {{ button({
+          "text": "Continue",
+          "id": "btn_submit",
+          "href": "requestor"
+        }) }}
+      </form>
+
+  
+    </div>
+  </div>
+
+{% endblock %}

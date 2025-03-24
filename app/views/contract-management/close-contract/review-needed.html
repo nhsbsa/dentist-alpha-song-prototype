@@ -1,0 +1,39 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  {{ serviceName }}
+{% endblock %}
+
+{% block outerContent %}
+{{ backLink({
+  href: "#",
+  text: "Go back"
+}) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+        <h1 class="nhsuk-heading-xl">
+            <span class="nhsuk-caption-xl">Change contract end date</span>
+            Your request needs to be reviewed
+          </h1>
+      
+      <p>Changing a contract end date needs to be checked by an authorised reviewer.</p>
+
+      <p>
+        A reviewer is usually someone in your commissioning organisation. You can choose to notify a specific reviewer if you wish.
+    </p>
+
+    <p>
+        You can also attach any supporting documentation to help the reviewer.
+    </p>
+
+      <a href="notify-someone" class="nhsuk-button">
+        Continue
+      </a>
+
+    </div>
+
+  </div>
+{% endblock %}

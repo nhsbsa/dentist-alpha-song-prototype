@@ -1,0 +1,42 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  {{ serviceName }}
+{% endblock %}
+
+{% block beforeContent %}
+{{ breadcrumb({
+  href: "/",
+  text: "Home"
+}) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <div class="govuk-panel govuk-panel--confirmation">
+        <h1 class="govuk-panel__title">
+          Contract end date change requested
+        </h1>
+        <div class="govuk-panel__body">
+          Approval needed
+        </div>
+      </div>
+
+      <h2 class="nhsuk-heading-l">
+        <br>What happens next?
+      </h2>
+
+      <p>An authorised reviewer needs to check your request before the contract end date can be changed. </p>
+        
+      <p>The reviewer you entered has been notified.</p>
+
+      <p>You do not need to do anything.</p>
+
+      <p><a href="awaiting-approval-close-contract-view">Go to contract 99017500001</a></p>
+
+    </div>
+  </div><br>
+
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  {{ serviceName }}
+{% endblock %}
+
+{% block outerContent %}
+{{ backLink({
+  href: "#",
+  text: "Go back"
+}) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+        <fieldset class="nhsuk-fieldset" aria-describedby="confirm-hint">
+                <h1 class="nhsuk-heading-xl">
+                    <span class="nhsuk-caption-xl">Allocate foundation dentist funding</span>
+                    What is the training practice’s contract ID?
+                  </h1>
+                  <h2 class="nhsuk-heading-m">
+                    Contract 1
+                  </h2>
+        
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label" for="two-thirds"><strong>
+                      Contract ID
+                    </strong></label>
+                    <input class="nhsuk-input nhsuk-u-width-two-thirds" id="three-quarters" name="three-quarters" type="text">
+                </div>
+          </fieldset>
+    </div>
+  </div><br><br>
+  <a href="contracts-dates" class="nhsuk-button" data-module="nhsuk-button" type="submit" onclick="goToContract">Save and continue</a>
+
+</div>
+{% endblock %}
+
+{% block pageScripts %}
+
+
+{% endblock %}

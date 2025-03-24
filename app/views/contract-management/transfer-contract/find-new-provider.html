@@ -1,0 +1,50 @@
+{% extends 'layout.html' %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  {{ backLink({
+    "href": "provider-id",
+    "text": "Back"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+      <span class="nhsuk-caption-xl">Transfer contract</span>
+      <h1 class="govuk-heading-xl" style="margin-bottom: 30px;">Find a provider</h1>
+      <form action="/new-provider-id" method="post" class="form">
+        <div>
+        {{ input({
+              hint: {
+              text: "Enter all or part of the new provider’s name or postcode"
+            },
+            id: "example-with-hint-text",
+            name: "example-with-hint-text"
+        })}}
+        {{ button({
+            "text": "Search",
+            "id": "search",
+            href: "select-new-provider"
+          }) }}
+        </div>
+      
+
+      {{ actionLink({
+        text: "Set up a provider",
+        href: "#"
+      }) }}
+
+        
+      </form>
+    </div>
+  </div>
+
+{% endblock %}
+
+

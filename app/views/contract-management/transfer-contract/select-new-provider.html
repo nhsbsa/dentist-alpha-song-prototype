@@ -1,0 +1,109 @@
+{% extends 'layout.html' %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  {{ backLink({
+    "href": "#",
+    "text": "Back"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+      <span class="nhsuk-caption-xl">Transfer contract</span>
+      <h1 class="govuk-heading-xl" style="margin-bottom: 30px;">Which provider is taking on the contract?</h1>
+      <form action="/select-provider" method="post" class="form">
+
+        {{ table({
+        responsive: false,
+        panel: false,
+        firstCellIsHeader: true,
+        head: [
+            {
+            text: "Provider ID"
+            },
+            {
+            text: "Provider name"
+            },
+            {
+            text: "Contact name"
+            },
+            {
+                text: "",
+                format: "numeric"
+            }
+        ],
+        rows: [
+            [
+            {
+                text: "123456"
+            },
+            {
+                text: "Longfellow Dental"
+            },
+            {
+                text: "Rory Longfellow"
+            },
+            {
+                html: "<a href='check-providers'>Select</a>"
+              }
+            ],
+            [
+            {
+                text: "123457"
+            },
+            {
+                text: "Green Park Dental"
+            },
+            {
+                text: "Rory Holmes"
+            },
+            {
+                html: "<a href='check-providers'>Select</a>"
+              }
+            ],
+            [
+            {
+                text: "123458"
+            },
+            {
+                text: "High Street Dental"
+            },
+            {
+                text: "Rory Jackson"
+            },
+            {
+                html: "<a href='check-providers'>Select</a>"
+              }
+            ]
+        ]
+        }) }}
+
+        {{ button({
+            text: "Continue",
+            href : "check-providers"
+          }) }}
+
+        {{ actionLink({
+        text: "Search again",
+        href: "find-new-provider"
+        }) }}
+
+        {{ actionLink({
+            text: "Set up a provider",
+            href: "#"
+        }) }}
+      
+      </form>
+    </div>
+  </div>
+
+{% endblock %}
+
+

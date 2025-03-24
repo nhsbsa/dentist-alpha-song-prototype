@@ -1,0 +1,43 @@
+{% extends 'layout.html' %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block outerContent %}
+{{ backLink({
+  href: "#",
+  text: "Go back"
+}) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+      <span class="nhsuk-caption-xl">Allocate foundation dentist funding</span>
+      <h1 class="govuk-heading-xl" style="margin-bottom: 30px;">What is the training practice’s contract ID?</h1>
+      <form action="/find-contract" method="post" class="form">
+      {{ input({
+        label: {
+          text: "Contract ID",
+          isPageHeading: true,
+          classes: "nhsuk-label--s"
+        },
+        classes: "nhsuk-input--width-10",
+        id: "contract-id",
+        name: "contractID"
+      }) }}
+
+        {{ button({
+          "text": "Save and continue",
+          "id": "btn_submit"
+        }) }}
+      </form>
+    </div>
+  </div>
+
+{% endblock %}
+
+

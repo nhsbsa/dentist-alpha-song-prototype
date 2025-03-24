@@ -1,0 +1,173 @@
+{% extends 'layout.html' %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+  Check your answers template - NHS prototype kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ backLink({
+    "href": "#",
+    "text": "Back"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1 class="nhsuk-heading-xl">
+        <span class="nhsuk-caption-xl">Change contract end date</span>
+        Check your answers and review contact changes
+      </h1>
+
+      <div class="govuk-summary-card">
+        <div class="govuk-summary-card__title-wrapper" style="background-color: #d8dde0;">
+          <h2 class="govuk-summary-card__title">
+            Contract 99017500001
+          </h2>
+        </div>
+        <div class="govuk-summary-card__content" style="background-color: #ffffff;">
+          <dl class="govuk-summary-list">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Contract end date
+              </dt>
+              <dd class="govuk-summary-list__value">
+                12/4/2025
+              </dd>
+              <dd class="nhsuk-table__cell"><a class="govuk-link" href="before-you-start">Change</a>
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Reason
+              </dt>
+              <dd class="govuk-summary-list__value">
+                Leaving NHS
+              </dd>
+              <dd class="nhsuk-table__cell"><a class="govuk-link" href="before-you-start">Change</a>
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+
+      <p>
+        Because the contract is closing on 12/4/2025:
+      </p>
+
+      <div class="govuk-summary-card">
+        <div class="govuk-summary-card__title-wrapper" style="background-color: #d8dde0;">
+          <h2 class="govuk-summary-card__title">
+            Contract 99017500001
+          </h2>
+          <a class="govuk-link" href="before-you-start">Change</a>
+        </div>
+        <div class="govuk-summary-card__content" style="background-color: #ffffff;">
+          <dl class="govuk-summary-list">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Original value
+              </dt>
+              <dd class="govuk-summary-list__value">
+                £120,000
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Pro-rata value
+              </dt>
+              <dd class="govuk-summary-list__value">
+                £40,000
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Required UDAs
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  6,000
+                </dd>
+              </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Delivered UDAs
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  4,400
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Remaining UDAs
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  1,600
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Adjusted UDAs
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  400
+                </dd>
+            </div>
+            <div style="color: #D4351C !important;" class="govuk-summary-list__row">
+                <dt  style="color: #D4351C !important;" class="govuk-summary-list__key">
+                  Forecast
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    <strong>Not on track to meet adjusted UDAs</strong>
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row"></div>
+          </dl>
+          <div class="govuk-summary-list__row"><br>
+            {{ checkboxes({
+                idPrefix: "example",
+                name: "example",
+                fieldset: {
+                legend: {
+                    text: "Do you want to withhold payments?",
+                    classes: "nhsuk-fieldset__legend--m",
+                    isPageHeading: true
+                }
+                },
+                items: [
+                {
+                    value: "withhold",
+                    text: "Withhold payments"
+                }
+                ]
+            }) }}
+            </div>
+        </div>
+      </div>
+
+      
+      <a href="review-needed" class="nhsuk-button">
+        Continue
+      </a>
+
+      <div class="nhsuk-action-link">
+        <a class="nhsuk-action-link__link" href="#">
+          <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" width="36" height="36">
+            <path d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
+          </svg>
+          <span class="nhsuk-action-link__text">Save to finish later</span>
+        </a>
+      </div>
+
+      <div class="nhsuk-action-link">
+        <a class="nhsuk-action-link__link" style="padding-left: 0px;" href="start-contract-view">
+          <span style="color: #D4351C;">Cancel and return to contract 99017500001</span>
+        </a>
+      </div>
+
+    </div>
+  </div>
+{% endblock %}

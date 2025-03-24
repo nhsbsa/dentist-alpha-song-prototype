@@ -1,0 +1,121 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  {{ serviceName }}
+{% endblock %}
+
+{% block outerContent %}
+{{ backLink({
+  href: "#",
+  text: "Go back"
+}) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+        <form>
+
+            <div class="nhsuk-form-group">
+          
+              <fieldset class="nhsuk-fieldset" aria-describedby="example-hint">
+                <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--xl">
+                  <h1 class="nhsuk-fieldset__heading">
+                    <span class="nhsuk-caption-xl">Transfer contract</span>
+                    Green Park Dental holds more than one contract
+                  </h1>
+                </legend>
+          
+                <div class="govuk-summary-card">
+                    <div class="govuk-summary-card__title-wrapper" style="background-color: #d8dde0;">
+                      <h2 class="govuk-summary-card__title">
+                        Provider
+                      </h2>
+                    </div>
+                    <div class="govuk-summary-card__content" style="background-color: #ffffff;">
+                      <dl class="govuk-summary-list">
+                        <div class="govuk-summary-list__row">
+                          <dt class="govuk-summary-list__key">
+                            Name
+                          </dt>
+                          <dd class="govuk-summary-list__value">
+                            Green Park Dental
+                          </dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                          <dt class="govuk-summary-list__key">
+                            Type
+                          </dt>
+                          <dd class="govuk-summary-list__value">
+                            Partnership
+                          </dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                          <dt class="govuk-summary-list__key">
+                            Provider ID
+                          </dt>
+                          <dd class="govuk-summary-list__value">
+                            102827
+                          </dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                          <dt class="govuk-summary-list__key">
+                            Contact
+                          </dt>
+                          <dd class="govuk-summary-list__value">
+                            Karen Hughes
+                          </dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                          <dt class="govuk-summary-list__key">
+                            Address
+                          </dt>
+                          <dd class="govuk-summary-list__value">
+                            2-4 Longfellow Road
+                            <br>Leeds
+                            <br>West Yorkshire
+                            <br>LS4 9YY
+                          </dd>
+                        </div>
+                      </dl>
+                    </div>
+                  </div>
+
+                <div class="nhsuk-checkboxes">
+                    <h2  class="nhsuk-fieldset__legend--l">
+                        <br>Which of their contracts do you want to apply the proposed end date to?
+                      </h2>
+                      <p class="nhsuk-hint">Choose one or more contracts to apply the proposed end date to</p>
+                  <div class="nhsuk-checkboxes__item">
+                    <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
+                    <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
+                        99017500001 (GDS)
+                    </label>
+                  </div>
+          
+                  <div class="nhsuk-checkboxes__item">
+                    <input class="nhsuk-checkboxes__input" id="example-2" name="example" type="checkbox" value="phone">
+                    <label class="nhsuk-label nhsuk-checkboxes__label" for="example-2">
+                        99017500002 (PDS)
+                    </label>
+                  </div>
+          
+                  <div class="nhsuk-checkboxes__item">
+                    <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message">
+                    <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+                        99017500003 (IMORS)
+                    </label>
+                  </div>
+          
+                </div>
+              </fieldset>
+          
+            </div>
+          
+          </form>
+          <a href="provider-id" class="nhsuk-button">
+            Continue
+          </a>
+</div>
+  </div>
+{% endblock %}

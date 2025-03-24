@@ -1,0 +1,58 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  {{ serviceName }}
+{% endblock %}
+
+{% block beforeContent %}
+{{ breadcrumb({
+  href: "/",
+  text: "Home"
+}) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+        <h1 class="nhsuk-heading-xl">
+            <span class="nhsuk-caption-xl">Transfer contract</span>
+            <form action="/retrospective-date" method="post" class="form">
+            The transfer date is in the past
+          </h1>
+      
+      <p>The new owner will receive payments from the effective change date onwards.</p>
+
+      <p>Payments made to the previous owner will remain unchanged.</p>
+  
+    {{ radios({
+    idPrefix: "example",
+    name: "retrospectiveDate",
+    fieldset: {
+        legend: {
+        text: "Do you want to continue with a retrospective transfer?",
+        classes: "nhsuk-fieldset__legend--l",
+        isPageHeading: true
+        }
+    },
+    items: [
+        {
+        value: "yes",
+        text: "Yes"
+        },
+        {
+        value: "no",
+        text: "No, I want to change the date"
+        }
+    ]
+    }) }}
+    {{ button({
+        "text": "Continue",
+        "id": "btn_submit"
+       
+      }) }}
+    </form>
+
+    </div>
+
+  </div>
+{% endblock %}

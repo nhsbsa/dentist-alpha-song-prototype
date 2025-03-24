@@ -1,0 +1,66 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  {{ serviceName }}
+{% endblock %}
+
+{% block outerContent %}
+{{ backLink({
+  href: "#",
+  text: "Go back"
+}) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+                <h1 class="nhsuk-heading-xl">
+                    <span class="nhsuk-caption-xl">Allocate foundation dentist funding</span>
+                    Review Jane’s funding allocation
+                  </h1>
+                <p>
+                    Based on their training pattern the proposed allocation is:
+                </p>
+
+                <ul class="nhsuk-list nhsuk-list--bullet">
+                    <li>
+                        £11,700 grant
+                    </li>
+                    <li>
+                        £64,164 service cost
+                    </li>
+                    <li>
+                        1,234 UDA
+                    </li>
+                  </ul>
+
+                  <p>
+                    This is because:
+                </p>
+
+                <ul class="nhsuk-list nhsuk-list--number">
+                    <li>
+                        this performer’s foundation period is 1 year
+                    </li>
+                    <li>
+                        this training starts on {{ data.oneToOneStartDateDay }}/{{ data.oneToOneStartDateMonth }}/{{ data.oneToOneStartDateYear }} and ends on {{ data.oneToOneEndDateDay }}/{{ data.oneToOneEndDateMonth }}/{{ data.oneToOneEndDateYear }} 
+                    </li>
+                    <li>
+                        100% of their training time will be allocated to this trainer
+                    </li>
+                    <li>
+                      their overall training grant payment is £11,700
+                    </li>
+                    <li>
+                      their overall service cost payment is £64,164
+                    </li>
+                  </ul>
+          
+            </div>
+  </div><br><br>
+  <a href="performer-view" class="nhsuk-button" data-module="nhsuk-button" type="submit">Finish</a>
+
+</div>
+{% endblock %}
+

@@ -1,0 +1,35 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  {{ serviceName }}
+{% endblock %}
+
+{% block beforeContent %}
+{{ breadcrumb({
+  href: "/",
+  text: "Home"
+}) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <div class="govuk-panel govuk-panel--confirmation">
+        <h1 class="govuk-panel__title">
+          Contract transferred
+        </h1>
+      </div>
+
+      <h2 class="nhsuk-heading-m">
+        <br>What happens next?
+      </h2>
+
+      <p>The contract has been transferred. You do not need to do anything more at this time.</p>
+
+      <p><a href="approved-contract-view">Return to contract 99017500001</a></p>
+
+    </div>
+  </div><br>
+
+{% endblock %}

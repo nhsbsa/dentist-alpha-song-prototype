@@ -1,0 +1,40 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  {{ serviceName }}
+{% endblock %}
+
+{% block beforeContent %}
+{{ breadcrumb({
+  href: "/",
+  text: "Home"
+}) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+        <fieldset class="nhsuk-fieldset" aria-describedby="confirm-hint">
+                <h1 class="nhsuk-heading-xl">
+                    <span class="nhsuk-caption-xl">Transfer contract</span>
+                    Why are you rejecting the request?
+                  </h1>
+                  
+                  {{ input({
+                    label: {
+                    },
+                    id: "reason",
+                    name: "reason"
+                  }) }}
+
+                  {{ button({
+                    "text": "Continue",
+                    "id": "btn_submit",
+                    href: "request-rejected"
+                  }) }}
+            </div>
+          </fieldset>
+    </div>
+  </div>
+
+{% endblock %}

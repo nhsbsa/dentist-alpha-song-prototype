@@ -1,0 +1,71 @@
+{% extends 'layout.html' %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block outerContent %}
+{{ backLink({
+  href: "#",
+  text: "Go back"
+}) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-two-thirds">
+      <p>{{ data.fullName }}</p>
+      <p>{{ data.trainerID }}</p>
+      <form action="/121-choose-trainers" method="post" class="form">
+        <span class="nhsuk-caption-xl">Allocate foundation dentist funding</span>
+
+        {{ checkboxes({
+          "idPrefix": "example",
+          "name": "oneChooseTrainers",
+          "fieldset": {
+            "legend": {
+              "text": "As part of this contract, who will be training Jane?",
+              "classes": "nhsuk-fieldset__legend--xl",
+              "isPageHeading": true
+            }
+          },
+          hint: {
+            text: "Choose one or more approved trainers on this contract"
+          },      
+          "items": [
+            {
+              "value": "Joe Bloggs (GDC: 12345)",
+              "text": "Joe Bloggs (GDC: 12345)"
+            },
+            {
+              "value": "Adam Scott (GDC: 12345)",
+              "text": "Adam Scott (GDC: 12345)"
+            },
+            {
+              "value": "Beth Williams (GDC: 12345)",
+              "text": "Beth Williams (GDC: 12345)"
+            },
+            {
+              divider: "or"
+            },
+            {
+              "value": "find another trainer",
+              "text": "find another trainer"
+            }
+          ]
+        }) }}
+
+        {{ button({
+          "text": "Continue",
+          "id": "btn_submit"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

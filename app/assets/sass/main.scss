@@ -1,6 +1,7 @@
 // Import NHS.UK frontend library
 @import "node_modules/nhsuk-frontend/packages/nhsuk";
-
+// Import GOV.UK frontend library
+@import "node_modules/govuk-frontend/dist/govuk";
 // Components that are not in the NHS.UK frontend library
 @import "components/list-border";
 @import "components/related-nav";
@@ -428,4 +429,18 @@
     line-height: 1.3157894737;
     margin-bottom: 30px;
   }
+}
+
+.govuk-summary-list, .govuk-summary-card__title, .govuk-summary-list__key {
+  font-family: "Frutiger W01", arial, sans-serif !important;
+  color: #212b32 !important;
+}
+
+.govuk-summary-card__title, .govuk-summary-list__key {
+  font-weight: 600 !important;
+}
+
+.govuk-link, .govuk-summary-list{
+  font-family: "Frutiger W01", arial, sans-serif !important;
+  font-weight: 400 !important;
 }

@@ -1,0 +1,195 @@
+{% extends 'layout.html' %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+  Check your answers template - NHS prototype kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ backLink({
+    "href": "#",
+    "text": "Back"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1 class="nhsuk-heading-xl">
+        <span class="nhsuk-caption-xl">Change contract end date</span>
+        Review the request
+      </h1>
+      <p>
+        On 8 January 2025, Jane Doe requested the early closure of contract (99017500001) with Green Park Dental be closed.
+      </p>
+
+      <div class="govuk-summary-card">
+        <div class="govuk-summary-card__title-wrapper" style="background-color: #d8dde0;">
+          <h2 class="govuk-summary-card__title">
+            Contract change: New end date
+          </h2>
+        </div>
+        <div class="govuk-summary-card__content" style="background-color: #ffffff;">
+          <dl class="govuk-summary-list">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Contract 
+              </dt>
+              <dd class="govuk-summary-list__value">
+                99017500001
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Type
+              </dt>
+              <dd class="govuk-summary-list__value">
+                GDS
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Original end date
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  Not applicable
+                </dd>
+              </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                New end date
+              </dt>
+              <dd class="govuk-summary-list__value">
+                12/4/2025
+              </dd>
+              </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Reason
+              </dt>
+              <dd class="govuk-summary-list__value">
+                The provider no longer provides dental services
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+
+      <p>
+        Because contract 99017500001 is closing on 12/4/2025:
+      </p>
+
+      <div class="govuk-summary-card">
+        <div class="govuk-summary-card__title-wrapper" style="background-color: #d8dde0;">
+          <h2 class="govuk-summary-card__title">
+            Change in value
+          </h2>
+        </div>
+        <div class="govuk-summary-card__content" style="background-color: #ffffff;">
+          <dl class="govuk-summary-list">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Value
+              </dt>
+              <dd class="govuk-summary-list__value">
+                £120,000
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                New value
+              </dt>
+              <dd class="govuk-summary-list__value">
+                £40,000
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+
+      <div class="govuk-summary-card">
+        <div class="govuk-summary-card__title-wrapper" style="background-color: #d8dde0;">
+          <h2 class="govuk-summary-card__title">
+            Change in Units of Dental Activity (UDAs)
+          </h2>
+        </div>
+        <div class="govuk-summary-card__content" style="background-color: #ffffff;">
+          <dl class="govuk-summary-list">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Required
+              </dt>
+              <dd class="govuk-summary-list__value">
+                6,000
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Adjusted requirement
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  2,000
+                </dd>
+              </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Delivered to date
+              </dt>
+              <dd class="govuk-summary-list__value">
+                400
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                Outstanding
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  1,600
+                </dd>
+              </div>
+          </dl>
+        </div>
+      </div>
+
+      <p>
+        The contract is currently <strong>on track</strong> to meet the adjusted UDA requirement given current trajectory. 
+      </p>
+
+        <form action="/close-contract-approval" method="post" class="form">
+
+            {{ radios({
+              "idPrefix": "example",
+              "name": "reviewDecision",
+              "fieldset": {
+                "legend": {
+                  "text": "What do you want to do?",
+                  "classes": "nhsuk-fieldset__legend--l",
+                  "isPageHeading": true
+                }
+              },
+              "items": [
+                {
+                  "value": "Approve",
+                  "text": "Approve the request and amend the contract"
+                },
+                {
+                  "value": "Reject",
+                  "text": "Reject the request with advice",
+                  hint: {
+                    text: "You will be able to provide a reason if you reject the request"
+                  }
+                }
+              ]
+            }) }}
+    
+            {{ button({
+              "text": "Continue",
+              "id": "btn_submit"
+            }) }}
+          </form>
+
+    </div>
+  </div>
+{% endblock %}

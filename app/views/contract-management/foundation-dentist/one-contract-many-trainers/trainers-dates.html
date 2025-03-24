@@ -1,0 +1,178 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  {{ serviceName }}
+{% endblock %}
+
+{% block beforeContent %}
+{{ breadcrumb({
+  href: "/",
+  text: "Home"
+}) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+        <form>
+
+            <div class="nhsuk-form-group">
+          
+              <fieldset class="nhsuk-fieldset" aria-describedby="example-hint">
+                <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+                  <h1 class="nhsuk-fieldset__heading">
+                    <span class="nhsuk-caption-xl">Allocate foundation dentist funding</span>
+                    When is Jane assigned to their different trainers?
+                  </h1>
+                </legend>
+            </div>
+        </div>
+          
+            <div class="nhsuk-grid-column-three-quarters">
+                <table class="nhsuk-table">
+                    <thead role="rowgroup" class="nhsuk-table__head">
+                      <tr role="row">
+                        <th role="columnheader" class="" scope="col">
+                          Trainer
+                        </th>
+                        <th role="columnheader" class="" scope="col">
+                          Start date
+                        </th>
+                        <th role="columnheader" class="" scope="col">
+                          End date
+                          </th>
+                      </tr>
+                    </thead>
+                    <tbody class="nhsuk-table__body">
+                      <tr role="row" class="nhsuk-table__row">
+                        <!--<td class="nhsuk-table__cell"><p>{{ data.oneChooseTrainers }}</p>-->
+                        <td class="nhsuk-table__cell"><p><strong>Joe Bloggs</strong><br>(GDC:12345)</p>
+                          </td>
+                        <td class="nhsuk-table__cell "><div class="nhsuk-date-input" id="example">
+                            <div class="nhsuk-date-input__item">
+                              <div class="nhsuk-form-group">
+                                <label class="nhsuk-label nhsuk-date-input__label" for="example-day">
+                                  Day
+                                </label>
+                                <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-day" name="example[day]" type="text" inputmode="numeric" value="30">
+                              </div>
+                            </div>
+                            <div class="nhsuk-date-input__item">
+                              <div class="nhsuk-form-group">
+                                <label class="nhsuk-label nhsuk-date-input__label" for="example-month">
+                                  Month
+                                </label>
+                                <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-month" name="example[month]" type="text" inputmode="numeric" value="7">
+                              </div>
+                            </div>
+                            <div class="nhsuk-date-input__item">
+                              <div class="nhsuk-form-group">
+                                <label class="nhsuk-label nhsuk-date-input__label" for="example-year">
+                                  Year
+                                </label>
+                                <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-3" id="example-year" name="example[year]" type="text" inputmode="numeric" value="2025">
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                        <td class="nhsuk-table__cell "><div class="nhsuk-date-input" id="example">
+                            <div class="nhsuk-date-input__item">
+                              <div class="nhsuk-form-group">
+                                <label class="nhsuk-label nhsuk-date-input__label" for="example-day">
+                                  Day
+                                </label>
+                                <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-day" name="example[day]" type="text" inputmode="numeric" value="29">
+                              </div>
+                            </div>
+                            <div class="nhsuk-date-input__item">
+                              <div class="nhsuk-form-group">
+                                <label class="nhsuk-label nhsuk-date-input__label" for="example-month">
+                                  Month
+                                </label>
+                                <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-month" name="example[month]" type="text" inputmode="numeric" value="7">
+                              </div>
+                            </div>
+                            <div class="nhsuk-date-input__item">
+                              <div class="nhsuk-form-group">
+                                <label class="nhsuk-label nhsuk-date-input__label" for="example-year">
+                                  Year
+                                </label>
+                                <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-3" id="example-year" name="example[year]" type="text" inputmode="numeric" value="2026">
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr role="row" class="nhsuk-table__row">
+                        <td class="nhsuk-table__cell"><strong>Beth Williams</strong><br>(GDC:12347)</td>
+                        <td class="nhsuk-table__cell "><div class="nhsuk-date-input" id="example">
+                            <div class="nhsuk-date-input__item">
+                              <div class="nhsuk-form-group">
+                                <label class="nhsuk-label nhsuk-date-input__label" for="example-day">
+                                  Day
+                                </label>
+                                <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-day" name="example[day]" type="text" inputmode="numeric" value="30">
+                              </div>
+                            </div>
+                            <div class="nhsuk-date-input__item">
+                              <div class="nhsuk-form-group">
+                                <label class="nhsuk-label nhsuk-date-input__label" for="example-month">
+                                  Month
+                                </label>
+                                <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-month" name="example[month]" type="text" inputmode="numeric" value="7">
+                              </div>
+                            </div>
+                            <div class="nhsuk-date-input__item">
+                              <div class="nhsuk-form-group">
+                                <label class="nhsuk-label nhsuk-date-input__label" for="example-year">
+                                  Year
+                                </label>
+                                <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-3" id="example-year" name="example[year]" type="text" inputmode="numeric" value="2025">
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                        <td class="nhsuk-table__cell "><div class="nhsuk-date-input" id="example">
+                            <div class="nhsuk-date-input__item">
+                              <div class="nhsuk-form-group">
+                                <label class="nhsuk-label nhsuk-date-input__label" for="example-day">
+                                  Day
+                                </label>
+                                <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-day" name="example[day]" type="text" inputmode="numeric" value="29">
+                              </div>
+                            </div>
+                            <div class="nhsuk-date-input__item">
+                              <div class="nhsuk-form-group">
+                                <label class="nhsuk-label nhsuk-date-input__label" for="example-month">
+                                  Month
+                                </label>
+                                <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-month" name="example[month]" type="text" inputmode="numeric" value="7">
+                              </div>
+                            </div>
+                            <div class="nhsuk-date-input__item">
+                              <div class="nhsuk-form-group">
+                                <label class="nhsuk-label nhsuk-date-input__label" for="example-year">
+                                  Year
+                                </label>
+                                <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-3" id="example-year" name="example[year]" type="text" inputmode="numeric" value="2026">
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+              </fieldset>
+          
+            </div>
+            <div class="nhsuk-grid-column-two-thirds">
+          </form>
+        </div>
+  <a href="q-split-funding" class="nhsuk-button" data-module="nhsuk-button" type="submit">Save and continue</a>
+
+</div>
+</div>
+{% endblock %}
+
+

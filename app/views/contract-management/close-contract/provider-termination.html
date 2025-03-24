@@ -1,0 +1,88 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  {{ serviceName }}
+{% endblock %}
+
+{% block outerContent %}
+{{ backLink({
+  href: "#",
+  text: "Go back"
+}) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+        {% from 'checkboxes/macro.njk' import checkboxes %}
+{% from 'input/macro.njk' import input %}
+
+{% set reasonHtml %}
+  {{ input({
+    id: "reason",
+    name: "reason",
+    classes: "nhsuk-u-width-full",
+    label: {
+      text: "Reason"
+    }
+  }) }}
+{% endset -%}
+<span class="nhsuk-caption-xl">Change contract end date</span>
+<form>
+  {{ radios({
+    idPrefix: "contact",
+    name: "contact",
+    fieldset: {
+      legend: {
+        text: "Why is the end date being changed?",
+        classes: "nhsuk-fieldset__legend--xl",
+        isPageHeading: "true"
+      }
+    },
+    items: [
+      {
+        value: "Retirement",
+        text: "Retirement"
+      },
+      {
+        "value": "Death",
+        "text": "Death"
+      },
+      {
+        "value": "Leaving",
+        "text": "Leaving NHS service"
+      },
+      {
+        divider: "or"
+      },
+      {
+        "value": "other",
+        "text": "Something else",
+        "conditional": {
+          "html": reasonHtml
+        }
+      }
+    ]
+  }) }}
+
+  {{ textarea({
+    name: "example",
+    id: "example",
+    label: {
+      text: "Do you want to add a note? (optional)",
+      classes: "nhsuk-label--l"
+    },
+    hint: {
+        text: "You can enter up to 200 characters"
+      }
+  }) }}
+</form>
+    </div>
+  </div><br>
+  <a href="multiple-contracts" class="nhsuk-button" data-module="nhsuk-button" data-prevent-double-click="true" type="submit">
+    Save and continue
+</a>
+
+
+
+{% endblock %}

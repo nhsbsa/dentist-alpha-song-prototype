@@ -1,0 +1,45 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  {{ serviceName }}
+{% endblock %}
+
+{% block beforeContent %}
+{{ breadcrumb({
+  href: "/",
+  text: "Home"
+}) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+        <fieldset class="nhsuk-fieldset" aria-describedby="confirm-hint">
+                <h1 class="nhsuk-heading-xl">
+                    <span class="nhsuk-caption-xl">Allocate foundation dentist funding</span>
+                    How is Jane’s funding shared between trainers?
+                  </h1>
+        
+                  <div class="nhsuk-radios">
+
+                    <div class="nhsuk-radios__item">
+                      <input class="nhsuk-radios__input" id="example-1" name="example" type="radio" value="yes">
+                      <label class="nhsuk-label nhsuk-radios__label" for="example-1">
+                        Shared equally (50:50)
+                      </label>
+                    </div>
+              
+                    <div class="nhsuk-radios__item">
+                      <input class="nhsuk-radios__input" id="example-2" name="example" type="radio" value="no">
+                      <label class="nhsuk-label nhsuk-radios__label" for="example-2">
+                        A different split
+                      </label>
+                    </div>
+          </fieldset>
+    </div>
+  </div><br><br>
+  <a href="input-funding-split" class="nhsuk-button" data-module="nhsuk-button" type="submit" >Save and continue</a>
+
+</div>
+{% endblock %}
+

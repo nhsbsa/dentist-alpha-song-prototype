@@ -1,0 +1,71 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  {{ serviceName }}
+{% endblock %}
+
+{% block beforeContent %}
+{{ breadcrumb({
+  href: "/",
+  text: "Home"
+}) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+          
+              <fieldset class="nhsuk-fieldset" aria-describedby="example-hint">
+                <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+                  <h1 class="nhsuk-fieldset__heading">
+                    <span class="nhsuk-caption-xl">Allocate foundation dentist funding</span>
+                    How is Jane's funding shared?
+                  </h1>
+                </legend>
+          
+                <table class="nhsuk-table">
+                  <br><h2 class="nhsuk-heading-l">Contract {{ data.contractID }}</h2>
+                  <caption class="nhsuk-table__caption">Green Park Dental</caption>
+                  <thead role="rowgroup" class="nhsuk-table__head">
+                      <tr role="row">
+                        <th role="columnheader" class="" scope="col" style="padding-right: 400px;">
+                          Trainer
+                        </th>
+                        <th role="columnheader" class="" scope="col" >
+                          Funding allocation
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody class="nhsuk-table__body">
+                      <tr role="row" class="nhsuk-table__row">
+                        <td class="nhsuk-table__cell"><strong>Joe Bloggs</strong><br>(GDC:123457)</td>
+                        <td class="nhsuk-table__cell"><div class="nhsuk-input__wrapper" >
+
+                          <input class="nhsuk-input nhsuk-input--width-5" id="example" name="example" type="text">
+                          <div class="nhsuk-input__suffix" aria-hidden="true">%</div>
+                      
+                        </div></td>
+                      </tr>
+                      <tr role="row" class="nhsuk-table__row">
+                        <td class="nhsuk-table__cell"><strong>Beth Williams</strong><br>(GDC:123456)</td>
+                        <td class="nhsuk-table__cell"><div class="nhsuk-input__wrapper" >
+
+                          <input class="nhsuk-input nhsuk-input--width-5" id="example" name="example" type="text">
+                          <div class="nhsuk-input__suffix" aria-hidden="true">%</div>
+                      
+                        </div></td>
+                      </tr>
+                    </tbody>
+                  </table>
+          
+                
+              </fieldset>
+    </div>
+  </div>
+  <a href="confirm-split-funding" class="nhsuk-button" data-module="nhsuk-button" type="submit">Save and continue</a>
+
+</div>
+{% endblock %}
+
+
+

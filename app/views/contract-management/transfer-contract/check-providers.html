@@ -1,0 +1,209 @@
+{% extends 'layout.html' %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+  Check your answers template - NHS prototype kit
+{% endblock %}
+
+{% block outerContent %}
+{{ backLink({
+  href: "#",
+  text: "Go back"
+}) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1 class="nhsuk-heading-xl">
+        <span class="nhsuk-caption-xl">Transfer contract</span>
+        Check your answers
+      </h1>
+
+      <div class="govuk-summary-card">
+        <div class="govuk-summary-card__title-wrapper" style="background-color: #d8dde0;">
+          <h2 class="govuk-summary-card__title">
+            Existing provider
+          </h2>
+        </div>
+        <div class="govuk-summary-card__content" style="background-color: #ffffff;">
+          <dl class="govuk-summary-list">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                ID
+              </dt>
+              <dd class="govuk-summary-list__value">
+                102827
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Name
+              </dt>
+              <dd class="govuk-summary-list__value">
+                Green Park Dental
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Contact
+                </dt>
+                <dd class="govuk-summary-list__value">
+                Karen Hughes
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Address
+                </dt>
+                <dd class="govuk-summary-list__value">
+                2-4 Longfellow Road
+                <br>Leeds
+                <br>LS4 9YY
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Telephone
+                </dt>
+                <dd class="govuk-summary-list__value">
+                 01234 567890
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Email
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    karen.hughes@green-park-dental.co.uk
+                </dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+
+      <div class="govuk-summary-card">
+        <div class="govuk-summary-card__title-wrapper" style="background-color: #d8dde0;">
+          <h2 class="govuk-summary-card__title">
+            Contracts to transfer
+          </h2>
+          <a class="govuk-link" href="#">Change</a>
+        </div>
+        <div class="govuk-summary-card__content" style="background-color: #ffffff;">
+          <dl class="govuk-summary-list">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                99017500001
+              </dt>
+              <dd class="govuk-summary-list__value">
+                GDS
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                99017500002
+              </dt>
+              <dd class="govuk-summary-list__value">
+                PDS+
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                99017500003
+                </dt>
+                <dd class="govuk-summary-list__value">
+                IMOS
+                </dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+
+      <div class="govuk-summary-card">
+        <div class="govuk-summary-card__title-wrapper" style="background-color: #d8dde0;">
+          <h2 class="govuk-summary-card__title">
+            New provider
+          </h2>
+          <a class="govuk-link" href="#">Change</a>
+        </div>
+        <div class="govuk-summary-card__content" style="background-color: #ffffff;">
+          <dl class="govuk-summary-list">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                ID
+              </dt>
+              <dd class="govuk-summary-list__value">
+                123456
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Name
+              </dt>
+              <dd class="govuk-summary-list__value">
+                Longfellow Dental
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                Contact
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  Rory Longfellow
+                </dd>
+              </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                Address
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    2-4 Longfellow Road
+                <br>Leeds
+                <br>LS4 9YY
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                Telephone
+                </dt>
+                <dd class="govuk-summary-list__value">
+                 01234 567890
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                Email
+                </dt>
+                <dd class="govuk-summary-list__value">
+                 rory.holmes@nhs.co.uk
+                </dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+
+      <a href="transfer-date" class="nhsuk-button">
+        Continue
+      </a>
+
+      <div class="nhsuk-action-link">
+        <a class="nhsuk-action-link__link" href="#">
+          <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" width="36" height="36">
+            <path d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
+          </svg>
+          <span class="nhsuk-action-link__text">Save to finish later</span>
+        </a>
+      </div>
+
+      <div class="nhsuk-action-link">
+        <a class="nhsuk-action-link__link" style="padding-left: 0px;" href="start-contract-view">
+          <span style="color: #D4351C;">Cancel and return to contract 99017500001</span>
+        </a>
+      </div>
+
+    </div>
+  </div>
+{% endblock %}

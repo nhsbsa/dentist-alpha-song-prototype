@@ -1,0 +1,42 @@
+{% extends 'layout.html' %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block outerContent %}
+{{ backLink({
+  href: "#",
+  text: "Go back"
+}) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+      <span class="nhsuk-caption-xl">Transfer contract</span>
+      <h1 class="govuk-heading-xl" style="margin-bottom: 30px;">What is the provider ID of the provider taking on the contract?</h1>
+      <form action="/provider-id" method="post" class="form">
+      {{ input({
+        classes: "nhsuk-input--width-10"
+      }) }}
+
+      {{ actionLink({
+        text: "I don't know the ID",
+        href: "find-new-provider"
+      }) }}
+
+        {{ button({
+          "text": "Save and continue",
+          "id": "btn_submit",
+          href: "check-providers"
+        }) }}
+      </form>
+    </div>
+  </div>
+
+{% endblock %}
+
+

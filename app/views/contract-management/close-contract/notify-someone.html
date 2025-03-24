@@ -1,0 +1,72 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  {{ serviceName }}
+{% endblock %}
+
+{% block outerContent %}
+{{ backLink({
+  href: "#",
+  text: "Go back"
+}) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+        <fieldset class="nhsuk-fieldset" aria-describedby="confirm-hint">
+                <h1 class="nhsuk-heading-xl">
+                    <span class="nhsuk-caption-xl">Change contract end date</span>
+                    Do you want to notify someone about your request?
+                  </h1>
+                  <div class="nhsuk-radios nhsuk-radios--conditional">
+
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="confirm-6" name="confirm" type="radio" value="phone" aria-controls="conditional-confirm-6" aria-expanded="true">
+                <label class="nhsuk-label nhsuk-radios__label" for="confirm-6">
+                    Yes, I want to notify someone
+                </label>
+              </div>
+        
+              <div class="nhsuk-radios__conditional" id="conditional-confirm-6">
+        
+                <div class="nhsuk-form-group">
+                  <div class="nhsuk-form-group">
+                    <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
+                      <div class="nhsuk-date-input" id="example">
+                        <div class="nhsuk-date-input__item">
+                          <div class="nhsuk-form-group">
+                            <div class="nhsuk-form-group">
+                              <label class="nhsuk-hint" for="close-justification">
+                                Enter the first part of their email address <span class="nhsuk-u-visually-hidden"></span>
+                              </label>
+                              <input class="nhsuk-input" id="close-justification" name="close-justification" type="text">
+                            </div>
+                          
+                        </div>
+                      </div>
+                    </fieldset>
+                  
+                  </div>
+                </div>
+        
+              </div>
+
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="confirm-1" name="confirm" type="radio" value="text" aria-controls="conditional-confirm-1" aria-expanded="false">
+                <label class="nhsuk-label nhsuk-radios__label" for="confirm-1">
+                    No, I do not want to notify anyone
+                </label>
+              </div>
+              
+        
+            </div>
+          </fieldset>
+    </div>
+  </div><br>
+  <a href="attach-files" class="nhsuk-button" data-module="nhsuk-button" data-prevent-double-click="true" type="submit">
+    Save and continue
+  </button>
+</a>
+
+{% endblock %}

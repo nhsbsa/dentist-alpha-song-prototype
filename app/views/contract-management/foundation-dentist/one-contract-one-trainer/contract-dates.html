@@ -1,0 +1,188 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  {{ serviceName }}
+{% endblock %}
+
+{% block outerContent %}
+{{ backLink({
+  href: "#",
+  text: "Go back"
+}) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <form action="/one-one-contract-dates" method="post" class="form">
+    <div class="nhsuk-grid-column-two-thirds">
+            <div class="nhsuk-form-group">
+          
+              <fieldset class="nhsuk-fieldset" aria-describedby="example-hint">
+                <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+                  <h1 class="nhsuk-fieldset__heading">
+                    <span class="nhsuk-caption-xl">Allocate foundation dentist funding</span>
+                    Jane’s foundation training contracts
+                  </h1>
+                </legend>
+            </div>
+        </div>
+          
+            <div class="nhsuk-grid-column-full">
+                <table class="nhsuk-table">
+                    <thead role="rowgroup" class="nhsuk-table__head">
+                      <tr role="row">
+                        <th role="columnheader" class="" scope="col">
+                            Contract
+                        </th>
+                        <th role="columnheader" class="" scope="col">
+                          Training practice
+                        </th>
+                        <th role="columnheader" class="" scope="col">
+                          Start date
+                          <div class="nhsuk-hint" id="example-hint" style="margin-right: 20px;">
+                            For example, 31 7 2025  
+                          </div>
+                          <div style="display: flex; justify-content: flex-start; gap: 20px;">
+                            <span style="font-weight: normal;">Day</span>
+                            <span style="font-weight: normal; margin-left: 20px;">Month</span>
+                            <span style="font-weight: normal;">Year</span>
+                          </div>
+                        </th>
+                        <th role="columnheader" class="" scope="col">
+                          End date
+                          <div class="nhsuk-hint" id="example-hint" style="margin-right: 20px;">
+                            For example, 30 7 2026 
+                          </div>
+                          <div style="display: flex; justify-content: flex-start; gap: 20px;">
+                            <span style="font-weight: normal;">Day</span>
+                            <span style="font-weight: normal; margin-left: 20px;">Month</span>
+                            <span style="font-weight: normal;">Year</span>
+                          </div>
+                        </th>
+                        <th role="columnheader" class="" scope="col">
+                            
+                          </th>
+                      </tr>
+                    </thead>
+
+                    {% from 'date-input/macro.njk' import dateInput %}
+
+                    <tbody class="nhsuk-table__body">
+                      <tr role="row" class="nhsuk-table__row">
+                        <td class="nhsuk-table__cell">{{ data.contractID }}</td>
+                        <td class="nhsuk-table__cell">Green Park Dental</td>
+                        <td class="nhsuk-table__cell "><div class="nhsuk-date-input" id="example">
+                            <div class="nhsuk-date-input__item">
+                              <div class="nhsuk-form-group">
+                                <label class="nhsuk-label nhsuk-date-input__label" for="example-day">
+                                </label>
+                                {{ input({
+                                  label: {
+                                  },
+                                  id: "oneToOneStartDateDay",
+                                  name: "oneToOneStartDateDay",
+                                  classes: "nhsuk-input--width-2"
+                                }) }}
+                                </div>
+                            </div>
+                            <div class="nhsuk-date-input__item">
+                              <div class="nhsuk-form-group">
+                                <label class="nhsuk-label nhsuk-date-input__label" for="example-month">
+                                </label>
+                                {{ input({
+                                  label: {
+                                  },
+                                  id: "oneToOneStartDateMonth",
+                                  name: "oneToOneStartDateMonth",
+                                  classes: "nhsuk-input--width-2"
+                                }) }}
+                              </div>
+                            </div>
+                            <div class="nhsuk-date-input__item">
+                              <div class="nhsuk-form-group">
+                                <label class="nhsuk-label nhsuk-date-input__label" for="example-year">
+                                </label>
+                                {{ input({
+                                  label: {
+                                  },
+                                  id: "oneToOneStartDateYear",
+                                  name: "oneToOneStartDateYear",
+                                  classes: "nhsuk-input--width-3"
+                                }) }}
+                                </div>
+                            </div>
+                          </div>
+                        </td>
+                        <td class="nhsuk-table__cell "><div class="nhsuk-date-input" id="example">
+                            <div class="nhsuk-date-input__item">
+                              <div class="nhsuk-form-group">
+                                <label class="nhsuk-label nhsuk-date-input__label" for="example-day">
+                                </label>
+                                {{ input({
+                                  label: {
+                                  },
+                                  id: "oneToOneEndDateDay",
+                                  name: "oneToOneEndDateDay",
+                                  classes: "nhsuk-input--width-2"
+                                }) }}</div>
+                            </div>
+                            <div class="nhsuk-date-input__item">
+                              <div class="nhsuk-form-group">
+                                <label class="nhsuk-label nhsuk-date-input__label" for="example-month">
+                                </label>
+                                {{ input({
+                                  label: {
+                                  },
+                                  id: "oneToOneEndDateMonth",
+                                  name: "oneToOneEndDateMonth",
+                                  classes: "nhsuk-input--width-2"
+                                }) }}</div>
+                            </div>
+                            <div class="nhsuk-date-input__item">
+                              <div class="nhsuk-form-group">
+                                <label class="nhsuk-label nhsuk-date-input__label" for="example-year">
+                                </label>
+                                {{ input({
+                                  label: {
+                                  },
+                                  id: "oneToOneEndDateYear",
+                                  name: "oneToOneEndDateYear",
+                                  classes: "nhsuk-input--width-3"
+                                }) }}
+                                </div>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                            <a class="govuk-link" href="#">Remove</a>
+                        </td>
+                      </tr>         
+                    </tbody>
+                  </table>
+            </div>
+              </fieldset>
+          
+            
+            <div class="nhsuk-grid-column-two-thirds">
+          </form>
+          {% from 'action-link/macro.njk' import actionLink %}
+
+          {{ actionLink({
+            text: "Add another contract",
+            href: "/contract-management/foundation-dentist/many-contracts-many-trainers/find-contract-2"
+          }) }}
+
+          {{ button({
+            "text": "Save and continue",
+            "id": "btn_submit",
+            "href": "/contract-management/foundation-dentist/one-contract-one-trainer/choose-trainers"
+          }) }}
+        </div>
+      </div>
+  
+
+</div>
+</div>
+{% endblock %}
+
+

@@ -1,0 +1,54 @@
+{% extends 'layout.html' %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block outerContent %}
+{{ backLink({
+  href: "#",
+  text: "Go back"
+}) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <form action="/many-contract-funding-split" method="post" class="form">
+
+        {{ radios({
+          "idPrefix": "example",
+          "name": "manyFundingSplit",
+          "fieldset": {
+            "legend": {
+              "text": "How is Jane’s funding shared between trainers?",
+              "classes": "nhsuk-fieldset__legend--l",
+              "isPageHeading": true
+            }
+          },
+          "items": [
+            {
+              "value": "Shared equally (33:33:33)",
+              "text": "Shared equally (33:33:33)"
+            },
+            {
+              "value": "A different split",
+              "text": "A different split"
+            }
+          ]
+        }) }}
+
+        {{ button({
+          "text": "Continue",
+          "id": "btn_submit"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
