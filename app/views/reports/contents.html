@@ -1,0 +1,71 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'default-layout.html' %}
+
+<!-- Set the page title -->
+{% block pageTitle %}
+Reports
+{% endblock %}
+
+<!-- Back link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- Content -->
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+      
+      <dl class="nhsuk-summary-list">
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            <div class="nhsuk-summary-list__row">
+              <a class="nhsuk-link--no-visited-state" href="published-reports">Published reports</a>
+            </div>
+          </dt>
+        </div>
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            <div class="nhsuk-summary-list__row">
+              <a class="nhsuk-link--no-visited-state" href="published-reports-tabs">Published reports tabs</a>
+            </div>
+          </dt>
+        </div>
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            <div class="nhsuk-summary-list__row">
+              <a class="nhsuk-link--no-visited-state" href="view-report">Report</a>
+            </div>
+          </dt>
+        </div>
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            <div class="nhsuk-summary-list__row">
+              <a class="nhsuk-link--no-visited-state" href="activity-dashboard">Activity dashboard</a>
+            </div>
+          </dt>
+        </div>
+        
+      
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            <div class="nhsuk-summary-list__row">
+              <a class="nhsuk-link--no-visited-state" href="activity-dashboard-interactive">Interactive activity dashboard</a>
+            </div>
+          </dt>
+        </div>
+      </dl>
+
+      
+
+      <!-- End of content -->
+
+    </div>
+  </div>
+{% endblock %}
+
