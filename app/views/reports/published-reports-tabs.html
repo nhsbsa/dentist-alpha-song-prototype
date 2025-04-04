@@ -29,7 +29,7 @@ Reports
     <div class="nhsuk-grid-column-full">
 
       <h1>
-        View published reports
+        View published reports for 2024-2025
       </h1>
 
       
@@ -158,8 +158,11 @@ Reports
         </div>
       </details>
 
-      <button id="contract-chip" type="submit" style="display: none; box-shadow: none; font-family: Frutiger; border-color: black;" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-        Contract: 0044567811&#9587;
+      <button id="provider-chip" type="submit" style="display: none; box-shadow: none; font-family: Frutiger; border-color: black; margin-right: 8px;" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+        Provider: 123456&#9587;
+      </button>
+      <button id="period-chip" type="submit" style="display: none; box-shadow: none; font-family: Frutiger; border-color: black;" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+        Reporting period from: Jan 2025 to Apr 2025&#9587;
       </button>
 
       <div class="nhsuk-tabs" data-module="nhsuk-tabs">
@@ -556,7 +559,8 @@ Reports
     /*const filterReportContainer = document.getElementById('filter-contract-container');*/
     const filterReportButton = document.getElementById('apply-filter-button');
     const filterReportClear = document.getElementById('clear-filter-button');
-    const filterContractChip = document.getElementById('contract-chip');
+    const filterPeriodChip = document.getElementById('period-chip');
+    const filterProviderChip = document.getElementById('provider-chip');
 
 
 
@@ -601,12 +605,18 @@ Reports
 
     filterReportButton.addEventListener('click', ()=>{
       console.log("Button clicked");
-      filterContractChip.style.display = 'inline-block'
+      filterPeriodChip.style.display = 'inline-block';
+      filterProviderChip.style.display = 'inline-block'
     });
 
-    filterContractChip.addEventListener('click', ()=>{
+    filterPeriodChip.addEventListener('click', ()=>{
       console.log("Chip clicked");
-      filterContractChip.style.display = 'none'
+      filterPeriodChip.style.display = 'none'
+    });
+
+    filterProviderChip.addEventListener('click', ()=>{
+      console.log("Chip clicked");
+      filterProviderChip.style.display = 'none'
     });
 
   </script>

@@ -29,8 +29,24 @@ Reports
     <div class="nhsuk-grid-column-full">
 
       <h1>
-        View published reports
+        View published reports for 2024-2025
       </h1>
+
+      <details class="nhsuk-details">
+        <summary class="nhsuk-details__summary">
+          <span class="nhsuk-details__summary-text">
+            View published reports for a different year
+          </span>
+        </summary>
+        <div class="nhsuk-details__text">
+          <a href="#" class="nhsuk-link nhsuk-link--no-visited-state">Published reports for 2023-2024</a><br>
+          <a href="#" class="nhsuk-link nhsuk-link--no-visited-state">Published reports for 2022-2023</a><br>
+          <a href="#" class="nhsuk-link nhsuk-link--no-visited-state">Published reports for 2021-2022</a><br>
+          <a href="#" class="nhsuk-link nhsuk-link--no-visited-state">Published reports for 2020-2021</a><br>
+          <a href="#" class="nhsuk-link nhsuk-link--no-visited-state">Published reports for 2019-2020</a><br>
+
+        </div>
+      </details>
 
       
       <details class="nhsuk-details nhsuk-expander" style="border:none; background-color: #f0f4f5; margin-bottom: 0;">
@@ -204,15 +220,20 @@ Reports
             Clear filters
           </button>
           
+          
 
 
         
         </div>
       </details>
 
-      <button id="contract-chip" type="submit" style="display: none; box-shadow: none; font-family: Frutiger; border-color: black;" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-        Contract: 0044567811&#9587;
+      <button id="provider-chip" type="submit" style="display: none; box-shadow: none; font-family: Frutiger; border-color: black; margin-right: 8px;" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+        Provider: 123456&#9587;
       </button>
+      <button id="period-chip" type="submit" style="display: none; box-shadow: none; font-family: Frutiger; border-color: black;" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+        Reporting period from: Jan 2025 to Apr 2025&#9587;
+      </button>
+
 
       <table class="nhsuk-table nhsuk-u-margin-bottom-3">
         <thead role="rowgroup" class="nhsuk-table__head">
@@ -342,7 +363,8 @@ Reports
     /*const filterReportContainer = document.getElementById('filter-contract-container');*/
     const filterReportButton = document.getElementById('apply-filter-button');
     const filterReportClear = document.getElementById('clear-filter-button');
-    const filterContractChip = document.getElementById('contract-chip');
+    const filterPeriodChip = document.getElementById('period-chip');
+    const filterProviderChip = document.getElementById('provider-chip');
 
 
 
@@ -387,12 +409,18 @@ Reports
 
     filterReportButton.addEventListener('click', ()=>{
       console.log("Button clicked");
-      filterContractChip.style.display = 'inline-block'
+      filterPeriodChip.style.display = 'inline-block';
+      filterProviderChip.style.display = 'inline-block'
     });
 
-    filterContractChip.addEventListener('click', ()=>{
+    filterPeriodChip.addEventListener('click', ()=>{
       console.log("Chip clicked");
-      filterContractChip.style.display = 'none'
+      filterPeriodChip.style.display = 'none'
+    });
+
+    filterProviderChip.addEventListener('click', ()=>{
+      console.log("Chip clicked");
+      filterProviderChip.style.display = 'none'
     });
 
   </script>
