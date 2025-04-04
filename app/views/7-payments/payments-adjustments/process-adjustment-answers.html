@@ -1,0 +1,258 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'default-layout.html' %}
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  Process an adjustment
+{% endblock %}
+
+<!-- Breadcrumbs -->
+{% block beforeContent %}
+
+{% endblock %}
+
+<!-- Back link -->
+{% block outerContent %}
+  <div class="nhsuk-back-link nhsuk-u-padding-top-3 nhsuk-u-margin-bottom-0">
+    <a id="back" class="nhsuk-back-link__link" href="/7-payments/payments-adjustments/process-adjustment">
+      <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
+        <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+      </svg>
+      Back
+    </a>
+  </div>
+{% endblock %}
+
+<!-- Content -->
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1 class="nhsuk-heading-xl">Check your answers before submitting</h1>
+
+      <!-- Adjustment details -->
+      <h2 class="nhsuk-heading-m">Adjustment details</h2>
+
+      <table class="nhsuk-table">
+          </thead>
+          <tbody class="nhsuk-table__body">
+            <tr role="row" class="nhsuk-table__row">
+              <th class="nhsuk-table__header" scope="row">Clinician ID</th>
+              <td class="nhsuk-table__cell nhsuk-table__cell--numeric">127840</td>
+              <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
+                  <a href="#" class="nhsuk-link"> </a>
+              </td>
+            </tr>
+            <tr role="row" class="nhsuk-table__row">
+              <th class="nhsuk-table__header" scope="row">Clinician name</th>
+              <td class="nhsuk-table__cell nhsuk-table__cell--numeric">Sophie Clarkson</td>
+              <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
+                  <a href="#" class="nhsuk-link"> </a>
+              </td>
+            </tr>
+            <tr role="row" class="nhsuk-table__row">
+              <th class="nhsuk-table__header" scope="row">Contract ID</th>
+              <td class="nhsuk-table__cell nhsuk-table__cell--numeric">4851113</td>
+              <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
+                  <a href="#" class="nhsuk-link"> </a>
+              </td>
+            </tr>
+            <tr role="row" class="nhsuk-table__row">
+              <th class="nhsuk-table__header" scope="row">Type</th>
+              <td class="nhsuk-table__cell nhsuk-table__cell--numeric">Maternity leave</td>
+              <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
+                  <a href="#" class="nhsuk-link">Change</a>
+              </td>
+            </tr>
+            <tr role="row" class="nhsuk-table__row">
+              <th class="nhsuk-table__header" scope="row">Description</th>
+              <td class="nhsuk-table__cell nhsuk-table__cell--numeric">Deduction</td>
+              <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
+                  <a href="#" class="nhsuk-link">Change</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+      <br>
+
+      <!-- Leave details -->
+      <h2 class="nhsuk-heading-m">Leave details</h2>
+
+      <table class="nhsuk-table">
+          </thead>
+          <tbody class="nhsuk-table__body">
+            <tr role="row" class="nhsuk-table__row">
+              <th class="nhsuk-table__header" scope="row">Expected birth date</th>
+              <td class="nhsuk-table__cell nhsuk-table__cell--numeric">19 October 2024</td>
+              <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
+                  <a href="#" class="nhsuk-link">Change</a>
+              </td>
+            </tr>
+            <tr role="row" class="nhsuk-table__row">
+              <th class="nhsuk-table__header" scope="row">Actual birth date</th>
+              <td class="nhsuk-table__cell nhsuk-table__cell--numeric">20 October 2024</td>
+              <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
+                  <a href="#" class="nhsuk-link">Change</a>
+              </td>
+            </tr>
+            <tr role="row" class="nhsuk-table__row">
+              <th class="nhsuk-table__header" scope="row">Leave start</th>
+              <td class="nhsuk-table__cell nhsuk-table__cell--numeric">12 October 2024</td>
+              <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
+                  <a href="#" class="nhsuk-link">Change</a>
+              </td>
+            </tr>
+            <tr role="row" class="nhsuk-table__row">
+              <th class="nhsuk-table__header" scope="row">Leave end</th>
+              <td class="nhsuk-table__cell nhsuk-table__cell--numeric">03 March 2025</td>
+              <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
+                  <a href="#" class="nhsuk-link">Change</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+      <br>
+
+      <!-- Special leave -->
+      <h2 class="nhsuk-heading-m">Special Leave</h2>
+
+      <table class="nhsuk-table">
+          </thead>
+          <tbody class="nhsuk-table__body">
+            <tr role="row" class="nhsuk-table__row">
+              <th class="nhsuk-table__header" scope="row">Do they have any special leave?</th>
+              <td class="nhsuk-table__cell nhsuk-table__cell--numeric">Yes</td>
+              <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
+                  <a href="#" class="nhsuk-link">Change</a>
+              </td>
+            </tr>
+            <tr role="row" class="nhsuk-table__row">
+              <th class="nhsuk-table__header" scope="row">Leave start</th>
+              <td class="nhsuk-table__cell nhsuk-table__cell--numeric">12 October 2024</td>
+              <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
+                  <a href="#" class="nhsuk-link">Change</a>
+              </td>
+            </tr>
+            <tr role="row" class="nhsuk-table__row">
+              <th class="nhsuk-table__header" scope="row">Leave end </th>
+              <td class="nhsuk-table__cell nhsuk-table__cell--numeric">03 March 2025</td>
+              <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
+                  <a href="#" class="nhsuk-link">Change</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      
+        <br>
+
+      <!-- Payment details -->
+      <h2 class="nhsuk-heading-m">Payment details</h2>
+
+      <table class="nhsuk-table">
+          </thead>
+          <tbody class="nhsuk-table__body">
+            <tr role="row" class="nhsuk-table__row">
+              <th class="nhsuk-table__header" scope="row">Actual contract</th>
+              <td class="nhsuk-table__cell nhsuk-table__cell--numeric">£60,000</td>
+              <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
+                  <a href="#" class="nhsuk-link">Change</a>
+              </td>
+            </tr>
+            <tr role="row" class="nhsuk-table__row">
+              <th class="nhsuk-table__header" scope="row">Weekly value</th>
+              <td class="nhsuk-table__cell nhsuk-table__cell--numeric">£890</td>
+              <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
+                  <a href="#" class="nhsuk-link">Change</a>
+              </td>
+            </tr>
+            <tr role="row" class="nhsuk-table__row">
+              <th class="nhsuk-table__header" scope="row">Estimated total </th>
+              <td class="nhsuk-table__cell nhsuk-table__cell--numeric">£7000</td>
+              <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
+                  <a href="#" class="nhsuk-link">Change</a>
+              </td>
+            </tr>
+          </tbody>
+      </table>
+      
+      <br>
+
+      <!-- Narrative -->
+
+      <table class="nhsuk-table" style="margin-bottom: 6">
+        <caption class= "nhsuk-table__caption">Narrative</caption>
+
+        <tbody class="nhsuk-table__body">
+          <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</td>
+            <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
+              <a href="#" class="nhsuk-link">Change</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <br>
+
+      <!-- Evidence -->
+
+      <table class="nhsuk-table" style="margin-bottom: 8">
+          <caption class= "nhsuk-table__caption">Attached evidence</caption>
+          <thead role="rowgroup" class="nhsuk-table__head">
+            <tr role="row">
+              <th role="columnheader" class="" scope="col">
+                File
+              </th>
+              <th role="columnheader" class="" scope="col">
+                Document Type
+              </th>
+              <th role="columnheader" class="" scope="col">
+                  
+              </th>
+            </tr>
+          </thead>
+          <tbody class="nhsuk-table__body">
+            <tr role="row" class="nhsuk-table__row">
+              <td class="nhsuk-table__cell" scope="row">
+                  <a href="#" class="nhsuk-link">ABC.pdf</a>
+                  <span class="nhsuk-u-margin-left-1 nhsuk-u-font-weight-bold">2MB</span>
+              </td>
+              <td class="nhsuk-table__cell ">Medical letter</td>
+              <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
+                <a href="#" class="nhsuk-link">Change</a>
+              </td>
+            </tr>
+          </tbody>
+      </table>
+
+      <br>
+
+     
+
+    <h2 class="nhsuk-heading-m">Submit payment adjustment</h2>
+    <p class="nhsuk-body">By submitting this payment adjustment you are confirming that, to the best of your knowledge, the details in the adjustment are correct.</p>
+
+    
+
+      <div class="nhsuk-button-group nhsuk-u-margin-top-6">
+        <a id="confirm-submit" href="/7-payments/payments-adjustments/notification" class="nhsuk-button nhsuk-u-margin-bottom-0" data-module="nhsuk-button" type="submit" >
+          Confirm and submit
+        </a>
+        <a id="reject" href=" " class="nhsuk-button nhsuk-button--secondary nhsuk-u-margin-bottom-0" data-module="nhsuk-button" type="submit">
+          Reject or request further information
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  {% endblock %}
+
+
+        
