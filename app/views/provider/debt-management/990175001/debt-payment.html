@@ -1,0 +1,303 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'default-layout.html' %}
+
+<!-- Set the page title -->
+{% block pageTitle %} 
+  Debt Payment 
+{% endblock %}
+
+
+<!-- Back link -->
+{% block outerContent %} 
+{% endblock %} 
+
+{% block content %}
+  <div class="nhsuk-back-link">
+    <a class="nhsuk-back-link__link" href="/provider/debt-management/990175001">
+      <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+        aria-hidden="true" height="24" width="24">
+        <path
+          d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z">
+        </path>
+      </svg>
+      Back
+    </a> 
+  </div>
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+      <form>
+        <h1 class="nhsuk-u-margin-bottom-0">
+          Make a one-off payment
+          <span class="nhsuk-caption-xl nhsuk-caption--bottom">Contract Name, 99017500001</span>
+        </h1>
+        <div class="nhsuk-warning-callout" id="debt-overpmt-alert" style="display: none;">
+          <h2 class="nhsuk-warning-callout__label nhsuk-heading-m ">
+            <span role="text">
+              <span class="nhsuk-u-visually-hidden">Important: </span>
+              Overpayment Alert
+            </span>
+          </h2>
+          <p>You are attempting to pay more than what you owe. Please verify the amount, or if you prefer to overpay, proceed with
+          the payment; any excess will be adjusted in the next monthly calculation.
+          </p>
+        </div>
+        <hr class="nhsuk-section-break  nhsuk-section-break--l" />
+        <div class="nhsuk-form-group nhsuk-u-margin-top-5">
+          <fieldset class="nhsuk-fieldset">
+            <legend class="nhsuk-fieldset__legend nhsuk-u-font-weight-bold">
+              How would you prefer to proceed with the payment: in full or partially?
+            </legend>
+            <div class="nhsuk-radios">
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="debt-total-yes" name="debt-payment" type="radio" value="yes">
+                <label class="nhsuk-label nhsuk-radios__label" for="debt-total-yes">
+                  Total amount £3000.00
+                </label>
+              </div>
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="debt-total-no" name="debt-payment" type="radio" value="no">
+                <label class="nhsuk-label nhsuk-radios__label" for="debt-total-no">
+                  Partial payment
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+        <div class="nhsuk-form-group nhsuk-u-margin-top-5" id="debt-amount-pay-div" style="display: none;">
+          <label class="nhsuk-label nhsuk-u-font-weight-bold" for="debt-payment-amount">
+            Enter the amount you would like to pay
+          </label>
+          <div class="nhsuk-input__wrapper">
+            <div class="nhsuk-input__prefix" aria-hidden="true">£</div>
+            <input class="nhsuk-input nhsuk-input--width-5" id="debt-payment-amount" name="payment-amount" type="text"
+              value="500">
+          </div>
+        </div>
+        <div class="nhsuk-form-group nhsuk-u-margin-top-5" id="debt-preferred-mode" style="display: none;">
+          <fieldset class="nhsuk-fieldset">
+            <legend class="nhsuk-fieldset__legend nhsuk-u-font-weight-bold">
+              What is your preferred payment option?
+            </legend>
+            <div class="nhsuk-radios">
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="debt-credit-option" name="debt-prefer-payment" type="radio"
+                  value="yes">
+                <label class="nhsuk-label nhsuk-radios__label" for="debt-credit-option">
+                  Credit or debit card
+                </label>
+              </div>
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="debt-bacs-option" name="debt-prefer-payment" type="radio"
+                  value="no">
+                <label class="nhsuk-label nhsuk-radios__label" for="debt-bacs-option">
+                  Pay by bank account
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+        <div id="debt-credit-contact-details" style="display: none;">
+          <h2 class="nhsuk-heading-m" id="debt-card-details">Enter card details</h2>
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label nhsuk-u-font-weight-bold" for="number-on-the-account">
+              Card number
+            </label>
+            <input class="nhsuk-input" id="number-on-the-account" name="numberOnTheAccount" type="text" spellcheck="false"
+              autocomplete="name" placeholder="Card number">
+            <figure class="nhsuk-image nhsuk-no-border nhsuk-no-background-color nhsuk-u-margin-top-3 nhsuk-u-margin-bottom-3">
+              <img class="nhsuk-image__img" src="/images/cards.png" alt="supported cards">
+            </figure>
+            <p class="nhsuk-hint">Accepted credit and debit card types</p>
+          </div>
+          <fieldset class="nhsuk-fieldset nhsuk-u-margin-top-5" role="group" aria-describedby="card-errors-hint">
+            <legend class="nhsuk-label nhsuk-u-font-weight-bold" for="expiry-date-selection">
+              Expiry date
+            </legend>
+            <div class="nhsuk-hint" id="card-errors-hint">
+              For example, 10/26
+            </div>
+            <div class="nhsuk-date-input" id="expiry-date-selection">
+              <div class="nhsuk-date-input__item">
+                <div class="nhsuk-form-group">
+                  <label class="nhsuk-label nhsuk-date-input__label" for="expiry-month">
+                    Month
+                  </label>
+                  <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="expiry-month"
+                    name="expiry-month" type="text" pattern="[0-9]*" inputmode="numeric" placeholder="mm">
+                </div>
+              </div>
+              <div class="nhsuk-date-input__item">
+                <div class="nhsuk-form-group">
+                  <label class="nhsuk-label nhsuk-date-input__label" for="expiry-year">
+                    Year
+                  </label>
+                  <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="expiry-year"
+                    name="expiry-year" type="text" pattern="[0-9]*" inputmode="numeric" placeholder="yy">
+                </div>
+              </div>
+            </div>
+          </fieldset>
+          <div class="nhsuk-form-group nhsuk-u-margin-top-5">
+            <label class="nhsuk-label nhsuk-u-font-weight-bold nhsuk-u-margin-top-5" for="card-name-on-the-account">
+              Name on card
+            </label>
+            <input class="nhsuk-input" id="card-name-on-the-account" name="cardnameOnTheAccount" type="text"
+              spellcheck="false" autocomplete="name" placeholder="Card holder name">
+          </div>
+          <div class="nhsuk-form-group nhsuk-u-margin-top-5">
+            <label class="nhsuk-label nhsuk-u-font-weight-bold" for="card-security-code">
+              Card security code
+            </label>
+            <div id="csc-code-hint" class="nhsuk-hint ">
+              The last 3 digits on the back of the card
+            </div>
+            <div class="nhsuk-input__wrapper">
+              <input class="nhsuk-input nhsuk-input--width-4 nhsuk-input--extra-letter-spacing  nhsuk-u-margin-top-3 " id="card-security-code"
+                name="securityCode" type="text" spellcheck="false" aria-describedby="csc-code-hint" inputmode="numeric" placeholder="***">
+              <figure class="nhsuk-no-border  nhsuk-u-margin-top-3 nhsuk-u-margin-bottom-3">
+                <img class="nhsuk-image__img" src="/images/cvv.png" alt="security code" width="60" style="max-width: fit-content;" height="39">
+              </figure>
+            </div>
+          </div>
+          <h3 class="nhsuk-heading-m nhsuk-u-margin-top-5 nhsuk-u-margin-bottom-2" id="debt-card-details">
+            Contact details
+          </h3>
+          <div class="nhsuk-form-group">
+            <div class="nhsuk-hint" id="email-with-hint-text-hint">
+              We'll send your payment confirmation here
+            </div>
+            <label class="nhsuk-label" for="debt-email-details-1">
+              Email
+            </label>
+            <input class="nhsuk-input" id="debt-email-details-1" name="account-email-detail" type="text"
+              spellcheck="false" aria-describedby="email-with-hint-text-hint" value="john.doe@email.com">
+            <div class="nhsuk-inset-text nhsuk-u-margin-top-3">
+              <span class="nhsuk-u-visually-hidden nhsuk-u-margin-top-2">Information: </span>
+              <p class="nhsuk-body">An email will be sent to <strong>john.doe@email.com</strong></p>
+            </div>
+          </div>
+          <!-- ACTION BUTTONS -->
+          <div class="nhsuk-u-margin-top-5">
+            <div class="nhsuk-button-group nhsuk-u-margin-top-4">
+              <a id="confirm-payment-btn" href="/provider/debt-management/990175001/debt-payment-confirmation"
+                class="nhsuk-button" data-module="nhsuk-button" type="submit">
+                Confirm payment
+              </a>
+              <a href="#" class="nhsuk-link nhsuk-link--no-visited-state">
+                Cancel
+              </a>
+            </div>
+          </div>
+        </div>
+        <div id="debt-bacs-contact-details" style="display: none;">
+          <h2 class="nhsuk-heading-m" id="debt-bank-details">Enter bank details</h2>
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="select-1">
+              Select bank in which you want to pay the debt
+            </label>
+            <select class="nhsuk-select nhsuk-u-width-full" id="select-1" name="select-1">
+              <option value="1" selected>HSBC</option>
+              <option value="2">BANK2</option>
+              <option value="3" disabled>BANK3</option>
+            </select>
+          </div>
+          <h2 class="nhsuk-heading-m" id="debt-card-details nhsuk-u-margin-bottom-0">
+            Contact details
+          </h2>
+          <div class="nhsuk-form-group nhsuk-u-margin-top-0">
+            <div class="nhsuk-hint" id="email-with-hint-text-hint-1">
+              We'll send your payment confirmation here
+            </div>
+            <label class="nhsuk-label" for="debt-email-details">
+              Email
+            </label>
+            <input class="nhsuk-input" id="debt-email-details" name="account-email-detail" type="text" spellcheck="false"
+              aria-describedby="email-with-hint-text-hint-1" value="john.doe@email.com">
+            <div class="nhsuk-inset-text nhsuk-u-margin-top-3">
+              <span class="nhsuk-u-visually-hidden nhsuk-u-margin-top-2">Information: </span>
+              <p class="nhsuk-body">An email will be sent to <strong>john.doe@email.com</strong></p>
+            </div>
+          </div>
+          <!-- ACTION BUTTONS -->
+          <div class="nhsuk-u-margin-top-5">
+            <div class="nhsuk-button-group nhsuk-u-margin-top-4">
+              <a id="confirm-view-debt-btn" href="#" class="nhsuk-button"
+                data-module="nhsuk-button" type="submit">
+                Pay now
+              </a>
+              <a href="#" class="nhsuk-u-font-weight-normal nhsuk-u-font-size-19 nhsuk-link--no-visited-state">
+                Cancel
+              </a>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+{% endblock %} 
+
+{% block pageScripts %}
+<script>
+  window.onload = function () {
+    const radiosOption1 = document.querySelectorAll('input[name="debt-payment"]');
+    const radiosOption2 = document.querySelectorAll('input[name="debt-prefer-payment"]');
+    const debtAmountPayDiv = document.getElementById('debt-amount-pay-div');
+    const debtPreferredModeDiv = document.getElementById('debt-preferred-mode');
+    const debtCardDetailsDiv = document.getElementById('debt-card-details');
+    const debtCreditContactDetailsDiv = document.getElementById('debt-credit-contact-details');
+    const debtBacsContactDetailsDiv = document.getElementById('debt-bacs-contact-details');
+
+    function handleRadioChange1() {
+      if (document.getElementById('debt-total-yes').checked) {
+        debtPreferredModeDiv.style.display = 'block';
+        debtAmountPayDiv.style.display = 'none';
+        debtOverpmtAlert.style.display = 'none';
+      } else if (document.getElementById('debt-total-no').checked) {
+        debtPreferredModeDiv.style.display = 'block';
+        debtAmountPayDiv.style.display = 'block';
+      }
+    }
+    function handleRadioChange2() {
+      if (document.getElementById('debt-credit-option').checked) {
+        debtCreditContactDetailsDiv.style.display = 'block';
+        debtBacsContactDetailsDiv.style.display = 'none';
+      } else if (document.getElementById('debt-bacs-option').checked) {
+        debtCreditContactDetailsDiv.style.display = 'none';
+        debtBacsContactDetailsDiv.style.display = 'block';
+      }
+    }
+    radiosOption1.forEach(radio => {
+      radio.checked = false;
+      radio.addEventListener('change', handleRadioChange1);
+    });
+    radiosOption2.forEach(radio => {
+      radio.checked = false;
+      radio.addEventListener('change', handleRadioChange2);
+    });
+
+  };
+  let debounceTimeout;
+  const debtAmtToPay = document.getElementById('debt-payment-amount');
+  const debtOverpmtAlert = document.getElementById('debt-overpmt-alert'); 
+  debtAmtToPay.addEventListener('input', checkValue);
+
+    // Function to handle the input event with debouncing
+    function checkValue(event) {
+      clearTimeout(debounceTimeout);
+      debounceTimeout = setTimeout(() => {
+        const inputValue = event.target.value;
+        if (parseFloat(inputValue) > 3000) {
+          debtOverpmtAlert.style.display = 'block';
+        } else {
+          debtOverpmtAlert.style.display = 'none';  
+        }
+      }, 500); // Delay in ms
+    }
+
+</script>
+{% endblock %}

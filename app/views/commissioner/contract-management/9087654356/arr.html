@@ -1,0 +1,231 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'default-layout.html' %}
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  Manage contracts
+{% endblock %}
+
+<!-- Breadcrumbs -->
+{% block beforeContent %}
+  {{ breadcrumb({
+    items: [
+      {
+        href: "/commissioner/landing-page",
+        text: "Home"
+      },
+      {
+        href: "/commissioner/contract-management/contracts",
+        text: "Contract Management"
+      },
+      {
+        href: "/commissioner/contract-management/9087654356",
+        text: "9087654356"
+      }
+    ],
+    href: "/commissioner/contract-management/9087654356/arr",
+    text: "ARR"
+  }) }}
+{% endblock %}
+
+<!-- Back link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- Content -->
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+      <!-- TITLE -->
+      <h1>
+        ARR for Francescine Wilene Pimley
+        <span class="nhsuk-caption-xl nhsuk-caption--bottom">1st April 2018 to 31st March 2019</span>
+      </h1>
+
+      <!-- SUMMARY TABLE -->
+      <dl class="nhsuk-summary-list">
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Performer Status
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            Accepted
+          </dd>
+        </div>
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Provider Status
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            Pending
+          </dd>
+        </div>
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Provider ID
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            527386
+          </dd>
+        </div>
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Name
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            Francescine Wilene Pimley
+          </dd>
+        </div>
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Start
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            01/04/2018
+          </dd>
+        </div>
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            End
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            <p>31/03/2019</p>
+          </dd>
+        </div>
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Financial Year
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            <p>1819</p>
+          </dd>
+        </div>
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Contract ID
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            <p>9087654365</p>
+          </dd>
+        </div>
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Contract Ceiling
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            <p>£177,532.29</p>
+          </dd>
+        </div>
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Performer NPEE
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            <p>0</p>
+          </dd>
+        </div>
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Original NPE
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            <p>0</p>
+          </dd>
+        </div>
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Actual NPE
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            <p>£50,000</p>
+          </dd>
+        </div>
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Proposed NPE
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            <p>£50,000</p>
+          </dd>
+        </div>
+      </dl>
+      <!-- ARR ACTION -->
+      <div class="nhsuk-form-group">
+        <fieldset class="nhsuk-fieldset">
+          <legend class="nhsuk-fieldset__legend nhsuk-u-font-weight-bold">
+            Are these details correct?
+          </legend>
+          <div class="nhsuk-radios nhsuk-radios--inline">
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="arr-correct-yes" name="arr-correct" type="radio" value="yes">
+              <label class="nhsuk-label nhsuk-radios__label" for="arr-correct-yes">
+                Yes
+              </label>
+            </div>
+      
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="arr-correct-no" name="arr-correct" type="radio" value="no">
+              <label class="nhsuk-label nhsuk-radios__label" for="arr-correct-no">
+                No
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <div id="arr-reason-q" class="nhsuk-form-group" style="display: none;">
+        <fieldset class="nhsuk-fieldset">
+          <legend class="nhsuk-fieldset__legend nhsuk-u-font-weight-bold">
+            Reason for rejection
+          </legend>
+          <div class="nhsuk-radios">
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="arr-reason-1" name="arr-reason" type="radio" value="Incorrect NPEE">
+              <label class="nhsuk-label nhsuk-radios__label" for="arr-reason-1">
+                Incorrect NPEE
+              </label>
+            </div>
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="arr-reason-2" name="arr-reason" type="radio" value="Rejection 2">
+              <label class="nhsuk-label nhsuk-radios__label" for="arr-reason-2">
+                Rejection reason 2
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <div id="arr-proposed-q" class="nhsuk-form-group" style="display: none;">
+        <label class="nhsuk-label nhsuk-u-font-weight-bold" for="arr-proposed">
+          Proposed NPEE
+        </label>
+        <div class="nhsuk-input__wrapper">
+          <div class="nhsuk-input__prefix" aria-hidden="true">£</div>
+          <input class="nhsuk-input nhsuk-input--width-5" id="arr-proposed" name="arr-proposed" type="text">
+        </div>
+      </div>
+
+      <div id="arr-additional-q" class="nhsuk-form-group" style="display: none;">
+        <label class="nhsuk-label nhsuk-u-font-weight-bold display-flex" for="arr-additional">
+          Additional information
+          <span class="nhsuk-hint">&nbsp;(optional)</span>
+        </label>
+        <textarea class="nhsuk-textarea" id="arr-additional" name="arr-additional" rows="5"></textarea>
+      </div>
+
+      <!-- ACTION BUTTONS -->
+      <div class="nhsuk-button-group nhsuk-u-margin-top-4">
+        <button id="arr-accept-btn" class="nhsuk-button nhsuk-u-margin-bottom-0" data-module="nhsuk-button" type="submit" disabled>
+          Submit
+        </button>
+        <a href="/commissioner/contract-management/9087654356" class="nhsuk-link nhsuk-link--no-visited-state">
+          Cancel
+        </a>
+      </div>
+    </div>
+  </div>
+{% endblock %}

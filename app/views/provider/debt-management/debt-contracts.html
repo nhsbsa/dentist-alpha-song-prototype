@@ -1,0 +1,259 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'default-layout.html' %}
+
+<!-- Set the page title -->
+{% block pageTitle %} 
+Contracts in debt
+{% endblock %}
+
+<!-- Breadcrumbs -->
+{% block beforeContent %}
+  {{ breadcrumb({
+    items: [
+      {
+        href: "/provider/landing-page",
+        text: "Home"
+      }
+      ],
+        href: "/provider/debt-management/debt-contracts",
+        text: "Contracts in debt"
+  }) }}
+{% endblock %} 
+
+<!-- Back link -->
+{% block outerContent %} 
+{% endblock %} 
+
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+      <h1>
+        Contracts in debt
+      </h1>
+      <div class="nhsuk-custom-search-filter-container">
+        <div class="nhsuk-custom-search nhsuk-u-width-one-half">
+          <input class="nhsuk-search__input nhsuk-custom-search-input nhsuk-u-width-full" id="contract-search"
+            name="contract-search" type="search" placeholder="Enter contract ID or practise name" autocomplete="off">
+          <button class="nhsuk-search__submit nhsuk-custom-search-icon" type="submit">
+            <svg class="nhsuk-icon nhsuk-custom-search-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+              aria-hidden="true" focusable="false">
+              <path
+                d="M19.71 18.29l-4.11-4.1a7 7 0 1 0-1.41 1.41l4.1 4.11a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42zM5 10a5 5 0 1 1 5 5 5 5 0 0 1-5-5z">
+              </path>
+            </svg>
+            <span class="nhsuk-u-visually-hidden">Search</span>
+          </button>
+        </div>
+        <div class="nhsuk-custom-search-filter-text">
+        </div>
+      </div>
+      <div id="filter-contract-container" class="nhsuk-filter-container">
+        <h2 class="nhsuk-heading-s">Filters</h2>
+        <div class="nhsuk-grid-row nhsuk-filter-box">
+          <div class="nhsuk-grid-column-one-quarter">
+            <div class="nhsuk-form-group">
+              <fieldset class="nhsuk-fieldset">
+                <legend class="nhsuk-fieldset__legend">
+                  Status
+                </legend>
+                <div class="nhsuk-checkboxes">
+                  <div class="nhsuk-checkboxes__item">
+                    <input class="nhsuk-checkboxes__input" id="contract-active-filter" name="contract-status"
+                      type="checkbox" value="active">
+                    <label class="nhsuk-label nhsuk-checkboxes__label" for="contract-active-filter">
+                      Active
+                    </label>
+                  </div>
+                  <div class="nhsuk-checkboxes__item">
+                    <input class="nhsuk-checkboxes__input" id="contract-completed-filter" name="contract-status"
+                      type="checkbox" value="completed">
+                    <label class="nhsuk-label nhsuk-checkboxes__label" for="contract-completed-filter">
+                      Completed
+                    </label>
+                  </div>
+                  <div class="nhsuk-checkboxes__item">
+                    <input class="nhsuk-checkboxes__input" id="contract-error-filter" name="contract-status"
+                      type="checkbox" value="error">
+                    <label class="nhsuk-label nhsuk-checkboxes__label" for="contract-error-filter">
+                      Error
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+          <div class="nhsuk-grid-column-one-quarter">
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="contract-type-filter">
+                Contract Type
+              </label>
+              <select class="nhsuk-select" id="contract-type-filter" name="contract-type-filter">
+                <option value="1" selected>Select</option>
+                <option value="2">Option 1</option>
+                <option value="3">Option 2</option>
+              </select>
+            </div>
+          </div>
+          <div class="nhsuk-grid-column-one-quarter">
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="provider-filter">
+                Provider
+              </label>
+              <select class="nhsuk-select" id="provider-filter" name="provider-filter">
+                <option value="1" selected>Select</option>
+                <option value="2">Option 1</option>
+                <option value="3">Option 2</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <button id="apply-contract-button" class="nhsuk-button nhsuk-button--secondary nhsuk-u-margin-bottom-0"
+          data-module="nhsuk-button" type="submit">
+          Apply filter
+        </button>
+      </div>
+      <hr class="nhsuk-section-break--visible" />
+      <table class="nhsuk-table">
+        <caption class="nhsuk-table__caption" style="display: none;">Contracts</caption>
+        <thead role="rowgroup" class="nhsuk-table__head">
+          <tr role="row">
+            <th role="columnheader" class="" scope="col">
+              Contract ID
+            </th>
+            <th role="columnheader" class="" scope="col">
+              Practise name
+            </th>
+            <th role="columnheader" class="" scope="col">
+              Debt start date
+            </th>
+            <th role="columnheader" class="" scope="col">
+              Outstanding Debt
+            </th>
+            <th role="columnheader" class="" scope="col">
+              Debt recovery plan
+            </th>
+            <th role="columnheader" class="" scope="col">
+              Last payment made
+            </th>
+            <th role="columnheader" class="" scope="col">
+            </th>
+          </tr>
+        </thead>
+        <tbody class="nhsuk-table__body">
+          <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell">990175001</td>
+            <td class="nhsuk-table__cell ">Northwood Practise</td>
+            <td class="nhsuk-table__cell">20/03/24</td>
+            <td class="nhsuk-table__cell">£15,000.00</td>
+            <td class="nhsuk-table__cell">Yes</td>
+            <td class="nhsuk-table__cell">22/04/2023</td>
+            <td class="nhsuk-table__cell">
+              <a class="nhsuk-link--no-visited-state" href="/provider/debt-management/990175001/debt-payment-in-plan">View
+              </a>
+            </td>
+          </tr>
+          <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell">990175001</td>
+            <td class="nhsuk-table__cell ">Lakeside center</td>
+            <td class="nhsuk-table__cell">30/04/24</td>
+            <td class="nhsuk-table__cell">£3,000.00</td>
+            <td class="nhsuk-table__cell">No</td>
+            <td class="nhsuk-table__cell">10/03/2021</td>
+            <td class="nhsuk-table__cell">
+              <a class="nhsuk-link--no-visited-state" href="/provider/debt-management/990175001/debt-payment-no-plan">View
+              </a>
+            </td>
+          </tr>
+          <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell">990175001</td>
+            <td class="nhsuk-table__cell ">Lakeside center</td>
+            <td class="nhsuk-table__cell">30/04/24</td>
+            <td class="nhsuk-table__cell">£1,500.00</td>
+            <td class="nhsuk-table__cell">No</td>
+            <td class="nhsuk-table__cell">10/03/2021</td>
+            <td class="nhsuk-table__cell">
+              <a class="nhsuk-link--no-visited-state" href="/provider/debt-management/990175001/debt-payment-failed">View
+              </a>
+            </td>
+          </tr>
+          <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell">990175001</td>
+            <td class="nhsuk-table__cell ">Lakeside center</td>
+            <td class="nhsuk-table__cell">30/04/24</td>
+            <td class="nhsuk-table__cell">£4,500.00</td>
+            <td class="nhsuk-table__cell">No</td>
+            <td class="nhsuk-table__cell">10/03/2021</td>
+            <td class="nhsuk-table__cell">
+              <a class="nhsuk-link--no-visited-state" href="/provider/debt-management/990175001/debt-payment-on-cutoff-date">View
+              </a>
+            </td>
+          </tr>
+          <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell">990175001</td>
+            <td class="nhsuk-table__cell ">Lakeside center</td>
+            <td class="nhsuk-table__cell">30/04/24</td>
+            <td class="nhsuk-table__cell">£10,000.00</td>
+            <td class="nhsuk-table__cell">No</td>
+            <td class="nhsuk-table__cell">10/03/2021</td>
+            <td class="nhsuk-table__cell">
+              <a class="nhsuk-link--no-visited-state" href="/provider/debt-management/990175001/debt-payment-on-closed-contract">View
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <nav class="nhsuk-table-pagination" aria-label="Pagination">
+        <div class="nhsuk-table-pagination__prev">
+          <a class="nhsuk-link nhsuk-link--no-visited-state  nhsuk-table-pagination__link" href="#" rel="prev">
+            <svg class="nhsuk-table-pagination__icon nhsuk-table-pagination__icon--prev" xmlns="http://www.w3.org/2000/svg" height="13"
+              width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+              <path
+                d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z">
+              </path>
+            </svg>
+            <span class="nhsuk-table-pagination__link-title">
+              Previous<span class="govuk-visually-hidden"> page</span>
+            </span>
+          </a>
+        </div>
+        <ul class="nhsuk-table-pagination__list">
+          <li class="nhsuk-table-pagination__item nhsuk-table-pagination__item--current">
+            <a class="nhsuk-link nhsuk-link--no-visited-state  nhsuk-table-pagination__link" href="#" aria-label="Page 1">
+              1
+            </a>
+          </li>
+          <li class="nhsuk-table-pagination__item">
+            <a class="nhsuk-link nhsuk-link--no-visited-state  nhsuk-table-pagination__link" href="#" aria-label="Page 2" aria-current="page">
+              2
+            </a>
+          </li>
+          <li class="nhsuk-table-pagination__item">
+            <a class="nhsuk-link nhsuk-link--no-visited-state  nhsuk-table-pagination__link" href="#" aria-label="Page 3">
+              3
+            </a>
+          </li>
+        </ul>
+        <div class="nhsuk-table-pagination__next">
+          <a class="nhsuk-link nhsuk-link--no-visited-state  nhsuk-table-pagination__link" href="#" rel="next">
+            <span class="nhsuk-table-pagination__link-title">
+              Next<span class="govuk-visually-hidden"> page</span>
+            </span>
+            <svg class="nhsuk-table-pagination__icon nhsuk-table-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13"
+              width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+              <path
+                d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z">
+              </path>
+            </svg>
+          </a>
+        </div>
+      </nav>
+      <!-- End of content -->
+    </div>
+  </div>
+
+{% endblock %}

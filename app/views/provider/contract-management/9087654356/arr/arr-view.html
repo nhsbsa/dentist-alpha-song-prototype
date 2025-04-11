@@ -1,0 +1,302 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'default-layout.html' %}
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  Manage contracts
+{% endblock %}
+
+<!-- Breadcrumbs -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Back link -->
+{% block outerContent %}
+<div class="nhsuk-back-link nhsuk-u-padding-top-3 nhsuk-u-margin-bottom-0">
+  <a class="nhsuk-back-link__link" href="/provider/contract-management/9087654356/arr">
+    <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
+      <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+    </svg>
+    Back</a>
+</div>
+{% endblock %}
+
+<!-- Content -->
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+      <!-- TITLE -->
+      <h1>
+        ARR for Francescine Wilene Pimley
+        <span class="nhsuk-caption-xl nhsuk-caption--bottom">1st April 2018 to 31st March 2019</span>
+      </h1>
+
+      <!-- SUMMARY TABLE -->
+      <dl class="nhsuk-summary-list">
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Clinician ID
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            527386
+          </dd>
+        </div>
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Name
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            Francescine Wilena Pimley
+          </dd>
+        </div>
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Clinician Status
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            Waiting
+          </dd>
+        </div>
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Clinician Status
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            Waiting
+          </dd>
+        </div>
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Start
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            01/04/2018
+          </dd>
+        </div>
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            End
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            <p>31/03/2019</p>
+          </dd>
+        </div>
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Financial Year
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            <p>1819</p>
+          </dd>
+        </div>
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Contract ID
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            <p>9087654365</p>
+          </dd>
+        </div>
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Contract Ceiling
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            <p>£177,532.29</p>
+          </dd>
+        </div>
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Original NPE
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            <p>0</p>
+          </dd>
+        </div>
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Actual NPE
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            <p>0</p>
+          </dd>
+        </div>
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Original NPEE
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            <p>£50,000</p>
+          </dd>
+        </div>
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Actual NPEE
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            <p>£50,000</p>
+          </dd>
+        </div>
+      </dl>
+      <!-- ARR ACTION -->
+      <div class="nhsuk-form-group">
+        <fieldset class="nhsuk-fieldset">
+          <legend class="nhsuk-fieldset__legend nhsuk-u-font-weight-bold">
+            Are these NPE/NPEE details correct?
+          </legend>
+          <div class="nhsuk-radios nhsuk-radios--inline">
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="arr-correct-yes" name="arr-correct" type="radio" value="yes">
+              <label class="nhsuk-label nhsuk-radios__label" for="arr-correct-yes">
+                Yes
+              </label>
+            </div>
+      
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="arr-correct-no" name="arr-correct" type="radio" value="no">
+              <label class="nhsuk-label nhsuk-radios__label" for="arr-correct-no">
+                No
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <div id="declaration" style="display: none;">
+        <h2>Declaration</h2>
+        <p>
+          I understand that the administration of NHS Dental Services and responsibility for anti fraud work in the NHS are both responsibilities of the NHS Business Services 
+          Authority. I understand that NHS Dental Services may share the information on this form with NHS Protect, a devision of the NHS Business Services Authority, 
+          for the purposes of the prevention, detection, investigation and prosecution of fraud or any other unlawful activity affecting the health service.
+        </p>
+        <form>
+          <div class="nhsuk-form-group">
+            <fieldset class="nhsuk-fieldset">
+              <legend class="nhsuk-u-visually-hidden">
+                Declaration confirm checkbox
+              </legend>
+      
+              <div class="nhsuk-checkboxes">
+                <div class="nhsuk-checkboxes__item">
+                  <input class="nhsuk-checkboxes__input" id="declaration-confirm" name="declaration-confirm" type="checkbox" value="true">
+                  <label class="nhsuk-label nhsuk-u-font-weight-bold nhsuk-checkboxes__label" for="declaration-confirm">
+                    I confirm
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+        </form>
+      </div>
+
+      <div id="arr-reason-q" class="nhsuk-form-group" style="display: none;">
+        <fieldset class="nhsuk-fieldset">
+          <legend class="nhsuk-fieldset__legend nhsuk-u-font-weight-bold">
+            Reason for rejection
+          </legend>
+          <div class="nhsuk-radios">
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="arr-reason-1" name="arr-reason" type="radio" value="Incorrect NPEE">
+              <label class="nhsuk-label nhsuk-radios__label" for="arr-reason-1">
+                Incorrect NPEE
+              </label>
+            </div>
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="arr-reason-2" name="arr-reason" type="radio" value="Rejection 2">
+              <label class="nhsuk-label nhsuk-radios__label" for="arr-reason-2">
+                Rejection reason 2
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <div id="arr-proposed-q" class="nhsuk-form-group" style="display: none;">
+        <label class="nhsuk-label nhsuk-u-font-weight-bold" for="arr-proposed">
+          Proposed NPEE
+        </label>
+        <div class="nhsuk-input__wrapper">
+          <div class="nhsuk-input__prefix" aria-hidden="true">£</div>
+          <input class="nhsuk-input nhsuk-input--width-5" id="arr-proposed" name="arr-proposed" type="text">
+        </div>
+      </div>
+
+      <div id="arr-additional-q" class="nhsuk-form-group" style="display: none;">
+        <label class="nhsuk-label nhsuk-u-font-weight-bold display-flex" for="arr-additional">
+          Additional information
+          <span class="nhsuk-hint">&nbsp;(optional)</span>
+        </label>
+        <textarea class="nhsuk-textarea" id="arr-additional" name="arr-additional" rows="5"></textarea>
+      </div>
+
+      <!-- ACTION BUTTONS -->
+      <div class="nhsuk-button-group nhsuk-u-margin-top-4">
+        <button id="arr-accept-btn" class="nhsuk-button nhsuk-u-margin-bottom-0" data-module="nhsuk-button" type="submit" disabled>
+          Submit
+        </button>
+        <a href="/provider/contract-management/9087654356" class="nhsuk-link nhsuk-link--no-visited-state">
+          Cancel
+        </a>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block pageScripts %}
+  <script>
+    const declaration = document.getElementById('declaration');
+    const declarationConfirm = document.getElementById('declaration-confirm');
+    const arrCorrectYes = document.getElementById('arr-correct-yes');
+    const arrCorrectNo = document.getElementById('arr-correct-no');
+    const arrReason1 = document.getElementById('arr-reason-1');
+    const arrReason2 = document.getElementById('arr-reason-2');
+    const arrProposed = document.getElementById('arr-proposed');
+    const arrReasonQ = document.getElementById('arr-reason-q');
+    const arrProposedQ = document.getElementById('arr-proposed-q');
+    const arrAdditionalQ = document.getElementById('arr-additional-q');
+    const arrAcceptBtn = document.getElementById('arr-accept-btn');
+
+    if(arrCorrectYes) {
+      arrCorrectYes.addEventListener('click', ()=>{
+        if(arrCorrectYes.checked) {
+          declaration.style.display = 'block';
+          arrReasonQ.style.display = 'none';
+          arrProposedQ.style.display = 'none';
+          arrAdditionalQ.style.display = 'none';
+        }
+      });
+    }
+
+    if(declarationConfirm) {
+      declarationConfirm.addEventListener('click', ()=>{
+        if(declarationConfirm.checked) {
+          arrAcceptBtn.disabled = false;
+        }
+      });
+    }
+
+    if(arrCorrectNo) {
+      arrCorrectNo.addEventListener('click', ()=>{
+        if(arrCorrectNo.checked) {
+          declaration.style.display = 'none';
+          arrAcceptBtn.disabled = true;
+          arrReasonQ.style.display = 'block';
+        }
+      });
+    }
+
+    if(arrReason1) {
+      arrReason1.addEventListener('click', ()=>{
+        if(arrCorrectNo.checked) {
+          arrProposedQ.style.display = 'block';
+          arrAdditionalQ.style.display = 'block';
+          arrAcceptBtn.disabled = false;
+        }
+      });
+    }
+  </script>
+{% endblock %}

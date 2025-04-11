@@ -1,0 +1,984 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'default-layout.html' %}
+
+<!-- Set the page title -->
+{% block pageTitle %}
+ Contract name 
+{% endblock %}
+
+<!-- Breadcrumbs -->
+{% block beforeContent %}
+  {{ breadcrumb({
+    items: [
+      {
+        href: "/provider/landing-page",
+        text: "Home"
+      },
+      {
+        href: "/provider/debt-management/debt-contracts",
+        text: "Contracts in debt"
+      },
+      {
+        href: "/provider/debt-management/990175001",
+        text: "990175001"
+      }
+    ],
+    href: "/provider/debt-management/990175001/debt-details",
+    text: "debt details"
+  }) }} 
+{% endblock %}
+
+<!-- Back link -->
+{% block outerContent %} {% endblock %} 
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+      <h1 class="nhsuk-u-margin-bottom-0">
+        Debt details
+        <span class="nhsuk-caption-xl nhsuk-caption--bottom">Contract Name, 99017500001</span>
+      </h1>
+      <hr class="nhsuk-section-break  nhsuk-section-break--l" />
+      <div class="nhsuk-u-margin-top-5">
+        <div class="nhsuk-multi-link-row-one">
+          <h2 class="nhsuk-heading-m">
+            Debt commencement timeline
+            <span class="nhsuk-caption-m nhsuk-caption--bottom"> 
+              These chart displays data indicating when your debt began.
+            </span>
+          </h2>
+        </div>
+        <div>
+          <div class="nhsuk-card nhsuk-card--clickable nhsuk-card-custom-container nhsuk-no-border">
+            <div class=" nhsuk-card__content nhsuk-card__content--primary nhsuk-card-custom-content">
+              <figure class="nhsuk-image nhsuk-no-border">
+                <img class="nhsuk-image__img" src="/images/debtImage.jpg" alt="debt chart" />
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="nhsuk-u-margin-top-5">
+        <h2 class="nhsuk-card__heading nhsuk-u-margin-bottom-0">
+          Payments and deductions
+        </h2>
+        <div class="nhsuk-u-margin-top-5">
+          <div class="nhsuk-form-group">
+            <fieldset class="nhsuk-fieldset">
+              <legend class="nhsuk-fieldset__legend nhsuk-u-font-weight-bold">
+                Choose the timeframe to view payments and deductions.
+              </legend>
+              <div class="nhsuk-radios">
+                <div class="nhsuk-radios__item">
+                  <input class="nhsuk-radios__input" id="debt-last-month" name="debt-period-select" type="radio" value="monthly" checked="checked">
+                  <label class="nhsuk-label nhsuk-radios__label" for="debt-last-month">
+                    Last month
+                  </label>
+                </div>
+                <div class="nhsuk-radios__item">
+                  <input class="nhsuk-radios__input" id="debt-3-month" name="debt-period-select" type="radio" value="yearly">
+                  <label class="nhsuk-label nhsuk-radios__label" for="debt-3-month">
+                    Last 3 month
+                  </label>
+                </div>
+                <div class="nhsuk-radios__item">
+                  <input class="nhsuk-radios__input" id="debt-6-month" name="debt-period-select" type="radio" value="yearly">
+                  <label class="nhsuk-label nhsuk-radios__label" for="debt-6-month">
+                    Last 6 month
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+            <button class="nhsuk-button nhsuk-u-margin-top-5 nhsuk-button--secondary" data-module="nhsuk-button" onclick="handleRadioChange();" type="submit">
+              Update table
+            </button>
+          </div>
+        </div>
+      </div>
+    <!-- debt monthly view -->
+      <div id="debt-last-month-view" class="nhsuk-u-margin-top-5">
+        <div class="nhsuk-u-margin-top-5">
+          <table role="table" class="nhsuk-table-responsive">
+            <caption class="nhsuk-table__caption">
+              Summary of the payments and deductions for the month of May 2024
+            </caption>
+            <thead role="rowgroup" class="nhsuk-table__head">
+              <tr role="row">
+                <th role="columnheader" class="" scope="col">Type</th>
+                <th role="columnheader" class="" scope="col">Payments</th>
+                <th role="columnheader" class="" scope="col">Deductions</th>
+              </tr>
+            </thead>
+            <tbody class="nhsuk-table__body">
+              <tr role="row" class="nhsuk-table__row">
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Type </span>Monthly Pay
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Payments </span>£16,730
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Deductions </span>£0
+                </td>
+              </tr>
+              <tr role="row" class="nhsuk-table__row">
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Type </span>Non-Superannuable deductions
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Payments </span>£0
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Deductions </span>£15.93
+                </td>
+              </tr>
+              <tr role="row" class="nhsuk-table__row">
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Type </span>Superannuation contributions
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Payments </span>£0
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Deductions </span>£540.42
+                </td>
+              </tr>
+              <tr role="row" class="nhsuk-table__row">
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Type </span>Patients charges
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Payments </span>£0
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Deductions </span>£14703.65
+                </td>
+              </tr>
+              <tr role="row" class="nhsuk-table__row">
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Type </span>Remissions
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Payments </span>£0
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Deductions </span>£0
+                </td>
+              </tr>
+              <tr role="row" class="nhsuk-table__row">
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Type </span>Sub totals
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Payments </span>£14,495
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Deductions </span>£15,260
+                </td>
+              </tr>
+              <tr role="row" class="nhsuk-table__row">
+                <td role="cell" class="nhsuk-table__cell nhsuk-u-font-weight-bold">
+                  <span class="nhsuk-table-responsive__heading">Type </span>Total net pay
+                </td>
+                <td role="cell" class="nhsuk-table__cell nhsuk-u-font-weight-bold">
+                  <span class="nhsuk-table-responsive__heading">Payments </span>- £3000.00
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Deductions </span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- WARNING TEXT -->
+        <div class="nhsuk-u-margin-top-5">
+          <div class="nhsuk-custom-warning-text">
+            <span class="nhsuk-custom-warning-text__icon" aria-hidden="true">!</span>
+            <strong class="nhsuk-custom-warning-text__text">
+              <span class="nhsuk-u-visually-hidden">Warning</span>
+              Your total is showing a negative balance, indicating that your contract is in debt. 
+            </strong>
+          </div>
+        </div>
+        <!-- ACTION BUTTONS -->
+        <div class="nhsuk-u-margin-top-5">
+          <div class="nhsuk-button-group nhsuk-u-margin-top-4">
+            <button id="dwnld-pay-stmt-mtn-btn" class="nhsuk-button nhsuk-u-margin-bottom-0" data-module="nhsuk-button"
+              type="submit">
+              Download summary
+            </button>
+            <a href="/provider/debt-management/990175001" class="nhsuk-link nhsuk-link--no-visited-state">
+              Back
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- debt last 3 month view -->
+      <div id="debt-last-3months-view" class="nhsuk-u-margin-top-5">
+        <!-- BREAKDOWN PAYMENTS & DEDUCTIONS -->
+        <h3>Summary of the payments and deductions for the last 3 months</h3>
+        <p class="nhsuk-body">
+          <a id="showAll3MonthLink" href="#" onclick="return showAll3MonthDetails(event);" class="nhsuk-link nhsuk-u-font-weight-normal nhsuk-u-font-size-19 nhsuk-link--no-visited-state">
+            Expand all months
+          </a>
+          <a id="hideAll3MonthLink" style="display: none;" href="#" onclick="return hideAllMonthDetails(event);" class="nhsuk-link- nhsuk-u-font-weight-normal nhsuk-u-font-size-19 nhsuk-link--no-visited-state">
+            Collapse all months
+          </a>
+        </p>
+        <div class="nhsuk-expander-group">
+          <details class="nhsuk-details nhsuk-expander">
+            <summary class="nhsuk-details__summary">
+              <span id="firstMonthExpander" class="nhsuk-details__summary-text">
+                Mar 2024
+              </span>
+            </summary>
+            <div class="nhsuk-details__text">
+              <div class="nhsuk-u-margin-top-5">
+                <table role="table" class="nhsuk-table-responsive">
+                  <thead role="rowgroup" class="nhsuk-table__head">
+                    <tr role="row">
+                      <th role="columnheader" class="" scope="col">Type</th>
+                      <th role="columnheader" class="" scope="col">Payments</th>
+                      <th role="columnheader" class="" scope="col">Deductions</th>
+                    </tr>
+                  </thead>
+                  <tbody class="nhsuk-table__body">
+                    <tr role="row" class="nhsuk-table__row">
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Type </span>
+                        Monthly Pay
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Payments </span>
+                        £16,730
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Deductions </span>
+                        £0
+                      </td>
+                    </tr>
+                    <tr role="row" class="nhsuk-table__row">
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Type
+                        </span>
+                        Non-Superannuable deductions
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Payments </span>
+                        £0
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Deductions </span>
+                        £15.93
+                      </td>
+                    </tr>
+                    <tr role="row" class="nhsuk-table__row">
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Type </span>
+                        Superannuation contributions
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Payments </span>
+                        £0
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Deductions </span>
+                        £540.42
+                      </td>
+                    </tr>
+                    <tr role="row" class="nhsuk-table__row">
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Type </span>
+                        Patients charges
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Payments </span>
+                        £0
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Deductions </span>
+                        £14703.65
+                      </td>
+                    </tr>
+                    <tr role="row" class="nhsuk-table__row">
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Type </span>
+                        Remissions
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Payments </span>
+                        £0
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Deductions </span>
+                        £0
+                      </td>
+                    </tr>
+                    <tr role="row" class="nhsuk-table__row">
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Type </span>
+                        Sub totals
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Payments </span>
+                        £16,495
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Deductions </span>
+                        £15,260
+                      </td>
+                    </tr>
+                    <tr role="row" class="nhsuk-table__row">
+                      <td role="cell" class="nhsuk-table__cell nhsuk-u-font-weight-bold">
+                        <span class="nhsuk-table-responsive__heading">Type </span>
+                        Total net pay
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell nhsuk-u-font-weight-bold">
+                        <span class="nhsuk-table-responsive__heading">Payments </span>
+                        £2,235.00
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Deductions </span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </details>
+          <details class="nhsuk-details nhsuk-expander">
+            <summary class="nhsuk-details__summary">
+              <span class="nhsuk-details__summary-text">
+                Feb 2024
+              </span>
+            </summary>
+            <div class="nhsuk-details__text">
+              <div class="nhsuk-u-margin-top-5">
+                <table role="table" class="nhsuk-table-responsive">
+                  <thead role="rowgroup" class="nhsuk-table__head">
+                    <tr role="row">
+                      <th role="columnheader" class="" scope="col">Type</th>
+                      <th role="columnheader" class="" scope="col">Payments</th>
+                      <th role="columnheader" class="" scope="col">Deductions</th>
+                    </tr>
+                  </thead>
+                  <tbody class="nhsuk-table__body">
+                    <tr role="row" class="nhsuk-table__row">
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Type </span>
+                        Monthly Pay
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Payments </span>
+                        £16,730
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Deductions </span>
+                        £0
+                      </td>
+                    </tr>
+                    <tr role="row" class="nhsuk-table__row">
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Type
+                        </span>
+                        Non-Superannuable deductions
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Payments </span>
+                        £0
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Deductions </span>
+                        £15.93
+                      </td>
+                    </tr>
+                    <tr role="row" class="nhsuk-table__row">
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Type </span>
+                        Superannuation contributions
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Payments </span>
+                        £0
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Deductions </span>
+                        £540.42
+                      </td>
+                    </tr>
+                    <tr role="row" class="nhsuk-table__row">
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Type </span>
+                        Patients charges
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Payments </span>
+                        £0
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Deductions</span>
+                        £14703.65
+                      </td>
+                    </tr>
+                    <tr role="row" class="nhsuk-table__row">
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Type </span>
+                        Remissions
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Payments </span>
+                        £0
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Deductions </span>
+                        £0
+                      </td>
+                    </tr>
+                    <tr role="row" class="nhsuk-table__row">
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Type </span>
+                        Sub totals
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Payments </span>
+                        £14,495
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Deductions </span>
+                        £15,260
+                      </td>
+                    </tr>
+                    <tr role="row" class="nhsuk-table__row">
+                      <td role="cell" class="nhsuk-table__cell nhsuk-u-font-weight-bold">
+                        <span class="nhsuk-table-responsive__heading">Type </span>
+                        Total net pay
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell nhsuk-u-font-weight-bold">
+                        <span class="nhsuk-table-responsive__heading">Payments </span>
+                        - £3000.00
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Deductions </span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </details>
+          <details class="nhsuk-details nhsuk-expander">
+            <summary class="nhsuk-details__summary">
+              <span class="nhsuk-details__summary-text">
+                Jan 2024
+              </span>
+            </summary>
+            <div class="nhsuk-details__text">
+              <div class="nhsuk-u-margin-top-5">
+                <table role="table" class="nhsuk-table-responsive">
+                  <thead role="rowgroup" class="nhsuk-table__head">
+                    <tr role="row">
+                      <th role="columnheader" class="" scope="col">Type</th>
+                      <th role="columnheader" class="" scope="col">Payments</th>
+                      <th role="columnheader" class="" scope="col">Deductions</th>
+                    </tr>
+                  </thead>
+                  <tbody class="nhsuk-table__body">
+                    <tr role="row" class="nhsuk-table__row">
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Type </span>
+                        Monthly Pay
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Payments </span>
+                        £16,730
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Deductions </span>
+                        £0
+                      </td>
+                    </tr>
+                    <tr role="row" class="nhsuk-table__row">
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Type
+                        </span>
+                        Non-Superannuable deductions
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Payments </span>
+                        £0
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Deductions </span>
+                        £15.93
+                      </td>
+                    </tr>
+                    <tr role="row" class="nhsuk-table__row">
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Type </span>
+                        Superannuation contributions
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Payments </span>
+                        £0
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Deductions </span>
+                        £540.42
+                      </td>
+                    </tr>
+                    <tr role="row" class="nhsuk-table__row">
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Type </span>
+                        Patients charges
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Payments </span>
+                        £0
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Deductions</span>
+                        £14703.65
+                      </td>
+                    </tr>
+                    <tr role="row" class="nhsuk-table__row">
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Type </span>
+                        Remissions
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Payments </span>
+                        £0
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Deductions </span>
+                        £0
+                      </td>
+                    </tr>
+                    <tr role="row" class="nhsuk-table__row">
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Type </span>
+                        Sub totals
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Payments </span>
+                        £14,495
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Deductions </span>
+                        £15,260
+                      </td>
+                    </tr>
+                    <tr role="row" class="nhsuk-table__row">
+                      <td role="cell" class="nhsuk-table__cell nhsuk-u-font-weight-bold">
+                        <span class="nhsuk-table-responsive__heading">Type </span>
+                        Total net pay
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell nhsuk-u-font-weight-bold">
+                        <span class="nhsuk-table-responsive__heading">Payments </span>
+                        - £3000.00
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Deductions </span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </details>
+        </div>
+        <!-- ACTION BUTTONS -->
+        <div class="nhsuk-u-margin-top-9">
+          <div class="nhsuk-button-group nhsuk-u-margin-top-4">
+            <button id="dwnld-pay-stmt-ran-btn" class="nhsuk-button nhsuk-u-margin-bottom-0" data-module="nhsuk-button"
+              type="submit">
+              Download pay statement
+            </button>
+            <a href="/provider/debt-management/990175001" class="nhsuk-link nhsuk-link--no-visited-state ">
+              Back
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- debt last 6 month view -->
+      <div id="debt-last-6months-view" class="nhsuk-u-margin-top-5">
+        <!-- BREAKDOWN PAYMENTS & DEDUCTIONS -->
+        <h3>Summary of the payments and deductions for the last 6 months</h3>
+        <p class="nhsuk-body">
+          <a href="#" id="showAll6MonthLink" onclick="return showAll6MonthDetails(event);" class="nhsuk-link nhsuk-u-font-weight-normal nhsuk-u-font-size-19 nhsuk-link--no-visited-state">
+            Expand all months
+          </a>
+          <a href="#" id="hideAll6MonthLink" style="display: none;" onclick="return hideAllMonthDetails(event);" class="nhsuk-link nhsuk-u-font-weight-normal nhsuk-u-font-size-19 nhsuk-link--no-visited-state">
+            Collapse all months
+          </a>
+        </p>
+        <div class="nhsuk-expander-group">
+          <details class="nhsuk-details nhsuk-expander">
+            <summary class="nhsuk-details__summary">
+              <span id="firstMonthExpander" class="nhsuk-details__summary-text">
+                Jun 2024
+              </span>
+            </summary>
+            <div class="nhsuk-details__text">
+              <div class="nhsuk-u-margin-top-5">
+                <table role="table" class="nhsuk-table-responsive">
+                  <thead role="rowgroup" class="nhsuk-table__head">
+                    <tr role="row">
+                      <th role="columnheader" class="" scope="col">Type</th>
+                      <th role="columnheader" class="" scope="col">Payments</th>
+                      <th role="columnheader" class="" scope="col">Deductions</th>
+                    </tr>
+                  </thead>
+                  <tbody class="nhsuk-table__body">
+                    <tr role="row" class="nhsuk-table__row">
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Type </span>
+                        Monthly Pay
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Payments </span>
+                        £16,730
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Deductions </span>
+                        £0
+                      </td>
+                    </tr>
+                    <tr role="row" class="nhsuk-table__row">
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Type </span>
+                        Non-Superannuable deductions
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Payments </span>
+                        £0
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Deductions </span>
+                        £15.93
+                      </td>
+                    </tr>
+                    <tr role="row" class="nhsuk-table__row">
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Type </span>
+                        Superannuation contributions
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Payments </span>
+                        £0
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Deductions </span>
+                        £540.42
+                      </td>
+                    </tr>
+                    <tr role="row" class="nhsuk-table__row">
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Type </span>
+                        Patients charges
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Payments </span>
+                        £0
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Deductions </span>
+                        £14703.65
+                      </td>
+                    </tr>
+                    <tr role="row" class="nhsuk-table__row">
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Type </span>
+                        Remissions
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Payments </span>
+                        £0
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Deductions </span>
+                        £0
+                      </td>
+                    </tr>
+                    <tr role="row" class="nhsuk-table__row">
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Type </span>
+                        Sub totals
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Payments </span>
+                        £16,495
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Deductions </span>
+                        £15,260
+                      </td>
+                    </tr>
+                    <tr role="row" class="nhsuk-table__row">
+                      <td role="cell" class="nhsuk-table__cell nhsuk-u-font-weight-bold">
+                        <span class="nhsuk-table-responsive__heading">Type </span>
+                        Total net pay
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell nhsuk-u-font-weight-bold">
+                        <span class="nhsuk-table-responsive__heading">Payments </span>
+                        £2,235.00
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Deductions </span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </details>
+          <details class="nhsuk-details nhsuk-expander">
+            <summary class="nhsuk-details__summary">
+              <span class="nhsuk-details__summary-text">
+                May 2024
+              </span>
+            </summary>
+            <div class="nhsuk-details__text">
+              <div class="nhsuk-u-margin-top-5">
+                <table role="table" class="nhsuk-table-responsive">
+                  <thead role="rowgroup" class="nhsuk-table__head">
+                    <tr role="row">
+                      <th role="columnheader" class="" scope="col">Type</th>
+                      <th role="columnheader" class="" scope="col">Payments</th>
+                      <th role="columnheader" class="" scope="col">Deductions</th>
+                    </tr>
+                  </thead>
+                  <tbody class="nhsuk-table__body">
+                    <tr role="row" class="nhsuk-table__row">
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Type </span>
+                        Monthly Pay
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Payments </span>
+                        £16,730
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Deductions </span>
+                        £0
+                      </td>
+                    </tr>
+                    <tr role="row" class="nhsuk-table__row">
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Type</span>
+                        Non-Superannuable deductions
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Payments </span>
+                        £0
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Deductions </span>
+                        £15.93
+                      </td>
+                    </tr>
+                    <tr role="row" class="nhsuk-table__row">
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Type </span>
+                        Superannuation contributions
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Payments </span>
+                        £0
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Deductions </span>
+                        £540.42
+                      </td>
+                    </tr>
+                    <tr role="row" class="nhsuk-table__row">
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Type </span>
+                        Patients charges
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Payments </span>
+                        £0
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Deductions</span>
+                        £14703.65
+                      </td>
+                    </tr>
+                    <tr role="row" class="nhsuk-table__row">
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Type </span>
+                        Remissions
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Payments </span>
+                        £0
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Deductions </span>
+                        £0
+                      </td>
+                    </tr>
+                    <tr role="row" class="nhsuk-table__row">
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Type </span>
+                        Sub totals
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Payments </span>
+                        £14,495
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Deductions </span>
+                        £15,260
+                      </td>
+                    </tr>
+                    <tr role="row" class="nhsuk-table__row">
+                      <td role="cell" class="nhsuk-table__cell nhsuk-u-font-weight-bold">
+                        <span class="nhsuk-table-responsive__heading">Type </span>
+                        Total net pay
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell nhsuk-u-font-weight-bold">
+                        <span class="nhsuk-table-responsive__heading">Payments </span>
+                        - £3000.00
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Deductions </span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </details>
+          <details class="nhsuk-details nhsuk-expander">
+            <summary class="nhsuk-details__summary">
+              <span class="nhsuk-details__summary-text">
+                Apr 2024
+              </span>
+            </summary>
+            <div class="nhsuk-details__text">
+            </div>
+          </details>
+          <details class="nhsuk-details nhsuk-expander">
+            <summary class="nhsuk-details__summary">
+              <span class="nhsuk-details__summary-text">
+                Mar 2024
+              </span>
+            </summary>
+            <div class="nhsuk-details__text">
+            </div>
+          </details>
+          <details class="nhsuk-details nhsuk-expander">
+            <summary class="nhsuk-details__summary">
+              <span class="nhsuk-details__summary-text">
+                Feb 2024
+              </span>
+            </summary>
+            <div class="nhsuk-details__text">
+            </div>
+          </details>
+          <details class="nhsuk-details nhsuk-expander">
+            <summary class="nhsuk-details__summary">
+              <span class="nhsuk-details__summary-text">
+                Jan 2024
+              </span>
+            </summary>
+            <div class="nhsuk-details__text">
+            </div>
+          </details>
+        </div>
+        <!-- ACTION BUTTONS -->
+        <div class="nhsuk-u-margin-top-9">
+          <div class="nhsuk-button-group nhsuk-u-margin-top-4">
+            <button id="dwnld-pay-stmt-ran-btn" class="nhsuk-button nhsuk-u-margin-bottom-0" data-module="nhsuk-button"
+              type="submit">
+              Download summary
+            </button>
+            <a href="/provider/debt-management/990175001" class="nhsuk-u-font-weight-normal nhsuk-u-font-size-19 nhsuk-link--no-visited-state">
+              Back
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %} 
+{% block pageScripts %}
+<script>
+  const radios = document.querySelectorAll('input[name="debt-period-select"]');
+  const debtLast3MonthView = document.getElementById('debt-last-3months-view');
+  const debtLast6MonthView = document.getElementById('debt-last-6months-view');
+  const debtLastMonthView = document.getElementById('debt-last-month-view');
+  const debtfirstOf3Month = document.querySelector('#debt-last-3months-view .nhsuk-expander');
+  const debtfirstOf6Month = document.querySelector('#debt-last-6months-view .nhsuk-expander');
+
+  const debtshowAll3Month = document.querySelectorAll('#debt-last-3months-view .nhsuk-expander');
+  const debtshowAll6Month = document.querySelectorAll('#debt-last-6months-view .nhsuk-expander');
+  const showAll3MonthLinkSelect = document.getElementById('showAll3MonthLink');
+  const hideAll3MonthLinkSelect = document.getElementById('hideAll3MonthLink');
+  const showAll6MonthLinkSelect = document.getElementById('showAll6MonthLink');
+  const hideAll6MonthLinkSelect = document.getElementById('hideAll6MonthLink');
+
+  function handleRadioChange() {
+      if (document.getElementById('debt-3-month').checked) {
+        debtLast3MonthView.style.display = 'block';
+        debtLast6MonthView.style.display = 'none';
+        debtLastMonthView.style.display = 'none';
+        debtfirstOf3Month.setAttribute("open", "");
+        debtfirstOf6Month.removeAttribute("open");
+        collapseHideAllMonthDetails();
+      } else if (document.getElementById('debt-6-month').checked) {
+        debtLast3MonthView.style.display = 'none';
+        debtLast6MonthView.style.display = 'block';
+        debtLastMonthView.style.display = 'none';
+        debtfirstOf6Month.setAttribute("open", "");
+        debtfirstOf3Month.removeAttribute("open");
+        collapseHideAllMonthDetails();
+      } else {
+        debtLast3MonthView.style.display = 'none';
+        debtLast6MonthView.style.display = 'none';
+        debtLastMonthView.style.display = 'block';
+        debtfirstOf3Month.removeAttribute("open");
+        debtfirstOf6Month.removeAttribute("open");
+      }
+  }
+
+  handleRadioChange();
+
+  function showAll3MonthDetails(event) {
+      event.preventDefault();
+      debtshowAll3Month.forEach(expander => expander.setAttribute("open", ""));
+      debtshowAll6Month.forEach(expander => expander.removeAttribute("open"));
+      event.target.style.display = 'none';
+      hideAll3MonthLinkSelect.style.display = 'block';
+      
+  }
+  function hideAllMonthDetails(event) {
+      event.preventDefault();
+      debtshowAll3Month.forEach(expander => expander.removeAttribute("open"));
+      debtshowAll6Month.forEach(expander => expander.removeAttribute("open"));
+      showAll3MonthLinkSelect.style.display = 'block';
+      showAll6MonthLinkSelect.style.display = 'block';
+      hideAll3MonthLinkSelect.style.display = 'none';
+      hideAll6MonthLinkSelect.style.display = 'none';
+    }
+  function collapseHideAllMonthDetails() {
+      showAll3MonthLinkSelect.style.display = 'block';
+      showAll6MonthLinkSelect.style.display = 'block';
+      hideAll3MonthLinkSelect.style.display = 'none';
+      hideAll6MonthLinkSelect.style.display = 'none';
+    }
+  function showAll6MonthDetails(event) {
+      event.preventDefault();
+      debtshowAll6Month.forEach(expander => expander.setAttribute("open", ""));
+      debtshowAll3Month.forEach(expander => expander.removeAttribute("open"));
+      event.target.style.display = 'none';
+      hideAll6MonthLinkSelect.style.display = 'block';
+  }
+</script>
+{% endblock %}

@@ -1,0 +1,47 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'default-layout.html' %}
+
+<!-- Set the page title -->
+{% block pageTitle %} 
+Debt payment confirmation 
+{% endblock %}
+
+
+<!-- Back link -->
+{% block outerContent %} 
+{% endblock %} 
+
+{% block content %}
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+    <div class="nhsuk-panel nhsuk-panel--confirmation nhsuk-u-margin-top-5">
+      <h1 class="nhsuk-panel-title">
+        Thank you for your payment
+      </h1>
+      <div class="nhsuk-panel-body">
+        Transaction number</br><strong>2XHGYFT674T</strong>
+      </div>
+    </div> 
+    <p class="nhsuk-body">A receipt of this transaction has been sent via email for your records.</p>
+    <p class="nhsuk-body"><strong>Total payment amount</strong></br>£11,000.00</p>
+    <p class="nhsuk-body"><strong>Payment method</strong></br> credit card</p>
+    <h2 class="govuk-heading-m">What happens next</h2>
+    <p class="govuk-body">
+      The payment will be credited towards the outstanding debt of contract 970000162849 within 2 working days. You will receive a notification once the adjustment is made.
+    </p>
+    <a href="/provider/debt-management/990175001" role="button" class="nhsuk-button" data-module="nhsuk-button">
+      View debt status
+    </a>
+  </div>
+</div>
+
+{% endblock %} 
+{% block pageScripts %}
+<script>
+</script>
+{% endblock %}

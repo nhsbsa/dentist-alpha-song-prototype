@@ -1,0 +1,127 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+
+<!-- Breadcrumbs -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Back link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- Content -->
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+      <span class="nhsuk-caption-xl">Contract ID 1234567890</span>
+      <h1 class="nhsuk-heading-xl">Mid-year review</h1>
+
+      <!-- CALL TO ACTION -->
+
+      <div class="nhsuk-warning-callout nhsuk-warning-callout--blue-variant">
+        <h2 class="nhsuk-warning-callout__label nhsuk-warning-callout__label--blue-variant">
+          <span role="text">
+            <span class="nhsuk-u-visually-hidden">Important: </span>
+            You have 14 days left to submit your action plan
+          </span>
+        </h2>
+        <p>Ensure you complete the <a class="nhsuk-link--no-visited-state" href="#action-plan">action plan</a> before the 16th August to avoid remedial notice and potential withheld payments.</p>
+      </div>
+
+      <p class="nhsuk-u-font-weight-bold nhsuk-u-margin-bottom-1">Commissioner</p>
+      <ul class="nhsuk-list nhsuk-list--bullet">
+        <li><span class="nhsuk-u-font-weight-bold">Name: </span>North East and North Cumbria ICB (QHM)</li>
+        <li><span class="nhsuk-u-font-weight-bold">ID: </span>102897</li>
+        <li><span class="nhsuk-u-font-weight-bold">Email address: </span>nencicb-tv.financecntw@nhs.net</li>
+      </ul>
+
+      <h2>Mid-year letter</h2>
+
+      <p>The mid-year letter outlines your contract’s performance for this financial year.</p>
+
+      <ul class="nhsuk-list">
+        <li><a href="#">Mid-year letter for FY2023/24</a></li>
+        <li><a href="#">View past fiscal year letters</a></li>
+      </ul>
+
+      <h2 class="nhsuk-u-margin-bottom-0">Impact of failing to submit the action plan</h2>
+
+      <div class="nhsuk-inset-text nhsuk-u-margin-bottom-0 nhsuk-u-margin-top-4">
+        <span class="nhsuk-u-visually-hidden">Information: </span>
+        <p>If you do not submit the action plan, your payments may be impacted by withheld payments. The withheld amount may vary based on your commissioning team's decision.</p>
+      </div>
+
+      <table role="table" class="nhsuk-table-responsive nhsuk-u-margin-top-4">
+        <caption class="nhsuk-u-visually-hidden">Impact of failing to submit table</caption>
+        <thead role="rowgroup" class="nhsuk-table__head">
+          <tr role="row">
+            <th role="columnheader" class="" scope="col">
+              Date
+            </th>
+            <th role="columnheader" class="" scope="col">
+              Withhold payment
+            </th>
+            <th role="columnheader" class="" scope="col">
+              Estimated payment
+            </th>
+          </tr>
+        </thead>
+        <tbody class="nhsuk-table__body">
+          <tr role="row" class="nhsuk-table__row">
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading" aria-hidden="true">Date </span>23 August 2024
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading" aria-hidden="true">Withhold payment </span>£6,000
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading" aria-hidden="true">Estimated payment </span>£14,000
+            </td>
+          </tr>
+          <tr role="row" class="nhsuk-table__row">
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading" aria-hidden="true">Date </span>23 September 2024
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading" aria-hidden="true">Withhold payment </span>£6,000
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading" aria-hidden="true">Estimated payment </span>£14,000
+            </td>
+          </tr>
+          <tr role="row" class="nhsuk-table__row">
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading" aria-hidden="true">Date </span>23 October 2024
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading" aria-hidden="true">Withhold payment </span>£6,000
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading" aria-hidden="true">Estimated payment </span>£14,000
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2 id="action-plan" class="nhsuk-u-margin-top-6">Action plan</h2>
+
+      <p>Here you can establish your mitigation plan if your contract is forecasted to underperform this financial year</p>
+
+      <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
+        Start action plan
+      </button>
+
+      <h2>Help and support</h2>
+
+      <ul class="nhsuk-list">
+        <li><a href="#">Access contact information of mid-year review team</a></li>
+        <li><a href="#">More about mid-year review</a></li>
+      </ul>
+
+    </div>
+  </div>
+{% endblock %}
+
+{% block pageScripts %}
+  
+{% endblock %}
