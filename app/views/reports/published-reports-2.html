@@ -217,7 +217,7 @@ Reports
                 <summary class="nhsuk-details__summary nhsuk-u-padding-left-0" style="padding: 8px 0px 16px 0px;">
                   <div class="nhsuk-custom-search-filter-text" style="padding: 0px; margin: 0px;">
                     <span class="nhsuk-details__summary-text">
-                      Performer
+                      Clinician
                     </span>
 
                   </div>
@@ -225,10 +225,10 @@ Reports
                 <div class="nhsuk-details__text nhsuk-u-padding-left-0">
                   <div class="nhsuk-form-group">
                     <label class="nhsuk-label" for="input-width-10">
-                      Enter performer number
+                      Enter clinician number
                     </label>
                     <div class="nhsuk-hint" style="font-size: 16px;" id="contact-hint">
-                      Search for multiple performers by separating them using a comma
+                      Search for multiple clinicians by separating them using a comma
                     </div>
                     <input class="nhsuk-input nhsuk-input--width-10" id="input-width-10" name="test-width-10" type="text">
                   </div>
@@ -439,7 +439,41 @@ Reports
               
               <hr style="margin: 0px 0px 8px 0px;">
 
-              <button class="nhsuk-button nhsuk-button--secondary nhsuk-button--disabled" style="padding: 8px 16px 8px 16px; position: absolute; right: 0;" data-module="nhsuk-button" type="submit">
+              <nav class="govuk-pagination" style="font-family: Frutiger;" aria-label="Pagination">
+        
+                <ul class="govuk-pagination__list">
+                  <li class="govuk-pagination__item govuk-pagination__item--current">
+                    <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 7" aria-current="page">
+                      1
+                    </a>
+                  </li>
+                  <li class="govuk-pagination__item">
+                    <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 8">
+                      2
+                    </a>
+                  </li>
+                  <li class="govuk-pagination__item govuk-pagination__item--ellipses">
+                    &ctdot;
+                  </li>
+                  <li class="govuk-pagination__item">
+                    <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 42">
+                      42
+                    </a>
+                  </li>
+                </ul>
+                <div class="govuk-pagination__next">
+                  <a class="govuk-link govuk-pagination__link" href="#" rel="next">
+                    <span class="govuk-pagination__link-title">
+                      Next<span class="govuk-visually-hidden"> page</span>
+                    </span>
+                    <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+                      <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+                    </svg>
+                  </a>
+                </div>
+              </nav>
+
+              <button class="nhsuk-button nhsuk-button--secondary" style="padding: 8px 16px 8px 16px; position: absolute; right: 0;" data-module="nhsuk-button" type="submit">
                 Download reports
               </button>
 
