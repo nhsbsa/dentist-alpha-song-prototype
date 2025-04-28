@@ -139,6 +139,84 @@ router.post('/contract-amount', function (req, res) {
       res.redirect('/contract-management/close-contract/provider-termination')
     }
   })
+  router.post('/is-ap-deliverable', function (req, res) {
+
+    var isApDeliverable = req.session.data.isApDeliverable
+
+    if (isApDeliverable == "Yes" ){
+
+      res.redirect('/pad-comments/commissioner-view/action-plan-deliverable/delivery-details')
+    } else {
+
+      res.redirect('/pad-comments/commissioner-view/action-plan-not-deliverable/before-you-start')
+    }
+  })
+  router.post('/nil-return-meeting', function (req, res) {
+    const nilReturnMeeting = req.session.data.confirm
+  
+    switch (nilReturnMeeting) {
+      case "yes":
+        res.redirect('/pad-comments/commissioner-view/nil-returns/under-performance-reasons')
+        break
+      case "not-met":
+        res.redirect('/pad-comments/commissioner-view/nil-returns/return-after-meeting')
+        break
+      case "no-response":
+        res.redirect('/pad-comments/commissioner-view/nil-returns/remedial-notice')
+        break
+      case "not-needed":
+        res.redirect('/pad-comments/commissioner-view/nil-returns/under-performance-reasons')
+        break
+    }
+  })
+  router.post('/nil-return-remedial-notice', function (req, res) {
+
+    var nilReturnRemedialNotice = req.session.data.nilReturnRemedialNotice
+
+    if (nilReturnRemedialNotice == "Yes" ){
+
+      res.redirect('/pad-comments/commissioner-view/nil-returns/remedial-notice-sent')
+    } else {
+
+      res.redirect('/pad-comments/commissioner-view/nil-returns/is-contract-deliverable')
+    }
+  })
+  router.post('/nil-return-outcome', function (req, res) {
+    const nilReturnOutcome = req.session.data.confirm
+  
+    switch (nilReturnOutcome) {
+      case "nr-no-further-action":
+        res.redirect('/pad-comments/commissioner-view/nil-returns/additional-comments')
+        break
+      case "nr-early-repayment-scheme":
+        res.redirect('/pad-comments/commissioner-view/nil-returns/all-adjustments')
+        break
+      case "non-recurrent":
+        res.redirect('/pad-comments/commissioner-view/nil-returns/all-adjustments')
+        break
+      case "rebase":
+        res.redirect('/pad-comments/commissioner-view/nil-returns/rebase')
+        break
+      case "withhold":
+        res.redirect('/pad-comments/commissioner-view/nil-returns/withhold')
+        break
+      case "other":
+        res.redirect('/pad-comments/commissioner-view/nil-returns/all-adjustments')
+        break
+    }
+  })
+  router.post('/rebase', function (req, res) {
+
+    var rebase = req.session.data.rebase
+
+    if (rebase == "Yes" ){
+
+      res.redirect('/pad-comments/commissioner-view/nil-returns/unilateral-rebase')
+    } else {
+
+      res.redirect('/pad-comments/commissioner-view/nil-returns/all-adjustments')
+    }
+  })
 // Add your routes here - above the module.exports line
 
 module.exports = router;

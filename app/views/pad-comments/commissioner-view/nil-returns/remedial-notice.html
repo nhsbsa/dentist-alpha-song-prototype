@@ -1,0 +1,56 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  {{ serviceName }}
+{% endblock %}
+
+{% block outerContent %}
+{{ backLink({
+  href: "/pad-comments/commissioner-view/nil-returns/meeting-date",
+  text: "Go back"
+}) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+        <div class="nhsuk-form-group">
+            <span class="nhsuk-caption-l">Mid-year action plan review</span>
+            <form action="/nil-return-remedial-notice" method="post" class="form">
+
+                {{ radios({
+                  "idPrefix": "example",
+                  "name": "nilReturnRemedialNotice",
+                  "fieldset": {
+                    "legend": {
+                      "text": "Do you want to issue a remedial notice to the contractor?",
+                      "classes": "nhsuk-fieldset__legend--xl",
+                      "isPageHeading": true
+                    }
+                  },
+                  "items": [
+                    {
+                      "value": "Yes",
+                      "text": "Yes"
+                    },
+                    {
+                      "value": "No",
+                      "text": "No"
+                    }
+                  ]
+                }) }}
+              
+                <div style="margin-top: 24px;">
+                  {{ button({
+                    "text": "Continue",
+                    "id": "btn_submit"
+                  }) }}
+                </div>
+              </form>
+              
+            
+          </div>
+    </div>
+  </div>
+
+{% endblock %}

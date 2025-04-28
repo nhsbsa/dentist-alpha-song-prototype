@@ -1,0 +1,41 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  {{ serviceName }}
+{% endblock %}
+
+{% block outerContent %}
+{{ backLink({
+  href: "/pad-comments/commissioner-view/nil-returns/start-action-plan",
+  text: "Go back"
+}) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+        <h1 class="nhsuk-heading-xl">
+            <span class="nhsuk-caption-xl">Mid-year action plan review</span>
+            Before you start
+          </h1>
+      
+      <p>Because no action plan has been provided you will need to:</p>
+      <ul>
+        <li>thing 1</li>
+        <li>thing 2</li>
+      </ul>
+
+      <p>
+        If the existing provider holds more than one contract you will be able to change the other contracts’ end dates as part of your request. <br>
+        <br>Changing the contract end date needs to be checked by an authorised reviewer. A reviewer will be notified when you complete the request.
+      </p>
+
+
+      <a href="meeting-date" class="nhsuk-button">
+        Continue
+      </a>
+
+    </div>
+
+  </div>
+{% endblock %}

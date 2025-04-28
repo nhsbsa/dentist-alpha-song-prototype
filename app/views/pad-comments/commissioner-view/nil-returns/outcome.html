@@ -1,0 +1,79 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  {{ serviceName }}
+{% endblock %}
+
+{% block outerContent %}
+{{ backLink({
+  href: "/pad-comments/commissioner-view/nil-returns/is-contract-deliverable",
+  text: "Go back"
+}) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+        <fieldset class="nhsuk-fieldset" aria-describedby="confirm-hint">
+            <span class="nhsuk-caption-xl">Mid-year action plan review</span>
+              <form action="/nil-return-outcome" method="post" class="form">
+                {{ radios({
+                  idPrefix: "confirm",
+                  name: "confirm",
+                  fieldset: {
+                    legend: {
+                      text: "What is your outcome for this action plan?",
+                      classes: "nhsuk-fieldset__legend--xl",
+                      isPageHeading: true
+                    }
+                  },
+                  classes: "nhsuk-radios--conditional",
+                  items: [
+                    {
+                      value: "nr-no-further-action",
+                      text: "No further action and no mid year meeting required"
+                    },
+                    {
+                      value: "nr-early-repayment-scheme",
+                      text: "Early repayment scheme"
+                    },
+                    {
+                      value: "non-recurrent",
+                      text: "Non-recurrent"
+                    },
+                    {
+                        value: "rebase",
+                        text: "Rebase"
+                    },
+                    {
+                        value: "withhold",
+                        text: "Withhold"
+                    },
+                    {
+                      divider: "or"
+                    },
+                    {
+                      value: "other",
+                      text: "Other",
+                      conditional: {
+                        html: '
+                        <div class="nhsuk-form-group">
+                            <label class="nhsuk-label" for="example">
+                              <strong>Outcome</strong>
+                            </label> <input class="nhsuk-input" id="nr-outcome-other" name="nr-outcome-other" type="text">
+                          </div>'
+                      }
+                    }
+                  ]
+                }) }}
+                
+            {{ button({
+              "text": "Continue",
+              "id": "btn_submit"
+            }) }}
+            </form>
+          </fieldset>
+    </div>
+  </div>
+
+{% endblock %}

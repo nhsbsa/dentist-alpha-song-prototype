@@ -1,0 +1,353 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  {{ serviceName }}
+{% endblock %}
+
+{% block outerContent %}
+{{ backLink({
+  href: "start-action-plan-review",
+  text: "Go back"
+}) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+        <h1 class="nhsuk-heading-xl">
+            <span class="nhsuk-caption-l">Mid-year action plan review</span>
+            Review the action plan
+          </h1>
+      
+      <p>Will the contractor deliver care to NHS patients to the level at which they have been funded?</p>
+
+      <h1 class="nhsuk-heading-l">Delivery</h1>
+      <h1 class="nhsuk-heading-m">Factors affecting delivery</h1>
+
+        <div class="nhsuk-inset-text" style="border-left: 8px solid #f47738; width: max-content;">
+          <div class="govuk-warning-text" style="font-family: Frutiger W01, Arial, Sans-serif;">
+            <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+            <strong class="govuk-warning-text__text">
+              <span class="govuk-visually-hidden">Warning</span>
+              Between the start of this year and this mid year review delivery was affected by:
+            </strong>
+          </div>
+          <ol class="nhsuk-list nhsuk-list--bullet">
+            <li>staff shortages</li>
+            <li>recruitment issue</li>
+            <li>patient not attending/available</li>
+          </ol>
+        </div>
+
+        <div class="nhsuk-inset-text" style="border-left: 8px solid #f47738; width: max-content;">
+            <div class="govuk-warning-text" style="font-family: Frutiger W01, Arial, Sans-serif;">
+              <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+              <strong class="govuk-warning-text__text">
+                <span class="govuk-visually-hidden">Warning</span>
+                Delivery was also affected by adverse/force majeure events:
+              </strong>
+            </div>
+            <p>“For 6 weeks roadworks prevented patients from attending appointments.”</p>
+            <p>Commissioners were notified within 5 days of the events.</p>
+        </div>
+
+        <div class="nhsuk-inset-text" style="border-left: 8px solid #007f3b; width: max-content;">
+            <div class="govuk-warning-text" style="font-family: Frutiger W01, Arial, Sans-serif;">
+              <strong class="govuk-warning-text__text" style="padding-left: 0px;">
+                <span class="govuk-visually-hidden">Warning</span>
+                Measures in place
+              </strong>
+            </div>
+            <p>“The practice is opening later and performers have agreed to work additional hours.”</p>
+          </div>
+          <hr>
+
+          <h1 class="nhsuk-heading-l">Workforce</h1>
+          <table class="nhsuk-table" style="margin-bottom: 20px;">
+            <caption class="nhsuk-table__caption">Vacancies</caption>
+            <thead class="nhsuk-table__head">
+              <tr>
+                <th scope="col" class="nhsuk-table__header">Vacant role</th>
+                <th scope="col" class="nhsuk-table__header nhsuk-table__header--numeric">WTE</th>
+                <th scope="col" class="nhsuk-table__header nhsuk-table__header--numeric">Days vacant</th>
+              </tr>
+            </thead>
+            <tbody class="nhsuk-table__body">
+              <tr class="nhsuk-table__row">
+                <th scope="row" class="nhsuk-table__header">Dentist</th>
+                <td class="nhsuk-table__cell nhsuk-table__cell--numeric">1</td>
+                <td class="nhsuk-table__cell nhsuk-table__cell--numeric">14</td>
+              </tr>
+              <tr class="nhsuk-table__row">
+                <th scope="row" class="nhsuk-table__header">Dental nurse</th>
+                <td class="nhsuk-table__cell nhsuk-table__cell--numeric">1.5</td>
+                <td class="nhsuk-table__cell nhsuk-table__cell--numeric">21</td>
+              </tr>
+              <tr class="nhsuk-table__row">
+                <th scope="row" class="nhsuk-table__header">Dental hygienist</th>
+                <td class="nhsuk-table__cell nhsuk-table__cell--numeric">1</td>
+                <td class="nhsuk-table__cell nhsuk-table__cell--numeric">3</td>
+              </tr>
+              <tr class="nhsuk-table__row">
+                <th scope="row" class="nhsuk-table__header">Other: practice manager</th>
+                <td class="nhsuk-table__cell nhsuk-table__cell--numeric">0.5</td>
+                <td class="nhsuk-table__cell nhsuk-table__cell--numeric">18</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <p>Currently advertising and recruiting for the following roles:</p>
+            <ol class="nhsuk-list nhsuk-list--bullet">
+                <li>dentist</li>
+                <li>practice manager</li>
+            </ol>
+            <hr>
+
+            <div class="nhsuk-inset-text" style="border-left: 8px solid #f47738; width: max-content;">
+                <div class="govuk-warning-text" style="font-family: Frutiger W01, Arial, Sans-serif;">
+                  <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+                  <strong class="govuk-warning-text__text">
+                    <span class="govuk-visually-hidden">Warning</span>
+                    There are staff on long term leave:
+                  </strong>
+                </div>
+
+                <div class="govuk-summary-card">
+                    <div class="govuk-summary-card__title-wrapper" style="background-color: #d8dde0;">
+                      <h2 class="govuk-summary-card__title">
+                        Kelly Jones
+                      </h2>
+                    </div>
+                    <div class="govuk-summary-card__content" style="background-color: #ffffff;">
+                      <dl class="govuk-summary-list">
+                        <div class="govuk-summary-list__row">
+                          <dt class="govuk-summary-list__key">
+                            Role
+                          </dt>
+                          <dd class="govuk-summary-list__value">
+                            Dentist
+                          </dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                          <dt class="govuk-summary-list__key">
+                            WTE
+                          </dt>
+                          <dd class="govuk-summary-list__value">
+                            1
+                          </dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                          <dt class="govuk-summary-list__key">
+                            Reason for absence
+                          </dt>
+                          <dd class="govuk-summary-list__value">
+                            Long-term sickness
+                          </dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                            Leave start date
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                            18 March 2025
+                            </dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Return to work date (estimated)
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                1 October 2025
+                            </dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Absence covered by other staff
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                Yes
+                            </dd>
+                        </div>
+                      </div>
+                      </dl>
+                    </div>
+
+                    <div class="govuk-summary-card">
+                        <div class="govuk-summary-card__title-wrapper" style="background-color: #d8dde0;">
+                          <h2 class="govuk-summary-card__title">
+                            Jane Doe
+                          </h2>
+                        </div>
+                        <div class="govuk-summary-card__content" style="background-color: #ffffff;">
+                          <dl class="govuk-summary-list">
+                            <div class="govuk-summary-list__row">
+                              <dt class="govuk-summary-list__key">
+                                Role
+                              </dt>
+                              <dd class="govuk-summary-list__value">
+                                Dental nurse
+                              </dd>
+                            </div>
+                            <div class="govuk-summary-list__row">
+                              <dt class="govuk-summary-list__key">
+                                WTE
+                              </dt>
+                              <dd class="govuk-summary-list__value">
+                                0.5
+                              </dd>
+                            </div>
+                            <div class="govuk-summary-list__row">
+                              <dt class="govuk-summary-list__key">
+                                Reason for absence
+                              </dt>
+                              <dd class="govuk-summary-list__value">
+                                Long-term sickness
+                              </dd>
+                            </div>
+                            <div class="govuk-summary-list__row">
+                                <dt class="govuk-summary-list__key">
+                                Leave start date
+                                </dt>
+                                <dd class="govuk-summary-list__value">
+                                2 February 2025
+                                </dd>
+                            </div>
+                            <div class="govuk-summary-list__row">
+                                <dt class="govuk-summary-list__key">
+                                    Return to work date (estimated)
+                                </dt>
+                                <dd class="govuk-summary-list__value">
+                                    10 May 2025
+                                </dd>
+                            </div>
+                            <div class="govuk-summary-list__row">
+                                <dt class="govuk-summary-list__key">
+                                    Absence covered by other staff
+                                </dt>
+                                <dd class="govuk-summary-list__value">
+                                    Other dental nurses do not have spare capacity to cover the absence.
+                                </dd>
+                            </div>
+                          </div>
+                          </dl>
+                        </div>        
+                    </div>
+
+                    <div class="nhsuk-inset-text" style="border-left: 8px solid #007f3b; width: max-content;">
+                        <div class="govuk-warning-text" style="font-family: Frutiger W01, Arial, Sans-serif;">
+                          <strong class="govuk-warning-text__text" style="padding-left: 0px;">
+                            <span class="govuk-visually-hidden">Warning</span>
+                            New patients
+                          </strong>
+                        </div>
+                        <p>The provider has additional capacity to take on new NHS and private patients.</p>
+                      </div>
+                
+                    <div class="nhsuk-inset-text" style="border-left: 8px solid #f47738; width: max-content;">
+                        <div class="govuk-warning-text" style="font-family: Frutiger W01, Arial, Sans-serif;">
+                          <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+                          <strong class="govuk-warning-text__text">
+                            <span class="govuk-visually-hidden">Warning</span>
+                            There are differences in their capacity to take on new NHS patients compared to private patients.
+                          </strong>
+                        </div>
+                        <p>“Lorem ipsum dolor sit amet consectetur. Amet elementum enim malesuada sapien hendrerit. Ultrices tortor lacinia ac dignissim malesuada mauris amet mattis.”</p>
+                    </div>
+
+                    <table class="nhsuk-table" style="margin-bottom: 10px;">
+                        <caption class="nhsuk-table__caption">Routine appointments</caption>
+                        <thead class="nhsuk-table__head">
+                          <tr>
+                            <th scope="col" class="nhsuk-table__header">Patient</th>
+                            <th scope="col" class="nhsuk-table__header">Next available appointment</th>
+                          </tr>
+                        </thead>
+                        <tbody class="nhsuk-table__body">
+                          <tr class="nhsuk-table__row">
+                            <td class="nhsuk-table__cell">NHS</td>
+                            <td class="nhsuk-table__cell">30 April 2025</td>
+                          </tr>
+                          <tr class="nhsuk-table__row">
+                            <td class="nhsuk-table__cell">Private</td>
+                            <td class="nhsuk-table__cell">21 April 2025</td>
+                          </tr>
+                        </tbody>
+                      </table>
+
+                      <div class="nhsuk-inset-text" style="border-left: 8px solid #007f3b; width: max-content; margin-top: 0px;">
+                        <p>There are no differences in their availability of routine appointments for NHS patients compared to private patients.</p>
+                      </div>
+
+                      <h2 class="nhsuk-heading-m">Distribution of patients</h2>
+                      <dl class="nhsuk-summary-list">
+                        <div class="nhsuk-summary-list__row">
+                          <dt class="nhsuk-summary-list__key">
+                            NHS patients
+                          </dt>
+                          <dd class="nhsuk-summary-list__value">
+                            35%
+                          </dd>
+                        </div>
+                        <div class="nhsuk-summary-list__row">
+                          <dt class="nhsuk-summary-list__key">
+                            Private patients
+                          </dt>
+                          <dd class="nhsuk-summary-list__value">
+                            65%
+                          </dd>
+                        </div>
+                      </dl>
+
+                      <h1 class="nhsuk-heading-l">Business continuity</h1>
+                      <div class="nhsuk-inset-text" style="border-left: 8px solid #f47738; width: max-content;">
+                        <div class="govuk-warning-text" style="font-family: Frutiger W01, Arial, Sans-serif;">
+                          <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+                          <strong class="govuk-warning-text__text">
+                            <span class="govuk-visually-hidden">Warning</span>
+                            Their business continuity plan is missing or incomplete
+                          </strong>
+                        </div>
+                        <p>“Lorem ipsum dolor sit amet consectetur. Amet elementum enim malesuada sapien hendrerit. Ultrices tortor lacinia ac dignissim malesuada mauris amet mattis.”</p>
+                    </div>
+
+                    <h2 class="nhsuk-heading-m">Additional comments</h2>
+                    <p>“Lorem ipsum dolor sit amet consectetur. Amet elementum enim malesuada sapien hendrerit. Ultrices tortor lacinia ac dignissim malesuada mauris amet mattis.”</p>
+                    <hr>
+
+                    <form action="/is-ap-deliverable" method="post" class="form">
+
+                        {{ radios({
+                          "idPrefix": "example",
+                          "name": "isApDeliverable",
+                          "fieldset": {
+                            "legend": {
+                              "text": "Are you assured that the action plan is deliverable? ",
+                              "classes": "nhsuk-fieldset__legend--l",
+                              "isPageHeading": true
+                            }
+                          },
+                          hint: {
+                            text: "Will the contractor deliver care to NHS patients to the level at which they have been funded?"
+                          },
+                          "items": [
+                            {
+                              "value": "Yes",
+                              "text": "Yes"
+                            },
+                            {
+                              "value": "No",
+                              "text": "No"
+                            }
+                          ]
+                        }) }}
+                
+                        {{ button({
+                          "text": "Continue",
+                          "id": "btn_submit"
+                        }) }}
+                      </form>
+
+    </div>
+
+  </div>
+{% endblock %}

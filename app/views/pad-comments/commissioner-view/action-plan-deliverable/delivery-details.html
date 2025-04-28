@@ -1,0 +1,52 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  {{ serviceName }}
+{% endblock %}
+
+{% block outerContent %}
+{{ backLink({
+  href: "/pad-comments/commissioner-view/review-action-plan",
+  text: "Go back"
+}) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+        {% from 'checkboxes/macro.njk' import checkboxes %}
+{% from 'input/macro.njk' import input %}
+
+{% set reasonHtml %}
+  {{ input({
+    id: "reason",
+    name: "reason",
+    classes: "nhsuk-u-width-full",
+    label: {
+      text: "Reason"
+    }
+  }) }}
+{% endset -%}
+<span class="nhsuk-caption-l">Mid-year action plan review</span>
+<form>
+  {{ textarea({
+    name: "example",
+    id: "example",
+    label: {
+      text: "How and when will the action plan be delivered?",
+      classes: "nhsuk-label--xl"
+    },
+    hint: {
+        text: "Enter details of the timescale that ensure that the action plan is deliverable"
+      }
+  }) }}
+</form>
+    </div>
+  </div><br>
+  <a href="meeting-date" class="nhsuk-button" data-module="nhsuk-button" data-prevent-double-click="true" type="submit">
+    Save and continue
+</a>
+
+
+
+{% endblock %}

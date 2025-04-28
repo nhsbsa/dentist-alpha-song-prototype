@@ -1,0 +1,61 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  {{ serviceName }}
+{% endblock %}
+
+{% block outerContent %}
+{{ backLink({
+  href: "/pad-comments/commissioner-view/nil-returns/rebase",
+  text: "Go back"
+}) }}
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+        <div class="nhsuk-form-group">
+            <span class="nhsuk-caption-l">Mid-year action plan review</span>
+            <form action="/unilateral-rebase" method="post" class="form">
+
+                {{ radios({
+                  "idPrefix": "example",
+                  "name": "unilateralRebase",
+                  "fieldset": {
+                    "legend": {
+                      "text": "Can you demonstrate that you can proceed with a unilateral rebase?",
+                      "classes": "nhsuk-fieldset__legend--xl",
+                      "isPageHeading": true
+                    }
+                  },
+                  "items": [
+                    {
+                      "value": "Yes",
+                      "text": "Yes"
+                    },
+                    {
+                      "value": "No",
+                      "text": "No",
+                      "conditional": {
+                        "html": '<div class="govuk-form-group"><div class="nhsuk-hint" id="example-hint">
+                            Why are you unable to demonstrate that you can proceed with a unilateral rebase?
+                          </div><textarea class="govuk-textarea" id="no-reason" name="noReason" rows="5"></textarea></div>'
+                      }
+                    }
+                  ]
+                }) }}
+              
+                <div style="margin-top: 24px;">
+                  {{ button({
+                    "text": "Continue",
+                    "id": "btn_submit",
+                    "href": "all-adjustments"
+                  }) }}
+                </div>
+              </form>
+              
+            
+          </div>
+    </div>
+  </div>
+{% endblock %}

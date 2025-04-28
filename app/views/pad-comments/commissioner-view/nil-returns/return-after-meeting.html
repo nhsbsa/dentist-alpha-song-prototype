@@ -1,0 +1,29 @@
+
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  {{ serviceName }}
+{% endblock %}
+
+{% block outerContent %}
+{{ backLink({
+  href: "/pad-comments/commissioner-view/nil-returns/meeting-date",
+  text: "Go back"
+}) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+        <h1 class="nhsuk-heading-xl">
+            <span class="nhsuk-caption-l">Mid-year action plan review</span>
+            Return after your mid-year review meeting with the contractor
+          </h1>
+      <p>Meeting with the contractor can help you make a more informed decision.</p>
+      <p>Return to this review after the meeting to record an outcome.</p>
+      <p><a  class="nhsuk-link--no-visited-state" href="start-action-plan">Go to contract 99017500001</a></p>
+
+    </div>
+
+  </div>
+{% endblock %}

@@ -1,0 +1,88 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  {{ serviceName }}
+{% endblock %}
+
+{% block outerContent %}
+{{ backLink({
+  href: "/pad-comments/commissioner-view/nil-returns/meeting-date",
+  text: "Go back"
+}) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+        <form>
+
+            <div class="nhsuk-form-group">
+          
+              <fieldset class="nhsuk-fieldset" aria-describedby="example-hint">
+                <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+                  <h1 class="nhsuk-fieldset__heading-xl">
+                    <span class="nhsuk-caption-l">Mid-year action plan review</span>
+                    What reasons has the contractor given for their under-performance?
+                  </h1>
+                </legend>
+          
+                <div class="nhsuk-checkboxes">
+          
+                  <div class="nhsuk-checkboxes__item">
+                    <input class="nhsuk-checkboxes__input" id="example-2" name="example" type="checkbox" value="phone">
+                    <label class="nhsuk-label nhsuk-checkboxes__label" for="example-2">
+                        Adverse or force majeure events
+                    </label>
+                  </div>
+          
+                  <div class="nhsuk-checkboxes__item">
+                    <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message">
+                    <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+                        Workforce
+                    </label>
+                  </div>
+
+                  <div class="nhsuk-checkboxes__item">
+                    <input class="nhsuk-checkboxes__input" id="confirm-6" name="confirm" type="checkbox" value="phone" aria-controls="conditional-confirm-6" aria-expanded="true">
+                    <label class="nhsuk-label nhsuk-checkboxes__label" for="confirm-6">
+                    Other
+                    </label>
+                  </div>
+            
+                  <div class="nhsuk-checkboxes__conditional" id="conditional-confirm-6">
+            
+                    <div class="nhsuk-form-group">
+                      <div class="nhsuk-form-group">
+                        <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
+                          <div class="nhsuk-date-input" id="example">
+                            <div class="nhsuk-date-input__item">
+                              <div class="nhsuk-form-group">
+                                <div class="nhsuk-form-group">
+                                  <label class="nhsuk-label--s" for="close-justification">
+                                    What other reason(s) did the contractor give for their under-performance? <span class="nhsuk-u-visually-hidden"></span>
+                                  </label>
+                                  <textarea class="nhsuk-textarea" id="example" name="example" rows="5" aria-describedby="example-hint"></textarea>
+                                </div>
+                              
+                            </div>
+                          </div>
+                        </fieldset>
+                      
+                      </div>
+                    </div>
+            
+                  </div>
+          
+                </div>
+              </fieldset>
+          
+            </div>
+          
+          </form>
+    </div>
+  </div>
+  <a href="actions-taken" class="nhsuk-button" data-module="nhsuk-button" type="submit">Save and continue</a>
+
+</div>
+{% endblock %}
+

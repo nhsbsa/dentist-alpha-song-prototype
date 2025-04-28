@@ -1,0 +1,94 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  {{ serviceName }}
+{% endblock %}
+
+{% block outerContent %}
+{{ backLink({
+  href: "/pad-comments/commissioner-view/nil-returns/before-you-start",
+  text: "Go back"
+}) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+        <fieldset class="nhsuk-fieldset" aria-describedby="confirm-hint">
+            <span class="nhsuk-caption-xl">Mid-year action plan review</span>
+              <form action="/nil-return-meeting" method="post" class="form">
+                {{ radios({
+                  idPrefix: "confirm",
+                  name: "confirm",
+                  fieldset: {
+                    legend: {
+                      text: "Have you met with the contractor to discuss their mid-year review?",
+                      classes: "nhsuk-fieldset__legend--xl",
+                      isPageHeading: true
+                    }
+                  },
+                  hint: {
+                    text: "Will the contractor deliver care to NHS patients to the level at which they have been funded?"
+                  },
+                  classes: "nhsuk-radios--conditional",
+                  items: [
+                    {
+                      value: "yes",
+                      text: "Yes, I have had a meeting with the contractor",
+                      conditional: {
+                        html: '
+                          <div class="nhsuk-form-group">
+                            <fieldset class="nhsuk-fieldset" aria-describedby="date-hint" role="group">
+                              <div class="nhsuk-hint" id="date-hint">Enter the date of the mid-year review meeting</div>
+                              <div class="nhsuk-date-input" id="review-date">
+                                <div class="nhsuk-date-input__item">
+                                  <div class="nhsuk-form-group">
+                                    <label class="nhsuk-label nhsuk-date-input__label" for="review-day">Day</label>
+                                    <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="review-day" name="reviewDate[day]" type="text" inputmode="numeric">
+                                  </div>
+                                </div>
+                                <div class="nhsuk-date-input__item">
+                                  <div class="nhsuk-form-group">
+                                    <label class="nhsuk-label nhsuk-date-input__label" for="review-month">Month</label>
+                                    <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="review-month" name="reviewDate[month]" type="text" inputmode="numeric">
+                                  </div>
+                                </div>
+                                <div class="nhsuk-date-input__item">
+                                  <div class="nhsuk-form-group">
+                                    <label class="nhsuk-label nhsuk-date-input__label" for="review-year">Year</label>
+                                    <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="review-year" name="reviewDate[year]" type="text" inputmode="numeric">
+                                  </div>
+                                </div>
+                              </div>
+                            </fieldset>
+                          </div>'
+                      }
+                    },
+                    {
+                      value: "not-met",
+                      text: "No, I have not met with the contractor yet"
+                    },
+                    {
+                      value: "no-response",
+                      text: "No, the contractor has not responded"
+                    },
+                    {
+                      divider: "or"
+                    },
+                    {
+                      value: "not-needed",
+                      text: "A meeting is not needed"
+                    }
+                  ]
+                }) }}
+                
+            {{ button({
+              "text": "Continue",
+              "id": "btn_submit"
+            }) }}
+            </form>
+          </fieldset>
+    </div>
+  </div>
+
+{% endblock %}

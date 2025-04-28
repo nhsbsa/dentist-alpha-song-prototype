@@ -1,0 +1,263 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  {{ serviceName }}
+{% endblock %}
+
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+        <h1 class="nhsuk-heading-xl">
+            2024/2025 Mid-Year Review
+          </h1>
+
+          <ul class="nhsuk-grid-row nhsuk-card-group">
+            <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
+          
+                <div class="nhsuk-card">
+                    <div class="nhsuk-card__content">
+                      <h5 class="nhsuk-card__description">To review
+                      </h5>
+                      <h1 class="nhsuk-card__heading">163</h1>
+                    </div>
+                  </div>
+          
+            </li>
+            <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
+          
+                <div class="nhsuk-card">
+                    <div class="nhsuk-card__content">
+                      <h5 class="nhsuk-card__description">Reviewed
+                      </h5>
+                      <h1 class="nhsuk-card__heading">90</h1>
+                    </div>
+                  </div>
+          
+            </li>
+          </ul>
+
+          <div class="nhsuk-grid-row" id="filter-table-wrapper">
+            <div id="filter-column" class="nhsuk-grid-column-one-third" style="display: none;">
+              <div class="nhsuk-card nhsuk-card--clickable">
+                <div class="nhsuk-card__content nhsuk-card__content--primary" style="padding: 0px;">
+                  <h2 class="nhsuk-heading-s" style="background-color: #005EB8; padding: 16px; margin: 0; color: #ffffff;">Filters</h2>
+          
+                  <div id="selected-filters" style="background-color:#f0f4f5; padding: 16px; margin-bottom: 8px;">
+                    <h2 class="nhsuk-heading-s">Selected filters</h2>
+                    <button id="provider-chip" class="govuk-button govuk-button--secondary" style="margin-top: 8px; background-color:#ffffff">Region: Q3F&nbsp;&#9587</button>
+                    <!--<button id="provider-chip" class="govuk-button govuk-button--secondary" style="margin-top: 8px;">Provider: 123456&nbsp;&#9587;</button>-->
+                    <br>
+                    <a href="#" class="nhsuk-link--no-visited-state">Clear all filters</a>
+                  </div>
+          
+                  <div class="nhsuk-u-padding-left-3 nhsuk-u-padding-right-3">
+                    <div class="nhsuk-form-group">
+                      <label class="nhsuk-heading-s" style="margin-bottom: 0;" for="contract-filter">Search</label>
+                      <input class="nhsuk-input" id="contract-filter" type="text">
+                    </div>
+
+                    <div class="govuk-form-group">
+                      <fieldset class="govuk-fieldset">
+                        <legend class="nhsuk-heading-s" style="margin-bottom: 0;">Region</legend>
+                        <div class="govuk-checkboxes govuk-checkboxes--small">
+                          <div class="govuk-checkboxes__item">
+                            <input type="checkbox" id="type1" class="govuk-checkboxes__input" value="Q3F" checked>
+                            <label for="type1" class="govuk-label govuk-checkboxes__label">Q3F</label>
+                          </div>
+                          <div class="govuk-checkboxes__item">
+                            <input type="checkbox" id="type2" class="govuk-checkboxes__input">
+                            <label for="type2" class="govuk-label govuk-checkboxes__label">Q3G</label>
+                          </div>
+                          <div class="govuk-checkboxes__item">
+                            <input type="checkbox" id="type3" class="govuk-checkboxes__input">
+                            <label for="type3" class="govuk-label govuk-checkboxes__label">Q3H</label>
+                          </div>
+                        </div>
+                      </fieldset>
+                    </div>
+          
+                    <div class="govuk-form-group">
+                      <fieldset class="govuk-fieldset">
+                        <legend class="nhsuk-heading-s" style="margin-bottom: 0;">Provider response</legend>
+                        <div class="govuk-checkboxes govuk-checkboxes--small">
+                          <div class="govuk-checkboxes__item">
+                            <input type="checkbox" id="type1" class="govuk-checkboxes__input">
+                            <label for="type1" class="govuk-label govuk-checkboxes__label">Nil return</label>
+                          </div>
+                          <div class="govuk-checkboxes__item">
+                            <input type="checkbox" id="type2" class="govuk-checkboxes__input">
+                            <label for="type2" class="govuk-label govuk-checkboxes__label">Partially complete</label>
+                          </div>
+                          <div class="govuk-checkboxes__item">
+                            <input type="checkbox" id="type3" class="govuk-checkboxes__input">
+                            <label for="type3" class="govuk-label govuk-checkboxes__label">Complete</label>
+                          </div>
+                        </div>
+                      </fieldset>
+                    </div>
+          
+                    <div class="govuk-form-group">
+                      <fieldset class="govuk-fieldset">
+                        <legend class="nhsuk-heading-s" style="margin-bottom: 0;">Status</legend>
+                        <div class="govuk-checkboxes govuk-checkboxes--small">
+                          <div class="govuk-checkboxes__item">
+                            <input type="checkbox" id="type1" class="govuk-checkboxes__input">
+                            <label for="type1" class="govuk-label govuk-checkboxes__label">Not started</label>
+                          </div>
+                          <div class="govuk-checkboxes__item">
+                            <input type="checkbox" id="type2" class="govuk-checkboxes__input">
+                            <label for="type2" class="govuk-label govuk-checkboxes__label">In progress</label>
+                          </div>
+                          <div class="govuk-checkboxes__item">
+                            <input type="checkbox" id="type3" class="govuk-checkboxes__input">
+                            <label for="type3" class="govuk-label govuk-checkboxes__label">Complete</label>
+                          </div>
+                        </div>
+                      </fieldset>
+                    </div>
+                        
+          
+                    <button id="apply-filter-button" class="nhsuk-button">Apply filters</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+
+            <div id="table-column" class="nhsuk-grid-column-full">
+              <div class="nhsuk-details nhsuk-expander nhsuk-custom-search-filter-text nhsuk-u-margin-bottom-4" style="border:none; background-color: #f0f4f5; margin-bottom: 0; padding-left: 0;">
+                <span id="expand-report-filters" class="nhsuk-details__summary-text" role="button" tabindex="0">
+                  Show filters
+                </span>
+                <span id="close-report-filters" class="nhsuk-details__summary-text" style="display: none;" role="button" tabindex="0">
+                  Hide filters
+                </span>
+              </div>
+              
+
+
+              <table class="nhsuk-table">
+                <caption class="nhsuk-table__caption" style="display: none;">Contracts</caption>
+                <thead class="nhsuk-table__head">
+                  <tr>
+                    <th scope="col">Contract to review</th>
+                    <th scope="col">Region</th>
+                    <th scope="col">Provider Activity</th>
+                    <th scope="col">Status</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody class="nhsuk-table__body">
+                  <tr>
+                    <td class="nhsuk-table__cell"><a href="#" class="nhsuk-link--no-visited-state">99017500001</a><br><span class="nhsuk-u-secondary-text-color">Green Park Dental</span></td>
+                    <td class="nhsuk-table__cell">Q3F</td>
+                    <td class="nhsuk-table__cell"><strong class="nhsuk-tag nhsuk-tag--red">Nil return</strong></td>
+                    <td class="nhsuk-table__cell" style="color: #4c6272;">Completed</td>
+                  </tr>
+                  <tr>
+                    <td class="nhsuk-table__cell"><a href="#" class="nhsuk-link--no-visited-state">99017500002</a><br><span class="nhsuk-u-secondary-text-color">Jane Scott Dental Clinic</span></td>
+                    <td class="nhsuk-table__cell">Q3F</td>
+                    <td class="nhsuk-table__cell"><strong class="nhsuk-tag nhsuk-tag--orange">Incomplete</strong></td>
+                    <td class="nhsuk-table__cell"><strong class="nhsuk-tag nhsuk-tag--grey">In progress</strong></td>
+                  </tr>
+                  <tr>
+                    <td class="nhsuk-table__cell"><a href="#" class="nhsuk-link--no-visited-state">99017500003</a><br><span class="nhsuk-u-secondary-text-color">Dr. Pablo Lhotka</span></td>
+                    <td class="nhsuk-table__cell">Q3F</td>
+                    <td class="nhsuk-table__cell"><strong class="nhsuk-tag nhsuk-tag--orange">Incomplete</strong></td>
+                    <td class="nhsuk-table__cell"><strong class="nhsuk-tag nhsuk-tag--white">Not started</strong></td>
+                  </tr>
+                  <tr>
+                    <td class="nhsuk-table__cell"><a href="/pad-comments/commissioner-view/start-action-plan-review" class="nhsuk-link--no-visited-state">99017500004</a><br><span class="nhsuk-u-secondary-text-color">High Street Dental</span></td>
+                    <td class="nhsuk-table__cell">Q3F</td>
+                    <td class="nhsuk-table__cell"><strong class="nhsuk-tag nhsuk-tag--green">Complete</strong></td>
+                    <td class="nhsuk-table__cell"><strong class="nhsuk-tag nhsuk-tag--white">Not started</strong></td>
+                  </tr>
+                  <tr>
+                    <td class="nhsuk-table__cell"><a href="#" class="nhsuk-link--no-visited-state">99017500005</a><br><span class="nhsuk-u-secondary-text-color">Chester Cosmetics Dental and Aesthetic Clinic</span></td>
+                    <td class="nhsuk-table__cell">Q3F</td>
+                    <td class="nhsuk-table__cell"><strong class="nhsuk-tag nhsuk-tag--green">Complete</strong></td>
+                    <td class="nhsuk-table__cell"><strong class="nhsuk-tag nhsuk-tag--white">Not started</strong></td>
+                  </tr>
+                </tbody>
+              </table>
+              <nav class="govuk-pagination" aria-label="Pagination">
+                <div class="govuk-pagination__prev">
+                  <a class="govuk-link govuk-pagination__link" href="#" rel="prev">
+                    <svg class="govuk-pagination__icon govuk-pagination__icon--prev" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+                      <path d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
+                    </svg>
+                    <span class="govuk-pagination__link-title">
+                      Previous<span class="govuk-visually-hidden"> page</span>
+                    </span>
+                  </a>
+                </div>
+                <ul class="govuk-pagination__list">
+                  <li class="govuk-pagination__item">
+                    <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 1">
+                      1
+                    </a>
+                  </li>
+                  <li class="govuk-pagination__item govuk-pagination__item--current">
+                    <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 2" aria-current="page">
+                      2
+                    </a>
+                  </li>
+                  <li class="govuk-pagination__item">
+                    <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 3">
+                      3
+                    </a>
+                  </li>
+                </ul>
+                <div class="govuk-pagination__next">
+                  <a class="govuk-link govuk-pagination__link" href="#" rel="next">
+                    <span class="govuk-pagination__link-title">
+                      Next<span class="govuk-visually-hidden"> page</span>
+                    </span>
+                    <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+                      <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+                    </svg>
+                  </a>
+                </div>
+              </nav>
+            </div>
+          </div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block pageScripts %}
+  <script>
+    const filterReportExpand = document.getElementById('expand-report-filters');
+const filterReportClose = document.getElementById('close-report-filters');
+
+function filterContractExpandFunction(action) {
+  const filterCol = document.getElementById('filter-column');
+  const tableCol = document.getElementById('table-column');
+
+  if (action === 'expand') {
+    filterReportExpand.style.display = 'none';
+    filterReportClose.style.display = 'inline';
+    filterCol.style.display = 'block';
+    tableCol.classList.remove('nhsuk-grid-column-full');
+    tableCol.classList.add('nhsuk-grid-column-two-thirds');
+  } else {
+    filterReportExpand.style.display = 'inline';
+    filterReportClose.style.display = 'none';
+    filterCol.style.display = 'none';
+    tableCol.classList.remove('nhsuk-grid-column-two-thirds');
+    tableCol.classList.add('nhsuk-grid-column-full');
+  }
+}
+
+filterReportExpand.addEventListener('click', () => {
+  filterContractExpandFunction('expand');
+});
+
+filterReportClose.addEventListener('click', () => {
+  filterContractExpandFunction('collapse');
+});
+
+
+  </script>
+{% endblock %}
