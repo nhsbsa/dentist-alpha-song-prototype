@@ -6,7 +6,7 @@
 
 {% block outerContent %}
 {{ backLink({
-  href: "/pad-comments/commissioner-view/nil-returns/outcome",
+  href: "/pad-comments/commissioner/outcome",
   text: "Go back"
 }) }}
 {% endblock %}
@@ -17,14 +17,14 @@
         <fieldset class="nhsuk-fieldset" aria-describedby="confirm-hint">
                 <h1 class="nhsuk-heading-xl">
                     <span class="nhsuk-caption-xl">Mid-year action plan review</span>
-                    Do you want to share any other comments with provider assurance?
+                    Do you have any other comments?
                   </h1>
 
             <div class="nhsuk-radios nhsuk-radios--conditional">
               <div class="nhsuk-radios__item">
                 <input class="nhsuk-radios__input" id="confirm-6" name="confirm" type="radio" value="phone" aria-controls="conditional-confirm-6" aria-expanded="true">
                 <label class="nhsuk-label nhsuk-radios__label" for="confirm-6">
-                    Yes, I want to share comments 
+                    Yes
                 </label>
               </div>
         
@@ -32,7 +32,7 @@
         
                 <div class="nhsuk-form-group">
                     <div class="nhsuk-hint" id="example-hint">
-                      Enter your comments
+                      Enter comments for the Provider Assurance team
                     </div> <textarea class="nhsuk-textarea" id="example" name="example" rows="5" aria-describedby="example-hint"></textarea>
                   </div>
         
@@ -49,7 +49,7 @@
           </fieldset>
     </div>
   </div><br>
-  <a href="outcome-saved" class="nhsuk-button" data-module="nhsuk-button" data-prevent-double-click="true" type="submit">
+  <a href="additional-actions" class="nhsuk-button" data-module="nhsuk-button" data-prevent-double-click="true" type="submit">
     Save and continue
   </button>
 </a>

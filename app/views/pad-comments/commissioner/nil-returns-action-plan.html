@@ -1,0 +1,247 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  {{ serviceName }}
+{% endblock %}
+
+{% block outerContent %}
+{{ backLink({
+  href: "/pad-comments/commissioner/commissioner-dashboard",
+  text: "Go back"
+}) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+        <h1 class="nhsuk-heading-xl">
+            <span class="nhsuk-caption-l">Contract 99017500001</span>
+            Mid-Year Review 2024/2025
+          </h1>
+      
+          <div class="nhsuk-tabs" data-module="nhsuk-tabs">
+            <h2 class="nhsuk-tabs__title">
+              Contents
+            </h2>
+            <ul class="nhsuk-tabs__list">
+              <li class="nhsuk-tabs__list-item nhsuk-tabs__list-item--selected">
+                <a class="nhsuk-tabs__tab" href="#summary">
+                  Summary
+                </a>
+              </li>
+              <li class="nhsuk-tabs__list-item">
+                <a class="nhsuk-tabs__tab" href="#timeline">
+                  Timeline
+                </a>
+              </li>
+            </ul>
+            <div class="nhsuk-tabs__panel" id="summary" style="padding: 30px 20px 20px 20px;">
+          
+                <table class="nhsuk-table" style="border-collapse: collapse;">
+                    <caption class="nhsuk-table__caption">Mid-year review summary</caption>
+                    <tbody class="nhsuk-table__body">
+                      <tr class="nhsuk-table__row">
+                        <td class="nhsuk-table__cell" style="padding-bottom: 0; line-height: 2.2; padding-right: 0; margin-right: 0; border-bottom: none;">
+                          <strong>Action plan</strong>
+                        </td>
+                        <td class="nhsuk-table__cell" style="border-bottom: none;">
+                          <div class="govuk-warning-text" style="margin-bottom: 0;">
+                            <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+                            <strong class="govuk-warning-text__text">
+                              <span class="govuk-visually-hidden">Warning</span>
+                              Not completed
+                            </strong>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  
+          
+            </div>
+            <div class="nhsuk-tabs__panel nhsuk-tabs__panel--hidden" id="timeline">
+              <table class="nhsuk-table">
+                <caption class="nhsuk-table__caption">Mid-year review timeline</caption>
+                <tbody class="nhsuk-table__body">
+                  <tr class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell"><strong>30 Oct 2025</strong></td>
+                    <td class="nhsuk-table__cell">Opened for commissioner outcome</td>
+                    <td class="nhsuk-table__cell"></td>
+                  </tr>
+                  <tr class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell"><strong>7 Oct 2025</strong></td>
+                    <td class="nhsuk-table__cell">Reminder letter sent</td>
+                    <td class="nhsuk-table__cell"></td>
+                  </tr>
+                  <tr class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell"><strong>1 Oct 2025</strong></td>
+                    <td class="nhsuk-table__cell">Action plan letter sent</td>
+                    <td class="nhsuk-table__cell"></td>
+                  </tr>
+                </tbody>
+              </table>
+          
+            </div>
+          </div>
+        </div>
+
+        <div class="nhsuk-grid-column-full">
+          <table class="nhsuk-table">
+            <caption class="nhsuk-table__caption">Achievement in recent years</caption>
+            <thead class="nhsuk-table__head">
+              <tr>
+                <th scope="col" class="nhsuk-table__header"></th>
+                <th scope="col" class="nhsuk-table__header nhsuk-table__header--numeric">2022/2023</th>
+                <th scope="col" class="nhsuk-table__header nhsuk-table__header--numeric">2023/2024</th>
+                <th scope="col" class="nhsuk-table__header nhsuk-table__header--numeric">2024/2025</th>
+                <th scope="col" class="nhsuk-table__header nhsuk-table__header--numeric">2025/2026 forecast</th>
+              </tr>
+            </thead>
+            <tbody class="nhsuk-table__body">
+              <tr class="nhsuk-table__row">
+                <th scope="row" class="nhsuk-table__header">Mid-Year</th>
+                <td class="nhsuk-table__cell nhsuk-table__cell--numeric">34%</td>
+                <td class="nhsuk-table__cell nhsuk-table__cell--numeric">29%</td>
+                <td class="nhsuk-table__cell nhsuk-table__cell--numeric">28%</td>
+                <td class="nhsuk-table__cell nhsuk-table__cell--numeric">28%</td>
+              </tr>
+              <tr class="nhsuk-table__row">
+                <th scope="row" class="nhsuk-table__header">Year end</th>
+                <td class="nhsuk-table__cell nhsuk-table__cell--numeric">96%</td>
+                <td class="nhsuk-table__cell nhsuk-table__cell--numeric">95%</td>
+                <td class="nhsuk-table__cell nhsuk-table__cell--numeric">100%</td>
+                <td class="nhsuk-table__cell nhsuk-table__cell--numeric">97%</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      <div class="nhsuk-grid-column-two-thirds">
+
+        <div class="govuk-summary-card">
+          <div class="govuk-summary-card__title-wrapper" style="background-color: #d8dde0;">
+            <h2 class="govuk-summary-card__title">
+              Debt and recovery
+            </h2>
+          </div>
+          <div class="govuk-summary-card__content" style="background-color: #ffffff;">
+            <dl class="govuk-summary-list">
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Ongoing year end recovery average
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  £2,454 per month
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Final recovery payment date
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  1 March 2025
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Debt
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  £1,510.06
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Maximum potential withhold
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  £20,456
+                </dd>
+              </div>
+            </div>
+              <div class="govuk-summary-card__title-wrapper" style="background-color: #ffffff; padding-top: 0;">
+                  <details class="nhsuk-details">
+                    <summary class="nhsuk-details__summary">
+                      <span class="nhsuk-details__summary-text">
+                        How the maximum potential withhold is calculated  
+                      </span>
+                    </summary>
+                    <div class="nhsuk-details__text">
+                      <p>The calculation compares delivered activity so far (with any adjustments) to the full-year contracted activity.</p>
+                      <ol class="nhsuk-list nhsuk-list--number">
+                        <li>Adjusted delivered activity at mid-year (30 Sept), including any carry forward or amendments, is doubled to estimate full-year delivery.</li>
+                        <li>The estimated full-year delivery is subtracted from the total contracted activity.</li>
+                        <li>The result is multiplied by the UDA rate to give the maximum withhold amount.</li>
+                      </ol>
+                    </div>
+                  </details>
+                </div>   
+            </dl>
+          </div>
+
+          <div class="govuk-summary-card">
+            <div class="govuk-summary-card__title-wrapper" style="background-color: #d8dde0;">
+              <h2 class="govuk-summary-card__title">
+                Contract
+              </h2>
+              <a class="govuk-link govuk-link--no-visited-state" href="#">View contract</a>
+            </div>
+            <div class="govuk-summary-card__content" style="background-color: #ffffff;">
+              <dl class="govuk-summary-list">
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Contract number 
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    99017500001
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Contract holders
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    John Doe <br> Jane Doe
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Locality
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    Q3F
+                  </dd>
+                </div>
+              </div>
+              </dl>
+            </div>
+
+            <h1 class="nhsuk-heading-l">Action plan outcome</h1>
+            <ul class="govuk-task-list" style="font-family: Frutiger W01, Arial, Sans-seri;">
+                <li class="govuk-task-list__item govuk-task-list__item--with-link" style="border-top:none">
+                  <div class="govuk-task-list__name-and-hint">
+                    
+                      Review action plan
+                  </div>
+                  <div class="govuk-task-list__status" id="your-health-3-status"><strong class="nhsuk-tag nhsuk-tag--red">
+                    No action plan provided
+                  </strong></div>
+                </li>
+                <li class="govuk-task-list__item govuk-task-list__item--with-link">
+                  <div class="govuk-task-list__name-and-hint">
+                    <a class="govuk-link govuk-task-list__link govuk-link--no-visited-state" href="before-you-start-nil-return">
+                        Confirm next steps
+                    </a>
+                  </div>
+                  <div class="govuk-task-list__status" id="company-details-2-status">
+                    <strong class="nhsuk-tag nhsuk-tag--blue">
+                      Incomplete
+                    </strong>
+                  </div>
+                </li>
+              </ul>
+
+    </div>
+  </div>
+  </div>
+{% endblock %}

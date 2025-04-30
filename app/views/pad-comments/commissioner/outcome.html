@@ -1,0 +1,52 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  {{ serviceName }}
+{% endblock %}
+
+{% block outerContent %}
+{{ backLink({
+  href: "/pad-comments/commissioner/actions-taken",
+  text: "Go back"
+}) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+        {% from 'checkboxes/macro.njk' import checkboxes %}
+{% from 'input/macro.njk' import input %}
+
+{% set reasonHtml %}
+  {{ input({
+    id: "reason",
+    name: "reason",
+    classes: "nhsuk-u-width-full",
+    label: {
+      text: "Reason"
+    }
+  }) }}
+{% endset -%}
+<span class="nhsuk-caption-l">Mid-year action plan review</span>
+<form>
+  {{ textarea({
+    name: "example",
+    id: "example",
+    label: {
+      text: "What is your outcome for this contract?",
+      classes: "nhsuk-label--xl"
+    },
+    hint: {
+        text: "Describe any non-recurrent in-year contract variations, contract sanctions, monies withheld or adjustments to the payment system that have been made"
+      }
+  }) }}
+</form>
+    </div>
+  </div><br>
+  <a href="additional-comments" class="nhsuk-button" data-module="nhsuk-button" data-prevent-double-click="true" type="submit">
+    Save and continue
+</a>
+
+
+
+{% endblock %}

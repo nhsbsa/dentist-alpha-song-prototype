@@ -1,0 +1,338 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  {{ serviceName }}
+{% endblock %}
+
+{% block outerContent %}
+{{ backLink({
+  href: "/pad-comments/commissioner/additional-comments",
+  text: "Go back"
+}) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+        <h1 class="nhsuk-heading-xl">
+            <span class="nhsuk-caption-l">Contract 99017500001</span>
+            Mid-Year Review 2024/2025
+          </h1>
+        </div>
+
+        <div class="nhsuk-grid-column-full">
+          <table class="nhsuk-table">
+            <caption class="nhsuk-table__caption">Achievement in recent years</caption>
+            <thead class="nhsuk-table__head">
+              <tr>
+                <th scope="col" class="nhsuk-table__header">Service line</th>
+                <th scope="col" class="nhsuk-table__header nhsuk-table__header--numeric">Full year <br>2022/2023</th>
+                <th scope="col" class="nhsuk-table__header nhsuk-table__header--numeric">Full year <br>2023/2024</th>
+                <th scope="col" class="nhsuk-table__header nhsuk-table__header--numeric">Mid-year <br>2024/2025</th>
+                <th scope="col" class="nhsuk-table__header nhsuk-table__header--numeric">Full year forecast <br>2025/2026</th>
+              </tr>
+            </thead>
+            <tbody class="nhsuk-table__body">
+              <tr class="nhsuk-table__row">
+                <th scope="row" class="nhsuk-table__header">Dental (UDA)</th>
+                <td class="nhsuk-table__cell nhsuk-table__cell--numeric">34%</td>
+                <td class="nhsuk-table__cell nhsuk-table__cell--numeric">26%</td>
+                <td class="nhsuk-table__cell nhsuk-table__cell--numeric"><strong>28%</strong></td>
+                <td class="nhsuk-table__cell nhsuk-table__cell--numeric"><strong>38%</strong></td>
+              </tr>
+              <tr class="nhsuk-table__row">
+                <th scope="row" class="nhsuk-table__header">Orthodontic (UOA)</th>
+                <td class="nhsuk-table__cell nhsuk-table__cell--numeric">96%</td>
+                <td class="nhsuk-table__cell nhsuk-table__cell--numeric">95%</td>
+                <td class="nhsuk-table__cell nhsuk-table__cell--numeric"><strong>100%</strong></td>
+                <td class="nhsuk-table__cell nhsuk-table__cell--numeric"><strong>97%</strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      <div class="nhsuk-grid-column-two-thirds">
+
+        <div class="govuk-summary-card">
+          <div class="govuk-summary-card__title-wrapper" style="background-color: #d8dde0;">
+            <h2 class="govuk-summary-card__title">
+              Debt and recovery
+            </h2>
+          </div>
+          <div class="govuk-summary-card__content" style="background-color: #ffffff;">
+            <dl class="govuk-summary-list">
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Ongoing year end recovery average
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  £2,454 per month
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Final recovery payment date
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  1 March 2025
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Debt
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  £1,510.06
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Maximum potential withhold
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  £20,456
+                </dd>
+              </div>
+            </div>
+
+              <div class="govuk-summary-card__title-wrapper" style="background-color: #ffffff; padding-top: 0;">
+                  <details class="nhsuk-details">
+                    <summary class="nhsuk-details__summary">
+                      <span class="nhsuk-details__summary-text">
+                        How the maximum potential withhold is calculated  
+                      </span>
+                    </summary>
+                    <div class="nhsuk-details__text">
+                      <p>The calculation compares delivered activity so far (with any adjustments) to the full-year contracted activity.</p>
+                      <ol class="nhsuk-list nhsuk-list--number">
+                        <li>Adjusted delivered activity at mid-year (30 Sept), including any carry forward or amendments, is doubled to estimate full-year delivery.</li>
+                        <li>The estimated full-year delivery is subtracted from the total contracted activity.</li>
+                        <li>The result is multiplied by the UDA rate to give the maximum withhold amount.</li>
+                      </ol>
+                    </div>
+                  </details>
+                </div>   
+            </dl>
+          </div>
+
+
+          <form action="/nil-return-withhold" method="post" class="form">
+
+            {{ radios({
+              "idPrefix": "example",
+              "name": "isNilApDeliverable",
+              "fieldset": {
+                "legend": {
+                  "text": "How much do you want to withhold?",
+                  "classes": "nhsuk-fieldset__legend--l",
+                  "isPageHeading": true
+                }
+              },
+              "hint": {
+                "text": "Select the months to withhold to enter the amount"
+              },
+              "items": [
+                {
+                  "value": "max-withold-amount",
+                  "text": "Withhold £20,456 (the maximum amount)",
+                  "conditional": {
+                    "html": '<fieldset class="nhsuk-fieldset" aria-describedby="months-hint">
+                        <div class="nhsuk-hint" id="months-hint">
+                            Select the months to withhold to enter the amount
+                        </div>
+                        <div class="nhsuk-checkboxes">
+                  
+                          <div class="nhsuk-checkboxes__item">
+                            <input class="nhsuk-checkboxes__input" id="months-dec" name="months" type="checkbox" value="dec" aria-controls="conditional-months-dec" aria-expanded="false" data-checkbox-exclusive-group="months-lists">
+                            <label class="nhsuk-label nhsuk-checkboxes__label" for="months-dec">
+                                December
+                            </label>
+                          </div>
+                          
+                          <div class="nhsuk-checkboxes__conditional" id="conditional-months-dec">
+                            <div class="nhsuk-form-group">
+                              <label class="nhsuk-label" for="withhold-dec">
+                                Amount to withhold
+                              </label>
+                              <div class="nhsuk-input__wrapper">
+                                <div class="nhsuk-input__prefix" aria-hidden="true">£</div>
+                                <input class="nhsuk-input nhsuk-input--width-5" id="withhold-dec" name="withhold-dec" type="text">
+                              </div>
+                            </div>
+                          </div>
+                  
+                          <div class="nhsuk-checkboxes__item">
+                            <input class="nhsuk-checkboxes__input" id="months-jan" name="months" type="checkbox" value="jan" aria-controls="conditional-months-jan" data-checkbox-exclusive-group="months-lists">
+                            <label class="nhsuk-label nhsuk-checkboxes__label" for="months-jan">
+                              January
+                            </label>
+                          </div>
+        
+                          <div class="nhsuk-checkboxes__conditional" id="conditional-months-jan">
+                            <div class="nhsuk-form-group">
+                              <label class="nhsuk-label" for="withhold-jan">
+                                Amount to withhold
+                              </label>
+                              <div class="nhsuk-input__wrapper">
+                                <div class="nhsuk-input__prefix" aria-hidden="true">£</div>
+                                <input class="nhsuk-input nhsuk-input--width-5" id="withhold-jan" name="withhold-jan" type="text">
+                              </div>
+                            </div>
+                          </div>
+                  
+                          <div class="nhsuk-checkboxes__item">
+                            <input class="nhsuk-checkboxes__input" id="months-feb" name="months" type="checkbox" value="feb" aria-controls="conditional-months-feb" data-checkbox-exclusive-group="months-lists">
+                            <label class="nhsuk-label nhsuk-checkboxes__label" for="months-feb">
+                              February
+                            </label>
+                          </div>
+        
+                          <div class="nhsuk-checkboxes__conditional" id="conditional-months-feb">
+                            <div class="nhsuk-form-group">
+                              <label class="nhsuk-label" for="withhold-feb">
+                                Amount to withhold
+                              </label>
+                              <div class="nhsuk-input__wrapper">
+                                <div class="nhsuk-input__prefix" aria-hidden="true">£</div>
+                                <input class="nhsuk-input nhsuk-input--width-5" id="withhold-feb" name="withhold-feb" type="text">
+                              </div>
+                            </div>
+                          </div>
+        
+                          <div class="nhsuk-checkboxes__item">
+                            <input class="nhsuk-checkboxes__input" id="months-mar" name="months" type="checkbox" value="mar" aria-controls="conditional-months-mar" data-checkbox-exclusive-group="months-lists">
+                            <label class="nhsuk-label nhsuk-checkboxes__label" for="months-mar">
+                              March
+                            </label>
+                          </div>
+        
+                          <div class="nhsuk-checkboxes__conditional" id="conditional-months-mar">
+                            <div class="nhsuk-form-group">
+                              <label class="nhsuk-label" for="withhold-mar">
+                                Amount to withhold
+                              </label>
+                              <div class="nhsuk-input__wrapper">
+                                <div class="nhsuk-input__prefix" aria-hidden="true">£</div>
+                                <input class="nhsuk-input nhsuk-input--width-5" id="withhold-mar" name="withhold-mar" type="text">
+                              </div>
+                            </div>
+                          </div>
+        
+        
+                          <div class="nhsuk-checkboxes__divider">or</div>
+                          <div class="nhsuk-checkboxes__item">
+                            <input class="nhsuk-checkboxes__input" id="months-5" name="months" type="checkbox" value="none" data-checkbox-exclusive data-checkbox-exclusive-group="months-lists">
+                            <label class="nhsuk-label nhsuk-checkboxes__label" for="months-5">
+                                Apply maximum equally across all months
+                            </label>
+                          </div>
+                        </div>
+                      </fieldset>'
+                  }
+                },
+                {
+                  "value": "custom-withhold-amount",
+                  "text": "Withhold a different amount",
+                  "conditional": {
+                    "html": '<fieldset class="nhsuk-fieldset" aria-describedby="months-hint">
+                        <div class="nhsuk-hint" id="months-hint">
+                            Select the months to withhold to enter the amount
+                        </div>
+                        <div class="nhsuk-checkboxes">
+                  
+                          <div class="nhsuk-checkboxes__item">
+                            <input class="nhsuk-checkboxes__input" id="months-1" name="months" type="checkbox" value="december" aria-controls="conditional-months-1" aria-expanded="false" data-checkbox-exclusive-group="months-list">
+                            <label class="nhsuk-label nhsuk-checkboxes__label" for="months-1">
+                                December
+                            </label>
+                          </div>
+                          
+                          <div class="nhsuk-checkboxes__conditional" id="conditional-months-1">
+                            <div class="nhsuk-form-group">
+                              <label class="nhsuk-label" for="withhold-december">
+                                Amount to withhold
+                              </label>
+                              <div class="nhsuk-input__wrapper">
+                                <div class="nhsuk-input__prefix" aria-hidden="true">£</div>
+                                <input class="nhsuk-input nhsuk-input--width-5" id="withhold-december" name="withhold-december" type="text">
+                              </div>
+                            </div>
+                          </div>
+                  
+                          <div class="nhsuk-checkboxes__item">
+                            <input class="nhsuk-checkboxes__input" id="months-2" name="months" type="checkbox" value="january" aria-controls="conditional-months-2" data-checkbox-exclusive-group="months-list">
+                            <label class="nhsuk-label nhsuk-checkboxes__label" for="months-2">
+                              January
+                            </label>
+                          </div>
+        
+                          <div class="nhsuk-checkboxes__conditional" id="conditional-months-2">
+                            <div class="nhsuk-form-group">
+                              <label class="nhsuk-label" for="withhold-january">
+                                Amount to withhold
+                              </label>
+                              <div class="nhsuk-input__wrapper">
+                                <div class="nhsuk-input__prefix" aria-hidden="true">£</div>
+                                <input class="nhsuk-input nhsuk-input--width-5" id="withhold-january" name="withhold-january" type="text">
+                              </div>
+                            </div>
+                          </div>
+                  
+                          <div class="nhsuk-checkboxes__item">
+                            <input class="nhsuk-checkboxes__input" id="months-3" name="months" type="checkbox" value="february" aria-controls="conditional-months-3" data-checkbox-exclusive-group="months-list">
+                            <label class="nhsuk-label nhsuk-checkboxes__label" for="months-3">
+                              February
+                            </label>
+                          </div>
+        
+                          <div class="nhsuk-checkboxes__conditional" id="conditional-months-3">
+                            <div class="nhsuk-form-group">
+                              <label class="nhsuk-label" for="withhold-february">
+                                Amount to withhold
+                              </label>
+                              <div class="nhsuk-input__wrapper">
+                                <div class="nhsuk-input__prefix" aria-hidden="true">£</div>
+                                <input class="nhsuk-input nhsuk-input--width-5" id="withhold-february" name="withhold-february" type="text">
+                              </div>
+                            </div>
+                          </div>
+        
+                          <div class="nhsuk-checkboxes__item">
+                            <input class="nhsuk-checkboxes__input" id="months-4" name="months" type="checkbox" value="march" aria-controls="conditional-months-4" data-checkbox-exclusive-group="months-list">
+                            <label class="nhsuk-label nhsuk-checkboxes__label" for="months-4">
+                              March
+                            </label>
+                          </div>
+        
+                          <div class="nhsuk-checkboxes__conditional" id="conditional-months-4">
+                            <div class="nhsuk-form-group">
+                              <label class="nhsuk-label" for="withhold-march">
+                                Amount to withhold
+                              </label>
+                              <div class="nhsuk-input__wrapper">
+                                <div class="nhsuk-input__prefix" aria-hidden="true">£</div>
+                                <input class="nhsuk-input nhsuk-input--width-5" id="withhold-march" name="withhold-march" type="text">
+                              </div>
+                            </div>
+                          </div>
+        
+                        </div>
+                      </fieldset>'
+                  }
+                }
+              ]
+            }) }}
+          
+            <div style="margin-top: 24px;">
+              {{ button({
+                "text": "Save and submit",
+                "id": "btn_submit",
+                "href": "outcome-saved"
+              }) }}
+            </div>
+          </form>
+          
+    </div>
+  </div>
+  </div>
+{% endblock %}

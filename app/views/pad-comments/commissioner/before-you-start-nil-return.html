@@ -1,0 +1,36 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  {{ serviceName }}
+{% endblock %}
+
+{% block outerContent %}
+{{ backLink({
+  href: "/pad-comments/commissioner/nil-returns-action-plan",
+  text: "Go back"
+}) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+        <h1 class="nhsuk-heading-xl">
+            <span class="nhsuk-caption-xl">Mid-year action plan review</span>
+            Before you start
+          </h1>
+      
+      <p>To complete this review you will need:</p>
+      <ul>
+        <li>to know the main reasons why the contract is under-performing</li>
+        <li>actions taken to address their under-performance</li>
+        <li>to know of any non-recurrent in-year contract variations, contract sanctions, monies withheld or adjustments to the payment system that have been made</li>
+        <br>
+
+      <a href="meeting-date" class="nhsuk-button">
+        Continue
+      </a>
+
+    </div>
+
+  </div>
+{% endblock %}

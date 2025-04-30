@@ -1,0 +1,96 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  {{ serviceName }}
+{% endblock %}
+
+{% block outerContent %}
+{{ backLink({
+  href: "/pad-comments/commissioner/additional-comments",
+  text: "Go back"
+}) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+            <span class="nhsuk-caption-xl">Mid-year action plan review</span>
+        
+          <form action="/ap-additional-actions" method="post" class="form">
+            <fieldset class="nhsuk-fieldset" aria-describedby="months-hint">
+                    <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--xl">
+                        <h1 class="nhsuk-fieldset__heading">
+                            Which additional actions do you wish to take?
+                        </h1>
+                    </legend>
+                            <div class="nhsuk-checkboxes">
+                      
+                              <div class="nhsuk-checkboxes__item">
+                                <input class="nhsuk-checkboxes__input" id="months-dec" name="months" type="checkbox" value="dec" aria-controls="conditional-months-dec" aria-expanded="false" data-checkbox-exclusive-group="months-lists">
+                                <label class="nhsuk-label nhsuk-checkboxes__label" for="months-dec">
+                                    Early repayment scheme
+                                </label>
+                              </div>
+                      
+                              <div class="nhsuk-checkboxes__item">
+                                <input class="nhsuk-checkboxes__input" id="months-jan" name="months" type="checkbox" value="jan" aria-controls="conditional-months-jan" data-checkbox-exclusive-group="months-lists">
+                                <label class="nhsuk-label nhsuk-checkboxes__label" for="months-jan">
+                                  Non-reccurent
+                                </label>
+                              </div>
+                      
+                              <div class="nhsuk-checkboxes__item">
+                                <input class="nhsuk-checkboxes__input" id="months-feb" name="months" type="checkbox" value="feb" aria-controls="conditional-months-feb" data-checkbox-exclusive-group="months-lists">
+                                <label class="nhsuk-label nhsuk-checkboxes__label" for="months-feb">
+                                  Rebase
+                                </label>
+                              </div>
+            
+                              <div class="nhsuk-checkboxes__item">
+                                <input class="nhsuk-checkboxes__input" id="months-mar" name="months" type="checkbox" value="mar" aria-controls="conditional-months-mar" data-checkbox-exclusive-group="months-lists">
+                                <label class="nhsuk-label nhsuk-checkboxes__label" for="months-mar">
+                                  Withhold
+                                </label>
+                              </div>
+
+                              <div class="nhsuk-checkboxes__item">
+                                <input class="nhsuk-checkboxes__input" id="months-other" name="months" type="checkbox" value="other" aria-controls="conditional-months-other" data-checkbox-exclusive-group="months-lists">
+                                <label class="nhsuk-label nhsuk-checkboxes__label" for="months-other">
+                                  Other
+                                </label>
+                              </div>
+            
+                              <div class="nhsuk-checkboxes__conditional" id="conditional-months-other">
+                                <div class="nhsuk-form-group">
+                                  <div class="nhsuk-hint" id="example-with-hint-text-hint" for="withhold-other">
+                                    Describe the outcome
+                                  </div>
+                                  <input class="nhsuk-input" id="nr-outcome-other" name="nr-outcome-other" type="text">
+                                </div>
+                              </div>
+            
+            
+                              <div class="nhsuk-checkboxes__divider">or</div>
+                              <div class="nhsuk-checkboxes__item">
+                                <input class="nhsuk-checkboxes__input" id="months-5" name="months" type="checkbox" value="none" data-checkbox-exclusive data-checkbox-exclusive-group="months-lists">
+                                <label class="nhsuk-label nhsuk-checkboxes__label" for="months-5">
+                                    No further action and no mid year meeting required
+                                </label>
+                              </div>
+                            </div>
+                          </fieldset>
+              
+                <div style="margin-top: 24px;">
+                  {{ button({
+                    "text": "Continue",
+                    "id": "btn_submit"
+                  }) }}
+                </div>
+              </form>
+            
+    </div>
+  </div>
+
+{% endblock %}
+
+

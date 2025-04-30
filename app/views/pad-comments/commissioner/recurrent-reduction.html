@@ -1,0 +1,82 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  {{ serviceName }}
+{% endblock %}
+
+{% block outerContent %}
+{{ backLink({
+  href: "/pad-comments/commissioner/q-3-year-underperformance",
+  text: "Go back"
+}) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+            <h1 class="nhsuk-heading-xl">
+                <span class="nhsuk-caption-l">Mid-year action plan review</span>
+                Have you agreed a recurrent reduction to the annual contract value and associated delivery?
+              </h1>
+
+        <form action="/historical-underperformance-consequences" method="post" class="form">
+
+            {{ radios({
+              "idPrefix": "example",
+              "name": "underperformanceConsequences",
+              "items": [
+                {
+                  "value": "yes-recurrent-reduction",
+                  "text": "Yes"
+                },
+                {
+                  "value": "no-recurrent-reduction",
+                  "text": "No",
+                  "conditional": {
+                    "html": '<div class="nhsuk-form-group">
+
+                        <fieldset class="nhsuk-fieldset">
+                          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+                            <h1 class="nhsuk-fieldset__heading">
+                                Can you demonstrate a unilateral rebase?
+                            </h1>
+                          </legend>
+                          <div class="nhsuk-radios">
+                            <div class="nhsuk-radios__item">
+                              <input class="nhsuk-radios__input" id="example-1" name="example" type="radio" value="yes-unilateral-rebase">
+                              <label class="nhsuk-label nhsuk-radios__label" for="example-1">
+                                Yes
+                              </label>
+                            </div>
+                            <div class="nhsuk-radios__item">
+                              <input class="nhsuk-radios__input" id="example-2" name="example" type="radio" value="no-unilateral-rebase">
+                              <label class="nhsuk-label nhsuk-radios__label" for="example-2">
+                                No
+                              </label>
+                            </div>
+                          </div>
+                        </fieldset>
+                      </div>'
+                  }
+                }
+              ]
+            }) }}
+          
+            <div style="margin-top: 24px;">
+              {{ button({
+                "text": "Continue",
+                "id": "btn_submit"
+              }) }}
+            </div>
+          </form>
+
+            </fieldset>
+          </div>
+             
+      </div>
+  </div>
+</div>
+
+  
+{% endblock %}
+

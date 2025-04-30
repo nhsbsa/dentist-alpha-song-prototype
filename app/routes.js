@@ -169,16 +169,16 @@ router.post('/contract-amount', function (req, res) {
         break
     }
   })
-  router.post('/nil-return-remedial-notice', function (req, res) {
+  router.post('/commissioner-remedial-notice', function (req, res) {
 
     var nilReturnRemedialNotice = req.session.data.nilReturnRemedialNotice
 
     if (nilReturnRemedialNotice == "Yes" ){
 
-      res.redirect('/pad-comments/commissioner-view/nil-returns/remedial-notice-sent')
+      res.redirect('/pad-comments/commissioner/remedial-notice-sent')
     } else {
 
-      res.redirect('/pad-comments/commissioner-view/nil-returns/is-contract-deliverable')
+      res.redirect('/pad-comments/commissioner/underperformance-reasons')
     }
   })
   router.post('/nil-return-outcome', function (req, res) {
@@ -217,6 +217,59 @@ router.post('/contract-amount', function (req, res) {
       res.redirect('/pad-comments/commissioner-view/nil-returns/all-adjustments')
     }
   })
+  router.post('/commissioner-mid-year-ap-meeting', function (req, res) {
+    const midYearAPMeeting = req.session.data.confirm
+  
+    switch (midYearAPMeeting) {
+      case "yes":
+        res.redirect('/pad-comments/commissioner/3-year-underperformance')
+        break
+      case "not-met":
+        res.redirect('/pad-comments/commissioner/underperformance-reasons')
+        break
+      case "no-response":
+        res.redirect('/pad-comments/commissioner/remedial-notice')
+        break
+    }
+  })
+  router.post('/historical-underperformance-consequences', function (req, res) {
+    const mainAnswer = req.body.underperformanceConsequences;
+    const subAnswer = req.body.example;
+  
+    if (mainAnswer === 'yes-recurrent-reduction') {
+      return res.redirect('/pad-comments/commissioner/underperformance-reasons');
+    }
+  
+    if (mainAnswer === 'no-recurrent-reduction') {
+      if (subAnswer === 'yes-unilateral-rebase') {
+        return res.redirect('/pad-comments/commissioner/underperformance-reasons');
+      } else if (subAnswer === 'no-unilateral-rebase') {
+        return res.redirect('/pad-comments/commissioner/unilateral-rebase');
+      }
+    }
+  
+  });
+  router.post('/is-there-historical-underperformance', function (req, res) {
+    const answer = req.body.historicalUnderperformance;
+  
+    if (answer === 'yes-3-year-failure') {
+      return res.redirect('/pad-comments/commissioner/recurrent-reduction');
+    } else if (answer === 'no-3-year-failure') {
+      return res.redirect('/pad-comments/commissioner/underperformance-reasons');
+    }
+  });
+  router.post('/ap-additional-actions', function (req, res) {
+    const selectedOptions = req.body.months;
+  
+    const selections = Array.isArray(selectedOptions) ? selectedOptions : [selectedOptions];
+  
+    if (selections.includes('mar')) {
+      res.redirect('/pad-comments/commissioner/withhold');
+    } else {
+      res.redirect('/pad-comments/commissioner/outcome-saved');
+    }
+  });
+  
 // Add your routes here - above the module.exports line
 
 module.exports = router;
