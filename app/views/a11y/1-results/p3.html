@@ -19,7 +19,7 @@ Reports
 
 <div class="nhsuk-back-link">
 
-  <a class="nhsuk-back-link__link" href="contents">
+  <a class="nhsuk-back-link__link" href="../contents">
       <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
         <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
       </svg>
@@ -32,9 +32,6 @@ Reports
         View published reports
       </h1>
 
-
-      
-
       <ul class="nhsuk-grid-row nhsuk-card-group" >
 
         <li class="nhsuk-grid-column-one-third nhsuk-card-group__item" style="padding: 0px 0px 0px 16px;">
@@ -43,22 +40,9 @@ Reports
             <div class="nhsuk-card__content nhsuk-card__content--primary" style="padding: 0px 0px 0px 0px;">
               <h2 class="nhsuk-heading-s" style="background-color: #d8dde0; padding: 16px 16px 16px 16px; margin: 0px 0px 0px 0px;">Filter reports</h2>
 
-              <div id="selected-filters" class="nhsuk-width-container-fluid" style="background-color:#f0f4f5; padding: 16px 16px 16px 16px; margin: 0px 0px 8px 0px;">
-                <h2 class="nhsuk-heading-xs" style="margin: 0px 0px 0px 0px;" >Selected filters</h2>
-                <button id="provider-chip" type="submit" style="box-shadow: none; font-family: Frutiger; border-color: 	#4c6272; border-width: 1px; margin: 8px 0px 0px 0px;" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-                  Contract: 0077421903&nbsp;&#9587;
-                </button>
-                <button id="provider-chip" type="submit" style="box-shadow: none; font-family: Frutiger; border-color: 	#4c6272; border-width: 1px; margin: 8px 0px 0px 0px;" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-                  Provider: 123456&nbsp;&#9587;
-                </button>
-                <br>
-                <a href="#" class="nhsuk-body-s" style="margin: 16px 0px 0px 0px;">Clear all filters</a>
-              </div>
-              
-
               <details class="nhsuk-details nhsuk-expander" style="border:none; padding: 0px 0px 0px 16px; margin: 0px;">
                 <summary class="nhsuk-details__summary nhsuk-u-padding-left-0" style="padding: 0px 0px 16px 0px;">
-                  <div class="nhsuk-custom-search-filter-text" style="padding: 0px; margin: 0px;">
+                  <div class="nhsuk-custom-search-filter-text" style="padding: 8px 0px 0px 0px; margin: 0px;">
                     <span class="nhsuk-details__summary-text">
                       Contract
                     </span>
@@ -157,11 +141,13 @@ Reports
                     </span>
                   </div>
                 </summary>
-                <div class="nhsuk-details__text nhsuk-u-padding-left-0">
+                <div class="nhsuk-details__text nhsuk-u-padding-left-0" style="display: block;" aria-hidden="false">
                   <div class="nhsuk-form-group">
     
                     <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
                       <div class="nhsuk-label" id="example-hint">From</div>
+
+          
                   
                       <div class="nhsuk-date-input" id="example">
                         <div class="nhsuk-date-input__item">
@@ -185,7 +171,6 @@ Reports
     
                     <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
                       <div class="nhsuk-label" id="example-hint">To</div>
-                  
                       <div class="nhsuk-date-input" id="example">
                         <div class="nhsuk-date-input__item">
                           <div class="nhsuk-form-group">
@@ -248,7 +233,7 @@ Reports
       
           <div class="nhsuk-card nhsuk-card--clickable" style="border: none;">
             <div class="nhsuk-card__content nhsuk-card__content--primary" style="padding: 16px 0px 0px 16px; background-color: 	#f0f4f5;">
-              <h3 class="nhsuk-heading-xs" style="margin: 12px 0px 0px 0px; position: absolute; left: 16px;">89 reports</h3>
+              <h3 class="nhsuk-heading-xs" style="margin: 12px 0px 0px 0px; position: absolute; left: 16px;">4 reports</h3>
               <p class="nhsuk-body" style="margin: 12px 0px 0px 0px; position: absolute; right: 64px;">Select all</h3>
               <div class="govuk-checkboxes govuk-checkboxes--small" style="margin: 0px 0px 8px 0px; position: absolute; right: 0;" data-module="govuk-checkboxes">
                 <div class="govuk-checkboxes__item">
@@ -258,114 +243,6 @@ Reports
               </div>
 
               <hr style="margin: 48px 0px 8px 0px;">
-              
-              <div class="nhsuk-grid-row">
-                <div class="nhsuk-grid-column-three-quarters">
-                  <a href="view-report" class="nhsuk-heading-s" style="margin: 8px 0px 8px 0px;">Year End Review for Provider 2024-2025</a>
-                </div>
-                <div class="nhsuk-grid-column-one-quarter">
-                  <div class="govuk-checkboxes govuk-checkboxes--small" style="margin: 0px 0px 8px 0px; position: absolute; right: 0;" data-module="govuk-checkboxes">
-                    <div class="govuk-checkboxes__item">
-                      <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
-                      <label class="govuk-label govuk-checkboxes__label" for="organisation"></label>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <p class="nhsuk-body" style="margin: 0px 0px 8px 0px;">Contract: 0077421903&nbsp;&nbsp;&nbsp;&nbsp;Provider: West Dental Practice (123456)</p>
-              <span class="nhsuk-caption-m" style="margin: 16px 0px 8px 0px;">Reporting period: 1 Apr 2024 to 31 Mar 2025</span>
-              
-              <hr style="margin: 0px 0px 8px 0px;">
-
-              <div class="nhsuk-grid-row">
-                <div class="nhsuk-grid-column-three-quarters">
-                  <a href="#" class="nhsuk-heading-s" style="margin: 8px 0px 8px 0px;">Year End Review for Provider 2024-2025</a>
-                </div>
-                <div class="nhsuk-grid-column-one-quarter">
-                  <div class="govuk-checkboxes govuk-checkboxes--small" style="margin: 0px 0px 8px 0px; position: absolute; right: 0;" data-module="govuk-checkboxes">
-                    <div class="govuk-checkboxes__item">
-                      <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
-                      <label class="govuk-label govuk-checkboxes__label" for="organisation"></label>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <p class="nhsuk-body" style="margin: 0px 0px 8px 0px;">Contract: 0044567811&nbsp;&nbsp;&nbsp;&nbsp;Provider: East Dental Practice (336789)</p>
-              <span class="nhsuk-caption-m" style="margin: 16px 0px 8px 0px;">Reporting period: 1 Apr 2024 to 31 Mar 2025</span>
-              
-              <hr style="margin: 0px 0px 8px 0px;">
-
-              <div class="nhsuk-grid-row">
-                <div class="nhsuk-grid-column-three-quarters">
-                  <a href="#" class="nhsuk-heading-s" style="margin: 8px 0px 8px 0px;">Year End Review for Provider 2024-2025</a>
-                </div>
-                <div class="nhsuk-grid-column-one-quarter">
-                  <div class="govuk-checkboxes govuk-checkboxes--small" style="margin: 0px 0px 8px 0px; position: absolute; right: 0;" data-module="govuk-checkboxes">
-                    <div class="govuk-checkboxes__item">
-                      <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
-                      <label class="govuk-label govuk-checkboxes__label" for="organisation"></label>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <p class="nhsuk-body" style="margin: 0px 0px 8px 0px;">Contract: 0033379903&nbsp;&nbsp;&nbsp;&nbsp;Provider: South Dental Practice (654321)</p>
-              <span class="nhsuk-caption-m" style="margin: 16px 0px 8px 0px;">Reporting period: 1 Apr 2024 to 31 Mar 2025</span>
-              
-              <hr style="margin: 0px 0px 8px 0px;">
-
-              <div class="nhsuk-grid-row">
-                <div class="nhsuk-grid-column-three-quarters">
-                  <a href="#" class="nhsuk-heading-s" style="margin: 8px 0px 8px 0px;">Dental Assurance Framework General Provider Report Q4 2024-2025</a>
-                </div>
-                <div class="nhsuk-grid-column-one-quarter">
-                  <div class="govuk-checkboxes govuk-checkboxes--small" style="margin: 0px 0px 8px 0px; position: absolute; right: 0;" data-module="govuk-checkboxes">
-                    <div class="govuk-checkboxes__item">
-                      <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
-                      <label class="govuk-label govuk-checkboxes__label" for="organisation"></label>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <p class="nhsuk-body" style="margin: 0px 0px 8px 0px;">Contract: 0077421903&nbsp;&nbsp;&nbsp;&nbsp;Provider: West Dental Practice (123456)</p>
-              <span class="nhsuk-caption-m" style="margin: 16px 0px 8px 0px;">Reporting period: 1 Jan 2025 to 31 Mar 2025</span>
-              
-              <hr style="margin: 0px 0px 8px 0px;">
-
-              <div class="nhsuk-grid-row">
-                <div class="nhsuk-grid-column-three-quarters">
-                  <a href="#" class="nhsuk-heading-s" style="margin: 8px 0px 8px 0px;">Activity actuals</a>
-                </div>
-                <div class="nhsuk-grid-column-one-quarter">
-                  <div class="govuk-checkboxes govuk-checkboxes--small" style="margin: 0px 0px 8px 0px; position: absolute; right: 0;" data-module="govuk-checkboxes">
-                    <div class="govuk-checkboxes__item">
-                      <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
-                      <label class="govuk-label govuk-checkboxes__label" for="organisation"></label>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <p class="nhsuk-body" style="margin: 0px 0px 8px 0px;">Contract: 0077421903&nbsp;&nbsp;&nbsp;&nbsp;Provider: West Dental Practice (123456)</p>
-              <span class="nhsuk-caption-m" style="margin: 16px 0px 8px 0px;">Updated: 17 Mar 2025</span>
-              
-              <hr style="margin: 0px 0px 8px 0px;">
-
-              <div class="nhsuk-grid-row">
-                <div class="nhsuk-grid-column-three-quarters">
-                  <a href="#" class="nhsuk-heading-s" style="margin: 8px 0px 8px 0px;">Activity actuals</a>
-                </div>
-                <div class="nhsuk-grid-column-one-quarter">
-                  <div class="govuk-checkboxes govuk-checkboxes--small" style="margin: 0px 0px 8px 0px; position: absolute; right: 0;" data-module="govuk-checkboxes">
-                    <div class="govuk-checkboxes__item">
-                      <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
-                      <label class="govuk-label govuk-checkboxes__label" for="organisation"></label>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <p class="nhsuk-body" style="margin: 0px 0px 8px 0px;">Contract: 0044567811&nbsp;&nbsp;&nbsp;&nbsp;Provider: East Dental Practice (336789)</p>
-              <span class="nhsuk-caption-m" style="margin: 16px 0px 8px 0px;">Updated: 18 Mar 2025</span>
-              
-              <hr style="margin: 0px 0px 8px 0px;">
 
               <div class="nhsuk-grid-row">
                 <div class="nhsuk-grid-column-three-quarters">
@@ -438,40 +315,6 @@ Reports
               <span class="nhsuk-caption-m" style="margin: 16px 0px 8px 0px;">Reporting period: 1 Jul 2025 to 30 Sept 2025</span>
               
               <hr style="margin: 0px 0px 8px 0px;">
-
-              <nav class="govuk-pagination" style="font-family: Frutiger;" aria-label="Pagination">
-        
-                <ul class="govuk-pagination__list">
-                  <li class="govuk-pagination__item govuk-pagination__item--current">
-                    <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 7" aria-current="page">
-                      1
-                    </a>
-                  </li>
-                  <li class="govuk-pagination__item">
-                    <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 8">
-                      2
-                    </a>
-                  </li>
-                  <li class="govuk-pagination__item govuk-pagination__item--ellipses">
-                    &ctdot;
-                  </li>
-                  <li class="govuk-pagination__item">
-                    <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 42">
-                      42
-                    </a>
-                  </li>
-                </ul>
-                <div class="govuk-pagination__next">
-                  <a class="govuk-link govuk-pagination__link" href="#" rel="next">
-                    <span class="govuk-pagination__link-title">
-                      Next<span class="govuk-visually-hidden"> page</span>
-                    </span>
-                    <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
-                      <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
-                    </svg>
-                  </a>
-                </div>
-              </nav>
 
               <button class="nhsuk-button nhsuk-button--secondary" style="padding: 8px 16px 8px 16px; position: absolute; right: 0;" data-module="nhsuk-button" type="submit">
                 Download reports

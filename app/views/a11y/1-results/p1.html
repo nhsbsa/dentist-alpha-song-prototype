@@ -19,7 +19,7 @@ Reports
 
 <div class="nhsuk-back-link">
 
-  <a class="nhsuk-back-link__link" href="contents">
+  <a class="nhsuk-back-link__link" href="../contents">
       <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
         <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
       </svg>
@@ -42,23 +42,11 @@ Reports
           <div class="nhsuk-card nhsuk-card--clickable">
             <div class="nhsuk-card__content nhsuk-card__content--primary" style="padding: 0px 0px 0px 0px;">
               <h2 class="nhsuk-heading-s" style="background-color: #d8dde0; padding: 16px 16px 16px 16px; margin: 0px 0px 0px 0px;">Filter reports</h2>
-
-              <div id="selected-filters" class="nhsuk-width-container-fluid" style="background-color:#f0f4f5; padding: 16px 16px 16px 16px; margin: 0px 0px 8px 0px;">
-                <h2 class="nhsuk-heading-xs" style="margin: 0px 0px 0px 0px;" >Selected filters</h2>
-                <button id="provider-chip" type="submit" style="box-shadow: none; font-family: Frutiger; border-color: 	#4c6272; border-width: 1px; margin: 8px 0px 0px 0px;" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-                  Contract: 0077421903&nbsp;&#9587;
-                </button>
-                <button id="provider-chip" type="submit" style="box-shadow: none; font-family: Frutiger; border-color: 	#4c6272; border-width: 1px; margin: 8px 0px 0px 0px;" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-                  Provider: 123456&nbsp;&#9587;
-                </button>
-                <br>
-                <a href="#" class="nhsuk-body-s" style="margin: 16px 0px 0px 0px;">Clear all filters</a>
-              </div>
               
 
               <details class="nhsuk-details nhsuk-expander" style="border:none; padding: 0px 0px 0px 16px; margin: 0px;">
                 <summary class="nhsuk-details__summary nhsuk-u-padding-left-0" style="padding: 0px 0px 16px 0px;">
-                  <div class="nhsuk-custom-search-filter-text" style="padding: 0px; margin: 0px;">
+                  <div class="nhsuk-custom-search-filter-text" style="padding: 8px 0px 0px 0px; margin: 0px;">
                     <span class="nhsuk-details__summary-text">
                       Contract
                     </span>
@@ -237,9 +225,12 @@ Reports
 
               <hr style="margin: 0px 0px 0px 0px;">
 
-              <button id="happly-filter-button" class="nhsuk-button" data-module="nhsuk-button" type="submit" style="padding: 8px 16px 8px 16px; margin: 16px 16px 16px 16px;">
-                Apply filters
-              </button>
+              <div class="nhsuk-button-group">
+                <a href="p2" class="nhsuk-button nhsuk-u-margin-bottom-0" data-module="nhsuk-button" type="submit" style="padding: 8px 16px 8px 16px; margin: 16px 16px 16px 16px;">
+                  Apply filters
+                </a>
+              </div>
+
             </div>    
           </div>
       
