@@ -1,7 +1,10 @@
+// Import GOV.UK and MoJ frontend library
+@use "node_modules/govuk-frontend/dist/govuk";
+@forward "node_modules/@ministryofjustice/frontend/moj/all";
+
 // Import NHS.UK frontend library
 @import "node_modules/nhsuk-frontend/packages/nhsuk";
-// Import GOV.UK frontend library
-@import "node_modules/govuk-frontend/dist/govuk";
+
 // Components that are not in the NHS.UK frontend library
 @import "components/list-border";
 @import "components/related-nav";
