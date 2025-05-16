@@ -33,16 +33,23 @@
       <div class="nhsuk-form-group">
         <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
           <h1 class="nhsuk-fieldset__heading" for="provider-id">
-            What is the Provider’s ID?
+            <span class="nhsuk-caption-l">General contract details</span>
+            Who's the Provider?
           </h1>
         </legend>
+        <br>
+        <div class="nhsuk-hint" id="contact-hint">
+          Start typing a name or Provider ID to find the Provider
+        </div>
         <input class="nhsuk-input" id="provider-id" name="provider-id" type="text" oninput="filterInputFunction(value)">
         <div id="filter-input" class="nhsuk-filter-input-box" style="display: none;">
           <a id="filter-input-row-1" class="nhsuk-link nhsuk-link--no-visited-state nhsuk-filter-input-link">123456789, Tom Holland</a>
           <a id="filter-input-row-2" class="nhsuk-link nhsuk-link--no-visited-state nhsuk-filter-input-link">123456784, Ella Purnell</a>
         </div>
       </div>
-      <details id="provider-detail" class="nhsuk-details">
+
+    
+      <!--<details id="provider-detail" class="nhsuk-details">
         <summary class="nhsuk-details__summary">
           <span class="nhsuk-details__summary-text">
             I don’t know the Provider's ID
@@ -105,13 +112,23 @@
           <br />
           <a href="#" class="nhsuk-link nhsuk-link--no-visited-state">Create a new provider (opens in a new tab)</a>
         </div>
-      </details>
+      </details>-->
 
       <div id="search-results" style="display: none;">
         <dl class="nhsuk-summary-list">
+          <h3 class="nhsuk-heading-s">Selected provider</h3>
           <div class="nhsuk-summary-list__row">
             <dt class="nhsuk-summary-list__key">
-              Primary contact name
+              Provider ID
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+              120345
+            </dd>
+          </div>
+          
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+              Name
             </dt>
             <dd class="nhsuk-summary-list__value">
               Tom Holland
@@ -120,19 +137,23 @@
         
           <div class="nhsuk-summary-list__row">
             <dt class="nhsuk-summary-list__key">
-              Primary contract number
+              Contact details
             </dt>
             <dd class="nhsuk-summary-list__value">
-              +44986576233
+              +44986576233 <br>
+              tomholland@example.com
             </dd>
           </div>
         
           <div class="nhsuk-summary-list__row">
             <dt class="nhsuk-summary-list__key">
-              Primary contact email
+              Business address
             </dt>
             <dd class="nhsuk-summary-list__value">
-              johndoe@abc.com
+              453 Ringwood Rd <br>
+              Poole <br>
+              Dorset <br>
+              BH12 4LX
             </dd>
           </div>
         </dl>
@@ -140,9 +161,21 @@
 
       <div id="search-results-2" style="display: none;">
         <dl class="nhsuk-summary-list">
+
+          <h3 class="nhsuk-heading-s">Selected provider</h3>
+
           <div class="nhsuk-summary-list__row">
             <dt class="nhsuk-summary-list__key">
-              Primary contact name
+              Provider ID
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+              120345
+            </dd>
+          </div>
+
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+              Name
             </dt>
             <dd class="nhsuk-summary-list__value">
               Ella Purnell
@@ -151,32 +184,36 @@
         
           <div class="nhsuk-summary-list__row">
             <dt class="nhsuk-summary-list__key">
-              Primary contract number
+              Contact details
             </dt>
             <dd class="nhsuk-summary-list__value">
-              +44986576233
+              +44986576233 <br>
+              ellapurnell@example.com
             </dd>
           </div>
         
           <div class="nhsuk-summary-list__row">
             <dt class="nhsuk-summary-list__key">
-              Primary contact email
+              Business address
             </dt>
             <dd class="nhsuk-summary-list__value">
-              johndoe@abc.com
+              453 Ringwood Rd <br>
+              Poole <br>
+              Dorset <br>
+              BH12 4LX
             </dd>
           </div>
         </dl>
       </div>
 
+      <a href="#" class="nhsuk-link nhsuk-link--no-visited-state">I want to create a new provider ID (opens in a new tab)</a>
+
+
       <div class="nhsuk-button-group nhsuk-u-margin-top-6">
-        <a id="provider-next" href="/3-contract-management/contract-create/v1/general/new-contract" class="nhsuk-button nhsuk-u-margin-bottom-0" data-module="nhsuk-button" type="submit" disabled>
-          Next
+        <a id="provider-next" href="/3-contract-management/contract-create/v1/general/new-contract-1" class="nhsuk-button nhsuk-u-margin-bottom-0" data-module="nhsuk-button" type="submit">
+          Continue
         </a>
-        <a href="/3-contract-management/contract-create/v1/start-create-contract" class="nhsuk-button nhsuk-button--secondary nhsuk-u-margin-bottom-0" data-module="nhsuk-button" type="submit">
-          Save and exit
-        </a>
-        <a href="/3-contract-management/contract-create/v1/start-create-contract" class="nhsuk-link nhsuk-link--no-visited-state">Cancel</a>
+        <a href="/3-contract-management/contract-create/v1/start-create-contract" class="nhsuk-link nhsuk-link--no-visited-state">Cancel entry</a>
       </div>
 
     </div>
