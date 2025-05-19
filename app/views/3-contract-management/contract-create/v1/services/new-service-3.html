@@ -36,183 +36,48 @@
       </div>
       <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
         <h1 class="nhsuk-fieldset__heading" for="provider-id">
-          <span class="nhsuk-caption-l">Service lines</span>
-          When does the service line start?
+          <span class="nhsuk-caption-l">Add a service line</span>
+          What is the annual value?
         </h1>
       </legend>
-      
-
-      <div id="q2" class="nhsuk-form-group" >
-        <label class="nhsuk-fieldset__legend nhsuk-label--l">
-          <h2 class="nhsuk-fieldset__heading">
-            Select the service line name
-          </h2>
-        </label>
-        <select class="nhsuk-select" id="service-select" name="service-select">
-          <option value="1" selected>Select</option>
-          <option value="2">£50m National Investment</option>
-          <option value="3">Access - in hours</option>
-        </select>
-      </div>
-
-      <div id="q3" class="nhsuk-form-group" >
-        <fieldset class="nhsuk-fieldset">
-          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
-            <h2 class="nhsuk-fieldset__heading">
-              Is this a recurring service line?
-            </h2>
-          </legend>
-      
-          <div class="nhsuk-radios">
-            <div class="nhsuk-radios__item">
-              <input class="nhsuk-radios__input" id="recurring-1" name="recurring" type="radio" value="yes">
-              <label class="nhsuk-label nhsuk-radios__label" for="recurring-1">
-                Yes
-              </label>
-            </div>
-      
-            <div class="nhsuk-radios__item">
-              <input class="nhsuk-radios__input" id="recurring-2" name="recurring" type="radio" value="no">
-              <label class="nhsuk-label nhsuk-radios__label" for="recurring-2">
-                No
-              </label>
-            </div>
-          </div>
-        </fieldset>
-      </div>
-
-      <div id="q4" class="nhsuk-form-group" >
-        <fieldset class="nhsuk-fieldset" role="group">
-          <legend class="nhsuk-fieldset__legend nhsuk-label--l">
-            <h2 class="nhsuk-fieldset__heading">
-              What is the service line’s start date?
-            </h2>
-          </legend>
-      
-          <div class="nhsuk-date-input" id="start-date">
-            <div class="nhsuk-date-input__item">
-              <div class="nhsuk-form-group">
-                <label class="nhsuk-label nhsuk-date-input__label" for="start-date-day">
-                  Day
-                </label>
-                <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="start-date-day" name="start-date-day" type="text" pattern="[0-9]*" inputmode="numeric">
-              </div>
-            </div>
-            <div class="nhsuk-date-input__item">
-              <div class="nhsuk-form-group">
-                <label class="nhsuk-label nhsuk-date-input__label" for="start-date-month">
-                  Month
-                </label>
-                <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="start-date-month" name="start-date-month" type="text" pattern="[0-9]*" inputmode="numeric">
-              </div>
-            </div>
-            <div class="nhsuk-date-input__item">
-              <div class="nhsuk-form-group">
-                <label class="nhsuk-label nhsuk-date-input__label" for="start-date-year">
-                  Year
-                </label>
-                <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="start-date-year" name="start-date-year" type="text" pattern="[0-9]*" inputmode="numeric">
-              </div>
-            </div>
-          </div>
-        </fieldset>
-      </div>
-
-      <div id="q5" class="nhsuk-form-group" >
-        <fieldset class="nhsuk-fieldset" role="group">
-          <legend class="nhsuk-fieldset__legend nhsuk-label--l">
-            <h2 class="nhsuk-fieldset__heading">
-              What is the service line’s end date?
-            </h2>
-          </legend>
-      
-          <div class="nhsuk-date-input" id="end-date">
-            <div class="nhsuk-date-input__item">
-              <div class="nhsuk-form-group">
-                <label class="nhsuk-label nhsuk-date-input__label" for="end-date-day">
-                  Day
-                </label>
-                <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="end-date-day" name="end-date-day" type="text" pattern="[0-9]*" inputmode="numeric">
-              </div>
-            </div>
-            <div class="nhsuk-date-input__item">
-              <div class="nhsuk-form-group">
-                <label class="nhsuk-label nhsuk-date-input__label" for="end-date-month">
-                  Month
-                </label>
-                <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="end-date-month" name="end-date-month" type="text" pattern="[0-9]*" inputmode="numeric">
-              </div>
-            </div>
-            <div class="nhsuk-date-input__item">
-              <div class="nhsuk-form-group">
-                <label class="nhsuk-label nhsuk-date-input__label" for="end-date-year">
-                  Year
-                </label>
-                <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="end-date-year" name="end-date-year" type="text" pattern="[0-9]*" inputmode="numeric">
-              </div>
-            </div>
-          </div>
-        </fieldset>
-      </div>
-
+      <br>
       <div id="q6" class="nhsuk-form-group" >
-        <label class="nhsuk-label nhsuk-label--l" for="annual-value">
-          What is the annual value of this service line?
-        </label>
+
         <div class="nhsuk-input__wrapper">
           <div class="nhsuk-input__prefix" aria-hidden="true">£</div>
           <input class="nhsuk-input nhsuk-input--width-5" id="annual-value" name="annual-value" type="text">
         </div>
       </div>
-
-      <div id="q7" class="nhsuk-form-group">
-        <fieldset class="nhsuk-fieldset">
-          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
-            <h2 class="nhsuk-fieldset__heading">
-              How will activity be measured for this service line?
-            </h2>
-          </legend>
-      
-          <div class="nhsuk-radios">
-            <div class="nhsuk-radios__item">
-              <input class="nhsuk-radios__input" id="activity-measured-1" name="activity-measured" type="radio" value="uda">
-              <label class="nhsuk-label nhsuk-radios__label" for="activity-measured-1">
-                UDA
-              </label>
-            </div>
-      
-            <div class="nhsuk-radios__item">
-              <input class="nhsuk-radios__input" id="activity-measured-2" name="activity-measured" type="radio" value="Option 2">
-              <label class="nhsuk-label nhsuk-radios__label" for="activity-measured-2">
-                Option 2
-              </label>
-            </div>
-
-            <div class="nhsuk-radios__item">
-              <input class="nhsuk-radios__input" id="activity-measured-3" name="activity-measured" type="radio" value="Option 3">
-              <label class="nhsuk-label nhsuk-radios__label" for="activity-measured-3">
-                Option 3
-              </label>
-            </div>
-          </div>
-        </fieldset>
-      </div>
+      <br>
 
       <div id="q8" class="nhsuk-form-group">
-        <label class="nhsuk-label nhsuk-label--l" for="contracted-activity">
-          What is the contracted activity for this service line?
+        <label class="nhsuk-label nhsuk-label--m" for="contracted-activity">
+          What is the contracted activity?
         </label>
         <div class="nhsuk-input__wrapper">
           <input class="nhsuk-input nhsuk-input--width-5" id="contracted-activity" name="contracted-activity" type="text">
           <div class="nhsuk-input__suffix" aria-hidden="true">UDAs</div>
         </div>
       </div>
+      <br>
+
+      <div id="q11" class="nhsuk-form-group" >
+        <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+          <h2 class="nhsuk-fieldset__heading">
+            Are there any details about the service line? (Optional)
+          </h2>
+        </legend>
+        <textarea class="nhsuk-textarea" id="example" name="example" rows="5" aria-describedby="example-hint"></textarea>
+        <div class="nhsuk-hint" id="contact-hint">
+          You have 100 characters remaining
+        </div>
+      </div>
 
       <div class="nhsuk-button-group nhsuk-u-margin-top-6">
-        <a id="service-next" href="/3-contract-management/contract-create/v1/services/new-service-2" class="nhsuk-button nhsuk-u-margin-bottom-0" data-module="nhsuk-button" type="submit">
+        <a id="contract-submit" href="/3-contract-management/contract-create/v1/services/check-answers" class="nhsuk-button nhsuk-u-margin-bottom-0" data-module="nhsuk-button" type="submit">
           Continue
         </a>
-        <a id="service-next" href="/3-contract-management/contract-create/v1/services/new-service-2" class="nhsuk-button--secondary nhsuk-u-margin-bottom-0" data-module="nhsuk-button" type="submit">
+        <a href="/3-contract-management/contract-create/v1/start-create-contract" class="nhsuk-button nhsuk-button--secondary nhsuk-u-margin-bottom-0" data-module="nhsuk-button" type="submit">
           Save and exit
         </a>
         <a href="/3-contract-management/contract-create/v1/start-create-contract" class="nhsuk-link nhsuk-link--no-visited-state">Cancel entry</a>

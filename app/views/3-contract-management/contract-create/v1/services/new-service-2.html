@@ -36,7 +36,7 @@
       </div>
       <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
         <h1 class="nhsuk-fieldset__heading" for="provider-id">
-          <span class="nhsuk-caption-l">Service lines</span>
+          <span class="nhsuk-caption-l">Add a service line</span>
           When does the service line start?
         </h1>
       </legend>
@@ -78,49 +78,62 @@
       </div>
 
       <br>
-      <div id="q5" class="nhsuk-form-group" >
-        <fieldset class="nhsuk-fieldset" role="group">
+      <div id="q1" class="nhsuk-form-group">
+        <fieldset class="nhsuk-fieldset">
           <legend class="nhsuk-fieldset__legend nhsuk-label--m">
             <h2 class="nhsuk-fieldset__heading">
-              When does the service line end? (Optional)
+              Is the end date different to the contract end date?
             </h2>
           </legend>
-          <div class="nhsuk-hint" id="contact-hint">
-            This has been pre-populated from the contract end date
-          </div>
-      
-          <div class="nhsuk-date-input" id="end-date">
-            <div class="nhsuk-date-input__item">
-              <div class="nhsuk-form-group">
-                <label class="nhsuk-label nhsuk-date-input__label" for="end-date-day">
-                  Day
-                </label>
-                <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="end-date-day" name="end-date-day" type="text" pattern="[0-9]*" inputmode="numeric" value="21">
+          <div class="nhsuk-radios">
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="service-name-5" name="service-name" type="radio" value="other">
+              <label class="nhsuk-label nhsuk-radios__label" for="service-name-5">
+                Yes
+              </label>
+            </div>
+            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
+              <div class="nhsuk-hint" id="contact-hint">
+                For example, 14 6 2028
+              </div>
+              <div class="nhsuk-date-input" id="end-date">
+                <div class="nhsuk-date-input__item">
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label nhsuk-date-input__label" for="end-date-day">
+                      Day
+                    </label>
+                    <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="end-date-day" name="end-date-day" type="text" pattern="[0-9]*" inputmode="numeric" value="21">
+                  </div>
+                </div>
+                <div class="nhsuk-date-input__item">
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label nhsuk-date-input__label" for="end-date-month">
+                      Month
+                    </label>
+                    <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="end-date-month" name="end-date-month" type="text" pattern="[0-9]*" inputmode="numeric" value="3">
+                  </div>
+                </div>
+                <div class="nhsuk-date-input__item">
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label nhsuk-date-input__label" for="end-date-year">
+                      Year
+                    </label>
+                    <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="end-date-year" name="end-date-year" type="text" pattern="[0-9]*" inputmode="numeric" value="2026">
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="nhsuk-date-input__item">
-              <div class="nhsuk-form-group">
-                <label class="nhsuk-label nhsuk-date-input__label" for="end-date-month">
-                  Month
-                </label>
-                <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="end-date-month" name="end-date-month" type="text" pattern="[0-9]*" inputmode="numeric" value="3">
-              </div>
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="service-name-1" name="service-name" type="radio" value="high street dental practice">
+              <label class="nhsuk-label nhsuk-radios__label" for="service-name-1">
+                No
+              </label>
             </div>
-            <div class="nhsuk-date-input__item">
-              <div class="nhsuk-form-group">
-                <label class="nhsuk-label nhsuk-date-input__label" for="end-date-year">
-                  Year
-                </label>
-                <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="end-date-year" name="end-date-year" type="text" pattern="[0-9]*" inputmode="numeric" value="2026">
-              </div>
-            </div>
+
           </div>
         </fieldset>
       </div>
 
-      
-
-      
 
       <div class="nhsuk-button-group nhsuk-u-margin-top-6">
         <a id="service-next" href="/3-contract-management/contract-create/v1/services/new-service-3" class="nhsuk-button nhsuk-u-margin-bottom-0" data-module="nhsuk-button" type="submit">

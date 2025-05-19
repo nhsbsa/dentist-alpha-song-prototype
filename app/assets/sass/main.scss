@@ -2,6 +2,7 @@
 @import "node_modules/nhsuk-frontend/packages/nhsuk";
 // Import GOV.UK frontend library
 @import "node_modules/govuk-frontend/dist/govuk";
+@import "node_modules/moj-frontend/all";
 // Components that are not in the NHS.UK frontend library
 @import "components/list-border";
 @import "components/related-nav";

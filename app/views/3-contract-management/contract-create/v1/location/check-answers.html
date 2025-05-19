@@ -36,92 +36,59 @@
       </div>
       <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
         <h1 class="nhsuk-fieldset__heading" for="provider-id">
-          <span class="nhsuk-caption-l">Add a service line</span>
-          What is the service line?
+          <span class="nhsuk-caption-l">Add a treatment location</span>
+          Check your answers before saving the treatment location
         </h1>
       </legend>
-      <div id="q1" class="nhsuk-form-group">
-        <fieldset class="nhsuk-fieldset">
-          <div class="nhsuk-radios">
-            <div class="nhsuk-radios__item">
-              <input class="nhsuk-radios__input" id="service-name-1" name="service-name" type="radio" value="high street dental practice">
-              <label class="nhsuk-label nhsuk-radios__label" for="service-name-1">
-                High Street Dental Practice
-              </label>
-            </div>
-      
-            <div class="nhsuk-radios__item">
-              <input class="nhsuk-radios__input" id="service-name-2" name="service-name" type="radio" value="dental public health">
-              <label class="nhsuk-label nhsuk-radios__label" for="service-name-2">
-                Dental Public Health
-              </label>
-            </div>
-            <div class="nhsuk-radios__item">
-              <input class="nhsuk-radios__input" id="service-name-3" name="service-name" type="radio" value="orthodontics">
-              <label class="nhsuk-label nhsuk-radios__label" for="service-name-3">
-                Orthodontics
-              </label>
-            </div>
-      
-            <div class="nhsuk-radios__item">
-              <input class="nhsuk-radios__input" id="service-name-4" name="service-name" type="radio" value="prosthodontics">
-              <label class="nhsuk-label nhsuk-radios__label" for="service-name-4">
-                Prosthodontics
-              </label>
-            </div>
-
-            <div class="nhsuk-radios__item">
-              <input class="nhsuk-radios__input" id="service-name-5" name="service-name" type="radio" value="other">
-              <label class="nhsuk-label nhsuk-radios__label" for="service-name-5">
-                Other
-              </label>
-            </div>
-            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
-              <div class="govuk-form-group">
-                <select class="nhsuk-select" id="contract-committee" name="contract-committee">
-                  <option value="1" selected>Select service line</option>
-                  <option value="2">Service line 1</option>
-                  <option value="3">Service line 2</option>
-                </select>
-              </div>
-            </div>
-
-          
-
-          </div>
-        </fieldset>
-      </div>
       <br>
-
-      <div id="q3" class="nhsuk-form-group">
-        <fieldset class="nhsuk-fieldset">
-          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
-            <h2 class="nhsuk-fieldset__heading">
-              Is this a recurring service line?
-            </h2>
-          </legend>
-      
-          <div class="nhsuk-radios">
-            <div class="nhsuk-radios__item">
-              <input class="nhsuk-radios__input" id="recurring-1" name="recurring" type="radio" value="yes">
-              <label class="nhsuk-label nhsuk-radios__label" for="recurring-1">
-                Yes
-              </label>
-            </div>
-      
-            <div class="nhsuk-radios__item">
-              <input class="nhsuk-radios__input" id="recurring-2" name="recurring" type="radio" value="no">
-              <label class="nhsuk-label nhsuk-radios__label" for="recurring-2">
-                No
-              </label>
-            </div>
-          </div>
-        </fieldset>
-      </div>
+      <dl class="nhsuk-summary-list">
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Treatment location
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            123456789<br>Eastbourne Dental Clinic
+          </dd>
+          <dd class="nhsuk-summary-list__actions">
+            <a href="#">
+              Change<span class="nhsuk-u-visually-hidden"> name</span>
+            </a>
+          </dd>
+        </div>
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Start date
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            15 June 2025
+          </dd>
+          <dd class="nhsuk-summary-list__actions">
+            <a href="#">
+              Change<span class="nhsuk-u-visually-hidden"> contact information</span>
+            </a>
+          </dd>
+        </div>
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            End date
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            Contract end
+          </dd>
+          <dd class="nhsuk-summary-list__actions">
+            <a href="#">
+              Change<span class="nhsuk-u-visually-hidden"> contact details</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
 
       <div class="nhsuk-button-group nhsuk-u-margin-top-6">
-        <a id="service-next" href="/3-contract-management/contract-create/v1/services/new-service-2" class="nhsuk-button nhsuk-u-margin-bottom-0" data-module="nhsuk-button" type="submit">
-          Continue
+        <a id="contract-submit" href="/3-contract-management/contract-create/v1/location/summary" class="nhsuk-button nhsuk-u-margin-bottom-0" data-module="nhsuk-button" type="submit">
+          Save and view summary
+        </a>
+        <a href="/3-contract-management/contract-create/v1/location/new-location" class="nhsuk-button nhsuk-button--secondary nhsuk-u-margin-bottom-0" data-module="nhsuk-button" type="submit">
+          Save and add another
         </a>
         <a href="/3-contract-management/contract-create/v1/start-create-contract" class="nhsuk-link nhsuk-link--no-visited-state">Cancel entry</a>
       </div>

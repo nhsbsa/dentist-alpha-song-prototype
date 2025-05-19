@@ -33,63 +33,92 @@
       
       <h1>
         <span class="nhsuk-caption-l">Add a treatment location</span>
-        What is the treatment location?
+        When does the treatment location start?
       </h1>
 
-      <div class="nhsuk-form-group">
-      
+      <div id="q5" class="nhsuk-form-group" >
+        <fieldset class="nhsuk-fieldset" role="group">
           <div class="nhsuk-hint" id="contact-hint">
-            Start typing the Location ID or postcode to find the treatment location
+            For example, 15 6 2025
           </div>
-        
-        <input class="nhsuk-input" id="location-id" name="location-id" type="text" oninput="filterInputFunction(value)">
-        <div id="filter-input" class="nhsuk-filter-input-box" style="display: none;">
-          <a id="filter-input-row-1" class="nhsuk-link nhsuk-link--no-visited-state nhsuk-filter-input-link">123456789, 2 Terminus Rd, Upperton Rd, Eastbourne, BN21 1BA</a>
-          <a id="filter-input-row-2" class="nhsuk-link nhsuk-link--no-visited-state nhsuk-filter-input-link">123456784, 10 Hollow Rd, Weststreet Rd, Eastbourne, BN45 2BA</a>
-        </div>
+          <div class="nhsuk-date-input" id="start-date">
+            <div class="nhsuk-date-input__item">
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label nhsuk-date-input__label" for="start-date-day">
+                  Day
+                </label>
+                <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="start-date-day" name="start-date-day" type="text" pattern="[0-9]*" inputmode="numeric">
+              </div>
+            </div>
+            <div class="nhsuk-date-input__item">
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label nhsuk-date-input__label" for="start-date-month">
+                  Month
+                </label>
+                <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="start-date-month" name="start-date-month" type="text" pattern="[0-9]*" inputmode="numeric">
+              </div>
+            </div>
+            <div class="nhsuk-date-input__item">
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label nhsuk-date-input__label" for="start-date-year">
+                  Year
+                </label>
+                <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="start-date-year" name="start-date-year" type="text" pattern="[0-9]*" inputmode="numeric">
+              </div>
+            </div>
+          </div>
+        </fieldset>
       </div>
-      
-      
-      <div id="results-container" style="display: none;">
-        <p class="nhsuk-u-font-weight-bold">Selected treatment location</p>
-        <dl class="nhsuk-summary-list">
-          <div class="nhsuk-summary-list__row">
-            <dt class="nhsuk-summary-list__key">
-              Location ID
-            </dt>
-            <dd class="nhsuk-summary-list__value">
-              123456789
-            </dd>
+      <br>
+
+      <!-- QUESTION 6 -->
+      <div id="q5" class="nhsuk-form-group" >
+        <fieldset class="nhsuk-fieldset" role="group">
+          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+            <h2 class="nhsuk-fieldset__heading">
+              When does the treatment location end? (Optional)
+            </h2>
+          </legend>
+          <div class="nhsuk-hint" id="contact-hint">
+            For example, 15 6 2028
           </div>
-          <div class="nhsuk-summary-list__row">
-            <dt class="nhsuk-summary-list__key">
-              Name
-            </dt>
-            <dd class="nhsuk-summary-list__value">
-              Eastbourne Dental Clinic
-            </dd>
+          <div class="nhsuk-date-input" id="start-date">
+            <div class="nhsuk-date-input__item">
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label nhsuk-date-input__label" for="start-date-day">
+                  Day
+                </label>
+                <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="start-date-day" name="start-date-day" type="text" pattern="[0-9]*" inputmode="numeric">
+              </div>
+            </div>
+            <div class="nhsuk-date-input__item">
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label nhsuk-date-input__label" for="start-date-month">
+                  Month
+                </label>
+                <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="start-date-month" name="start-date-month" type="text" pattern="[0-9]*" inputmode="numeric">
+              </div>
+            </div>
+            <div class="nhsuk-date-input__item">
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label nhsuk-date-input__label" for="start-date-year">
+                  Year
+                </label>
+                <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="start-date-year" name="start-date-year" type="text" pattern="[0-9]*" inputmode="numeric">
+              </div>
+            </div>
           </div>
-          <div class="nhsuk-summary-list__row">
-            <dt class="nhsuk-summary-list__key">
-              Address
-            </dt>
-            <dd class="nhsuk-summary-list__value">
-              10 Hollow Rd<br>West Street<br>Eastbourne<br>BN45 2BA
-            </dd>
-          </div>
-        </dl>
-        <div class="nhsuk-inset-text">
-          <p>This treatment location is already part of a live contract. If you want to use it anyway, click 'continue'.</p>
-        </div>
+        </fieldset>
       </div>
-
+      <br>
       
-
-      <a href="#" class="nhsuk-link nhsuk-link--no-visited-state">I want to create a new treatment location ID (opens in a new tab)</a>
 
       <div class="nhsuk-button-group nhsuk-u-margin-top-6">
-        <a id="location-next" href="/3-contract-management/contract-create/v1/location/new-location-1" class="nhsuk-button nhsuk-u-margin-bottom-0" data-module="nhsuk-button" type="submit">
+        <a id="location-next" href="/3-contract-management/contract-create/v1/location/check-answers" class="nhsuk-button nhsuk-u-margin-bottom-0" data-module="nhsuk-button" type="submit">
           Continue
+        </a>
+        <a id="add-another" href="#" class="nhsuk-button nhsuk-button--secondary nhsuk-u-margin-bottom-0" data-module="nhsuk-button" type="submit">
+          Save and exit
         </a>
         <a href="/3-contract-management/contract-create/v1/start-create-contract" class="nhsuk-link nhsuk-link--no-visited-state">Cancel entry</a>
       </div>
