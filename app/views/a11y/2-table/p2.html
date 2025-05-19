@@ -1,0 +1,356 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'default-layout.html' %}
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  Payment adjustments
+{% endblock %}
+
+<!-- Breadcrumbs -->
+{% block beforeContent %}
+
+{% endblock %}
+
+<!-- Back link -->
+{% block outerContent %}
+  <div class="nhsuk-back-link nhsuk-u-padding-top-3 nhsuk-u-margin-bottom-0">
+    <a id="back" class="nhsuk-back-link__link" href="../contents">
+      <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
+        <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+      </svg>
+      Back
+    </a>
+  </div>
+{% endblock %}
+
+<!-- Content -->
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+        <h1 class="nhsuk-heading-xl">Payment adjustments</h1>
+
+        <!-- Summary cards -->
+        <ul class="nhsuk-grid-row nhsuk-card-group">
+            <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+              <div class="nhsuk-card nhsuk-card--clickable">
+                <div class="nhsuk-card__content">
+                  <p class="nhsuk-heading-xl nhsuk-u-font-size-32 nhsuk-u-margin-bottom-1">2 
+                    <span class="nhsuk-u-visually-hidden">Adjustments require attention</span>
+                  </p>
+                  <a href="#" class="nhsuk-card__link nhsuk-u-font-weight-normal nhsuk-u-font-size-19 nhsuk-link--no-visited-state">
+                    Adjustments require attention
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+              <div class="nhsuk-card nhsuk-card--clickable">
+                <div class="nhsuk-card__content">
+                  <p class="nhsuk-heading-xl nhsuk-u-font-size-32 nhsuk-u-margin-bottom-1">5 <span class="nhsuk-u-visually-hidden">Active adjustments</span>
+                  </p>
+                  <a href="#" class="nhsuk-card__link nhsuk-u-font-weight-normal nhsuk-u-font-size-19 nhsuk-link--no-visited-state">Active adjustments</a>
+                </div>
+              </div>
+            </li>
+            <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+              <div class="nhsuk-card nhsuk-card--clickable">
+                <div class="nhsuk-card__content">
+                  <p class="nhsuk-heading-xl nhsuk-u-font-size-32 nhsuk-u-margin-bottom-1">7 <span class="nhsuk-u-visually-hidden">Adjustments to review</span>
+                  </p>
+                  <a href="#" class="nhsuk-card__link nhsuk-u-font-weight-normal nhsuk-u-font-size-19 nhsuk-link--no-visited-state">Adjustments to review</a>
+                </div>
+              </div>
+            </li>
+          </ul>
+
+        <!-- Incoming adjustment requests -->
+        <h2 class="nhsuk-heading-m">Incoming adjustment requests</h2>
+        <p class="nhsuk-body">Review and process adjustment requests submitted via self-serve or create an adjustment manually.</p>
+
+        <div class="nhsuk-button-group nhsuk-u-margin-top-6">
+            <a id="Process an adjustment request" href=" " class="nhsuk-button nhsuk-u-margin-bottom-0" data-module="nhsuk-button" type="submit">
+              Process an adjustment request
+            </a>
+          </div>
+
+        <hr>
+
+        <!-- All adjustments -->
+        <div id="filtered-results">
+          <h2 class="nhsuk-heading-m">All adjustments</h2>
+          <p class="nhsuk-body">Track and review adjustments within your team.</p>
+
+          
+
+          <details class="nhsuk-details nhsuk-expander" style="border:none; background-color: #f0f4f5; margin-bottom: 0;">
+              <summary class="nhsuk-details__summary nhsuk-u-padding-left-0" style="background-color: #f0f4f5;">
+                <div class="nhsuk-custom-search-filter-text" style="padding: 0;">
+                  <span id="expand-adjustment-filters" class="nhsuk-details__summary-text">
+                    Advanced search
+                  </span>
+                  <span id="close-adjustment-filters" class="nhsuk-details__summary-text" style="display: none;">
+                    Hide filters
+                  </span>
+                </div>
+              </summary>
+              
+              <div class="nhsuk-details__text nhsuk-u-padding-left-0">
+                
+                <details class="nhsuk-details  nhsuk-expander" style="margin-bottom: 0;">
+                  <summary class="nhsuk-details__summary nhsuk-u-padding-3">
+                    <span class="nhsuk-details__summary-text">
+                      Adjustment ID
+                    </span>
+                  </summary>
+                  <div class="nhsuk-details__text">
+                    <div class="nhsuk-form-group">
+                      <label class="nhsuk-label" for="input-width-10">
+                        Enter Adjustment ID
+                      </label>
+                      <div class="nhsuk-hint" id="contact-hint">
+                        Search for adjustments by separating them using a comma
+                      </div>
+                      <input class="nhsuk-input nhsuk-input--width-10" id="input-width-10" name="test-width-10" type="text">
+                    </div>
+                  </div>
+                </details>
+      
+      
+                <details class="nhsuk-details  nhsuk-expander" style="margin-bottom: 0;">
+                  <summary class="nhsuk-details__summary nhsuk-u-padding-3">
+                    <span class="nhsuk-details__summary-text">
+                      Example
+                    </span>
+                  </summary>
+                  <div class="nhsuk-details__text">
+              
+                  </div>
+                </details>
+      
+                <details class="nhsuk-details  nhsuk-expander" style="margin-bottom: 2;">
+                  <summary class="nhsuk-details__summary nhsuk-u-padding-3">
+                    <span class="nhsuk-details__summary-text">
+                      Example
+                    </span>
+                  </summary>
+                  <div class="nhsuk-details__text">
+      
+                      <div class="nhsuk-form-group" style="margin-bottom: 0;">
+                    
+                          <form>
+
+                              <div class="nhsuk-form-group">
+                          
+                          
+                                  <div class="nhsuk-checkboxes">
+                          
+                                  <div class="nhsuk-checkboxes__item">
+                                      <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
+                                      <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
+                                      Filter 1
+                                      </label>
+                                  </div>
+                          
+                                  <div class="nhsuk-checkboxes__item">
+                                      <input class="nhsuk-checkboxes__input" id="example-2" name="example" type="checkbox" value="phone">
+                                      <label class="nhsuk-label nhsuk-checkboxes__label" for="example-2">
+                                      Filter 2
+                                      </label>
+                                  </div>
+                          
+                                  <div class="nhsuk-checkboxes__item">
+                                      <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message">
+                                      <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+                                      Filter 3
+                                      </label>
+                                  </div>
+                              </div>
+                          </form>
+                      </div>
+                  </div>
+                </details>
+      
+                <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
+                  Update results
+                </button>
+      
+                <button class="nhsuk-button nhsuk-button--secondary" data-module="nhsuk-button" type="submit">
+                  Clear filters
+                </button>
+              </div>
+            </details>
+
+            <div id="selected-filters" class="nhsuk-width-container-fluid" style="background-color:#f0f4f5;">
+              <button id="provider-chip" type="submit" style="box-shadow: none; font-family: Frutiger; border-color: 	#4c6272;" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+                Adjustment ID: 	247352&nbsp;&#9587;
+              </button>
+            </div> 
+
+
+          <table class="nhsuk-table">
+              <caption class="nhsuk-table__caption" style="display: none;">Contracts</caption>
+              <thead role="rowgroup" class="nhsuk-table__head">
+                <tr role="row">
+                  <th role="columnheader" class="" scope="col">
+                    Date
+                  </th>
+                  <th role="columnheader" class="" scope="col">
+                    Adjustment ID
+                  </th>
+                  <th role="columnheader" class="" scope="col">
+                    Type
+                  </th>
+                  <th role="columnheader" class="" scope="col">
+                    Description
+                  </th>
+                  <th role="columnheader" class="" scope="col">
+                    Clinician
+                  </th>
+                  <th role="columnheader" class="" scope="col">
+                    Caseworker
+                  </th>
+                  <th role="columnheader" class="" scope="col">
+                    Status
+                  </th>
+                  <th role="columnheader" class="" scope="col">
+                    
+                  </th>
+                </tr>
+              </thead>
+              <tbody class="nhsuk-table__body">
+                  <tr role="row" class="nhsuk-table__row">
+                      <td class="nhsuk-table__cell">02/04/2025</td>
+                      <td class="nhsuk-table__cell">247352</td>
+                      <td class="nhsuk-table__cell ">Activity review</td>
+                      <td class="nhsuk-table__cell">Deduction</td>
+                      <td class="nhsuk-table__cell">Sophie Clarkson</td>
+                      <td class="nhsuk-table__cell">William	Bailey</td>
+                      <td class="nhsuk-table__cell"> 
+                      <strong class="nhsuk-tag nhsuk-tag--grey">
+                          Review
+                      </strong>
+                      <td class="nhsuk-table__cell"><a class="nhsuk-link--no-visited-state" href=" ">View</a></td>
+                  </tr>
+              </tbody>
+          </table>
+
+          <nav class="govuk-pagination" aria-label="Pagination">
+            <div class="govuk-pagination__prev">
+              <a class="govuk-link govuk-pagination__link" href="#" rel="prev">
+                <svg class="govuk-pagination__icon govuk-pagination__icon--prev" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+                  <path d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
+                </svg>
+                <span class="govuk-pagination__link-title">
+                  Previous<span class="govuk-visually-hidden"> page</span>
+                </span>
+              </a>
+            </div>
+            <ul class="govuk-pagination__list">
+              <li class="govuk-pagination__item">
+                <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 1">
+                  1
+                </a>
+              </li>
+              <li class="govuk-pagination__item govuk-pagination__item--current">
+                <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 2" aria-current="page">
+                  2
+                </a>
+              </li>
+              <li class="govuk-pagination__item">
+                <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 3">
+                  3
+                </a>
+              </li>
+            </ul>
+            <div class="govuk-pagination__next">
+              <a class="govuk-link govuk-pagination__link" href="#" rel="next">
+                <span class="govuk-pagination__link-title">
+                  Next<span class="govuk-visually-hidden"> page</span>
+                </span>
+                <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+                  <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+                </svg>
+              </a>
+            </div>
+          </nav>
+        </div>
+    </div>
+</div>
+<!-- End of content --> 
+{% endblock %}
+
+
+{% block pageScripts %}
+  <script>
+    const filterReportExpand = document.getElementById('expand-adjustment-filters');
+    const filterReportClose = document.getElementById('close-adjustment-filters');
+    /*const filterReportContainer = document.getElementById('filter-contract-container');*/
+    const filterReportButton = document.getElementById('apply-filter-button');
+    const filterReportClear = document.getElementById('clear-filter-button');
+    const filterPeriodChip = document.getElementById('period-chip');
+    const filterProviderChip = document.getElementById('provider-chip');
+
+
+
+    function filterContractExpandFunction(item) { 
+      if(item == 'expand') {
+        filterReportExpand.style.display = 'none';
+        filterReportClose.style.display = 'block';
+        filterReportContainer.style.display = 'block';
+      } else {
+        filterReportExpand.style.display = 'block';
+        filterReportClose.style.display = 'none';
+        filterReportContainer.style.display = 'none';
+      }
+    }
+
+    /*function contractClearFilterText(item) { 
+      if(item == 'filtersActive') {
+        filterReportClear.style.display = 'block';
+        contractOne.style.display = 'none';
+        contractTwo.style.display = 'none';
+        contractThree.style.display = 'none';
+      } else {
+        filterReportClear.style.display = 'none';
+        contractOne.style.display = 'table-row';
+        contractTwo.style.display = 'table-row';
+        contractThree.style.display = 'table-row';
+        document.getElementById("contract-active-filter").checked = false;
+        document.getElementById("contract-completed-filter").checked = false;
+        document.getElementById("contract-error-filter").checked = false;
+        document.getElementById("contract-type-filter").selectedIndex = 0;
+        document.getElementById("provider-filter").selectedIndex = 0;
+      }
+    }*/
+
+    filterReportExpand.addEventListener('click', ()=>{
+      filterContractExpandFunction('expand');
+    });
+
+    filterReportClose.addEventListener('click', ()=>{
+      filterContractExpandFunction();
+    });
+
+    filterReportButton.addEventListener('click', ()=>{
+      console.log("Button clicked")
+      /*filterPeriodChip.style.display = 'inline-block';
+      filterProviderChip.style.display = 'inline-block'*/
+    });
+
+    filterPeriodChip.addEventListener('click', ()=>{
+      console.log("Chip clicked");
+      filterPeriodChip.style.display = 'none'
+    });
+
+    filterProviderChip.addEventListener('click', ()=>{
+      console.log("Chip clicked");
+      filterProviderChip.style.display = 'none'
+    });
+
+  </script>
+{% endblock %}
