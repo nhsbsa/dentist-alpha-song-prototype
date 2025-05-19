@@ -30,7 +30,7 @@
 {% block content %}
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
-      <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+      <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--xl">
         <h1 class="nhsuk-fieldset__heading" for="provider-id">
           <span class="nhsuk-caption-l">Add general contract details</span>
           What category is the contract?
@@ -75,31 +75,23 @@
       </div>
       <br>
 
-      <!-- QUESTION 10 -->
-      <div id="q10" class="nhsuk-form-group" style="display: none;">
-        <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
-          <h2 class="nhsuk-fieldset__heading">
-            What sub-category is the contract? (Optional)
-          </h2>
-        </legend>
-        <select class="nhsuk-select" id="contract-committee" name="contract-committee">
-          <option value="1" selected>Select sub-category code</option>
-          <option value="2">Code 1</option>
-          <option value="3">Code 2</option>
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-heading-m" for="select-1">
+          What sub-category is the contract? (Optional)
+        </label> <select class="nhsuk-select" id="select-1" name="select-1">
+          <option value="1">Option 1</option>
+          <option value="2">Option 2</option>
+          <option value="3">Option 3</option>
         </select>
       </div>
-      <br>
 
-      <!-- QUESTION 10 -->
-      <div id="q11" class="nhsuk-form-group" style="display: none;">
-        <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
-          <h2 class="nhsuk-fieldset__heading">
-            Do you have any category notes? (Optional)
-          </h2>
-        </legend>
-        <textarea class="nhsuk-textarea" id="example" name="example" rows="5" aria-describedby="example-hint"></textarea>
-        <div class="nhsuk-hint" id="contact-hint">
-          You can enter up to 1000 characters
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-heading-m" for="example">
+          Do you have any category notes? (Optional)
+        </label>
+         <textarea class="nhsuk-textarea" id="example" name="example" rows="5" aria-describedby="example-hint"></textarea>
+         <div class="nhsuk-hint" id="example-hint">
+          You have 1000 characters remaining. 
         </div>
       </div>
 
