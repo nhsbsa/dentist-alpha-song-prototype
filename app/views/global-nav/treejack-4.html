@@ -1,0 +1,185 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'default-layout-no-header-no-footer.html' %}
+
+<!-- Set the page title -->
+{% block pageTitle %}
+Trees
+{% endblock %}
+
+<!-- Back link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- Content -->
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+      <h1 class="nhsuk-heading-m">Site map: internal users and commissioners topical view</h1>
+      <br>
+      
+          <details class="nhsuk-details">
+            <summary class="nhsuk-details__summary">
+              <span class="nhsuk-details__summary-text">
+                Payments and finance
+              </span>
+            </summary>
+            <div class="nhsuk-details__text">
+              
+              <details class="nhsuk-details">
+                <summary class="nhsuk-details__summary">
+                  <span class="nhsuk-details__summary-text">
+                    Payment calculations and adjustments
+                  </span>
+                </summary>
+                <div class="nhsuk-details__text">
+                  <a href="#" class="nhsuk-link">Review draft pay calculations</a><br>
+                  <a href="#" class="nhsuk-link">Review SFE payment applications</a><br>
+                  <a href="#" class="nhsuk-link">Create a SFE business rate adjustment</a><br>
+                  <a href="#" class="nhsuk-link">Create a request to add an SFE payment</a><br>
+                  <a href="#" class="nhsuk-link">Create payment adjustments</a><br>
+                  <a href="#" class="nhsuk-link">Create linked payment adjustments</a><br>
+                  <a href="#" class="nhsuk-link">Create PAD payment adjustments</a><br>
+                  <a href="#" class="nhsuk-link">Make an amendment to payment adjustments</a><br>
+                  <a href="#" class="nhsuk-link">Amend draft pay calculations</a><br>
+                  <a href="#" class="nhsuk-link">Amend final pay calculations</a><br>
+                </div>
+              </details>
+              <details class="nhsuk-details">
+                <summary class="nhsuk-details__summary">
+                  <span class="nhsuk-details__summary-text">
+                    Making payments
+                  </span>
+                </summary>
+                <div class="nhsuk-details__text">
+                  <a href="#" class="nhsuk-link">Make payments for specific contracts</a><br>
+                  <a href="#" class="nhsuk-link">Add narrative and evidence, then authorise the payment run</a><br>
+                  <a href="#" class="nhsuk-link">Request advanced payments</a><br>
+                  <a href="#" class="nhsuk-link">Request collection of levies in an area</a><br>
+                  <a href="#" class="nhsuk-link">View a payment run</a><br>
+                  <a href="#" class="nhsuk-link">Create payment witholds</a><br>
+                  <a href="#" class="nhsuk-link">Amend payment witholds</a><br>
+                  <a href="#" class="nhsuk-link">Request payment witholds</a><br>
+                  <a href="#" class="nhsuk-link">Release payment witholds</a><br>
+                </div>
+              </details>
+              <details class="nhsuk-details">
+                <summary class="nhsuk-details__summary">
+                  <span class="nhsuk-details__summary-text">
+                    Debt
+                </summary>
+                <div class="nhsuk-details__text">
+                  <a href="#" class="nhsuk-link">View debt recovery plan</a><br>
+                  <a href="#" class="nhsuk-link">View debt info</a><br>
+                  <a href="#" class="nhsuk-link">Create a debt recovery plan</a><br>
+                  <a href="#" class="nhsuk-link">Edit a debt recovery plan</a><br>
+                </div>
+              </details> 
+            </div>
+          </details>
+
+          <details class="nhsuk-details" id="accounts-people">
+            <summary class="nhsuk-details__summary">
+              <span class="nhsuk-details__summary-text">
+                Activity and performance
+              </span>
+            </summary>
+            <div class="nhsuk-details__text">
+              <a href="#" class="nhsuk-link">View activity actuals</a><br>
+              <a href="#" class="nhsuk-link">View activity summary</a><br>
+              <a href="#" class="nhsuk-link">View activity reports and error</a><br>
+              <a href="#" class="nhsuk-link">View performance reports</a><br>
+              <a href="#" class="nhsuk-link">Download activity actuals</a><br>
+              <a href="#" class="nhsuk-link">Add underperformance against a contract</a><br>
+              <a href="#" class="nhsuk-link">Edit underperformance against a contract</a><br>
+              <a href="#" class="nhsuk-link">Cancel underperformance against a contract</a><br>
+              <a href="#" class="nhsuk-link">Underperformance</a><br>
+              <a href="#" class="nhsuk-link">Mid year and end of year review</a><br>
+              <a href="#" class="nhsuk-link">Find ingested DPMS messages</a><br>
+            </div>
+          </details>
+
+          <details class="nhsuk-details" id="accounts-people">
+            <summary class="nhsuk-details__summary">
+              <span class="nhsuk-details__summary-text">
+                Reports
+              </span>
+            </summary>
+            <div class="nhsuk-details__text">
+              <a href="#" class="nhsuk-link">View pay statements</a><br>
+              <a href="#" class="nhsuk-link">Download pay statements</a><br>
+              <a href="#" class="nhsuk-link">View published reports</a><br>
+              <a href="#" class="nhsuk-link">Download published reports</a><br>
+              <a href="#" class="nhsuk-link">Generate reports</a><br>
+              <a href="#" class="nhsuk-link">Upload reports</a><br>
+            </div>
+          </details>
+
+          <details class="nhsuk-details" id="accounts-people">
+            <summary class="nhsuk-details__summary">
+              <span class="nhsuk-details__summary-text">
+                Pensions
+              </span>
+            </summary>
+            <div class="nhsuk-details__text">
+              <a href="#" class="nhsuk-link">View ARR</a><br>
+              <a href="#" class="nhsuk-link">Review post ARR figures</a><br>
+              <a href="#" class="nhsuk-link">Trigger post ARR figures</a><br>
+              <a href="#" class="nhsuk-link">Initiate ARR process</a><br>
+              <a href="#" class="nhsuk-link">View records of pension members</a><br>
+              <a href="#" class="nhsuk-link">Edit records of pension members</a><br>
+              <a href="#" class="nhsuk-link">Delete records of pension members</a><br>
+            </div>
+          </details>
+
+          <details class="nhsuk-details" id="accounts-people">
+            <summary class="nhsuk-details__summary">
+              <span class="nhsuk-details__summary-text">
+                Contract management
+              </span>
+            </summary>
+            <div class="nhsuk-details__text">
+              <a href="#" class="nhsuk-link">Create a contract</a><br>
+              <a href="#" class="nhsuk-link">Create a treatment location</a><br>
+              <a href="#" class="nhsuk-link">Amend a treatment location</a><br>
+              <a href="#" class="nhsuk-link">Create a service line</a><br>
+              <a href="#" class="nhsuk-link">Amend a service line</a><br>
+              <a href="#" class="nhsuk-link">Amend a contract</a><br>
+              <a href="#" class="nhsuk-link">Amend a closed contract</a><br>
+            </div>
+          </details>
+
+
+          <details class="nhsuk-details" id="accounts-people">
+            <summary class="nhsuk-details__summary">
+              <span class="nhsuk-details__summary-text">
+                Accounts and access
+              </span>
+            </summary>
+            <div class="nhsuk-details__text">
+              <a href="#" class="nhsuk-link">Give clinicians access to system</a><br>
+              <a href="#" class="nhsuk-link">Create a clinician</a><br>
+              <a href="#" class="nhsuk-link">Amend a clinician</a><br>
+              <a href="#" class="nhsuk-link">Import GDC register file</a><br>
+              <a href="#" class="nhsuk-link">Give providers access to system</a><br>
+              <a href="#" class="nhsuk-link">Create a provider</a><br>
+              <a href="#" class="nhsuk-link">Amend a provider</a><br>
+              <a href="#" class="nhsuk-link">Amend own details</a><br>
+            </div>
+          </details>  
+          
+        </div>
+      </details>
+      
+
+      <!-- End of content -->
+
+    </div>
+  </div>
+{% endblock %}
+

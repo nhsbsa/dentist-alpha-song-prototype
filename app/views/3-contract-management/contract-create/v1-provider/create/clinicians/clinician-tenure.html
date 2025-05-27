@@ -1,0 +1,180 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  {{ serviceName }}
+{% endblock %}
+
+<!-- Back link -->
+{% block outerContent %}
+  <div class="nhsuk-back-link nhsuk-u-padding-top-3 nhsuk-u-margin-bottom-0">
+    <a class="nhsuk-back-link__link" href="/3-contract-management/contract-create/v1-provider/create/clincians/new-clinician">
+      <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
+        <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+      </svg>
+      Back
+    </a>
+  </div>
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+      <fieldset class="nhsuk-fieldset" aria-describedby="clinician-tenure-hint">
+        <h1 class="nhsuk-heading-xl">
+          <span class="nhsuk-caption-xl">Add Clinician details</span>
+          When does the Clinician’s tenure start?
+        </h1>
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" role="group" aria-describedby="clinician-tenure-hint">
+            <div id="clinician-tenure-hint" class="govuk-hint">
+              For example, 15 6 2025
+            </div>
+            <div class="govuk-date-input" id="clinician-tenure">
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="clinician-tenure-day">
+                    Day
+                  </label>
+                  <input
+                    class="govuk-input govuk-date-input__input govuk-input--width-2"
+                    id="clinician-tenure-day"
+                    name="clinician-tenure-day"
+                    type="text"
+                    inputmode="numeric"
+                  >
+                </div>
+              </div>
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="clinician-tenure-month">
+                    Month
+                  </label>
+                  <input
+                    class="govuk-input govuk-date-input__input govuk-input--width-2"
+                    id="clinician-tenure-month"
+                    name="clinician-tenure-month"
+                    type="text"
+                    inputmode="numeric"
+                  >
+                </div>
+              </div>
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="clinician-tenure-year">
+                    Year
+                  </label>
+                  <input
+                    class="govuk-input govuk-date-input__input govuk-input--width-4"
+                    id="clinician-tenure-year"
+                    name="clinician-tenure-year"
+                    type="text"
+                    inputmode="numeric"
+                  >
+                </div>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+     <div class="nhsuk-form-group">
+        <fieldset class="nhsuk-fieldset">
+          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+            <h2 class="nhsuk-fieldset__heading">Is the tenure end date different to the contract end date?</h2>
+          </legend>
+
+      <div class="nhsuk-radios nhsuk-radios--conditional">
+        <div class="nhsuk-radios__item">
+          <input class="nhsuk-radios__input" id="tenure-end-yes" name="tenure-end-different" type="radio" value="yes" aria-controls="conditional-tenure-end-date">
+          <label class="nhsuk-label nhsuk-radios__label" for="tenure-end-yes">Yes</label>
+        </div>
+
+      <div class="nhsuk-radios__conditional" id="conditional-tenure-end-date">
+        <div class="nhsuk-form-group">
+          <fieldset class="nhsuk-fieldset" role="group">
+            <div class="nhsuk-hint">When does the Clinician’s tenure end?</div>
+            <div class="nhsuk-date-input" id="tenure-end-date">
+              <div class="nhsuk-date-input__item">
+                <label class="nhsuk-label nhsuk-date-input__label" for="tenure-end-day">Day</label>
+                <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="tenure-end-day" name="tenure-end-day" type="text" pattern="[0-9]*" inputmode="numeric">
+              </div>
+              <div class="nhsuk-date-input__item">
+                <label class="nhsuk-label nhsuk-date-input__label" for="tenure-end-month">Month</label>
+                <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="tenure-end-month" name="tenure-end-month" type="text" pattern="[0-9]*" inputmode="numeric">
+              </div>
+              <div class="nhsuk-date-input__item">
+                <label class="nhsuk-label nhsuk-date-input__label" for="tenure-end-year">Year</label>
+                <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="tenure-end-year" name="tenure-end-year" type="text" pattern="[0-9]*" inputmode="numeric">
+              </div>
+            </div>
+          </fieldset>
+        </div>
+      </div>
+
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="tenure-end-no" name="tenure-end-different" type="radio" value="no">
+        <label class="nhsuk-label nhsuk-radios__label" for="tenure-end-no">No</label>
+      </div>
+      </div>
+
+      <br/>
+      
+      <div class="nhsuk-form-group" id="tenure-end-reason-wrapper" style="display: none;">
+        <label class="nhsuk-label nhsuk-body-s" for="tenure-end-reason">
+            <strong>Why is the tenure ending?</strong>
+        </label> 
+        <select class="nhsuk-select" id="tenure-end-reason" name="tenure-end-reason">
+          <option value="" disabled selected>Select tenure end reason</option>
+          <option value="reason-1">Reason 1</option>
+          <option value="reason-2">Reason 2</option>
+          <option value="reason-2">Reason 3</option>
+        </select>
+      </div>
+      
+      </fieldset>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+          <div class="nhsuk-button-group nhsuk-u-margin-top-6">
+        <a id="add-clinician" href="/3-contract-management/contract-create/v1-provider/create/clinicians/npe-npee" class="nhsuk-button nhsuk-u-margin-bottom-0" data-module="nhsuk-button" type="submit">
+          Continue
+        </a>
+         <a href="/3-contract-management/contract-create/v1-provider/create/clinicians/new-clinician" class="nhsuk-button nhsuk-button--secondary nhsuk-u-margin-bottom-0" data-module="nhsuk-button" type="submit">
+          Save and exit
+        </a>
+        <a href="/3-contract-management/contract-create/v1-provider/create/start-create-contract" class="nhsuk-link nhsuk-link--no-visited-state">Cancel entry</a>
+      </div>
+      </fieldset>
+    </div>
+  </div>
+{% endblock %}
+{% block pageScripts %}
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const tenureEndYes = document.getElementById("tenure-end-yes");
+    const dayInput = document.getElementById("tenure-end-day");
+    const monthInput = document.getElementById("tenure-end-month");
+    const yearInput = document.getElementById("tenure-end-year");
+    const reasonWrapper = document.getElementById("tenure-end-reason-wrapper");
+
+    function toggleReasonSelect() {
+      const anyDateFilled = dayInput.value || monthInput.value || yearInput.value;
+      if (tenureEndYes.checked && anyDateFilled) {
+        reasonWrapper.style.display = "block";
+      } else {
+        reasonWrapper.style.display = "none";
+      }
+    }
+
+    [tenureEndYes, dayInput, monthInput, yearInput].forEach((el) => {
+      el.addEventListener("input", toggleReasonSelect);
+      el.addEventListener("change", toggleReasonSelect);
+    });
+
+    toggleReasonSelect(); 
+  });
+</script>
+
+{% endblock %}

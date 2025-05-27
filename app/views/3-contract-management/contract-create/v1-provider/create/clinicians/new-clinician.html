@@ -30,92 +30,48 @@
 {% block content %}
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
-      <div id="notified" class="nhsuk-inset-text nhsuk-u-margin-bottom-4 nhsuk-u-margin-top-0 nhsuk-inset-text--green" style="display: none;">
-        <span class="nhsuk-u-visually-hidden">Information: </span>
-        <p>Ella Purnell has been added to the contract</p>
-      </div>
-      <h1>Add a Clinician</h1>
+
+      <span class="govuk-caption-l">Add Clinician details</span>
+      <h1>Who is the Clinician?</h1>
       
       <div class="nhsuk-form-group">
-        <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
-          <h1 class="nhsuk-fieldset__heading" for="provider-id">
-            What is the a Clinician’s personal ID?
-          </h1>
-        </legend>
+        <div class="govuk-hint">
+          Start typing a name, Clinician ID or GDC number to find the Clinician
+        </div>
         <input class="nhsuk-input" id="provider-id" name="provider-id" type="text" oninput="filterInputFunction(value)">
         <div id="filter-input" class="nhsuk-filter-input-box" style="display: none;">
           <a id="filter-input-row-1" class="nhsuk-link nhsuk-link--no-visited-state nhsuk-filter-input-link">123456789, Tom Holland</a>
           <a id="filter-input-row-2" class="nhsuk-link nhsuk-link--no-visited-state nhsuk-filter-input-link">123456784, Ella Purnell</a>
         </div>
       </div>
-      <details id="provider-detail" class="nhsuk-details">
-        <summary class="nhsuk-details__summary">
-          <span class="nhsuk-details__summary-text">
-            I don’t know the Clinician’s personal ID
-          </span>
-        </summary>
-        <div class="nhsuk-details__text">
-          <p class="nhsuk-u-font-weight-bold nhsuk-u-margin-bottom-2">What is the Clinician’s name?</p>
-          <div class="nhsuk-custom-search">
-            <input class="nhsuk-search__input nhsuk-custom-search-input" id="contract-search" name="contract-search" type="search" placeholder="Search" autocomplete="off">
-            <button id="provider-name-search" class="nhsuk-search__submit nhsuk-custom-search-icon" type="submit">
-              <svg class="nhsuk-icon nhsuk-custom-search-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                <path d="M19.71 18.29l-4.11-4.1a7 7 0 1 0-1.41 1.41l4.1 4.11a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42zM5 10a5 5 0 1 1 5 5 5 5 0 0 1-5-5z"></path>
-              </svg>
-              <span class="nhsuk-u-visually-hidden">Search</span>
-            </button>
-          </div>
-
-          <table id="provider-name-results" role="table" class="nhsuk-table-responsive" style="display: none;">
-            <caption class="nhsuk-u-visually-hidden">Providers table</caption>
-            <thead role="rowgroup" class="nhsuk-table__head">
-              <tr role="row">
-                <th role="columnheader" class="" scope="col">
-                  Name
-                </th>
-                <th role="columnheader" class="" scope="col">
-                  Provider ID
-                </th>
-                <th role="columnheader" class="" scope="col">
-                  GDC Number
-                </th>
-                <th role="columnheader" class="" scope="col">
-                  <span class="nhsuk-u-visually-hidden">Action</span>
-                </th>
-              </tr>
-            </thead>
-            <tbody class="nhsuk-table__body">
-              <tr role="row" class="nhsuk-table__row">
-                <td role="cell" class="nhsuk-table__cell">
-                  <span class="nhsuk-table-responsive__heading">Name </span> Ella Purnell
-                </td>
-                <td role="cell" class="nhsuk-table__cell">
-                  <span class="nhsuk-table-responsive__heading">Provider ID </span>123456784
-                </td>
-                <td role="cell" class="nhsuk-table__cell">
-                  <span class="nhsuk-table-responsive__heading">GDC Number </span>5432457
-                </td>
-                <td role="cell" class="nhsuk-table__cell">
-                  <span class="nhsuk-table-responsive__heading">Action </span>
-                  <a id="usertable-select" href="#" class="nhsuk-link nhsuk-link--no-visited-state">Select</a> 
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </details>
-
+  
       <div id="search-results" style="display: none;">
+        <h2 class="nhsuk-u-font-weight-bold">Selected clinician</h2>
         <dl class="nhsuk-summary-list">
           <div class="nhsuk-summary-list__row">
             <dt class="nhsuk-summary-list__key">
-              Clinician’s name
+              Clinician ID
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+              123456789
+            </dd>
+          </div>
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+              Name
             </dt>
             <dd class="nhsuk-summary-list__value">
               Tom Holland
             </dd>
           </div>
-        
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+              Clinician type
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+              Dental therapist
+            </dd>
+          </div>
           <div class="nhsuk-summary-list__row">
             <dt class="nhsuk-summary-list__key">
               GDC number
@@ -124,29 +80,64 @@
               6497356
             </dd>
           </div>
-        
           <div class="nhsuk-summary-list__row">
             <dt class="nhsuk-summary-list__key">
-              Role type
+              Pension member
             </dt>
             <dd class="nhsuk-summary-list__value">
-              DCP
+              Yes
+            </dd>
+          </div>
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+              Contact details
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+              +44 7512371452<br>tom@provider.co.uk
+               </dd>
+          </div>
+                      
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+              Address
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+              453 Ringwood Rd<br>Poole<br>Dorset<br>BH12 4LX
             </dd>
           </div>
         </dl>
       </div>
 
       <div id="search-results-2" style="display: none;">
+        <p class="nhsuk-u-font-weight-bold">Selected clinician</p>
         <dl class="nhsuk-summary-list">
+            <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+              Clinician ID
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+              123456784
+            </dd>
+          </div>
+
           <div class="nhsuk-summary-list__row">
             <dt class="nhsuk-summary-list__key">
-              Clinician’s name
+              Name
             </dt>
             <dd class="nhsuk-summary-list__value">
               Ella Purnell
             </dd>
           </div>
         
+            <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+              Clinician type
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+              Dental therapist
+            </dd>
+          </div>
+
           <div class="nhsuk-summary-list__row">
             <dt class="nhsuk-summary-list__key">
               GDC number
@@ -158,23 +149,46 @@
         
           <div class="nhsuk-summary-list__row">
             <dt class="nhsuk-summary-list__key">
-              Role type
+              Clinician type
             </dt>
             <dd class="nhsuk-summary-list__value">
-              DCP
+              Dental therapist
+            </dd>
+          </div>
+
+       <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+              Pension member
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+              Yes
+            </dd>
+          </div>
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+              Contact details
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+              +44 7512371452<br>ella@provider.co.uk
+               </dd>
+          </div>
+                      
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+              Address
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+              453 Ringwood Rd<br>Poole<br>Dorset<br>BH12 4LX
             </dd>
           </div>
         </dl>
       </div>
 
       <div class="nhsuk-button-group nhsuk-u-margin-top-6">
-        <a id="add-clinician" href="/3-contract-management/contract-create/v1-provider/create/clinicians/new-clinician-2" class="nhsuk-button nhsuk-u-margin-bottom-0" data-module="nhsuk-button" type="submit" disabled>
-          Next
+        <a id="add-clinician" href="/3-contract-management/contract-create/v1-provider/create/clinicians/clinician-tenure" class="nhsuk-button nhsuk-u-margin-bottom-0" data-module="nhsuk-button" type="submit">
+          Continue
         </a>
-        <a href="/3-contract-management/contract-create/v1-provider/create/start-create-contract" class="nhsuk-button nhsuk-button--secondary nhsuk-u-margin-bottom-0" data-module="nhsuk-button" type="submit">
-          Save and exit
-        </a>
-        <a href="/3-contract-management/contract-create/v1-provider/create/start-create-contract" class="nhsuk-link nhsuk-link--no-visited-state">Cancel</a>
+        <a href="/3-contract-management/contract-create/v1-provider/create/start-create-contract" class="nhsuk-link nhsuk-link--no-visited-state">Cancel entry</a>
       </div>
 
     </div>

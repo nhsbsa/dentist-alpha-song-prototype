@@ -1,0 +1,173 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  {{ serviceName }}
+{% endblock %}
+
+<!-- Back link -->
+{% block outerContent %}
+  <div class="nhsuk-back-link nhsuk-u-padding-top-3 nhsuk-u-margin-bottom-0">
+    <a class="nhsuk-back-link__link" href="/3-contract-management/contract-create/v1-provider/create/clinicians/npe-npee">
+      <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
+        <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+      </svg>
+      Back
+    </a>
+  </div>
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+      <fieldset class="nhsuk-fieldset" aria-describedby="clinician-tenure-hint">
+        <h1 class="nhsuk-heading-xl">
+          <span class="nhsuk-caption-xl">Add Clinician details</span>
+          Check your answers before saving the Clinician
+        </h1>
+
+        <dl class="nhsuk-summary-list">
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+              Selected Clinician
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+              120345<br>
+              Ella Purnell<br>
+              Dental therapist<br>
+              GDC 10235
+            </dd>
+            <dd class="nhsuk-summary-list__actions">
+              <a href="#">
+                Change<span class="nhsuk-u-visually-hidden"> NHS number</span>
+              </a>
+            </dd>
+          </div>
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+              Pension member
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+              Yes
+            </dd>
+            <dd class="nhsuk-summary-list__actions">
+              <a href="#">
+                Change<span class="nhsuk-u-visually-hidden"> name</span>
+              </a>
+            </dd>
+          </div>
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+              Tenure start date
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+              15 June 2025
+            </dd>
+            <dd class="nhsuk-summary-list__actions">
+              <a href="#">
+                Change<span class="nhsuk-u-visually-hidden"> date of birth</span>
+              </a>
+            </dd>
+          </div>
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+              Tenure end date
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+              15 June 2025
+            </dd>
+            <dd class="nhsuk-summary-list__actions">
+              <a href="#">
+                Change<span class="nhsuk-u-visually-hidden"> name</span>
+              </a>
+            </dd>
+            </div>
+            <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+              Ending reason
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+              Reason 3
+            </dd>
+            <dd class="nhsuk-summary-list__actions">
+              <a href="#">
+                Change<span class="nhsuk-u-visually-hidden"> date of birth</span>
+              </a>
+            </dd>
+          </div>
+        </dl>
+
+        <h2 class="nhsuk-heading-m">
+          NPE/NPEE estimation
+        </h2>
+
+        <dl class="nhsuk-summary-list">
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+              Employment type
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+              DCP
+            </dd>
+            <dd class="nhsuk-summary-list__actions">
+              <a href="#">
+                Change<span class="nhsuk-u-visually-hidden"> allergies</span>
+              </a>
+            </dd>
+          </div>
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+              NPE/NPEE start date
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+              15 June 2025
+            </dd>
+            <dd class="nhsuk-summary-list__actions">
+              <a href="#">
+                Change<span class="nhsuk-u-visually-hidden"> conditions</span>
+              </a>
+            </dd>
+          </div>
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+              NPE/NPEE end date
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+              15 June 2026
+            </dd>
+            <dd class="nhsuk-summary-list__actions">
+              <a href="#">
+                Change<span class="nhsuk-u-visually-hidden"> conditions</span>
+              </a>
+            </dd>
+          </div>
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+              Expected earnings
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+              £XX,XXX
+            </dd>
+            <dd class="nhsuk-summary-list__actions">
+              <a href="/3-contract-management/contract-create/v1-provider/create/clinicians/npe-npee">
+                Change<span class="nhsuk-u-visually-hidden"> conditions</span>
+              </a>
+            </dd>
+          </div>
+        </dl>
+
+        <p class="govuk-body">
+            <a href="#" class="govuk-link">Add another estimation</a>
+        </p>
+           <div class="nhsuk-button-group nhsuk-u-margin-top-6">
+        <a id="submit" href="/3-contract-management/contract-create/v1-provider/create/clinicians/summary" class="nhsuk-button nhsuk-u-margin-bottom-0" data-module="nhsuk-button" type="submit">
+          Save and view summary
+        </a>
+        <a href="/3-contract-management/contract-create/v1-provider/create/check-answers" class="nhsuk-button nhsuk-button--secondary nhsuk-u-margin-bottom-0" data-module="nhsuk-button" type="submit">
+          Save and add another Clinician
+        </a>
+        <a href="/3-contract-management/contract-create/v1-provider/create/start-create-contract" class="nhsuk-link nhsuk-link--no-visited-state">Cancel entry</a>
+      </div>
+      </fieldset>
+    </div>
+  </div>
+{% endblock %}
