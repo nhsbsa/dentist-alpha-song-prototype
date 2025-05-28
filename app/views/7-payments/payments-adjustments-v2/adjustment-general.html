@@ -207,7 +207,7 @@
   <!-- Call to actions -->
 
   <div class="nhsuk-button-group nhsuk-u-margin-top-6">
-    <form action="process-adjustment-request">
+    <form action="contract-example">
       <button id="add-clinician" class="nhsuk-button" type="submit" disabled>
         Save and view contract financials
       </button>
@@ -241,6 +241,13 @@
               button.disabled = !isChecked;
             }
           });
+        });
+        buttons.forEach(button => {
+          if (button.getAttribute("type") === "submit") {
+            button.addEventListener("click", function () {
+              localStorage.setItem("hasNewGeneral", "Yes");
+              });
+          }
         });
       });
     </script>

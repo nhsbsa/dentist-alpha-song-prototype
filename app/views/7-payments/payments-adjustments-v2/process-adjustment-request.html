@@ -36,16 +36,16 @@
     </h1>
 
     <ul class="nhsuk-task-list">
-      <li class="nhsuk-task-list-item" href=" ">
+      <li class="nhsuk-task-list-item" href="adjustment-general">
         <div class="nhsuk-task-list-details">
-          <a class="nhsuk-task-list-details-link nhsuk-link--no-visited-state" href="adjustment-general" aria-describedby="company-details-1-hint company-details-1-status">
+          <a class="nhsuk-task-list-details-link nhsuk-link--no-visited-state" href="adjustment-general" aria-describedby="general-details-hint general-details-1-status">
             Adjustment general details
           </a>
-          <p id="company-details-1-hint" class="nhsuk-task-list-details-text">
+          <p id="general-details-1-hint" class="nhsuk-task-list-details-text">
             Clinician name: Sophie Clarkson
           </p>
         </div>
-        <div class="nhsuk-task-list-status" id="company-details-1-status">
+        <div class="nhsuk-task-list-status" id="general-details-1-status">
           <strong id="general-incomplete" class="nhsuk-tag nhsuk-tag--grey">
             Incomplete
           </strong>
@@ -54,56 +54,56 @@
           </strong>
         </div>
       </li>
-      <li class="nhsuk-task-list-item" href=" ">
+      <li class="nhsuk-task-list-item" href="contact-example">
         <div class="nhsuk-task-list-details">
-          <a class="nhsuk-task-list-details-link nhsuk-link--no-visited-state" href="contract-example" aria-describedby="company-details-1-hint company-details-1-status">
+          <a class="nhsuk-task-list-details-link nhsuk-link--no-visited-state" href="contract-example" aria-describedby="contract-details-1-hint contract-details-1-status">
             Contract 4851113000
           </a>
-          <p id="company-details-1-hint" class="nhsuk-task-list-details-text">
+          <p id="contract-details-1-hint" class="nhsuk-task-list-details-text">
             Provider name: Jane Dawson<br> Practice name: Luton Dental
           </p>
         </div>
         <div class="nhsuk-task-list-status" id="company-details-1-status">
-          <strong id="general-incomplete" class="nhsuk-tag nhsuk-tag--grey">
+          <strong id="contract-1-incomplete" class="nhsuk-tag nhsuk-tag--grey">
             Incomplete
           </strong>
-          <strong id="general-complete" class="nhsuk-tag nhsuk-tag--green" style="display: none;">
+          <strong id="contract-1-complete" class="nhsuk-tag nhsuk-tag--green" style="display: none;">
             Complete
           </strong>
         </div>
       </li>
-      <li class="nhsuk-task-list-item" href=" ">
+      <li class="nhsuk-task-list-item" href="contract-example2">
         <div class="nhsuk-task-list-details">
-          <a class="nhsuk-task-list-details-link nhsuk-link--no-visited-state" href=" " aria-describedby="company-details-1-hint company-details-1-status">
+          <a class="nhsuk-task-list-details-link nhsuk-link--no-visited-state" href="contract-example2" aria-describedby="contract-details-2-hint contract-details-2-status">
             Contract 4851113390
           </a>
-          <p id="company-details-1-hint" class="nhsuk-task-list-details-text">
+          <p id="contract-details-2-hint" class="nhsuk-task-list-details-text">
             Provider name: Asma Hassan <br>  Practice name: Spark Smiles Surgery
           </p>
         </div>
         <div class="nhsuk-task-list-status" id="company-details-1-status">
-          <strong id="general-incomplete" class="nhsuk-tag nhsuk-tag--grey">
+          <strong id="contract-2-incomplete" class="nhsuk-tag nhsuk-tag--grey">
             Incomplete
           </strong>
-          <strong id="general-complete" class="nhsuk-tag nhsuk-tag--green" style="display: none;">
+          <strong id="contract-2-complete" class="nhsuk-tag nhsuk-tag--green" style="display: none;">
             Complete
           </strong>
         </div>
       </li>
-      <li class="nhsuk-task-list-item" href=" ">
+      <li class="nhsuk-task-list-item" href="contract-example3">
         <div class="nhsuk-task-list-details">
-          <a class="nhsuk-task-list-details-link nhsuk-link--no-visited-state" href=" " aria-describedby="company-details-1-hint company-details-1-status">
+          <a class="nhsuk-task-list-details-link nhsuk-link--no-visited-state" href="contract-example3" aria-describedby="contract-details-3-hint contract-details-3-status">
             Contract 48511134821
           </a>
-          <p id="company-details-1-hint" class="nhsuk-task-list-details-text">
+          <p id="contract-details-3-hint" class="nhsuk-task-list-details-text">
             Provider name: Lewis Mosely <br> Practice name: Amersham Dental Practice
           </p>
         </div>
         <div class="nhsuk-task-list-status" id="company-details-1-status">
-          <strong id="general-incomplete" class="nhsuk-tag nhsuk-tag--grey">
+          <strong id="contract-3-incomplete" class="nhsuk-tag nhsuk-tag--grey">
             Incomplete
           </strong>
-          <strong id="general-complete" class="nhsuk-tag nhsuk-tag--green" style="display: none;">
+          <strong id="contract-3-complete" class="nhsuk-tag nhsuk-tag--green" style="display: none;">
             Complete
           </strong>
         </div>
@@ -111,7 +111,7 @@
 
     </ul>
 
-    <a class="nhsuk-task-list-details-link nhsuk-link--no-visited-state" href=" " aria-describedby="company-details-1-hint company-details-1-status">
+    <a class="nhsuk-link--no-visited-state nhsuk-u-font-size-19" href=" " aria-describedby="company-details-1-hint company-details-1-status">
       Add another contract to this adjustment
     </a>
 
@@ -121,18 +121,27 @@
 
     <!-- Total values -->
    
-    <h2 class="nhsuk-heading-m">Payment details</h2>
-    <div class="nhsuk-payment-summary nhsuk-u-margin-top-5">
-      <p class="nhsuk-u-font-weight-bold nhsuk-u-margin-0">Total payment value</p> 
-      <p class="nhsuk-u-margin-0">£2000.00</p>
+    <div id="payment-section" style="display: none;">
+      <h2 class="nhsuk-heading-m">Payment details</h2>
+    
+      <div class="nhsuk-payment-summary nhsuk-u-margin-top-5">
+        <p class="nhsuk-u-font-weight-bold nhsuk-u-margin-0">Total payment value</p> 
+        <p class="nhsuk-u-margin-0">£2000.00</p>
+      </div>
+    
+      <div class="nhsuk-payment-summary nhsuk-u-margin-top-2 nhsuk-u-margin-bottom-2">
+        <p class="nhsuk-u-font-weight-bold nhsuk-u-margin-0">Adjustment cap</p> 
+        <p class="nhsuk-u-margin-0">£2100.00</p>
+      </div>
+    
+      <div class="nhsuk-button-group nhsuk-u-margin-top-6">
+        <form action="process-adjustment-request">
+          <button id="save-view-next" class="nhsuk-button" type="submit">
+            Go to check answers
+          </button>
+        </form>
+      </div>
     </div>
-
-    <div class="nhsuk-payment-summary nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-2">
-      <p class="nhsuk-u-font-weight-bold nhsuk-u-margin-0">Cap</p> 
-      <p class="nhsuk-u-margin-0">£2100.00</p>
-    </div>
-
-    <br>
 
 
     </div>
@@ -141,6 +150,43 @@
   {% endblock %}
 
 
+  {% block pageScripts %}
+  <script>
+    const generalTag1 = document.getElementById('general-incomplete');
+    const generalTag2 = document.getElementById('general-complete');
+    const contract1Tag1 = document.getElementById('contract-1-incomplete');
+    const contract1Tag2 = document.getElementById('contract-1-complete');
+    const contract2Tag1 = document.getElementById('contract-2-incomplete');
+    const contract2Tag2 = document.getElementById('contract-2-complete');
+    const contract3Tag1 = document.getElementById('contract-3-incomplete');
+    const contract3Tag2 = document.getElementById('contract-3-complete');
+    const paymentSection = document.getElementById('payment-section');
+
+    window.onload = function() {
+      if(localStorage['hasNewGeneral'] == "Yes") {
+        generalTag1.style.display = 'none';
+        generalTag2.style.display = 'block';
+      }
+      if(localStorage['hasNewContract1'] == "Yes") {
+        contract1Tag1.style.display = 'none';
+        contract1Tag2.style.display = 'block';
+      }
+      if(localStorage['hasNewContract2'] == "Yes") {
+        contract2Tag1.style.display = 'none';
+        contract2Tag2.style.display = 'block';
+      } 
+      if(localStorage['hasNewContract3'] == "Yes") {
+        contract3Tag1.style.display = 'none';
+        contract3Tag2.style.display = 'block';
+      } 
+      if(localStorage['hasNewContract3'] == "Yes") {
+        contract3Tag1.style.display = 'none';
+        contract3Tag2.style.display = 'block';
+        paymentSection.style.display = 'block';
+      }
+    };
+  </script>
+{% endblock %}
         
 
   

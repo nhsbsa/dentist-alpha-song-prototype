@@ -33,7 +33,7 @@
   <div class="nhsuk-grid-column-two-thirds">
     <h1 class="nhsuk-heading-xl">
       <span class="nhsuk-caption-xl">Process adjustment request 222567</span>
-      Confirm financials for contract 4851113000
+      Confirm financials for contract 4851113390
     </h1>
 
     <!-- Key details -->
@@ -61,15 +61,15 @@
       <tbody class="nhsuk-table__body">
         <tr role="row" class="nhsuk-table__row">
           <th class="nhsuk-table__header" scope="row">Contract ID</th>
-          <td class="nhsuk-table__cell nhsuk-table__cell--numeric">4851113000</td>
+          <td class="nhsuk-table__cell nhsuk-table__cell--numeric">4851113390</td>
         </tr>
         <tr role="row" class="nhsuk-table__row">
           <th class="nhsuk-table__header" scope="row">Provider name</th>
-          <td class="nhsuk-table__cell nhsuk-table__cell--numeric">Jane Dawson</td>
+          <td class="nhsuk-table__cell nhsuk-table__cell--numeric">Asma Hassan</td>
         </tr>
         <tr role="row" class="nhsuk-table__row">
           <th class="nhsuk-table__header" scope="row">Practice name</th>
-          <td class="nhsuk-table__cell nhsuk-table__cell--numeric">Luton Dental</td>
+          <td class="nhsuk-table__cell nhsuk-table__cell--numeric">Spark Smiles Surgery</td>
         </tr>
         <tr role="row" class="nhsuk-table__row">
           <th class="nhsuk-table__header" scope="row">Contract category</th>
@@ -94,7 +94,7 @@
         </tr>
         <tr role="row" class="nhsuk-table__row">
           <th class="nhsuk-table__header" scope="row">Actual NPE before start date</th>
-          <td class="nhsuk-table__cell nhsuk-table__cell--numeric">£68,000.00</td>
+          <td class="nhsuk-table__cell nhsuk-table__cell--numeric">£20,000.00</td>
         </tr>
       </tbody>
     </table>
@@ -114,7 +114,7 @@
       </label>
       <div class="nhsuk-input__wrapper nhsuk-u-margin-top-3">
         <div class="nhsuk-input__prefix" aria-hidden="true">£</div>
-        <input class="nhsuk-input nhsuk-input--width-5" id="weekly-payment" name="weekly-payment" type="text" value="800">
+        <input class="nhsuk-input nhsuk-input--width-5" id="weekly-payment" name="weekly-payment" type="text" value="400">
       </div>
 
       <div class="nhsuk-payment-summary nhsuk-u-margin-top-5">
@@ -124,7 +124,7 @@
 
       <div class="nhsuk-payment-summary nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-2">
         <p class="nhsuk-u-font-weight-bold nhsuk-u-margin-0">Weekly payments</p> 
-        <p class="nhsuk-u-margin-0" id="weekly-payment-output">£200.00</p>
+        <p class="nhsuk-u-margin-0">£100.00</p>
       </div>
     </div>
 
@@ -136,25 +136,25 @@
         <div class="nhsuk-radios nhsuk-radios--conditional">
 
     <div class="nhsuk-radios__item">
-      <input class="nhsuk-radios__input" id="additional-info-yes" name="additional-info" type="radio" value="phone" aria-controls="enter-comments" aria-expanded="true">
-      <label class="nhsuk-label nhsuk-radios__label" for="additional-info-yes">
+      <input class="nhsuk-radios__input" id="confirm-6" name="confirm" type="radio" value="phone" aria-controls="conditional-confirm-6" aria-expanded="true">
+      <label class="nhsuk-label nhsuk-radios__label" for="confirm-6">
           Yes, additional information needs to be captured
       </label>
     </div>
 
-    <div class="nhsuk-radios__conditional" id="enter-comments">
+    <div class="nhsuk-radios__conditional" id="conditional-confirm-6">
 
       <div class="nhsuk-form-group">
-          <div class="nhsuk-hint" id="enter-comments">
+          <div class="nhsuk-hint" id="example-hint">
             Enter your comments
-          </div> <textarea class="nhsuk-textarea" id="enter-comments" name="addtional-info" rows="5" aria-describedby="additiona-info-no"></textarea>
+          </div> <textarea class="nhsuk-textarea" id="example" name="example" rows="5" aria-describedby="example-hint"></textarea>
         </div>
 
     </div>
 
     <div class="nhsuk-radios__item">
-      <input class="nhsuk-radios__input" id="additional-info-no" name="additional-info" type="radio" value="text" aria-controls="additional-info-no" aria-expanded="false">
-      <label class="nhsuk-label nhsuk-radios__label" for="additional-info-no">
+      <input class="nhsuk-radios__input" id="confirm-1" name="confirm" type="radio" value="text" aria-controls="conditional-confirm-1" aria-expanded="false">
+      <label class="nhsuk-label nhsuk-radios__label" for="confirm-1">
         No, additional information does not need to be captured
       </label>
     </div>
@@ -163,7 +163,7 @@
     <!-- Call to actions -->
 
     <div class="nhsuk-button-group nhsuk-u-margin-top-6">
-      <form action="contract-example2">
+      <form action="contract-example3">
         <button id="save-view-next" class="nhsuk-button" type="submit">
           Save and view next contract
         </button>
@@ -186,33 +186,15 @@
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     const buttons = document.querySelectorAll('button[type="submit"]');
-    const input = document.getElementById("weekly-payment");
-    const weeklyPaymentDisplay = document.getElementById("weekly-payment-output");
-    const adjustmentWeeks = 4;
 
     buttons.forEach(button => {
       button.addEventListener("click", function () {
-        localStorage.setItem("hasNewContract1", "Yes");
+        localStorage.setItem("hasNewContract2", "Yes");
       });
     });
-
-    function formatCurrency(value) {
-      return "£" + Number(value).toFixed(2);
-    }
-
-    function updateWeeklyPayment() {
-      const total = parseFloat(input.value.replace(/[^0-9.]/g, ''));
-      if (!isNaN(total)) {
-        const weekly = total / adjustmentWeeks;
-        weeklyPaymentDisplay.textContent = formatCurrency(weekly);
-      } else {
-        weeklyPaymentDisplay.textContent = "£0.00";
-      }
-    }
-
-    input.addEventListener("input", updateWeeklyPayment);
-    updateWeeklyPayment(); // Set initial value on load
   });
 </script>
 {% endblock %}
+
+  
         
