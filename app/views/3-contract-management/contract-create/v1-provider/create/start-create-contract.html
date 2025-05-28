@@ -19,7 +19,7 @@
         text: "Home"
       }
     ],
-    href: "/3-contract-management/contract-create/v1-provider/create/start-create-contract",
+    href: "/3-contract-management/contract-create/v1/start-create-contract",
     text: "Create Contract"
   }) }}
 {% endblock %}
@@ -32,67 +32,54 @@
 {% block content %}
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
-      <div class="nhsuk-inset-text nhsuk-u-margin-bottom-4 nhsuk-u-margin-top-0">
-        <span class="nhsuk-u-visually-hidden">Information: </span>
-        <p><a href="/3-contract-management/contract-create/v1-provider/create/clinicians/new-clinician">Clinicians need to be added</a> for contract set up to be completed</p>
-      </div>
       <h1 class="nhsuk-u-margin-bottom-0">
         Create a new contract
       </h1>
     
       <ul class="nhsuk-task-list">
-        <li class="nhsuk-task-list-item">
+        <li class="nhsuk-task-list-item" href="/3-contract-management/contract-create/v1/general/commissioner-code">
           <div class="nhsuk-task-list-details">
-            <a class="nhsuk-task-list-details-link nhsuk-link--no-visited-state" href="/3-contract-management/contract-create/v1-provider/create/general/summary" aria-describedby="company-details-1-hint company-details-1-status">
-              General
+            <a class="nhsuk-task-list-details-link nhsuk-link--no-visited-state" href="/3-contract-management/contract-create/v1/general/commissioner-code" aria-describedby="company-details-1-hint company-details-1-status">
+              General contract details
             </a>
             <p id="company-details-1-hint" class="nhsuk-task-list-details-text">
-              This section requires the basic details of your contract. Information you will need: Contract type, category and subcategory code, Provider ID, contract start date, local dental committee.
+              Information you will need about the contract: provider name or ID, contract type, category code and contract start date.
             </p>
           </div>
           <div class="nhsuk-task-list-status" id="company-details-1-status">
-            <strong id="general-complete" class="nhsuk-tag nhsuk-tag--green">
+            <strong id="general-incomplete" class="nhsuk-tag nhsuk-tag--grey">
+              Incomplete
+            </strong>
+            <strong id="general-complete" class="nhsuk-tag nhsuk-tag--green" style="display: none;">
               Complete
             </strong>
           </div>
         </li>
         <li class="nhsuk-task-list-item">
           <div class="nhsuk-task-list-details">
-            <a class="nhsuk-task-list-details-link nhsuk-link--no-visited-state" href="/3-contract-management/contract-create/v1-provider/create/services/summary" aria-describedby="company-details-2-hint company-details-2-status">
-              Services
+            <a class="nhsuk-task-list-details-link nhsuk-link--no-visited-state" href="/3-contract-management/contract-create/v1/services/new-service-1" aria-describedby="company-details-2-hint company-details-2-status">
+              Service lines
             </a>
             <p id="company-details-2-hint" class="nhsuk-task-list-details-text">
-              This section requires details about service lines on the contract. Information you will need about each service line: name, type (reoccurring or non-reoccurring), start date, financial value and contracted activity. 
+              Information you will need about each service line: name, type (reoccurring or non-reoccurring), start date, financial value and contracted activity. 
             </p>
           </div>
           <div class="nhsuk-task-list-status" id="company-details-2-status">
-            <strong id="service-complete" class="nhsuk-tag nhsuk-tag--green">
+            <strong id="service-incomplete" class="nhsuk-tag nhsuk-tag--grey">
+              Incomplete
+            </strong>
+            <strong id="service-complete" class="nhsuk-tag nhsuk-tag--green" style="display: none;">
               Complete
             </strong>
           </div>
         </li>
         <li class="nhsuk-task-list-item">
           <div class="nhsuk-task-list-details">
-            <a class="nhsuk-task-list-details-link nhsuk-link--no-visited-state" href="/3-contract-management/contract-create/v1-provider/create/location/summary" aria-describedby="company-details-3-hint company-details-3-status">
+            <a class="nhsuk-task-list-details-link nhsuk-link--no-visited-state" href="/3-contract-management/contract-create/v1/location/new-location" aria-describedby="company-details-3-hint company-details-3-status">
               Treatment locations
             </a>
             <p id="company-details-3-hint" class="nhsuk-task-list-details-text">
-              This section requires details about the treatment locations on the contract. Information you will need about each treatment location: practice name, treatment location ID, the practice’s email address and phone number.
-            </p>
-          </div>
-          <div class="nhsuk-task-list-status" id="company-details-3-status">
-            <strong id="location-complete" class="nhsuk-tag nhsuk-tag--green">
-              Complete
-            </strong>
-          </div>
-        </li>
-        <li class="nhsuk-task-list-item">
-          <div class="nhsuk-task-list-details">
-            <a class="nhsuk-task-list-details-link nhsuk-link--no-visited-state" href="/3-contract-management/contract-create/v1-provider/create/clinicians/new-clinician" aria-describedby="company-details-3-hint company-details-3-status">
-              Clinicians
-            </a>
-            <p id="company-details-3-hint" class="nhsuk-task-list-details-text">
-              This section requires the basic details of your contract. Information you will need: Contract type, category and subcategory code, Provider ID, contract start date, local dental committee.
+              Information you will need about each treatment location: treatment location postcode or ID and start date.
             </p>
           </div>
           <div class="nhsuk-task-list-status" id="company-details-3-status">
@@ -107,8 +94,8 @@
       </ul>
 
       <div class="nhsuk-button-group nhsuk-u-margin-top-6">
-        <a id="summary" href="/3-contract-management/contract-create/v1-provider/create/clinicians/summary" class="nhsuk-button nhsuk-u-margin-bottom-0" data-module="nhsuk-button" type="submit" disabled>
-          Summary
+        <a id="summary" href="/3-contract-management/contract-create/v1/create-summary" class="nhsuk-button nhsuk-u-margin-bottom-0" data-module="nhsuk-button" type="submit" disabled>
+          Review and submit
         </a>
       </div>
     </div>
@@ -117,9 +104,27 @@
 
 {% block pageScripts %}
   <script>
+    const generalTag1 = document.getElementById('general-incomplete');
+    const generalTag2 = document.getElementById('general-complete');
+    const serviceTag1 = document.getElementById('service-incomplete');
+    const serviceTag2 = document.getElementById('service-complete');
+    const locationTag1 = document.getElementById('location-incomplete');
+    const locationTag2 = document.getElementById('location-complete');
     const summary = document.getElementById('summary');
     window.onload = function() {
-      
+      if(localStorage['hasNewGeneral'] == "Yes") {
+        generalTag1.style.display = 'none';
+        generalTag2.style.display = 'block';
+      }
+      if(localStorage['hasNewService'] == "Yes") {
+        serviceTag1.style.display = 'none';
+        serviceTag2.style.display = 'block';
+      }
+      if(localStorage['hasNewLocation'] == "Yes") {
+        locationTag1.style.display = 'none';
+        locationTag2.style.display = 'block';
+        summary.removeAttribute("disabled");
+      } 
     };
   </script>
 {% endblock %}
