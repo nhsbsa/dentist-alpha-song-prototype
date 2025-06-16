@@ -124,7 +124,7 @@
 
       <div class="nhsuk-payment-summary nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-2">
         <p class="nhsuk-u-font-weight-bold nhsuk-u-margin-0">Weekly payments</p> 
-        <p class="nhsuk-u-margin-0">£100.00</p>
+        <p class="nhsuk-u-margin-0" id="weekly-payment-output">£100.00</p>
       </div>
     </div>
 
@@ -186,12 +186,32 @@
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     const buttons = document.querySelectorAll('button[type="submit"]');
+    const input = document.getElementById("weekly-payment");
+    const weeklyPaymentDisplay = document.getElementById("weekly-payment-output");
+    const adjustmentWeeks = 4;
 
     buttons.forEach(button => {
       button.addEventListener("click", function () {
         localStorage.setItem("hasNewContract2", "Yes");
       });
     });
+
+    function formatCurrency(value) {
+      return "£" + Number(value).toFixed(2);
+    }
+
+    function updateWeeklyPayment() {
+      const total = parseFloat(input.value.replace(/[^0-9.]/g, ''));
+      if (!isNaN(total)) {
+        const weekly = total / adjustmentWeeks;
+        weeklyPaymentDisplay.textContent = formatCurrency(weekly);
+      } else {
+        weeklyPaymentDisplay.textContent = "£0.00";
+      }
+    }
+
+    input.addEventListener("input", updateWeeklyPayment);
+    updateWeeklyPayment(); // Set initial value on load
   });
 </script>
 {% endblock %}
