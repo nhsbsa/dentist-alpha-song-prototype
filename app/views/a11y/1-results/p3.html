@@ -3,7 +3,7 @@
 <!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
 
 <!-- Extends the layout from /views/layout.html -->
-{% extends 'default-layout.html' %}
+{% extends 'default-layout-new.html' %}
 
 <!-- Set the page title -->
 {% block pageTitle %}
@@ -41,15 +41,18 @@ Reports
               <h2 class="nhsuk-heading-s" style="background-color: #d8dde0; padding: 16px 16px 16px 16px; margin: 0px 0px 0px 0px;">Filter reports</h2>
 
               <div id="selected-filters" class="nhsuk-width-container-fluid" style="background-color:#f0f4f5; padding: 16px 16px 16px 16px; margin: 0px 0px 8px 0px;">
-                <h2 class="nhsuk-heading-xs" style="margin: 0px 0px 0px 0px;" >Selected filters</h2>
+                <h3 class="nhsuk-heading-xs" style="margin: 0px 0px 0px 0px;" >Selected filters</h3>
                 <button id="provider-chip" type="submit" style="box-shadow: none; font-family: Frutiger; border-color: 	#4c6272; border-width: 1px; margin: 8px 0px 0px 0px;" class="govuk-button govuk-button--secondary" data-module="govuk-button">
                   Contract: 0044567811&nbsp;&#9587;
+                  <span class="govuk-visually-hidden">Remove filter</span>
                 </button>
                 <button id="provider-chip" type="submit" style="box-shadow: none; font-family: Frutiger; border-color: 	#4c6272; border-width: 1px; margin: 8px 0px 0px 0px;" class="govuk-button govuk-button--secondary" data-module="govuk-button">
                   Report type: Pay statements&nbsp;&#9587;
+                  <span class="govuk-visually-hidden">Remove filter</span>
                 </button>
                 <button id="provider-chip" type="submit" style="box-shadow: none; font-family: Frutiger; border-color: 	#4c6272; border-width: 1px; margin: 8px 0px 0px 0px;" class="govuk-button govuk-button--secondary" data-module="govuk-button">
                   Reporting period from: Sept 2023 to: Jan 2024&nbsp;&#9587;
+                  <span class="govuk-visually-hidden">Remove filter</span>
                 </button>
                 <br>
                 <a href="#" class="nhsuk-body-s" style="margin: 16px 0px 0px 0px;">Clear all filters</a>
@@ -250,12 +253,12 @@ Reports
             <div class="nhsuk-card__content nhsuk-card__content--primary" style="padding: 16px 0px 0px 16px; background-color: 	#f0f4f5;">
               <h3 class="nhsuk-heading-xs" style="margin: 12px 0px 0px 0px; position: absolute; left: 16px;">4 reports</h3>
               <p class="nhsuk-body" style="margin: 12px 0px 0px 0px; position: absolute; right: 64px;">Select all</h3>
-              <div class="govuk-checkboxes govuk-checkboxes--small" style="margin: 0px 0px 8px 0px; position: absolute; right: 0;" data-module="govuk-checkboxes">
-                <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
-                  <label class="govuk-label govuk-checkboxes__label" for="organisation"></label>
+                <div class="govuk-checkboxes govuk-checkboxes--small" style="margin: 0px 0px 8px 0px; position: absolute; right: 0;" data-module="govuk-checkboxes">
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc" aria-label="Select all reports">
+                    <label class="govuk-label govuk-checkboxes__label" for="organisation"></label>
+                  </div>
                 </div>
-              </div>
 
               <hr style="margin: 48px 0px 8px 0px;">
 
@@ -264,10 +267,10 @@ Reports
                   <a href="#" class="nhsuk-heading-s" style="margin: 8px 0px 8px 0px;">Monthly pay statement for P9 2023-2024</a>
                 </div>
                 <div class="nhsuk-grid-column-one-quarter">
-                  <div class="govuk-checkboxes govuk-checkboxes--small" style="margin: 0px 0px 8px 0px; position: absolute; right: 0;" data-module="govuk-checkboxes">
+                  <div class="govuk-checkboxes govuk-checkboxes--small" style="margin: 0 0 8px 0; position: absolute; right: 0;" data-module="govuk-checkboxes">
                     <div class="govuk-checkboxes__item">
-                      <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
-                      <label class="govuk-label govuk-checkboxes__label" for="organisation"></label>
+                      <input class="govuk-checkboxes__input" id="organisation" type="checkbox">
+                      <label class="govuk-label govuk-checkboxes__label" for="organisation"><span class="govuk-visually-hidden">Select report</span></label>
                     </div>
                   </div>
                 </div>
@@ -282,10 +285,10 @@ Reports
                   <a href="#" class="nhsuk-heading-s" style="margin: 8px 0px 8px 0px;">Monthly pay statement for P8 2023-2024</a>
                 </div>
                 <div class="nhsuk-grid-column-one-quarter">
-                  <div class="govuk-checkboxes govuk-checkboxes--small" style="margin: 0px 0px 8px 0px; position: absolute; right: 0;" data-module="govuk-checkboxes">
+                  <div class="govuk-checkboxes govuk-checkboxes--small" style="margin: 0 0 8px 0; position: absolute; right: 0;" data-module="govuk-checkboxes">
                     <div class="govuk-checkboxes__item">
-                      <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
-                      <label class="govuk-label govuk-checkboxes__label" for="organisation"></label>
+                      <input class="govuk-checkboxes__input" id="organisation" type="checkbox">
+                      <label class="govuk-label govuk-checkboxes__label" for="organisation"><span class="govuk-visually-hidden">Select report</span></label>
                     </div>
                   </div>
                 </div>
@@ -300,10 +303,10 @@ Reports
                   <a href="#" class="nhsuk-heading-s" style="margin: 8px 0px 8px 0px;">Monthly pay statement for P7 2023-2024</a>
                 </div>
                 <div class="nhsuk-grid-column-one-quarter">
-                  <div class="govuk-checkboxes govuk-checkboxes--small" style="margin: 0px 0px 8px 0px; position: absolute; right: 0;" data-module="govuk-checkboxes">
+                  <div class="govuk-checkboxes govuk-checkboxes--small" style="margin: 0 0 8px 0; position: absolute; right: 0;" data-module="govuk-checkboxes">
                     <div class="govuk-checkboxes__item">
-                      <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
-                      <label class="govuk-label govuk-checkboxes__label" for="organisation"></label>
+                      <input class="govuk-checkboxes__input" id="organisation" type="checkbox">
+                      <label class="govuk-label govuk-checkboxes__label" for="organisation"><span class="govuk-visually-hidden">Select report</span></label>
                     </div>
                   </div>
                 </div>
@@ -318,10 +321,10 @@ Reports
                   <a href="#" class="nhsuk-heading-s" style="margin: 8px 0px 8px 0px;">Monthly pay statement for P6 2023-2024</a>
                 </div>
                 <div class="nhsuk-grid-column-one-quarter">
-                  <div class="govuk-checkboxes govuk-checkboxes--small" style="margin: 0px 0px 8px 0px; position: absolute; right: 0;" data-module="govuk-checkboxes">
+                  <div class="govuk-checkboxes govuk-checkboxes--small" style="margin: 0 0 8px 0; position: absolute; right: 0;" data-module="govuk-checkboxes">
                     <div class="govuk-checkboxes__item">
-                      <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
-                      <label class="govuk-label govuk-checkboxes__label" for="organisation"></label>
+                      <input class="govuk-checkboxes__input" id="organisation" type="checkbox">
+                      <label class="govuk-label govuk-checkboxes__label" for="organisation"><span class="govuk-visually-hidden">Select report</span></label>
                     </div>
                   </div>
                 </div>

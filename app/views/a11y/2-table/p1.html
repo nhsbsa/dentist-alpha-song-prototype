@@ -3,7 +3,7 @@
 <!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
 
 <!-- Extends the layout from /views/layout.html -->
-{% extends 'default-layout.html' %}
+{% extends 'default-layout-new.html' %}
 
 <!-- Set the page title -->
 {% block pageTitle %}
@@ -133,29 +133,29 @@
                                 <div class="nhsuk-checkboxes">
                             
                                     <div class="nhsuk-checkboxes__item">
-                                    <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
-                                    <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
+                                    <input class="nhsuk-checkboxes__input" id="review" type="checkbox" >
+                                    <label class="nhsuk-label nhsuk-checkboxes__label" for="review">
                                         Review
                                     </label>
                                     </div>
                             
                                     <div class="nhsuk-checkboxes__item">
-                                    <input class="nhsuk-checkboxes__input" id="example-2" name="example" type="checkbox" value="phone">
-                                    <label class="nhsuk-label nhsuk-checkboxes__label" for="example-2">
+                                    <input class="nhsuk-checkboxes__input" id="completed" type="checkbox" >
+                                    <label class="nhsuk-label nhsuk-checkboxes__label" for="completed">
                                         Completed
                                     </label>
                                     </div>
                             
                                     <div class="nhsuk-checkboxes__item">
-                                    <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message">
-                                    <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+                                    <input class="nhsuk-checkboxes__input" id="pending" type="checkbox" >
+                                    <label class="nhsuk-label nhsuk-checkboxes__label" for="pending">
                                         Pending
                                     </label>
                                     </div>
 
                                     <div class="nhsuk-checkboxes__item">
-                                    <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message">
-                                    <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+                                    <input class="nhsuk-checkboxes__input" id="amend" type="checkbox" >
+                                    <label class="nhsuk-label nhsuk-checkboxes__label" for="amend">
                                         Amend
                                     </label>
                                     </div>
@@ -182,29 +182,29 @@
                                 <div class="nhsuk-checkboxes">
                             
                                     <div class="nhsuk-checkboxes__item">
-                                    <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
-                                    <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
+                                    <input class="nhsuk-checkboxes__input" id="assurance-review" type="checkbox" value="email">
+                                    <label class="nhsuk-label nhsuk-checkboxes__label" for="assurance-review">
                                         Assurance review
                                     </label>
                                     </div>
                             
                                     <div class="nhsuk-checkboxes__item">
-                                    <input class="nhsuk-checkboxes__input" id="example-2" name="example" type="checkbox" value="phone">
-                                    <label class="nhsuk-label nhsuk-checkboxes__label" for="example-2">
+                                    <input class="nhsuk-checkboxes__input" id="maternity-leave" type="checkbox" value="phone">
+                                    <label class="nhsuk-label nhsuk-checkboxes__label" for="maternity-leave">
                                         Maternity leave
                                     </label>
                                     </div>
                             
                                     <div class="nhsuk-checkboxes__item">
-                                    <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message">
-                                    <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+                                    <input class="nhsuk-checkboxes__input" id="activity-review" type="checkbox" value="text message">
+                                    <label class="nhsuk-label nhsuk-checkboxes__label" for="activity-review">
                                         Activity review
                                     </label>
                                     </div>
 
                                     <div class="nhsuk-checkboxes__item">
-                                    <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message">
-                                    <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+                                    <input class="nhsuk-checkboxes__input" id="added-benefit" type="checkbox" value="text message">
+                                    <label class="nhsuk-label nhsuk-checkboxes__label" for="added-benefit">
                                         Added benefit
                                     </label>
                                     </div>
@@ -231,26 +231,33 @@
             <thead role="rowgroup" class="nhsuk-table__head">
               <tr role="row">
                 <th role="columnheader" scope="col">
-                  &#8693;Date
-                </th>                                                     
-                <th role="columnheader" class="" scope="col">
-                  &#8693;Adjustment ID
-                </th>
-                <th role="columnheader" class="" scope="col">
-                  &#8693;Type
-                </th>
-                <th role="columnheader" class="" scope="col">
-                  &#8693;Description
-                </th>
-                <th role="columnheader" class="" scope="col">
-                  &#8693;Clinician
-                </th>
-                <th role="columnheader" class="" scope="col">
-                  &#8693;Caseworker
-                </th>
-                <th role="columnheader" class="" scope="col">
-                  &#8693;Status
-                </th>
+                  <button type="button" class="sortable-column-button" aria-label="sort table by date">&#8693;</button>
+                  Date
+                </th>    
+                <th role="columnheader" scope="col">
+                  <button type="button" class="sortable-column-button" aria-label="sort table by adjustment ID">&#8693;</button>
+                  Adjustment ID
+                </th>   
+                <th role="columnheader" scope="col">
+                  <button type="button" class="sortable-column-button" aria-label="sort table by type">&#8693;</button>
+                  Type
+                </th> 
+                <th role="columnheader" scope="col">
+                  <button type="button" class="sortable-column-button" aria-label="sort table by description">&#8693;</button>
+                  Description
+                </th>   
+                <th role="columnheader" scope="col">
+                  <button type="button" class="sortable-column-button" aria-label="sort table by clinician">&#8693;</button>
+                  Clinician
+                </th> 
+                <th role="columnheader" scope="col">
+                  <button type="button" class="sortable-column-button" aria-label="sort table by caseworker">&#8693;</button>
+                  Caseworker
+                </th> 
+                <th role="columnheader" scope="col">
+                  <button type="button" class="sortable-column-button" aria-label="sort table by status">&#8693;</button>
+                  Status
+                </th>                                              
                 <th role="columnheader" class="" scope="col">
                   
                 </th>

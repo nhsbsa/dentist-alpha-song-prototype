@@ -3,7 +3,7 @@
 <!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
 
 <!-- Extends the layout from /views/layout.html -->
-{% extends 'default-layout.html' %}
+{% extends 'default-layout-new.html' %}
 
 <!-- Set the page title -->
 {% block pageTitle %}
@@ -39,7 +39,7 @@ Reports
         </h2>
         <div class="nhsuk-error-summary__body">
           <ul class="nhsuk-list nhsuk-error-summary__list" role="list">
-            <li> <a href="#example-error-1">Reporting period end date must be in the past</a>
+            <li> <a href="#reporting-period">Reporting period end date must be in the past</a>
             </li>
           </ul>
         </div>
@@ -146,7 +146,7 @@ Reports
 
               <hr style="margin: 0px 0px 0px 0px;">
 
-              <details class="nhsuk-details nhsuk-expander" open style="border:none; padding: 0px 0px 0px 16px; margin: 0px;">
+              <details class="nhsuk-details nhsuk-expander" id="reporting-period" open style="border:none; padding: 0px 0px 0px 16px; margin: 0px;">
                 <summary class="nhsuk-details__summary nhsuk-u-padding-left-0" style="padding: 8px 0px 16px 0px;">
                   <div class="nhsuk-custom-search-filter-text" style="padding: 0px; margin: 0px;">
                     <span class="nhsuk-details__summary-text">
@@ -257,7 +257,7 @@ Reports
               <p class="nhsuk-body" style="margin: 12px 0px 0px 0px; position: absolute; right: 64px;">Select all</h3>
               <div class="govuk-checkboxes govuk-checkboxes--small" style="margin: 0px 0px 8px 0px; position: absolute; right: 0;" data-module="govuk-checkboxes">
                 <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc" aria-label="Select all reports">
                   <label class="govuk-label govuk-checkboxes__label" for="organisation"></label>
                 </div>
               </div>
@@ -266,13 +266,13 @@ Reports
               
               <div class="nhsuk-grid-row">
                 <div class="nhsuk-grid-column-three-quarters">
-                  <a href="view-report" class="nhsuk-heading-s" style="margin: 8px 0px 8px 0px;">Year End Review for Provider 2024-2025</a>
+                  <a href="#" class="nhsuk-heading-s" style="margin: 8px 0px 8px 0px;">Year End Review for Provider 2024-2025</a>
                 </div>
                 <div class="nhsuk-grid-column-one-quarter">
-                  <div class="govuk-checkboxes govuk-checkboxes--small" style="margin: 0px 0px 8px 0px; position: absolute; right: 0;" data-module="govuk-checkboxes">
+                  <div class="govuk-checkboxes govuk-checkboxes--small" style="margin: 0 0 8px 0; position: absolute; right: 0;" data-module="govuk-checkboxes">
                     <div class="govuk-checkboxes__item">
-                      <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
-                      <label class="govuk-label govuk-checkboxes__label" for="organisation"></label>
+                      <input class="govuk-checkboxes__input" id="organisation" type="checkbox">
+                      <label class="govuk-label govuk-checkboxes__label" for="organisation"><span class="govuk-visually-hidden">Select report</span></label>
                     </div>
                   </div>
                 </div>
@@ -287,10 +287,10 @@ Reports
                   <a href="#" class="nhsuk-heading-s" style="margin: 8px 0px 8px 0px;">Year End Review for Provider 2024-2025</a>
                 </div>
                 <div class="nhsuk-grid-column-one-quarter">
-                  <div class="govuk-checkboxes govuk-checkboxes--small" style="margin: 0px 0px 8px 0px; position: absolute; right: 0;" data-module="govuk-checkboxes">
+                  <div class="govuk-checkboxes govuk-checkboxes--small" style="margin: 0 0 8px 0; position: absolute; right: 0;" data-module="govuk-checkboxes">
                     <div class="govuk-checkboxes__item">
-                      <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
-                      <label class="govuk-label govuk-checkboxes__label" for="organisation"></label>
+                      <input class="govuk-checkboxes__input" id="organisation" type="checkbox">
+                      <label class="govuk-label govuk-checkboxes__label" for="organisation"><span class="govuk-visually-hidden">Select report</span></label>
                     </div>
                   </div>
                 </div>
@@ -305,10 +305,10 @@ Reports
                   <a href="#" class="nhsuk-heading-s" style="margin: 8px 0px 8px 0px;">Year End Review for Provider 2024-2025</a>
                 </div>
                 <div class="nhsuk-grid-column-one-quarter">
-                  <div class="govuk-checkboxes govuk-checkboxes--small" style="margin: 0px 0px 8px 0px; position: absolute; right: 0;" data-module="govuk-checkboxes">
+                  <div class="govuk-checkboxes govuk-checkboxes--small" style="margin: 0 0 8px 0; position: absolute; right: 0;" data-module="govuk-checkboxes">
                     <div class="govuk-checkboxes__item">
-                      <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
-                      <label class="govuk-label govuk-checkboxes__label" for="organisation"></label>
+                      <input class="govuk-checkboxes__input" id="organisation" type="checkbox">
+                      <label class="govuk-label govuk-checkboxes__label" for="organisation"><span class="govuk-visually-hidden">Select report</span></label>
                     </div>
                   </div>
                 </div>
@@ -323,10 +323,10 @@ Reports
                   <a href="#" class="nhsuk-heading-s" style="margin: 8px 0px 8px 0px;">Dental Assurance Framework General Provider Report Q4 2024-2025</a>
                 </div>
                 <div class="nhsuk-grid-column-one-quarter">
-                  <div class="govuk-checkboxes govuk-checkboxes--small" style="margin: 0px 0px 8px 0px; position: absolute; right: 0;" data-module="govuk-checkboxes">
+                  <div class="govuk-checkboxes govuk-checkboxes--small" style="margin: 0 0 8px 0; position: absolute; right: 0;" data-module="govuk-checkboxes">
                     <div class="govuk-checkboxes__item">
-                      <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
-                      <label class="govuk-label govuk-checkboxes__label" for="organisation"></label>
+                      <input class="govuk-checkboxes__input" id="organisation" type="checkbox">
+                      <label class="govuk-label govuk-checkboxes__label" for="organisation"><span class="govuk-visually-hidden">Select report</span></label>
                     </div>
                   </div>
                 </div>
@@ -341,10 +341,10 @@ Reports
                   <a href="#" class="nhsuk-heading-s" style="margin: 8px 0px 8px 0px;">Activity actuals</a>
                 </div>
                 <div class="nhsuk-grid-column-one-quarter">
-                  <div class="govuk-checkboxes govuk-checkboxes--small" style="margin: 0px 0px 8px 0px; position: absolute; right: 0;" data-module="govuk-checkboxes">
+                  <div class="govuk-checkboxes govuk-checkboxes--small" style="margin: 0 0 8px 0; position: absolute; right: 0;" data-module="govuk-checkboxes">
                     <div class="govuk-checkboxes__item">
-                      <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
-                      <label class="govuk-label govuk-checkboxes__label" for="organisation"></label>
+                      <input class="govuk-checkboxes__input" id="organisation" type="checkbox">
+                      <label class="govuk-label govuk-checkboxes__label" for="organisation"><span class="govuk-visually-hidden">Select report</span></label>
                     </div>
                   </div>
                 </div>
@@ -359,10 +359,10 @@ Reports
                   <a href="#" class="nhsuk-heading-s" style="margin: 8px 0px 8px 0px;">Activity actuals</a>
                 </div>
                 <div class="nhsuk-grid-column-one-quarter">
-                  <div class="govuk-checkboxes govuk-checkboxes--small" style="margin: 0px 0px 8px 0px; position: absolute; right: 0;" data-module="govuk-checkboxes">
+                  <div class="govuk-checkboxes govuk-checkboxes--small" style="margin: 0 0 8px 0; position: absolute; right: 0;" data-module="govuk-checkboxes">
                     <div class="govuk-checkboxes__item">
-                      <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
-                      <label class="govuk-label govuk-checkboxes__label" for="organisation"></label>
+                      <input class="govuk-checkboxes__input" id="organisation" type="checkbox">
+                      <label class="govuk-label govuk-checkboxes__label" for="organisation"><span class="govuk-visually-hidden">Select report</span></label>
                     </div>
                   </div>
                 </div>
@@ -377,10 +377,10 @@ Reports
                   <a href="#" class="nhsuk-heading-s" style="margin: 8px 0px 8px 0px;">Monthly pay statement for P11 2024-2025</a>
                 </div>
                 <div class="nhsuk-grid-column-one-quarter">
-                  <div class="govuk-checkboxes govuk-checkboxes--small" style="margin: 0px 0px 8px 0px; position: absolute; right: 0;" data-module="govuk-checkboxes">
+                  <div class="govuk-checkboxes govuk-checkboxes--small" style="margin: 0 0 8px 0; position: absolute; right: 0;" data-module="govuk-checkboxes">
                     <div class="govuk-checkboxes__item">
-                      <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
-                      <label class="govuk-label govuk-checkboxes__label" for="organisation"></label>
+                      <input class="govuk-checkboxes__input" id="organisation" type="checkbox">
+                      <label class="govuk-label govuk-checkboxes__label" for="organisation"><span class="govuk-visually-hidden">Select report</span></label>
                     </div>
                   </div>
                 </div>
@@ -395,10 +395,10 @@ Reports
                   <a href="#" class="nhsuk-heading-s" style="margin: 8px 0px 8px 0px;">Monthly pay statement for P11 2024-2025</a>
                 </div>
                 <div class="nhsuk-grid-column-one-quarter">
-                  <div class="govuk-checkboxes govuk-checkboxes--small" style="margin: 0px 0px 8px 0px; position: absolute; right: 0;" data-module="govuk-checkboxes">
+                  <div class="govuk-checkboxes govuk-checkboxes--small" style="margin: 0 0 8px 0; position: absolute; right: 0;" data-module="govuk-checkboxes">
                     <div class="govuk-checkboxes__item">
-                      <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
-                      <label class="govuk-label govuk-checkboxes__label" for="organisation"></label>
+                      <input class="govuk-checkboxes__input" id="organisation" type="checkbox">
+                      <label class="govuk-label govuk-checkboxes__label" for="organisation"><span class="govuk-visually-hidden">Select report</span></label>
                     </div>
                   </div>
                 </div>
@@ -413,10 +413,10 @@ Reports
                   <a href="#" class="nhsuk-heading-s" style="margin: 8px 0px 8px 0px;">Dental Assurance Framework General Provider Report Q3 2024-2025</a>
                 </div>
                 <div class="nhsuk-grid-column-one-quarter">
-                  <div class="govuk-checkboxes govuk-checkboxes--small" style="margin: 0px 0px 8px 0px; position: absolute; right: 0;" data-module="govuk-checkboxes">
+                  <div class="govuk-checkboxes govuk-checkboxes--small" style="margin: 0 0 8px 0; position: absolute; right: 0;" data-module="govuk-checkboxes">
                     <div class="govuk-checkboxes__item">
-                      <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
-                      <label class="govuk-label govuk-checkboxes__label" for="organisation"></label>
+                      <input class="govuk-checkboxes__input" id="organisation" type="checkbox">
+                      <label class="govuk-label govuk-checkboxes__label" for="organisation"><span class="govuk-visually-hidden">Select report</span></label>
                     </div>
                   </div>
                 </div>
@@ -431,10 +431,10 @@ Reports
                   <a href="#" class="nhsuk-heading-s" style="margin: 8px 0px 8px 0px;">Dental Assurance Framework General Provider Report Q2 2024-2025</a>
                 </div>
                 <div class="nhsuk-grid-column-one-quarter">
-                  <div class="govuk-checkboxes govuk-checkboxes--small" style="margin: 0px 0px 8px 0px; position: absolute; right: 0;" data-module="govuk-checkboxes">
+                  <div class="govuk-checkboxes govuk-checkboxes--small" style="margin: 0 0 8px 0; position: absolute; right: 0;" data-module="govuk-checkboxes">
                     <div class="govuk-checkboxes__item">
-                      <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
-                      <label class="govuk-label govuk-checkboxes__label" for="organisation"></label>
+                      <input class="govuk-checkboxes__input" id="organisation" type="checkbox">
+                      <label class="govuk-label govuk-checkboxes__label" for="organisation"><span class="govuk-visually-hidden">Select report</span></label>
                     </div>
                   </div>
                 </div>
