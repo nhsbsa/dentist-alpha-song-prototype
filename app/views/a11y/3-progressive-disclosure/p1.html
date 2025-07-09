@@ -1,5 +1,5 @@
 <!-- Extends the layout from /views/layout.html -->
-{% extends 'default-layout.html' %}
+{% extends 'default-layout-new.html' %}
 
 <!-- Breadcrumbs -->
 {% block beforeContent %}
@@ -23,7 +23,7 @@
             Go back</a>
       </div>
 
-        <fieldset class="nhsuk-fieldset" aria-describedby="confirm-hint">
+        <fieldset class="nhsuk-fieldset">
             <h1 class="nhsuk-heading-xl">
               <span class="nhsuk-caption-xl">Mid-year action plan review</span>
               Does the contract's financial year for 2020/21 start on the 1st April?
@@ -50,6 +50,10 @@
           
               <!-- CONDITIONAL DATE INPUT (only shown when "No" is selected) -->
               <div class="nhsuk-radios__conditional" id="conditional-confirm-1">
+                <br>
+                <label class="nhsuk-label" for="conditional-confirm-1">
+                  When does the contract's financial year start?
+                </label>
                 <div class="nhsuk-date-input" id="example">
                   <div class="nhsuk-date-input__item">
                     <div class="nhsuk-form-group">
