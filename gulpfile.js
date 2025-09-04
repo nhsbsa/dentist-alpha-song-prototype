@@ -121,3 +121,4 @@ exports.cleanPublic = cleanPublic;
 
 gulp.task('build', gulp.series(cleanPublic, compileStyles, compileScripts, compileAssets));
 gulp.task('default', gulp.series(startNodemon, startBrowserSync, watch));
+
