@@ -1,0 +1,94 @@
+{% extends 'default-layout-new.html' %}
+
+{% block pageTitle %}
+Add supporting documents
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">Attach evidence</h1>
+
+    <!-- File Upload area -->
+    <div class="nhsuk-form-group">
+      <div class="nhsuk-file-upload" id="file-dropzone" style="border: 2px dotted grey; padding: 20px; text-align: left;">
+        <span class="nhsuk-file-upload__label">
+          Drag and drop files here or
+          <button class="nhsuk-button nhsuk-button--secondary" type="button" id="choose-files">
+            Choose files
+          </button>
+        </span>
+        <!-- Hidden file input -->
+        <input type="file" id="file-upload" multiple style="display: none;">
+      </div>
+    </div>
+
+    <!-- Uploaded file summary list -->
+    <h2 class="govuk-heading-m">Documents added</h2>
+    <p id="upload-count">No documents uploaded</p>
+    <dl class="govuk-summary-list" id="uploaded-files">
+      <!-- Dynamic rows added here -->
+    </dl>
+
+  </div>
+</div>
+
+<script>
+  const fileInput = document.getElementById('file-upload');
+  const chooseFilesBtn = document.getElementById('choose-files');
+  const uploadedFilesList = document.getElementById('uploaded-files');
+  const uploadCount = document.getElementById('upload-count');
+
+  let uploadedFiles = [];
+
+  // Trigger hidden file input
+  chooseFilesBtn.addEventListener('click', () => {
+    fileInput.click();
+  });
+
+  // Handle file selection
+  fileInput.addEventListener('change', () => {
+    Array.from(fileInput.files).forEach(file => {
+      addFileRow(file);
+    });
+    fileInput.value = ""; // reset so same file can be chosen again
+  });
+
+  function addFileRow(file) {
+    uploadedFiles.push(file);
+
+    const row = document.createElement('div');
+    row.classList.add('govuk-summary-list__row');
+    row.innerHTML = `
+      <dt class="govuk-summary-list__key">${file.name} (${(file.size / (1024*1024)).toFixed(1)}MB)</dt>
+      <dd class="govuk-summary-list__value">
+        <strong class="nhsuk-tag nhsuk-tag--green">Uploaded</strong>
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a href="#" class="nhsuk-link remove-link">Remove</a>
+      </dd>
+    `;
+
+    row.querySelector('.remove-link').addEventListener('click', (e) => {
+      e.preventDefault();
+      uploadedFiles = uploadedFiles.filter(f => f !== file);
+      row.remove();
+      updateUploadCount();
+    });
+
+    uploadedFilesList.appendChild(row);
+    updateUploadCount();
+  }
+
+  function updateUploadCount() {
+    if (uploadedFiles.length === 0) {
+      uploadCount.textContent = "No documents uploaded";
+    } else {
+      uploadCount.textContent = `${uploadedFiles.length} document${uploadedFiles.length > 1 ? 's' : ''} uploaded`;
+    }
+  }
+</script>
+
+{% endblock %}

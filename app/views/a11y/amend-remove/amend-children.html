@@ -1,0 +1,54 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'default-layout-new.html' %}
+
+<!-- Set the page title -->
+{% block pageTitle %}
+How many children customer has
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form action="/a11y/amend-cya-remove" method="post" novalidate>
+
+        <span class="govuk-caption-l">Amend form 123456</span>
+
+        <h1 class="govuk-heading-l">How many children does the customer have?</h1>
+
+        <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title"
+             data-module="govuk-notification-banner">
+          <div class="govuk-notification-banner__header">
+            <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+              Important
+            </h2>
+          </div>
+          <div class="govuk-notification-banner__content">
+            <p class="govuk-notification-banner__heading">
+              Any information you've entered may be lost if you change the number.
+            </p>
+          </div>
+        </div>
+
+        <div class="govuk-form-group">
+          <div id="children-hint" class="govuk-hint">
+            Enter the number of children
+          </div>
+          <input class="govuk-input govuk-input--width-5" id="children" name="children" type="number" inputmode="numeric" aria-describedby="children-hint" value="5">
+        </div>
+
+        <button class="govuk-button" data-module="govuk-button">
+          Save and continue
+        </button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
