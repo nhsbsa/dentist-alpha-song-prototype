@@ -1,0 +1,59 @@
+{% extends 'default-layout-new.html' %}
+
+{% block pageTitle %}
+Check your answers
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <span class="govuk-caption-l">Amend form 123456</span>
+
+    <h1 class="govuk-heading-l">Check your answers</h1>
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9" data-module="govuk-summary-list">
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">Patient name</dt>
+        <dd class="govuk-summary-list__value">John Smith</dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="/edit-patient-name">Change<span class="govuk-visually-hidden"> patient name</span></a>
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">Patient NHS number</dt>
+        <dd class="govuk-summary-list__value">123 456 7890</dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="/edit-nhs-number">Change<span class="govuk-visually-hidden"> NHS number</span></a>
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">How old is the patient’s child</dt>
+        <dd class="govuk-summary-list__value">17</dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="/edit-child-age">
+            Change<span class="govuk-visually-hidden"> child age</span>
+          </a>
+        </dd>
+      </div>
+
+    </dl>
+
+    <p class="nhsuk-action-link">
+      <a class="nhsuk-action-link__link" href="/add-supporting-docs">
+        <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 15l-1.41-1.41L14.17 12H7v-2h7.17l-2.58-2.59L13 6l5 5-5 6z"></path>
+        </svg>
+        <span class="nhsuk-action-link__text">Add supporting docs</span>
+      </a>
+    </p>
+
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,47 @@
+{% extends 'default-layout-new.html' %}
+
+{% block pageTitle %}
+How old is the patient’s child
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form action="/cya-with-docs" method="post">
+
+      <span class="govuk-caption-l">Amend form 123456</span>
+
+      <h1 class="govuk-heading-l">How old is the patient’s child?</h1>
+
+      <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title"
+           data-module="govuk-notification-banner">
+        <div class="govuk-notification-banner__header">
+          <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">Important</h2>
+        </div>
+        <div class="govuk-notification-banner__content">
+          <p class="govuk-notification-banner__heading">
+            You need to include supporting docs if patient is under 18.
+          </p>
+        </div>
+      </div>
+
+      <div class="govuk-form-group">
+        <div id="child-age-hint" class="govuk-hint">
+          Enter the age of the patient’s child
+        </div>
+        <input class="govuk-input govuk-input--width-5" id="child-age" name="child-age" type="number"
+               inputmode="numeric" aria-describedby="child-age-hint" value="19">
+      </div>
+
+      <button class="govuk-button" data-module="govuk-button">
+        Save and continue
+      </button>
+
+    </form>
+
+  </div>
+</div>
+
+{% endblock %}

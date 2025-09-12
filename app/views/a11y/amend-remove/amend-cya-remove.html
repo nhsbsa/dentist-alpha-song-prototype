@@ -1,0 +1,85 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'default-layout-new.html' %}
+
+{% block pageTitle %}
+Check your answers
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+       <!-- NHS Warning Callout -->
+      <div class="nhsuk-warning-callout">
+        <h3 class="nhsuk-warning-callout__label">
+          <span role="text">
+            <span class="nhsuk-u-visually-hidden">Important: </span>
+            Information removed
+          </span>
+        </h3>
+        <p>
+          Some information has been removed because the customer now has only 1 child.
+        </p>
+      </div>
+
+      <span class="govuk-caption-l">Amend form 123456</span>
+
+      <h1 class="govuk-heading-l">Check your answers</h1>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9" data-module="govuk-summary-list">
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            How many children does the customer have
+          </dt>
+          <dd class="govuk-summary-list__value">
+            1
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="/amend-children">
+              Change<span class="govuk-visually-hidden"> number of children</span>
+            </a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Child 1 name
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Alice
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="/edit-child-1">
+              Change<span class="govuk-visually-hidden"> child 1 name</span>
+            </a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Child 1 age
+          </dt>
+          <dd class="govuk-summary-list__value">
+            7
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="/edit-child-1">
+              Change<span class="govuk-visually-hidden"> child 1 age</span>
+            </a>
+          </dd>
+        </div>
+
+           <form action="/amend-cya2" >
+        <button class="govuk-button" data-module="govuk-button">
+          Confirm and continue
+        </button>
+      </form>
+
+      </dl>
+
+    </div>
+  </div>
+
+{% endblock %}
