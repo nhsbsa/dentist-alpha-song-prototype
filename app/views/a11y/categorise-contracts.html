@@ -1,0 +1,550 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'default-layout-new.html' %}
+
+<!-- Set the page title -->
+{% block pageTitle %}
+Reports
+{% endblock %}
+
+<!-- Back link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- Content -->
+{% block content %}
+
+<div class="nhsuk-back-link">
+
+  <a class="nhsuk-back-link__link" href="../home">
+      <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
+        <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+      </svg>
+      Back to home</a>
+  </div>
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+      <span class="nhsuk-caption-xl">Year-end review 2025</span>
+      <h1 class="nhsuk-heading-xl">Categorise contracts</h1>
+
+      <div class="nhsuk-card nhsuk-card--clickable" style="border: none; background-color: 	#f0f4f5;">
+        
+        
+        
+        <ul class="nhsuk-grid-row nhsuk-card-group" style="background-color: #d8dde0;">
+          <div class="nhsuk-card" style="background-color: #d8dde0; margin: 20px;">
+          <h4 style="margin-bottom: 0px;">Year-end review phase 1 of 3</h4>
+          <p style="margin-bottom: 0px;">Propose contract categories ahead of your year-end review</p>
+          <p class="nhsuk-heading-xs" style="margin-bottom: 0px;">Ends: 31 September 2025</p>
+        </div>
+
+          <div class="nhsuk-card" style="background-color: #d8dde0; margin: 0px 20px 8px 20px; display: flex;">
+            <div class="nhsuk-card " style="background-color: #007f3b; margin: 0px 8px 0px 0px; width: 400px; height: 20px;"></div>
+            <div class="nhsuk-card " style="background-color: 	#aeb7bd; margin: 0px 8px 0px 8px; width: 400px"></div>
+            <div class="nhsuk-card " style="background-color: 	#aeb7bd; margin: 0px 0px 0px 8px; width: 400px"></div>
+          </div>
+
+          <li class="nhsuk-grid-full nhsuk-card-group__item">
+        
+            <div class="nhsuk-card nhsuk-card--clickable" style="margin: 20px 0px 20px 20px;">
+              <div class="nhsuk-card__content">
+                <p class="nhsuk-heading-l">225</p>
+                <h5 class="nhsuk-card__heading nhsuk-heading-xs"> <a class="nhsuk-card__link" href="#">Contracts to categorise</a> </h5>
+              </div>
+            </div>
+
+            <div class="nhsuk-card nhsuk-card--clickable" style="margin: 20px 0px 20px 20px;">
+              <div class="nhsuk-card__content">
+                <p class="nhsuk-heading-l">166</p>
+                <h5 class="nhsuk-card__heading nhsuk-heading-xs">Recommendations to review</h5>
+              </div>
+            </div>
+
+            <div class="nhsuk-card nhsuk-card--clickable" style="margin: 20px 0px 20px 20px;">
+              <div class="nhsuk-card__content">
+                <p class="nhsuk-heading-l">209</p>
+                <h5 class="nhsuk-card__heading nhsuk-heading-xs"> <a class="nhsuk-card__link" href="#">Recommendations with commissioners and caseworker</a> </h5>
+              </div>
+            </div>
+
+            <div class="nhsuk-card nhsuk-card--clickable" style="margin: 20px;">
+              <div class="nhsuk-card__content">
+                <p class="nhsuk-heading-l">118</p>
+                <h5 class="nhsuk-card__heading nhsuk-heading-xs"> <a class="nhsuk-card__link" href="#">Contracts categorised</a> </h5>
+              </div>
+            </div>
+        
+          </li>
+        </ul>
+     
+
+
+
+      <ul class="nhsuk-grid-row nhsuk-card-group" >
+
+        <li class="nhsuk-grid-column-one-quarter nhsuk-card-group__item" style="padding: 0px 0px 0px 16px;">
+          
+          <div class="nhsuk-card nhsuk-card--clickable">
+            <div class="nhsuk-card__content nhsuk-card__content--primary" style="padding: 0px 0px 0px 0px;">
+              <h2 class="nhsuk-heading-s" style="color: #fff; background-color: 	#005eb8; padding: 16px 16px 16px 16px; margin: 0px 0px 0px 0px;">Filter and sort</h2>
+              
+
+              <details class="nhsuk-details nhsuk-expander" style="border:none; padding: 0px 0px 0px 16px; margin: 0px;">
+                <summary class="nhsuk-details__summary nhsuk-u-padding-left-0" style="padding: 0px 0px 16px 0px;">
+                  <div class="nhsuk-custom-search-filter-text" style="padding: 8px 0px 0px 0px; margin: 0px;">
+                    <span class="nhsuk-details__summary-text">
+                      Contract
+                    </span>
+
+                  </div>
+                </summary>
+                <div class="nhsuk-details__text nhsuk-u-padding-left-0">
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label" for="input-width-10">
+                      Enter contract number
+                    </label>
+                    <div class="nhsuk-hint" style="font-size: 16px;" id="contact-hint">
+                      Search for multiple contracts by separating them using a comma
+                    </div>
+                    <input class="nhsuk-input nhsuk-input--width-10" id="input-width-10" name="test-width-10" type="text">
+                  </div>
+                </div>
+              </details>
+
+              <hr style="margin: 0px 0px 0px 0px;">
+
+              <details class="nhsuk-details nhsuk-expander" style="border:none; padding: 0px 0px 0px 16px; margin: 0px;">
+                <summary class="nhsuk-details__summary nhsuk-u-padding-left-0" style="padding: 8px 0px 16px 0px;">
+                  <div class="nhsuk-custom-search-filter-text" style="padding: 0px; margin: 0px;">
+                    <span class="nhsuk-details__summary-text">
+                      Report type
+                    </span>
+
+                  </div>
+                </summary>
+                <div class="nhsuk-details__text nhsuk-u-padding-left-0">
+                  <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset">
+                      <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+                          <label class="nhsuk-label govuk-checkboxes__label" for="organisation">
+                            Activity actuals
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+                          <label class="nhsuk-label govuk-checkboxes__label" for="organisation-2">
+                            Pay statements
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="organisation-3" name="organisation" type="checkbox" value="MOD">
+                          <label class="nhsuk-label govuk-checkboxes__label" for="organisation-3">
+                            Mid and end of year reviews
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+                          <label class="nhsuk-label govuk-checkboxes__label" for="organisation-4">
+                            Pensions
+                          </label>
+                        </div>
+                      </div>
+                    </fieldset>
+                  </div>
+                </div>
+              </details>
+
+              <hr style="margin: 0px 0px 0px 0px;">
+
+              <details class="nhsuk-details nhsuk-expander" style="border:none; padding: 0px 0px 0px 16px; margin: 0px;">
+                <summary class="nhsuk-details__summary nhsuk-u-padding-left-0" style="padding: 8px 0px 16px 0px;">
+                  <div class="nhsuk-custom-search-filter-text" style="padding: 0px; margin: 0px;">
+                    <span class="nhsuk-details__summary-text">
+                      Provider
+                    </span>
+
+                  </div>
+                </summary>
+                <div class="nhsuk-details__text nhsuk-u-padding-left-0">
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label" for="input-width-10">
+                      Enter provider number
+                    </label>
+                    <div class="nhsuk-hint" style="font-size: 16px;" id="contact-hint">
+                      Search for multiple providers by separating them using a comma
+                    </div>
+                    <input class="nhsuk-input nhsuk-input--width-10" id="input-width-10" name="test-width-10" type="text">
+                  </div>
+                </div>
+              </details>
+
+              <hr style="margin: 0px 0px 0px 0px;">
+
+              <details class="nhsuk-details nhsuk-expander" style="border:none; padding: 0px 0px 0px 16px; margin: 0px;">
+                <summary class="nhsuk-details__summary nhsuk-u-padding-left-0" style="padding: 8px 0px 16px 0px;">
+                  <div class="nhsuk-custom-search-filter-text" style="padding: 0px; margin: 0px;">
+                    <span class="nhsuk-details__summary-text">
+                      Review status
+                    </span>
+                  </div>
+                </summary>
+                <div class="nhsuk-details__text nhsuk-u-padding-left-0">
+                  <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset">
+                      <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+                          <label class="nhsuk-label govuk-checkboxes__label" for="organisation">
+                            To review
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+                          <label class="nhsuk-label govuk-checkboxes__label" for="organisation-2">
+                            With my peers
+                          </label>
+                        </div>
+                      </div>
+                    </fieldset>
+                  </div>
+                  
+                  
+            
+                </div>
+              </details>
+
+              <hr style="margin: 0px 0px 0px 0px;">
+
+              <details class="nhsuk-details nhsuk-expander" style="border:none; padding: 0px 0px 0px 16px; margin: 0px;">
+                <summary class="nhsuk-details__summary nhsuk-u-padding-left-0" style="padding: 8px 0px 16px 0px;">
+                  <div class="nhsuk-custom-search-filter-text" style="padding: 0px; margin: 0px;">
+                    <span class="nhsuk-details__summary-text">
+                      Sort by
+                    </span>
+
+                  </div>
+                </summary>
+                <div class="nhsuk-details__text nhsuk-u-padding-left-0">
+                  <div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="changedName" name="changedName" type="radio" value="month">
+                      <label class="govuk-label govuk-radios__label" for="changedName">
+                        Monthly
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="changedName-2" name="changedName" type="radio" value="year">
+                      <label class="govuk-label govuk-radios__label" for="changedName-2">
+                        Yearly
+                      </label>
+                    </div>
+                  </div>
+                  
+                </div>
+                
+              </details>
+
+              <hr style="margin: 0px 0px 0px 0px;">
+
+              <div class="nhsuk-button-group">
+                <a href="p2" class="nhsuk-button nhsuk-u-margin-bottom-0" data-module="nhsuk-button" type="submit" style="padding: 8px 16px 8px 16px; margin: 16px 16px 16px 16px;">
+                  Apply filters
+                </a>
+              </div>
+
+            </div>    
+          </div>
+      
+        </li>
+        <li class="nhsuk-grid-column-three-quarters nhsuk-card-group__item" style="padding: 0px 0px 0px 16px; ">
+          <div class="nhsuk-card nhsuk-card--clickable" style="border: none; background-color: 	#f0f4f5;">
+          <table class="nhsuk-table-responsive" role="table">
+            <thead class="nhsuk-table__head" role="rowgroup">
+              <tr role="row">
+                <th scope="col" class="nhsuk-table__header " style="width: 30px; height: 20px;" role="columnheader">
+                  <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="organisation" type="checkbox">
+                      <label class="govuk-label govuk-checkboxes__label" for="organisation"><span class="govuk-visually-hidden">Select report</span></label>
+                    </div>
+                  </div>
+                </th>
+                <th scope="col" class="nhsuk-table__header nhsuk-u-width-one-quarter" role="columnheader">Contract</th>
+                <th scope="col" class="nhsuk-table__header nhsuk-u-width-one-half" role="columnheader">ICB</th>
+                <th scope="col" class="nhsuk-table__header nhsuk-u-width-one-quarter" role="columnheader">Recommended category</th>
+                <th scope="col" class="nhsuk-table__header nhsuk-u-width-one-quarter" role="columnheader">Review status</th>
+              </tr>
+            </thead>
+            <tbody class="nhsuk-table__body">
+              <tr class="nhsuk-table__row" role="row">
+                <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Select </span>
+                  <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="organisation" type="checkbox">
+                      <label class="govuk-label govuk-checkboxes__label" for="organisation"><span class="govuk-visually-hidden">Select report</span></label>
+                    </div>
+                  </div>
+                </td>
+                <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Contract </span>1234567890</td>
+                <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Age </span>ABC</td>
+                <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Recommended category </span>2.1</td>
+                <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Status</span><strong class="nhsuk-tag nhsuk-tag--white">
+                  To review
+                </strong></td>
+              </tr>
+              <tr class="nhsuk-table__row" role="row">
+                <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Select </span>
+                  <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="organisation" type="checkbox">
+                      <label class="govuk-label govuk-checkboxes__label" for="organisation"><span class="govuk-visually-hidden">Select report</span></label>
+                    </div>
+                  </div>
+                </td>
+                <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Contract </span>1112345678</td>
+                <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Age </span>ABC</td>
+                <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Recommended category </span>2.1</td>
+                <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Status</span><strong class="nhsuk-tag nhsuk-tag--white">
+                  To review
+                </strong></td>
+              </tr>
+              <tr class="nhsuk-table__row" role="row">
+                <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Select </span>
+                  <!--No checkbox-->
+                </td>
+                <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Contract </span>2223456789</td>
+                <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Age </span>ABC</td>
+                <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Recommended category </span>2.1</td>
+                <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Status</span>With my peers</td>
+              </tr>
+              <tr class="nhsuk-table__row" role="row">
+                <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Select </span>
+                  <!--No checkbox-->
+                </td>
+                <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Contract </span>3334567890</td>
+                <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Age </span>ABC</td>
+                <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Recommended category </span>2.1</td>
+                <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Status</span>With my peers</td>
+              </tr>
+              <tr class="nhsuk-table__row" role="row">
+                <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Select </span>
+                  <!--No checkbox-->
+                </td>
+                <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Contract </span>4445678901</td>
+                <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Age </span>ABC</td>
+                <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Recommended category </span>2.1</td>
+                <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Status</span>With my peers</td>
+              </tr>
+              <tr class="nhsuk-table__row" role="row">
+                <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Select </span>
+                  <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="organisation" type="checkbox">
+                      <label class="govuk-label govuk-checkboxes__label" for="organisation"><span class="govuk-visually-hidden">Select report</span></label>
+                    </div>
+                  </div>
+                </td>
+                <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Contract </span>5556789012</td>
+                <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Age </span>ABC</td>
+                <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Recommended category </span>2.1</td>
+                <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Status</span><strong class="nhsuk-tag nhsuk-tag--white">
+                  To review
+                </strong></td>
+              </tr>
+              <tr class="nhsuk-table__row" role="row">
+                <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Select </span>
+                  <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="organisation" type="checkbox">
+                      <label class="govuk-label govuk-checkboxes__label" for="organisation"><span class="govuk-visually-hidden">Select report</span></label>
+                    </div>
+                  </div>
+                </td>
+                <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Contract </span>6667890123</td>
+                <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Age </span>ABC</td>
+                <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Recommended category </span>2.1</td>
+                <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Status</span><strong class="nhsuk-tag nhsuk-tag--white">
+                  To review
+                </strong></td>
+              </tr>
+              <tr class="nhsuk-table__row" role="row">
+                <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Select </span>
+                  <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="organisation" type="checkbox">
+                      <label class="govuk-label govuk-checkboxes__label" for="organisation"><span class="govuk-visually-hidden">Select report</span></label>
+                    </div>
+                  </div>
+                </td>
+                <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Contract </span>7778901234</td>
+                <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Age </span>ABC</td>
+                <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Recommended category </span>2.1</td>
+                <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Status</span><strong class="nhsuk-tag nhsuk-tag--white">
+                  To review
+                </strong></td>
+              </tr>
+              <tr class="nhsuk-table__row" role="row">
+                <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Select </span>
+                  <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="organisation" type="checkbox">
+                      <label class="govuk-label govuk-checkboxes__label" for="organisation"><span class="govuk-visually-hidden">Select report</span></label>
+                    </div>
+                  </div>
+                </td>
+                <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Contract </span>8889012345</td>
+                <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Age </span>ABC</td>
+                <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Recommended category </span>2.1</td>
+                <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Status</span><strong class="nhsuk-tag nhsuk-tag--white">
+                  To review
+                </strong></td>
+              </tr>
+              <tr class="nhsuk-table__row" role="row">
+                <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Select </span>
+                  <!--No checkbox-->
+                </td>
+                <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Contract </span>9990123456</td>
+                <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Age </span>ABC</td>
+                <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Recommended category </span>2.1</td>
+                <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Status</span>With my peers</td>
+              </tr>
+            </tbody>
+            
+          </table>
+
+          <br>
+          <nav class="govuk-pagination" style="font-family: Frutiger;" aria-label="Pagination">
+        
+            <ul class="govuk-pagination__list">
+              <li class="govuk-pagination__item govuk-pagination__item--current">
+                <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 7" aria-current="page">
+                  1
+                </a>
+              </li>
+              <li class="govuk-pagination__item">
+                <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 8">
+                  2
+                </a>
+              </li>
+              <li class="govuk-pagination__item govuk-pagination__item--ellipses">
+                &ctdot;
+              </li>
+              <li class="govuk-pagination__item">
+                <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 42">
+                  42
+                </a>
+              </li>
+            </ul>
+            <div class="govuk-pagination__next">
+              <a class="govuk-link govuk-pagination__link" href="#" rel="next">
+                <span class="govuk-pagination__link-title">
+                  Next<span class="govuk-visually-hidden"> page</span>
+                </span>
+                <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+                  <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+                </svg>
+              </a>
+            </div>
+          </nav>
+
+          
+        </div>
+          
+        </li>
+
+        
+        
+        
+      </ul>
+
+      
+      
+        
+      
+      
+
+      
+
+      
+
+      <!-- End of content -->
+
+    </div>
+  </div>
+{% endblock %}
+
+{% block pageScripts %}
+  <script>
+    const filterReportExpand = document.getElementById('expand-report-filters');
+    const filterReportClose = document.getElementById('close-report-filters');
+    /*const filterReportContainer = document.getElementById('filter-contract-container');*/
+    const filterReportButton = document.getElementById('apply-filter-button');
+    const filterReportClear = document.getElementById('clear-filter-button');
+    const filterPeriodChip = document.getElementById('period-chip');
+    const filterProviderChip = document.getElementById('provider-chip');
+
+
+
+    function filterContractExpandFunction(item) { 
+      if(item == 'expand') {
+        filterReportExpand.style.display = 'none';
+        filterReportClose.style.display = 'block';
+        filterReportContainer.style.display = 'block';
+      } else {
+        filterReportExpand.style.display = 'block';
+        filterReportClose.style.display = 'none';
+        filterReportContainer.style.display = 'none';
+      }
+    }
+
+    /*function contractClearFilterText(item) { 
+      if(item == 'filtersActive') {
+        filterReportClear.style.display = 'block';
+        contractOne.style.display = 'none';
+        contractTwo.style.display = 'none';
+        contractThree.style.display = 'none';
+      } else {
+        filterReportClear.style.display = 'none';
+        contractOne.style.display = 'table-row';
+        contractTwo.style.display = 'table-row';
+        contractThree.style.display = 'table-row';
+        document.getElementById("contract-active-filter").checked = false;
+        document.getElementById("contract-completed-filter").checked = false;
+        document.getElementById("contract-error-filter").checked = false;
+        document.getElementById("contract-type-filter").selectedIndex = 0;
+        document.getElementById("provider-filter").selectedIndex = 0;
+      }
+    }*/
+
+    filterReportExpand.addEventListener('click', ()=>{
+      filterContractExpandFunction('expand');
+    });
+
+    filterReportClose.addEventListener('click', ()=>{
+      filterContractExpandFunction();
+    });
+
+    filterReportButton.addEventListener('click', ()=>{
+      console.log("Button clicked")
+      /*filterPeriodChip.style.display = 'inline-block';
+      filterProviderChip.style.display = 'inline-block'*/
+    });
+
+    filterPeriodChip.addEventListener('click', ()=>{
+      console.log("Chip clicked");
+      filterPeriodChip.style.display = 'none'
+    });
+
+    filterProviderChip.addEventListener('click', ()=>{
+      console.log("Chip clicked");
+      filterProviderChip.style.display = 'none'
+    });
+
+  </script>
+{% endblock %}
