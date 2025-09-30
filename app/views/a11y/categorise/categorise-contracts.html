@@ -53,14 +53,14 @@ Reports
             <div class="nhsuk-card nhsuk-card--clickable" style="margin: 20px 0px 20px 20px;">
               <div class="nhsuk-card__content">
                 <p class="nhsuk-heading-l">225</p>
-                <h5 class="nhsuk-card__heading nhsuk-heading-xs"> <a class="nhsuk-card__link" href="#">Contracts to categorise</a> </h5>
+                <h5 class="nhsuk-card__heading nhsuk-heading-xs">Contracts to categorise</h5>
               </div>
             </div>
 
             <div class="nhsuk-card nhsuk-card--clickable" style="margin: 20px 0px 20px 20px;">
               <div class="nhsuk-card__content">
                 <p class="nhsuk-heading-l">166</p>
-                <h5 class="nhsuk-card__heading nhsuk-heading-xs">Recommendations to review</h5>
+                <h5 class="nhsuk-card__heading nhsuk-heading-xs"> <a class="nhsuk-card__link" href="#">Recommendations to review</a> </h5>
               </div>
             </div>
 
@@ -121,52 +121,7 @@ Reports
                 <summary class="nhsuk-details__summary nhsuk-u-padding-left-0" style="padding: 8px 0px 16px 0px;">
                   <div class="nhsuk-custom-search-filter-text" style="padding: 0px; margin: 0px;">
                     <span class="nhsuk-details__summary-text">
-                      Report type
-                    </span>
-
-                  </div>
-                </summary>
-                <div class="nhsuk-details__text nhsuk-u-padding-left-0">
-                  <div class="govuk-form-group">
-                    <fieldset class="govuk-fieldset">
-                      <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
-                        <div class="govuk-checkboxes__item">
-                          <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
-                          <label class="nhsuk-label govuk-checkboxes__label" for="organisation">
-                            Activity actuals
-                          </label>
-                        </div>
-                        <div class="govuk-checkboxes__item">
-                          <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
-                          <label class="nhsuk-label govuk-checkboxes__label" for="organisation-2">
-                            Pay statements
-                          </label>
-                        </div>
-                        <div class="govuk-checkboxes__item">
-                          <input class="govuk-checkboxes__input" id="organisation-3" name="organisation" type="checkbox" value="MOD">
-                          <label class="nhsuk-label govuk-checkboxes__label" for="organisation-3">
-                            Mid and end of year reviews
-                          </label>
-                        </div>
-                        <div class="govuk-checkboxes__item">
-                          <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
-                          <label class="nhsuk-label govuk-checkboxes__label" for="organisation-4">
-                            Pensions
-                          </label>
-                        </div>
-                      </div>
-                    </fieldset>
-                  </div>
-                </div>
-              </details>
-
-              <hr style="margin: 0px 0px 0px 0px;">
-
-              <details class="nhsuk-details nhsuk-expander" style="border:none; padding: 0px 0px 0px 16px; margin: 0px;">
-                <summary class="nhsuk-details__summary nhsuk-u-padding-left-0" style="padding: 8px 0px 16px 0px;">
-                  <div class="nhsuk-custom-search-filter-text" style="padding: 0px; margin: 0px;">
-                    <span class="nhsuk-details__summary-text">
-                      Provider
+                      ICB
                     </span>
 
                   </div>
@@ -174,10 +129,10 @@ Reports
                 <div class="nhsuk-details__text nhsuk-u-padding-left-0">
                   <div class="nhsuk-form-group">
                     <label class="nhsuk-label" for="input-width-10">
-                      Enter provider number
+                      Enter ICB code
                     </label>
                     <div class="nhsuk-hint" style="font-size: 16px;" id="contact-hint">
-                      Search for multiple providers by separating them using a comma
+                      Search for multiple ICBs by separating them using a comma
                     </div>
                     <input class="nhsuk-input nhsuk-input--width-10" id="input-width-10" name="test-width-10" type="text">
                   </div>
@@ -253,7 +208,7 @@ Reports
               <hr style="margin: 0px 0px 0px 0px;">
 
               <div class="nhsuk-button-group">
-                <a href="p2" class="nhsuk-button nhsuk-u-margin-bottom-0" data-module="nhsuk-button" type="submit" style="padding: 8px 16px 8px 16px; margin: 16px 16px 16px 16px;">
+                <a href="#" class="nhsuk-button nhsuk-u-margin-bottom-0" data-module="nhsuk-button" type="submit" style="padding: 8px 16px 8px 16px; margin: 16px 16px 16px 16px;">
                   Apply filters
                 </a>
               </div>
@@ -264,7 +219,17 @@ Reports
         </li>
         <li class="nhsuk-grid-column-three-quarters nhsuk-card-group__item" style="padding: 0px 0px 0px 16px; ">
           <div class="nhsuk-card nhsuk-card--clickable" style="border: none; background-color: 	#f0f4f5;">
-          <table class="nhsuk-table-responsive" role="table">
+            <div class="nhsuk-form-group">
+               <select class="nhsuk-select" id="select-1" name="select-1">
+                <option value="1" selected>Accept proposed category</option>
+                <option value="2">Reject proposed category</option>
+              </select>
+              <a href="#" class="nhsuk-button nhsuk-u-margin-bottom-0" data-module="nhsuk-button" type="submit" style="padding: 4px 16px 4px 16px; margin: 0px 0px 0px 8px;">
+                Apply
+              </a>
+            </div>
+          
+            <table class="nhsuk-table-responsive" role="table">
             <thead class="nhsuk-table__head" role="rowgroup">
               <tr role="row">
                 <th scope="col" class="nhsuk-table__header " style="width: 30px; height: 20px;" role="columnheader">
@@ -436,8 +401,8 @@ Reports
                 &ctdot;
               </li>
               <li class="govuk-pagination__item">
-                <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 42">
-                  42
+                <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 16">
+                  16
                 </a>
               </li>
             </ul>
