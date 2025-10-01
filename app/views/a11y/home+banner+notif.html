@@ -13,21 +13,23 @@ Home
 
 <!-- Content style="display: inline-block; width: 1240px; margin-left: -140px;" -->
 {% block content %}
-<div class="govuk-phase-banner" style="background-color: #fff9c4; margin: -40px 0px 40px 0px;">
-  <p class="govuk-phase-banner__content">
-    <span class="govuk-phase-banner__text">
-      <b>Important: </b>Dental Services Portal will be unavailable from 6:00pm on Friday 5 September to 8:00am on Monday 8 September. This is to complete planned fixes and performance updates.
-    </span>
-  </p>
-</div>
+
   <div class="nhsuk-grid-row" >
-    
     <div class="nhsuk-grid-column-full">
-      
 
       <h1>
         Good morning Amina
       </h1>
+
+      <div class="nhsuk-warning-callout">
+        <h3 class="nhsuk-warning-callout__label"> <span role="text">
+            <span class="nhsuk-u-visually-hidden">Important: </span>
+            Dental Services Portal will be unavailable from 6:00pm Friday 10 October
+          </span> </h3>
+        <p>Dental Services Portal will be unavailable from 6:00pm on Friday 5 September to 8:00am on Monday 8 September. This is to complete planned fixes and performance updates.
+          </p>
+          <a class="nhsuk-link" href="home+notif">Remind me later</a>
+      </div>
 
       <div class="nhsuk-do-dont-list">
         <h3 class="nhsuk-do-dont-list__label">Notifications</h3>
@@ -95,12 +97,25 @@ Home
             </tr>
 
             <tr class="nhsuk-table__row" role="row">
-              <td class="nhsuk-table__cell" style="width: 300px;" role="cell">
-                <span class="nhsuk-table-responsive__heading" aria-hidden="true">Type </span>Notification dismissed. <a class="nhsuk-link" style="text-decoration: underline;">Undo</a>.
+              <td class="nhsuk-table__cell" style="width: 200px;" role="cell">
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true">Type </span><b>For info &nbsp;</b>
               </td>
               <td class="nhsuk-table__cell" style="padding-bottom: 0px;" role="cell">
                 <span class="nhsuk-table-responsive__heading" aria-hidden="true">Notification</span>
+                <details class="nhsuk-details">
+                  <summary class="nhsuk-details__summary">
+                    <span class="nhsuk-details__summary-text">
+                      A contract has been successfully set up
+                    </span>
+                  </summary>
+                  <div class="nhsuk-details__text">
+                    <p>Following a review, contract 0098711423 has been successfully set up.</p>
+                    <button class="nhsuk-button nhsuk-button--secondary" data-module="nhsuk-button" type="submit">
+                      Mark read
+                    </button>
                 
+                  </div>
+                </details>
               </td>
               <td class="nhsuk-table__cell nhsuk-table__cell--numeric" style="width: 150px; padding-bottom: 0px;" role="cell">
                 <span class="nhsuk-table-responsive__heading" aria-hidden="true">Status </span>

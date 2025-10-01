@@ -53,14 +53,14 @@ Categorising contracts
             <div class="nhsuk-card nhsuk-card--clickable" style="margin: 20px 0px 20px 20px;">
               <div class="nhsuk-card__content">
                 <p class="nhsuk-heading-l">225</p>
-                <h5 class="nhsuk-card__heading nhsuk-heading-xs">Contracts to categorise</h5>
+                <h5 class="nhsuk-card__heading nhsuk-heading-xs"><a class="nhsuk-card__link" href="categorise-contracts">Contracts to categorise</a></h5>
               </div>
             </div>
 
             <div class="nhsuk-card nhsuk-card--clickable" style="margin: 20px 0px 20px 20px;">
               <div class="nhsuk-card__content">
                 <p class="nhsuk-heading-l">166</p>
-                <h5 class="nhsuk-card__heading nhsuk-heading-xs"> <a class="nhsuk-card__link" href="categorise-contracts-to-review">Recommendations to review</a> </h5>
+                <h5 class="nhsuk-card__heading nhsuk-heading-xs"> Recommendations to review </h5>
               </div>
             </div>
 
@@ -220,7 +220,7 @@ Categorising contracts
               <hr style="margin: 0px 0px 0px 0px;">
 
               <div class="nhsuk-button-group">
-                <a href="#" class="nhsuk-button nhsuk-u-margin-bottom-0" data-module="nhsuk-button" type="submit" style="padding: 8px 16px 8px 16px; margin: 16px 16px 16px 16px;">
+                <a href="categorise-sorted" class="nhsuk-button nhsuk-u-margin-bottom-0" data-module="nhsuk-button" type="submit" style="padding: 8px 16px 8px 16px; margin: 16px 16px 16px 16px;">
                   Apply filters
                 </a>
               </div>
@@ -294,31 +294,54 @@ Categorising contracts
               </tr>
               <tr class="nhsuk-table__row" role="row">
                 <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Select </span>
-                  <!--No checkbox-->
+                  <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="organisation" type="checkbox">
+                      <label class="govuk-label govuk-checkboxes__label" for="organisation"><span class="govuk-visually-hidden">Select report</span></label>
+                    </div>
+                  </div>
                 </td>
-                <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Contract </span>2223456789<div class="nhsuk-hint">Harbour View Dental Practice</div></td>
+                <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Contract </span>1987645678<div class="nhsuk-hint">Maple Row Dental Practice</div></td>
                 <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Age </span>ABC</td>
                 <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Recommended category </span>2.1</td>
-                <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Status</span>With my peers</td>
+                <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Status</span><strong class="nhsuk-tag nhsuk-tag--white">
+                  To review
+                </strong></td>
               </tr>
               <tr class="nhsuk-table__row" role="row">
                 <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Select </span>
-                  <!--No checkbox-->
+                  <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="organisation" type="checkbox">
+                      <label class="govuk-label govuk-checkboxes__label" for="organisation"><span class="govuk-visually-hidden">Select report</span></label>
+                    </div>
+                  </div>
                 </td>
-                <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Contract </span>3334567890<div class="nhsuk-hint">Riverside Smiles</div></td>
+                <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Contract </span>1154321678<div class="nhsuk-hint">The Crescent Dental Surgery</div></td>
                 <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Age </span>ABC</td>
                 <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Recommended category </span>2.1</td>
-                <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Status</span>With my peers</td>
+                <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Status</span><strong class="nhsuk-tag nhsuk-tag--white">
+                  To review
+                </strong></td>
               </tr>
               <tr class="nhsuk-table__row" role="row">
                 <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Select </span>
-                  <!--No checkbox-->
+                  <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="organisation" type="checkbox">
+                      <label class="govuk-label govuk-checkboxes__label" for="organisation"><span class="govuk-visually-hidden">Select report</span></label>
+                    </div>
+                  </div>
                 </td>
-                <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Contract </span>4445678901<div class="nhsuk-hint">Meadowgate Dental Centre</div></td>
+                <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Contract </span>8882345678<div class="nhsuk-hint">Parkside Orthodontics</div></td>
                 <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Age </span>ABC</td>
                 <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Recommended category </span>2.1</td>
-                <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Status</span>With my peers</td>
+                <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Status</span><strong class="nhsuk-tag nhsuk-tag--white">
+                  To review
+                </strong></td>
               </tr>
+              
+              
               <tr class="nhsuk-table__row" role="row">
                 <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Select </span>
                   <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
@@ -385,13 +408,21 @@ Categorising contracts
               </tr>
               <tr class="nhsuk-table__row" role="row">
                 <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Select </span>
-                  <!--No checkbox-->
+                  <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="organisation" type="checkbox">
+                      <label class="govuk-label govuk-checkboxes__label" for="organisation"><span class="govuk-visually-hidden">Select report</span></label>
+                    </div>
+                  </div>
                 </td>
-                <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Contract </span>9990123456<div class="nhsuk-hint">Horizon Dental Practice</div></td>
+                <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Contract </span>3219012345<div class="nhsuk-hint">Elmwood Family Dental</div></td>
                 <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Age </span>ABC</td>
                 <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Recommended category </span>2.1</td>
-                <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Status</span>With my peers</td>
+                <td class="nhsuk-table__cell" role="cell"><span class="nhsuk-table-responsive__heading" aria-hidden="true">Status</span><strong class="nhsuk-tag nhsuk-tag--white">
+                  To review
+                </strong></td>
               </tr>
+              
             </tbody>
             
           </table>
@@ -415,7 +446,7 @@ Categorising contracts
               </li>
               <li class="govuk-pagination__item">
                 <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 16">
-                  23
+                  16
                 </a>
               </li>
             </ul>
