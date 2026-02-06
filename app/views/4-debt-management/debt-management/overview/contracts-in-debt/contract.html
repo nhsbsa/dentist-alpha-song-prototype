@@ -178,9 +178,6 @@
         </ul>
 
         <table class="nhsuk-table-responsive" role="table">
-          <caption class="nhsuk-table__caption">
-            Ibuprofen liquid dosages for children
-          </caption>
           <thead class="nhsuk-table__head" role="rowgroup">
             <tr class="nhsuk-table__row" role="row">
               <th scope="col" class="nhsuk-table__header nhsuk-u-width-one-half" role="columnheader">
@@ -266,10 +263,77 @@
       <!-- CASE LOG -->
 
       <!-- DEBT SUMMARY -->
-      <div class="sebt-summary">
+      <div class="debt-summary">
         <h1 class="nhsuk-heading-l">Debt summary</h1>
 
-        <!-- embedded table -->
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Pay statement date</th>
+              <th scope="col" class="govuk-table__header">Monthly debt amount</th>
+              <th scope="col" class="govuk-table__header">Recovered amount</th>
+              <th scope="col" class="govuk-table__header">Remaining debt</th>
+              <th scope="col" class="govuk-table__header">Recovery plan</th>
+              <th scope="col" class="govuk-table__header">Action</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">
+                <details class="nhsuk-details">
+                  <summary class="nhsuk-details__summary">
+                    <span class="nhsuk-details__summary-text">
+                      232410
+                    </span>
+                  </summary>
+                  <div class="nhsuk-details__text">
+                    <table class="govuk-table">
+                      <thead class="govuk-table__head">
+                        <tr class="govuk-table__row">
+                          <th scope="col" class="govuk-table__header">Receipt date</th>
+                          <th scope="col" class="govuk-table__header">Receipt amount</th>
+                          <th scope="col" class="govuk-table__header">Receipt type</th>
+                          <th scope="col" class="govuk-table__header">Action</th>
+                        </tr>
+                      </thead>
+                      <tbody class="govuk-table__body">
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell">
+                            13 Jan 2025
+                          </td>
+                          <td class="govuk-table__cell">
+                            £150.00
+                          </td>
+                          <td class="govuk-table__cell">
+                            Bacs payment
+                          </td>
+                          <td class="govuk-table__cell">
+                            <a href="#" class="nhsuk-link">View</a>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </details>
+              </td>
+              <td class="govuk-table__cell">
+                £1,000.00
+              </td>
+              <td class="govuk-table__cell">
+                £1,000.00
+              </td>
+              <td class="govuk-table__cell">
+                £0.00
+              </td>
+              <td class="govuk-table__cell">
+                <a href="#" class="nhsuk-link">163354</a>
+              </td>
+              <td class="govuk-table__cell">
+                <a href="#" class="nhsuk-link">View</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
 
         <a href="#" class="nhsuk-link">View debt history</a>
 
