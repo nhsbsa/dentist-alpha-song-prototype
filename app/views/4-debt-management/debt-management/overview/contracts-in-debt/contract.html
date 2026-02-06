@@ -1,0 +1,364 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'default-layout.html' %}
+
+<!-- Set the page title -->
+{% block pageTitle %}
+ Contract name 
+{% endblock %}
+
+<!-- Breadcrumbs -->
+{% block beforeContent %}
+  {{ breadcrumb({
+    items: [
+      {
+        href: "",
+        text: "Home"
+      },
+      {
+        href: "",
+        text: "Debt overivew"
+      },
+      {
+        href: "#",
+        text: "Contracts in debt"
+      }
+    ],
+    href: "/4-debt-management/debt-management/990175001/debt-details",
+    text: "Debt details"
+  }) }} 
+{% endblock %}
+
+<!-- Back link -->
+{% block outerContent %} {% endblock %} 
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+      <!-- HEADER -->
+      <h1 class="nhsuk-u-margin-bottom-0">
+        Debt details
+        <span class="nhsuk-caption-xl nhsuk-caption--bottom">Contract Name, 99017500001</span>
+      </h1>
+      <hr class="nhsuk-section-break  nhsuk-section-break--l" />
+      <!-- HEADER -->
+
+      <!-- CARDS -->
+      <ul class="nhsuk-grid-row nhsuk-card-group">
+        <li class="nhsuk-grid-column-one-quarter nhsuk-card-group__item">
+          <div class="nhsuk-card">
+            <div class="nhsuk-card__content">
+              <h4 class="nhsuk-heading-xs">Outstanding debt amount</h4>
+              <h1 class="nhsuk-heading-l">£10,978.00</h1>
+              <span class="nhsuk-caption-m">of £12,978.00 total debt</span>
+            </div>
+          </div>
+        </li>
+        <li class="nhsuk-grid-column-one-quarter nhsuk-card-group__item">
+          <div class="nhsuk-card">
+            <div class="nhsuk-card__content">
+              <h4 class="nhsuk-heading-xs">Debt start date</h4>
+              <h1 class="nhsuk-heading-l">242503</h1>
+              <span class="nhsuk-caption-m">June 2024</span>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <!-- CARDS -->
+
+      <!-- EXPANDERS -->
+      <div class="nhsuk-expander-group">
+        <details class="nhsuk-details nhsuk-expander">
+          <summary class="nhsuk-details__summary">
+            <span class="nhsuk-details__summary-text">
+              About the contract
+            </span>
+          </summary>
+          <div class="nhsuk-details__text">
+            CONTENT
+          </div>
+        </details>
+
+        <details class="nhsuk-details nhsuk-expander">
+          <summary class="nhsuk-details__summary">
+            <span class="nhsuk-details__summary-text">
+              Contract information
+            </span>
+          </summary>
+          <div class="nhsuk-details__text">
+            CONTENT
+          </div>
+        </details>
+
+        <details class="nhsuk-details nhsuk-expander">
+          <summary class="nhsuk-details__summary">
+            <span class="nhsuk-details__summary-text">
+              Debt recovery plans
+            </span>
+          </summary>
+          <div class="nhsuk-details__text">
+            CONTENT
+          </div>
+        </details>
+      </div>
+      <!-- EXPANDERS -->
+
+      <!-- MANAGE DEBT LINKS -->
+      <div class="manage-debt-on-this-contract-container">
+        <h1 class="nhsuk-heading-l">Manage debt in this contract</h1>
+
+        <div class="nhsuk-action-link-group">
+          <a class="nhsuk-action-link" href="#">
+            <svg class="nhsuk-icon nhsuk-icon--arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" focusable="false" aria-hidden="true">
+              <path d="M12 2a10 10 0 0 0-10 9h11.7l-4-4a1 1 0 0 1 1.5-1.4l5.6 5.7a1 1 0 0 1 0 1.4l-5.6 5.7a1 1 0 0 1-1.5 0 1 1 0 0 1 0-1.4l4-4H2A10 10 0 1 0 12 2z" />
+            </svg>
+            <span class="nhsuk-action-link__text">Create a debt recovery plan</span>
+          </a>
+
+          <a class="nhsuk-action-link" href="#">
+            <svg class="nhsuk-icon nhsuk-icon--arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" focusable="false" aria-hidden="true">
+              <path d="M12 2a10 10 0 0 0-10 9h11.7l-4-4a1 1 0 0 1 1.5-1.4l5.6 5.7a1 1 0 0 1 0 1.4l-5.6 5.7a1 1 0 0 1-1.5 0 1 1 0 0 1 0-1.4l4-4H2A10 10 0 1 0 12 2z" />
+            </svg>
+            <span class="nhsuk-action-link__text">Recharge debt to commissioner</span>
+          </a>
+
+          <a class="nhsuk-action-link" href="#">
+            <svg class="nhsuk-icon nhsuk-icon--arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" focusable="false" aria-hidden="true">
+              <path d="M12 2a10 10 0 0 0-10 9h11.7l-4-4a1 1 0 0 1 1.5-1.4l5.6 5.7a1 1 0 0 1 0 1.4l-5.6 5.7a1 1 0 0 1-1.5 0 1 1 0 0 1 0-1.4l4-4H2A10 10 0 1 0 12 2z" />
+            </svg>
+            <span class="nhsuk-action-link__text">Manual recovery</span>
+          </a>
+
+          <a class="nhsuk-action-link" href="#">
+            <svg class="nhsuk-icon nhsuk-icon--arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" focusable="false" aria-hidden="true">
+              <path d="M12 2a10 10 0 0 0-10 9h11.7l-4-4a1 1 0 0 1 1.5-1.4l5.6 5.7a1 1 0 0 1 0 1.4l-5.6 5.7a1 1 0 0 1-1.5 0 1 1 0 0 1 0-1.4l4-4H2A10 10 0 1 0 12 2z" />
+            </svg>
+            <span class="nhsuk-action-link__text">Pause debt communications</span>
+          </a>
+        </div>
+      </div>
+      <!-- MANAGE DEBT LINKS -->
+
+
+      <!-- CASE LOG -->
+      <div class="case-log">
+        <h1 class="nhsuk-heading-l">Case log</h1>
+
+        <ul class="nhsuk-grid-row nhsuk-card-group">
+          <li class="nhsuk-grid-column-one-quarter nhsuk-card-group__item">
+            <div class="nhsuk-card">
+              <div class="nhsuk-card__content">
+                <h1 class="nhsuk-heading-l">9</h1>
+                <h4 class="nhsuk-heading-xs">Emails</h4>
+              </div>
+            </div>
+          </li>
+
+          <li class="nhsuk-grid-column-one-quarter nhsuk-card-group__item">
+            <div class="nhsuk-card">
+              <div class="nhsuk-card__content">
+                <h1 class="nhsuk-heading-l">3</h1>
+                <h4 class="nhsuk-heading-xs">Phone calls</h4>
+              </div>
+            </div>
+          </li>
+
+          <li class="nhsuk-grid-column-one-quarter nhsuk-card-group__item">
+            <div class="nhsuk-card">
+              <div class="nhsuk-card__content">
+                <h1 class="nhsuk-heading-l">1</h1>
+                <h4 class="nhsuk-heading-xs">Letter</h4>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        <table class="nhsuk-table-responsive" role="table">
+          <caption class="nhsuk-table__caption">
+            Ibuprofen liquid dosages for children
+          </caption>
+          <thead class="nhsuk-table__head" role="rowgroup">
+            <tr class="nhsuk-table__row" role="row">
+              <th scope="col" class="nhsuk-table__header nhsuk-u-width-one-half" role="columnheader">
+                Date
+              </th>
+              <th scope="col" class="nhsuk-table__header nhsuk-u-width-one-quarter" role="columnheader">
+                Time
+              </th>
+              <th scope="col" class="nhsuk-table__header nhsuk-u-width-one-quarter" role="columnheader">
+                Log entry
+              </th>
+              <th scope="col" class="nhsuk-table__header nhsuk-u-width-one-quarter" role="columnheader">
+                
+              </th>
+            </tr>
+          </thead>
+          <tbody class="nhsuk-table__body">
+            <tr class="nhsuk-table__row" role="row">
+              <td class="nhsuk-table__cell" role="cell">
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true">Date </span>11 Feb 2025
+              </td>
+              <td class="nhsuk-table__cell" role="cell">
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true">Time </span>3:15pm
+              </td>
+              <td class="nhsuk-table__cell" role="cell">
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true">Log entry </span>Confirmation email sent to provider
+              </td>
+              <td class="nhsuk-table__cell" role="cell">
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true"></span>
+              </td>
+            </tr>
+            <tr class="nhsuk-table__row" role="row">
+              <td class="nhsuk-table__cell" role="cell">
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true">Date </span>11 Feb 2025
+              </td>
+              <td class="nhsuk-table__cell" role="cell">
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true">Time </span>3:15pm
+              </td>
+              <td class="nhsuk-table__cell" role="cell">
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true">Log entry </span>Payment activity 19573955 moved into debt recovery plan<br>Jane Smith, Caseworker
+              </td>
+              <td class="nhsuk-table__cell" role="cell">
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true"></span>
+              </td>
+            </tr>
+            <tr class="nhsuk-table__row" role="row">
+              <td class="nhsuk-table__cell" role="cell">
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true">Date </span>11 Feb 2025
+              </td>
+              <td class="nhsuk-table__cell" role="cell">
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true">Time </span>3:15pm
+              </td>
+              <td class="nhsuk-table__cell" role="cell">
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true">Log entry </span>Confirmation email sent to provider
+              </td>
+              <td class="nhsuk-table__cell" role="cell">
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true"></span><a href="#" class="nhsuk-link">Remove</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <a href="#" class="nhsuk-link">View entire case log</a>
+
+        <div class="nhsuk-form-group">
+          <h3 class="nhsuk-heading-m">
+            Add notes and files to case log (optional)
+          </h3>
+          <textarea class="nhsuk-textarea" id="example" name="example" rows="5" aria-describedby="example-hint"></textarea>
+          <div id="example-hint" class="nhsuk-hint">
+            You have 500 characters remaining
+          </div>
+        </div>
+
+        <div class="nhsuk-form-group nhsuk-file-upload" data-module="nhsuk-file-upload">
+          <input class="nhsuk-file-upload__input" id="file-hint" name="file-hint" type="file">
+        </div>
+
+        <button class="nhsuk-button nhsuk-button--secondary" data-module="nhsuk-button" type="submit">
+          Save case note
+        </button>
+      </div>
+      <!-- CASE LOG -->
+
+      <!-- DEBT SUMMARY -->
+      <div class="sebt-summary">
+        <h1 class="nhsuk-heading-l">Debt summary</h1>
+
+        <!-- embedded table -->
+
+        <a href="#" class="nhsuk-link">View debt history</a>
+
+        <details class="nhsuk-details nhsuk-expander">
+          <summary class="nhsuk-details__summary">
+            <span class="nhsuk-details__summary-text">
+              Previous cases of debt
+            </span>
+          </summary>
+          <div class="nhsuk-details__text">
+            CONTENT
+          </div>
+        </details>
+      </div>
+      <!-- DEBT SUMMARY -->
+    </div>
+  </div>
+{% endblock %} 
+{% block pageScripts %}
+<script>
+  const radios = document.querySelectorAll('input[name="debt-period-select"]');
+  const debtLast3MonthView = document.getElementById('debt-last-3months-view');
+  const debtLast6MonthView = document.getElementById('debt-last-6months-view');
+  const debtLastMonthView = document.getElementById('debt-last-month-view');
+  const debtfirstOf3Month = document.querySelector('#debt-last-3months-view .nhsuk-expander');
+  const debtfirstOf6Month = document.querySelector('#debt-last-6months-view .nhsuk-expander');
+
+  const debtshowAll3Month = document.querySelectorAll('#debt-last-3months-view .nhsuk-expander');
+  const debtshowAll6Month = document.querySelectorAll('#debt-last-6months-view .nhsuk-expander');
+  const showAll3MonthLinkSelect = document.getElementById('showAll3MonthLink');
+  const hideAll3MonthLinkSelect = document.getElementById('hideAll3MonthLink');
+  const showAll6MonthLinkSelect = document.getElementById('showAll6MonthLink');
+  const hideAll6MonthLinkSelect = document.getElementById('hideAll6MonthLink');
+
+  function handleRadioChange() {
+      if (document.getElementById('debt-3-month').checked) {
+        debtLast3MonthView.style.display = 'block';
+        debtLast6MonthView.style.display = 'none';
+        debtLastMonthView.style.display = 'none';
+        debtfirstOf3Month.setAttribute("open", "");
+        debtfirstOf6Month.removeAttribute("open");
+        collapseHideAllMonthDetails();
+      } else if (document.getElementById('debt-6-month').checked) {
+        debtLast3MonthView.style.display = 'none';
+        debtLast6MonthView.style.display = 'block';
+        debtLastMonthView.style.display = 'none';
+        debtfirstOf6Month.setAttribute("open", "");
+        debtfirstOf3Month.removeAttribute("open");
+        collapseHideAllMonthDetails();
+      } else {
+        debtLast3MonthView.style.display = 'none';
+        debtLast6MonthView.style.display = 'none';
+        debtLastMonthView.style.display = 'block';
+        debtfirstOf3Month.removeAttribute("open");
+        debtfirstOf6Month.removeAttribute("open");
+      }
+  }
+
+  handleRadioChange();
+
+  function showAll3MonthDetails(event) {
+      event.preventDefault();
+      debtshowAll3Month.forEach(expander => expander.setAttribute("open", ""));
+      debtshowAll6Month.forEach(expander => expander.removeAttribute("open"));
+      event.target.style.display = 'none';
+      hideAll3MonthLinkSelect.style.display = 'block';
+      
+  }
+  function hideAllMonthDetails(event) {
+      event.preventDefault();
+      debtshowAll3Month.forEach(expander => expander.removeAttribute("open"));
+      debtshowAll6Month.forEach(expander => expander.removeAttribute("open"));
+      showAll3MonthLinkSelect.style.display = 'block';
+      showAll6MonthLinkSelect.style.display = 'block';
+      hideAll3MonthLinkSelect.style.display = 'none';
+      hideAll6MonthLinkSelect.style.display = 'none';
+    }
+  function collapseHideAllMonthDetails() {
+      showAll3MonthLinkSelect.style.display = 'block';
+      showAll6MonthLinkSelect.style.display = 'block';
+      hideAll3MonthLinkSelect.style.display = 'none';
+      hideAll6MonthLinkSelect.style.display = 'none';
+    }
+  function showAll6MonthDetails(event) {
+      event.preventDefault();
+      debtshowAll6Month.forEach(expander => expander.setAttribute("open", ""));
+      debtshowAll3Month.forEach(expander => expander.removeAttribute("open"));
+      event.target.style.display = 'none';
+      hideAll6MonthLinkSelect.style.display = 'block';
+  }
+</script>
+{% endblock %}
