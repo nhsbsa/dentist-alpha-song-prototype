@@ -36,327 +36,324 @@
 {% block outerContent %} {% endblock %} 
 
 {% block content %}
-    <div>
+  <!-- HEADER -->
+  <div class="nhsuk-grid-row">
+    <h1 class="nhsuk-heading-xl nhsuk-grid-column-one-half">
+      Current debt on contract 9876546872 
+    </h1>
+  </div>
+  <!-- HEADER -->
 
-      <!-- HEADER -->
-      <div class="nhsuk-grid-row">
-        <h1 class="nhsuk-heading-xl nhsuk-grid-column-one-half">
-          Current debt on contract 9876546872 
-        </h1>
-      </div>
-      <!-- HEADER -->
-
-      <!-- CARDS -->
-      <ul class="nhsuk-grid-row nhsuk-card-group">
-        <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
-          <div class="nhsuk-card">
-            <div class="nhsuk-card__content">
-              <h4 class="nhsuk-heading-xs nhsuk-u-margin-bottom-3">Outstanding debt amount</h4>
-              <h1 class="nhsuk-heading-l nhsuk-u-margin-bottom-0">£10,978.00</h1>
-              <span class="nhsuk-caption-m">of £12,978.00 total debt</span>
-            </div>
-          </div>
-        </li>
-        <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
-          <div class="nhsuk-card">
-            <div class="nhsuk-card__content">
-              <h4 class="nhsuk-heading-xs nhsuk-u-margin-bottom-3">Debt start date</h4>
-              <h1 class="nhsuk-heading-l nhsuk-u-margin-bottom-0">242503</h1>
-              <span class="nhsuk-caption-m">June 2024</span>
-            </div>
-          </div>
-        </li>
-      </ul>
-      <!-- CARDS -->
-
-      <!-- EXPANDERS -->
-      <div class="nhsuk-expander-group nhsuk-grid-row nhsuk-u-margin-bottom-6">
-        <details class="nhsuk-details nhsuk-expander nhsuk-grid-column-full">
-          <summary class="nhsuk-details__summary">
-            <span class="nhsuk-details__summary-text">
-              About the contract
-            </span>
-          </summary>
-          <div class="nhsuk-details__text">
-            CONTENT
-          </div>
-        </details>
-
-        <details class="nhsuk-details nhsuk-expander nhsuk-grid-column-full">
-          <summary class="nhsuk-details__summary">
-            <span class="nhsuk-details__summary-text">
-              Contract information
-            </span>
-          </summary>
-          <div class="nhsuk-details__text">
-            CONTENT
-          </div>
-        </details>
-
-        <details class="nhsuk-details nhsuk-expander nhsuk-grid-column-full">
-          <summary class="nhsuk-details__summary">
-            <span class="nhsuk-details__summary-text">
-              Debt recovery plans
-            </span>
-          </summary>
-          <div class="nhsuk-details__text">
-            CONTENT
-          </div>
-        </details>
-      </div>
-      <!-- EXPANDERS -->
-
-      <!-- MANAGE DEBT LINKS -->
-      <div class="manage-debt-on-this-contract-container nhsuk-grid-row nhsuk-u-margin-bottom-6">
-        <div class="nhsuk-grid-column-one-half">
-          <h1 class="nhsuk-heading-l nhsuk-u-margin-bottom-5">Manage debt in this contract</h1>
-        </div>
-        
-        <div class="nhsuk-grid-row">
-          <a class="nhsuk-action-link nhsuk-grid-column-full" href="#">
-            <svg class="nhsuk-icon nhsuk-icon--arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" focusable="false" aria-hidden="true">
-              <path d="M12 2a10 10 0 0 0-10 9h11.7l-4-4a1 1 0 0 1 1.5-1.4l5.6 5.7a1 1 0 0 1 0 1.4l-5.6 5.7a1 1 0 0 1-1.5 0 1 1 0 0 1 0-1.4l4-4H2A10 10 0 1 0 12 2z" />
-            </svg>
-            <span class="nhsuk-action-link__text">Create a debt recovery plan</span>
-          </a>
-        </div>
-
-        <div class="nhsuk-grid-row">
-          <a class="nhsuk-action-link" href="#">
-            <svg class="nhsuk-icon nhsuk-icon--arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" focusable="false" aria-hidden="true">
-              <path d="M12 2a10 10 0 0 0-10 9h11.7l-4-4a1 1 0 0 1 1.5-1.4l5.6 5.7a1 1 0 0 1 0 1.4l-5.6 5.7a1 1 0 0 1-1.5 0 1 1 0 0 1 0-1.4l4-4H2A10 10 0 1 0 12 2z" />
-            </svg>
-            <span class="nhsuk-action-link__text">Recharge debt to commissioner</span>
-          </a>
-        </div>
-
-        <div class="nhsuk-grid-row">
-          <a class="nhsuk-action-link" href="#">
-            <svg class="nhsuk-icon nhsuk-icon--arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" focusable="false" aria-hidden="true">
-              <path d="M12 2a10 10 0 0 0-10 9h11.7l-4-4a1 1 0 0 1 1.5-1.4l5.6 5.7a1 1 0 0 1 0 1.4l-5.6 5.7a1 1 0 0 1-1.5 0 1 1 0 0 1 0-1.4l4-4H2A10 10 0 1 0 12 2z" />
-            </svg>
-            <span class="nhsuk-action-link__text">Manual recovery</span>
-          </a>
-        </div>
-
-        <div class="nhsuk-grid-row">
-          <a class="nhsuk-action-link" href="#">
-            <svg class="nhsuk-icon nhsuk-icon--arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" focusable="false" aria-hidden="true">
-              <path d="M12 2a10 10 0 0 0-10 9h11.7l-4-4a1 1 0 0 1 1.5-1.4l5.6 5.7a1 1 0 0 1 0 1.4l-5.6 5.7a1 1 0 0 1-1.5 0 1 1 0 0 1 0-1.4l4-4H2A10 10 0 1 0 12 2z" />
-            </svg>
-            <span class="nhsuk-action-link__text">Pause debt communications</span>
-          </a>
+  <!-- CARDS -->
+  <ul class="nhsuk-grid-row nhsuk-card-group">
+    <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+      <div class="nhsuk-card">
+        <div class="nhsuk-card__content">
+          <h4 class="nhsuk-heading-xs nhsuk-u-margin-bottom-3">Outstanding debt amount</h4>
+          <h1 class="nhsuk-heading-l nhsuk-u-margin-bottom-0">£10,978.00</h1>
+          <span class="nhsuk-caption-m">of £12,978.00 total debt</span>
         </div>
       </div>
-      <!-- MANAGE DEBT LINKS -->
-
-
-      <!-- CASE LOG -->
-      <div class="case-log">
-        <h1 class="nhsuk-heading-l">Case log</h1>
-
-        <ul class="nhsuk-grid-row nhsuk-card-group">
-          <li class="nhsuk-grid-column-one-quarter nhsuk-card-group__item">
-            <div class="nhsuk-card">
-              <div class="nhsuk-card__content">
-                <h1 class="nhsuk-heading-l">9</h1>
-                <h4 class="nhsuk-heading-xs">Emails</h4>
-              </div>
-            </div>
-          </li>
-
-          <li class="nhsuk-grid-column-one-quarter nhsuk-card-group__item">
-            <div class="nhsuk-card">
-              <div class="nhsuk-card__content">
-                <h1 class="nhsuk-heading-l">3</h1>
-                <h4 class="nhsuk-heading-xs">Phone calls</h4>
-              </div>
-            </div>
-          </li>
-
-          <li class="nhsuk-grid-column-one-quarter nhsuk-card-group__item">
-            <div class="nhsuk-card">
-              <div class="nhsuk-card__content">
-                <h1 class="nhsuk-heading-l">1</h1>
-                <h4 class="nhsuk-heading-xs">Letter</h4>
-              </div>
-            </div>
-          </li>
-        </ul>
-
-        <table class="nhsuk-table-responsive" role="table">
-          <thead class="nhsuk-table__head" role="rowgroup">
-            <tr class="nhsuk-table__row" role="row">
-              <th scope="col" class="nhsuk-table__header nhsuk-u-width-one-half" role="columnheader">
-                Date
-              </th>
-              <th scope="col" class="nhsuk-table__header nhsuk-u-width-one-quarter" role="columnheader">
-                Time
-              </th>
-              <th scope="col" class="nhsuk-table__header nhsuk-u-width-one-quarter" role="columnheader">
-                Log entry
-              </th>
-              <th scope="col" class="nhsuk-table__header nhsuk-u-width-one-quarter" role="columnheader">
-                
-              </th>
-            </tr>
-          </thead>
-          <tbody class="nhsuk-table__body">
-            <tr class="nhsuk-table__row" role="row">
-              <td class="nhsuk-table__cell" role="cell">
-                <span class="nhsuk-table-responsive__heading" aria-hidden="true">Date </span>11 Feb 2025
-              </td>
-              <td class="nhsuk-table__cell" role="cell">
-                <span class="nhsuk-table-responsive__heading" aria-hidden="true">Time </span>3:15pm
-              </td>
-              <td class="nhsuk-table__cell" role="cell">
-                <span class="nhsuk-table-responsive__heading" aria-hidden="true">Log entry </span>Confirmation email sent to provider
-              </td>
-              <td class="nhsuk-table__cell" role="cell">
-                <span class="nhsuk-table-responsive__heading" aria-hidden="true"></span>
-              </td>
-            </tr>
-            <tr class="nhsuk-table__row" role="row">
-              <td class="nhsuk-table__cell" role="cell">
-                <span class="nhsuk-table-responsive__heading" aria-hidden="true">Date </span>11 Feb 2025
-              </td>
-              <td class="nhsuk-table__cell" role="cell">
-                <span class="nhsuk-table-responsive__heading" aria-hidden="true">Time </span>3:15pm
-              </td>
-              <td class="nhsuk-table__cell" role="cell">
-                <span class="nhsuk-table-responsive__heading" aria-hidden="true">Log entry </span>Payment activity 19573955 moved into debt recovery plan<br>Jane Smith, Caseworker
-              </td>
-              <td class="nhsuk-table__cell" role="cell">
-                <span class="nhsuk-table-responsive__heading" aria-hidden="true"></span>
-              </td>
-            </tr>
-            <tr class="nhsuk-table__row" role="row">
-              <td class="nhsuk-table__cell" role="cell">
-                <span class="nhsuk-table-responsive__heading" aria-hidden="true">Date </span>11 Feb 2025
-              </td>
-              <td class="nhsuk-table__cell" role="cell">
-                <span class="nhsuk-table-responsive__heading" aria-hidden="true">Time </span>3:15pm
-              </td>
-              <td class="nhsuk-table__cell" role="cell">
-                <span class="nhsuk-table-responsive__heading" aria-hidden="true">Log entry </span>Confirmation email sent to provider
-              </td>
-              <td class="nhsuk-table__cell" role="cell">
-                <span class="nhsuk-table-responsive__heading" aria-hidden="true"></span><a href="#" class="nhsuk-link">Remove</a>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-
-        <a href="#" class="nhsuk-link">View entire case log</a>
-
-        <div class="nhsuk-form-group">
-          <h3 class="nhsuk-heading-m">
-            Add notes and files to case log (optional)
-          </h3>
-          <textarea class="nhsuk-textarea" id="example" name="example" rows="5" aria-describedby="example-hint"></textarea>
-          <div id="example-hint" class="nhsuk-hint">
-            You have 500 characters remaining
-          </div>
+    </li>
+    <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+      <div class="nhsuk-card">
+        <div class="nhsuk-card__content">
+          <h4 class="nhsuk-heading-xs nhsuk-u-margin-bottom-3">Debt start date</h4>
+          <h1 class="nhsuk-heading-l nhsuk-u-margin-bottom-0">242503</h1>
+          <span class="nhsuk-caption-m">June 2024</span>
         </div>
-
-        <div class="nhsuk-form-group nhsuk-file-upload" data-module="nhsuk-file-upload">
-          <input class="nhsuk-file-upload__input" id="file-hint" name="file-hint" type="file">
-        </div>
-
-        <button class="nhsuk-button nhsuk-button--secondary" data-module="nhsuk-button" type="submit">
-          Save case note
-        </button>
       </div>
-      <!-- CASE LOG -->
+    </li>
+  </ul>
+  <!-- CARDS -->
 
-      <!-- DEBT SUMMARY -->
-      <div class="debt-summary">
-        <h1 class="nhsuk-heading-l">Debt summary</h1>
-
-        <table class="govuk-table">
-          <thead class="govuk-table__head">
-            <tr class="govuk-table__row">
-              <th scope="col" class="govuk-table__header">Pay statement date</th>
-              <th scope="col" class="govuk-table__header">Monthly debt amount</th>
-              <th scope="col" class="govuk-table__header">Recovered amount</th>
-              <th scope="col" class="govuk-table__header">Remaining debt</th>
-              <th scope="col" class="govuk-table__header">Recovery plan</th>
-              <th scope="col" class="govuk-table__header">Action</th>
-            </tr>
-          </thead>
-          <tbody class="govuk-table__body">
-            <tr class="govuk-table__row">
-              <td class="govuk-table__cell">
-                <details class="nhsuk-details">
-                  <summary class="nhsuk-details__summary">
-                    <span class="nhsuk-details__summary-text">
-                      232410
-                    </span>
-                  </summary>
-                  <div class="nhsuk-details__text">
-                    <table class="govuk-table">
-                      <thead class="govuk-table__head">
-                        <tr class="govuk-table__row">
-                          <th scope="col" class="govuk-table__header">Receipt date</th>
-                          <th scope="col" class="govuk-table__header">Receipt amount</th>
-                          <th scope="col" class="govuk-table__header">Receipt type</th>
-                          <th scope="col" class="govuk-table__header">Action</th>
-                        </tr>
-                      </thead>
-                      <tbody class="govuk-table__body">
-                        <tr class="govuk-table__row">
-                          <td class="govuk-table__cell">
-                            13 Jan 2025
-                          </td>
-                          <td class="govuk-table__cell">
-                            £150.00
-                          </td>
-                          <td class="govuk-table__cell">
-                            Bacs payment
-                          </td>
-                          <td class="govuk-table__cell">
-                            <a href="#" class="nhsuk-link">View</a>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </details>
-              </td>
-              <td class="govuk-table__cell">
-                £1,000.00
-              </td>
-              <td class="govuk-table__cell">
-                £1,000.00
-              </td>
-              <td class="govuk-table__cell">
-                £0.00
-              </td>
-              <td class="govuk-table__cell">
-                <a href="#" class="nhsuk-link">163354</a>
-              </td>
-              <td class="govuk-table__cell">
-                <a href="#" class="nhsuk-link">View</a>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-
-        <a href="#" class="nhsuk-link">View debt history</a>
-
-        <details class="nhsuk-details nhsuk-expander">
-          <summary class="nhsuk-details__summary">
-            <span class="nhsuk-details__summary-text">
-              Previous cases of debt
-            </span>
-          </summary>
-          <div class="nhsuk-details__text">
-            CONTENT
-          </div>
-        </details>
+  <!-- EXPANDERS -->
+  <div class="nhsuk-expander-group nhsuk-grid-row nhsuk-u-margin-bottom-6">
+    <details class="nhsuk-details nhsuk-expander nhsuk-grid-column-full nhsuk-u-padding-left-3 nhsuk-u-padding-right-3">
+      <summary class="nhsuk-details__summary">
+        <span class="nhsuk-details__summary-text">
+          About the contract
+        </span>
+      </summary>
+      <div class="nhsuk-details__text">
+        CONTENT
       </div>
-      <!-- DEBT SUMMARY -->
+    </details>
+
+    <details class="nhsuk-details nhsuk-expander nhsuk-grid-column-full">
+      <summary class="nhsuk-details__summary">
+        <span class="nhsuk-details__summary-text">
+          Contract information
+        </span>
+      </summary>
+      <div class="nhsuk-details__text">
+        CONTENT
+      </div>
+    </details>
+
+    <details class="nhsuk-details nhsuk-expander nhsuk-grid-column-full">
+      <summary class="nhsuk-details__summary">
+        <span class="nhsuk-details__summary-text">
+          Debt recovery plans
+        </span>
+      </summary>
+      <div class="nhsuk-details__text">
+        CONTENT
+      </div>
+    </details>
+  </div>
+  <!-- EXPANDERS -->
+
+  <!-- MANAGE DEBT LINKS -->
+  <div class="manage-debt-on-this-contract-container nhsuk-grid-row nhsuk-u-margin-bottom-6">
+    <div class="nhsuk-grid-column-one-half">
+      <h1 class="nhsuk-heading-l nhsuk-u-margin-bottom-5">Manage debt in this contract</h1>
     </div>
+    
+    <div class="nhsuk-grid-row">
+      <a class="nhsuk-action-link nhsuk-grid-column-full" href="#">
+        <svg class="nhsuk-icon nhsuk-icon--arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" focusable="false" aria-hidden="true">
+          <path d="M12 2a10 10 0 0 0-10 9h11.7l-4-4a1 1 0 0 1 1.5-1.4l5.6 5.7a1 1 0 0 1 0 1.4l-5.6 5.7a1 1 0 0 1-1.5 0 1 1 0 0 1 0-1.4l4-4H2A10 10 0 1 0 12 2z" />
+        </svg>
+        <span class="nhsuk-action-link__text">Create a debt recovery plan</span>
+      </a>
+    </div>
+
+    <div class="nhsuk-grid-row">
+      <a class="nhsuk-action-link" href="#">
+        <svg class="nhsuk-icon nhsuk-icon--arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" focusable="false" aria-hidden="true">
+          <path d="M12 2a10 10 0 0 0-10 9h11.7l-4-4a1 1 0 0 1 1.5-1.4l5.6 5.7a1 1 0 0 1 0 1.4l-5.6 5.7a1 1 0 0 1-1.5 0 1 1 0 0 1 0-1.4l4-4H2A10 10 0 1 0 12 2z" />
+        </svg>
+        <span class="nhsuk-action-link__text">Recharge debt to commissioner</span>
+      </a>
+    </div>
+
+    <div class="nhsuk-grid-row">
+      <a class="nhsuk-action-link" href="#">
+        <svg class="nhsuk-icon nhsuk-icon--arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" focusable="false" aria-hidden="true">
+          <path d="M12 2a10 10 0 0 0-10 9h11.7l-4-4a1 1 0 0 1 1.5-1.4l5.6 5.7a1 1 0 0 1 0 1.4l-5.6 5.7a1 1 0 0 1-1.5 0 1 1 0 0 1 0-1.4l4-4H2A10 10 0 1 0 12 2z" />
+        </svg>
+        <span class="nhsuk-action-link__text">Manual recovery</span>
+      </a>
+    </div>
+
+    <div class="nhsuk-grid-row">
+      <a class="nhsuk-action-link" href="#">
+        <svg class="nhsuk-icon nhsuk-icon--arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" focusable="false" aria-hidden="true">
+          <path d="M12 2a10 10 0 0 0-10 9h11.7l-4-4a1 1 0 0 1 1.5-1.4l5.6 5.7a1 1 0 0 1 0 1.4l-5.6 5.7a1 1 0 0 1-1.5 0 1 1 0 0 1 0-1.4l4-4H2A10 10 0 1 0 12 2z" />
+        </svg>
+        <span class="nhsuk-action-link__text">Pause debt communications</span>
+      </a>
+    </div>
+  </div>
+  <!-- MANAGE DEBT LINKS -->
+
+
+  <!-- CASE LOG -->
+  <div class="case-log">
+    <h1 class="nhsuk-heading-l">Case log</h1>
+
+    <ul class="nhsuk-grid-row nhsuk-card-group">
+      <li class="nhsuk-grid-column-one-quarter nhsuk-card-group__item">
+        <div class="nhsuk-card">
+          <div class="nhsuk-card__content">
+            <h1 class="nhsuk-heading-l">9</h1>
+            <h4 class="nhsuk-heading-xs">Emails</h4>
+          </div>
+        </div>
+      </li>
+
+      <li class="nhsuk-grid-column-one-quarter nhsuk-card-group__item">
+        <div class="nhsuk-card">
+          <div class="nhsuk-card__content">
+            <h1 class="nhsuk-heading-l">3</h1>
+            <h4 class="nhsuk-heading-xs">Phone calls</h4>
+          </div>
+        </div>
+      </li>
+
+      <li class="nhsuk-grid-column-one-quarter nhsuk-card-group__item">
+        <div class="nhsuk-card">
+          <div class="nhsuk-card__content">
+            <h1 class="nhsuk-heading-l">1</h1>
+            <h4 class="nhsuk-heading-xs">Letter</h4>
+          </div>
+        </div>
+      </li>
+    </ul>
+
+    <table class="nhsuk-table-responsive" role="table">
+      <thead class="nhsuk-table__head" role="rowgroup">
+        <tr class="nhsuk-table__row" role="row">
+          <th scope="col" class="nhsuk-table__header nhsuk-u-width-one-half" role="columnheader">
+            Date
+          </th>
+          <th scope="col" class="nhsuk-table__header nhsuk-u-width-one-quarter" role="columnheader">
+            Time
+          </th>
+          <th scope="col" class="nhsuk-table__header nhsuk-u-width-one-quarter" role="columnheader">
+            Log entry
+          </th>
+          <th scope="col" class="nhsuk-table__header nhsuk-u-width-one-quarter" role="columnheader">
+            
+          </th>
+        </tr>
+      </thead>
+      <tbody class="nhsuk-table__body">
+        <tr class="nhsuk-table__row" role="row">
+          <td class="nhsuk-table__cell" role="cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Date </span>11 Feb 2025
+          </td>
+          <td class="nhsuk-table__cell" role="cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Time </span>3:15pm
+          </td>
+          <td class="nhsuk-table__cell" role="cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Log entry </span>Confirmation email sent to provider
+          </td>
+          <td class="nhsuk-table__cell" role="cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true"></span>
+          </td>
+        </tr>
+        <tr class="nhsuk-table__row" role="row">
+          <td class="nhsuk-table__cell" role="cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Date </span>11 Feb 2025
+          </td>
+          <td class="nhsuk-table__cell" role="cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Time </span>3:15pm
+          </td>
+          <td class="nhsuk-table__cell" role="cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Log entry </span>Payment activity 19573955 moved into debt recovery plan<br>Jane Smith, Caseworker
+          </td>
+          <td class="nhsuk-table__cell" role="cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true"></span>
+          </td>
+        </tr>
+        <tr class="nhsuk-table__row" role="row">
+          <td class="nhsuk-table__cell" role="cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Date </span>11 Feb 2025
+          </td>
+          <td class="nhsuk-table__cell" role="cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Time </span>3:15pm
+          </td>
+          <td class="nhsuk-table__cell" role="cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Log entry </span>Confirmation email sent to provider
+          </td>
+          <td class="nhsuk-table__cell" role="cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true"></span><a href="#" class="nhsuk-link">Remove</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <a href="#" class="nhsuk-link">View entire case log</a>
+
+    <div class="nhsuk-form-group">
+      <h3 class="nhsuk-heading-m">
+        Add notes and files to case log (optional)
+      </h3>
+      <textarea class="nhsuk-textarea" id="example" name="example" rows="5" aria-describedby="example-hint"></textarea>
+      <div id="example-hint" class="nhsuk-hint">
+        You have 500 characters remaining
+      </div>
+    </div>
+
+    <div class="nhsuk-form-group nhsuk-file-upload" data-module="nhsuk-file-upload">
+      <input class="nhsuk-file-upload__input" id="file-hint" name="file-hint" type="file">
+    </div>
+
+    <button class="nhsuk-button nhsuk-button--secondary" data-module="nhsuk-button" type="submit">
+      Save case note
+    </button>
+  </div>
+  <!-- CASE LOG -->
+
+  <!-- DEBT SUMMARY -->
+  <div class="debt-summary">
+    <h1 class="nhsuk-heading-l">Debt summary</h1>
+
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Pay statement date</th>
+          <th scope="col" class="govuk-table__header">Monthly debt amount</th>
+          <th scope="col" class="govuk-table__header">Recovered amount</th>
+          <th scope="col" class="govuk-table__header">Remaining debt</th>
+          <th scope="col" class="govuk-table__header">Recovery plan</th>
+          <th scope="col" class="govuk-table__header">Action</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+            <details class="nhsuk-details">
+              <summary class="nhsuk-details__summary">
+                <span class="nhsuk-details__summary-text">
+                  232410
+                </span>
+              </summary>
+              <div class="nhsuk-details__text">
+                <table class="govuk-table">
+                  <thead class="govuk-table__head">
+                    <tr class="govuk-table__row">
+                      <th scope="col" class="govuk-table__header">Receipt date</th>
+                      <th scope="col" class="govuk-table__header">Receipt amount</th>
+                      <th scope="col" class="govuk-table__header">Receipt type</th>
+                      <th scope="col" class="govuk-table__header">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody class="govuk-table__body">
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">
+                        13 Jan 2025
+                      </td>
+                      <td class="govuk-table__cell">
+                        £150.00
+                      </td>
+                      <td class="govuk-table__cell">
+                        Bacs payment
+                      </td>
+                      <td class="govuk-table__cell">
+                        <a href="#" class="nhsuk-link">View</a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </details>
+          </td>
+          <td class="govuk-table__cell">
+            £1,000.00
+          </td>
+          <td class="govuk-table__cell">
+            £1,000.00
+          </td>
+          <td class="govuk-table__cell">
+            £0.00
+          </td>
+          <td class="govuk-table__cell">
+            <a href="#" class="nhsuk-link">163354</a>
+          </td>
+          <td class="govuk-table__cell">
+            <a href="#" class="nhsuk-link">View</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <a href="#" class="nhsuk-link">View debt history</a>
+
+    <details class="nhsuk-details nhsuk-expander">
+      <summary class="nhsuk-details__summary">
+        <span class="nhsuk-details__summary-text">
+          Previous cases of debt
+        </span>
+      </summary>
+      <div class="nhsuk-details__text">
+        CONTENT
+      </div>
+    </details>
+  </div>
+  <!-- DEBT SUMMARY -->
 {% endblock %} 
 {% block pageScripts %}
 <script>
