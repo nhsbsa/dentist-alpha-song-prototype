@@ -5,6 +5,9 @@
 <!-- Extends the layout from /views/layout.html -->
 {% extends 'default-layout.html' %}
 
+<!-- components -->
+{% from "action-link/macro.njk" import actionLink %}
+
 <!-- Set the page title -->
 {% block pageTitle %}
  Contract name 
@@ -365,47 +368,25 @@
       </div>
     </div>
 
-    {% from "action-link/macro.njk" import actionLink %}
     {{ actionLink({
-      "text": "Find your nearest A&E",
+      "text": "Create a debt recovery plan",
       "href": "#"
     }) }}
-      
-    <div class="nhsuk-grid-row">
-      <a class="nhsuk-action-link nhsuk-grid-column-one-half nhsuk-u-margin-bottom-3" href="#">
-        <svg class="nhsuk-icon nhsuk-icon--arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" focusable="false" aria-hidden="true">
-          <path d="M12 2a10 10 0 0 0-10 9h11.7l-4-4a1 1 0 0 1 1.5-1.4l5.6 5.7a1 1 0 0 1 0 1.4l-5.6 5.7a1 1 0 0 1-1.5 0 1 1 0 0 1 0-1.4l4-4H2A10 10 0 1 0 12 2z" />
-        </svg>
-        <span class="nhsuk-action-link__text">Create a debt recovery plan</span>
-      </a>
-    </div>
 
-    <div class="nhsuk-grid-row">
-      <a class="nhsuk-action-link nhsuk-grid-column-one-half nhsuk-u-margin-bottom-3" href="#">
-        <svg class="nhsuk-icon nhsuk-icon--arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" focusable="false" aria-hidden="true">
-          <path d="M12 2a10 10 0 0 0-10 9h11.7l-4-4a1 1 0 0 1 1.5-1.4l5.6 5.7a1 1 0 0 1 0 1.4l-5.6 5.7a1 1 0 0 1-1.5 0 1 1 0 0 1 0-1.4l4-4H2A10 10 0 1 0 12 2z" />
-        </svg>
-        <span class="nhsuk-action-link__text">Recharge debt to commissioner</span>
-      </a>
-    </div>
+    {{ actionLink({
+      "text": "Recharge debt to commissioner",
+      "href": "#"
+    }) }}
 
-    <div class="nhsuk-grid-row">
-      <a class="nhsuk-action-link nhsuk-grid-column-one-half nhsuk-u-margin-bottom-3" href="#">
-        <svg class="nhsuk-icon nhsuk-icon--arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" focusable="false" aria-hidden="true">
-          <path d="M12 2a10 10 0 0 0-10 9h11.7l-4-4a1 1 0 0 1 1.5-1.4l5.6 5.7a1 1 0 0 1 0 1.4l-5.6 5.7a1 1 0 0 1-1.5 0 1 1 0 0 1 0-1.4l4-4H2A10 10 0 1 0 12 2z" />
-        </svg>
-        <span class="nhsuk-action-link__text">Manual recovery</span>
-      </a>
-    </div>
+    {{ actionLink({
+      "text": "Manual recovery",
+      "href": "#"
+    }) }}
 
-    <div class="nhsuk-grid-row">
-      <a class="nhsuk-action-link nhsuk-grid-column-one-half nhsuk-u-margin-bottom-3" href="#">
-        <svg class="nhsuk-icon nhsuk-icon--arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" focusable="false" aria-hidden="true">
-          <path d="M12 2a10 10 0 0 0-10 9h11.7l-4-4a1 1 0 0 1 1.5-1.4l5.6 5.7a1 1 0 0 1 0 1.4l-5.6 5.7a1 1 0 0 1-1.5 0 1 1 0 0 1 0-1.4l4-4H2A10 10 0 1 0 12 2z" />
-        </svg>
-        <span class="nhsuk-action-link__text">Pause debt communications</span>
-      </a>
-    </div>
+    {{ actionLink({
+      "text": "Pause debt communications",
+      "href": "#"
+    }) }}
   </div>
   <!-- MANAGE DEBT LINKS -->
 
@@ -420,12 +401,10 @@
           <div class="nhsuk-card__content">
             <h1 class="nhsuk-heading-l nhsuk-u-margin-bottom-1">9</h1>
             <h4 class="nhsuk-heading-xs nhsuk-u-margin-bottom-1">Emails</h4>
-            <a class="nhsuk-action-link nhsuk-u-padding-0" href="#">
-              <svg class="nhsuk-icon nhsuk-icon--arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" focusable="false" aria-hidden="true">
-                <path d="M12 2a10 10 0 0 0-10 9h11.7l-4-4a1 1 0 0 1 1.5-1.4l5.6 5.7a1 1 0 0 1 0 1.4l-5.6 5.7a1 1 0 0 1-1.5 0 1 1 0 0 1 0-1.4l4-4H2A10 10 0 1 0 12 2z" />
-              </svg>
-              <span class="nhsuk-action-link__text">Log new email entrty</span>
-            </a>
+            {{ actionLink({
+              "text": "Log new email entrty",
+              "href": "#"
+            }) }}
           </div>
         </div>
       </li>
@@ -435,12 +414,10 @@
           <div class="nhsuk-card__content">
             <h1 class="nhsuk-heading-l nhsuk-u-margin-bottom-1">3</h1>
             <h4 class="nhsuk-heading-xs nhsuk-u-margin-bottom-1">Phone calls</h4>
-            <a class="nhsuk-action-link nhsuk-u-padding-0" href="#">
-              <svg class="nhsuk-icon nhsuk-icon--arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" focusable="false" aria-hidden="true">
-                <path d="M12 2a10 10 0 0 0-10 9h11.7l-4-4a1 1 0 0 1 1.5-1.4l5.6 5.7a1 1 0 0 1 0 1.4l-5.6 5.7a1 1 0 0 1-1.5 0 1 1 0 0 1 0-1.4l4-4H2A10 10 0 1 0 12 2z" />
-              </svg>
-              <span class="nhsuk-action-link__text">Log new phone call entry</span>
-            </a>
+            {{ actionLink({
+              "text": "Log new phone call entry",
+              "href": "#"
+            }) }}
           </div>
         </div>
       </li>
@@ -450,12 +427,10 @@
           <div class="nhsuk-card__content">
             <h1 class="nhsuk-heading-l nhsuk-u-margin-bottom-1">1</h1>
             <h4 class="nhsuk-heading-xs nhsuk-u-margin-bottom-1">Letter</h4>
-            <a class="nnhsuk-action-link nhsuk-u-padding-0" href="#">
-              <svg class="nhsuk-icon nhsuk-icon--arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" focusable="false" aria-hidden="true">
-                <path d="M12 2a10 10 0 0 0-10 9h11.7l-4-4a1 1 0 0 1 1.5-1.4l5.6 5.7a1 1 0 0 1 0 1.4l-5.6 5.7a1 1 0 0 1-1.5 0 1 1 0 0 1 0-1.4l4-4H2A10 10 0 1 0 12 2z" />
-              </svg>
-              <span class="nhsuk-action-link__text">Log new letter entry</span>
-            </a>
+            {{ actionLink({
+              "text": "Log new letter entry",
+              "href": "#"
+            }) }}
           </div>
         </div>
       </li>
