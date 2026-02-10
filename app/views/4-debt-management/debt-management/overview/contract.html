@@ -552,15 +552,6 @@
       <a href="#" class="nhsuk-link">View entire case log</a>
     </div>
 
-    <!-- {{ fileUpload({
-      label: {
-        text: "Upload a file",
-        size: "l",
-        isPageHeading: true
-      },
-      name: "file-hint"
-    }) }} -->
-
     <div class="nhsuk-grid-row">
       <div class="nhsuk-form-group nhsuk-grid-column-one-half">
         <h3 class="nhsuk-heading-m nhsuk-u-margin-bottom-0">
@@ -573,13 +564,10 @@
       </div>
     </div>
 
-    {{ fileUpload({
-      label: {
-        size: "l",
-        isPageHeading: true
-      },
-      name: "file-hint"
-    }) }}
+    <div class="nhsuk-form-group nhsuk-file-upload" data-module="nhsuk-file-upload">
+      <h4>Drag and drop files here or</h4>
+      <input class="nhsuk-file-upload__input" id="file-hint" name="file-hint" type="file">
+    </div>
 
     <button class="nhsuk-button nhsuk-button--secondary" data-module="nhsuk-button" type="submit">
       Save case note
