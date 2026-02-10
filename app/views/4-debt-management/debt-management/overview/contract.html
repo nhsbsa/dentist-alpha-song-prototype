@@ -15,25 +15,20 @@
   {{ breadcrumb({
     items: [
       {
-        href: "",
+        href: "#",
         text: "Home"
       },
       {
-        href: "",
-        text: "Debt overivew"
+        href: "#",
+        text: "Debt overview"
       },
       {
-        href: "",
+        href: "#",
         text: "Contracts in debt"
       }
-    ],
-    href: "/4-debt-management/debt-management/990175001/debt-details",
-    text: "Debt details"
+    ]
   }) }} 
 {% endblock %}
-
-<!-- Back link -->
-{% block outerContent %} {% endblock %} 
 
 {% block content %}
   <!-- HEADER -->
@@ -76,7 +71,93 @@
         </span>
       </summary>
       <div class="nhsuk-details__text">
-        CONTENT
+        <h3>Debt recovery plans</h3>
+        <table class="nhsuk-table-responsive nhsuk-u-margin-bottom-3" role="table">
+          <thead class="nhsuk-table__head" role="rowgroup">
+            <tr class="nhsuk-table__row" role="row">
+              <th style="width: 15%;" scope="col" class="nhsuk-table__header" role="columnheader">
+                Recovery plan ID
+              </th>
+              <th style="width: 10%;" scope="col" class="nhsuk-table__header" role="columnheader">
+                Start date
+              </th>
+              <th style="width: 10%;" scope="col" class="nhsuk-table__header" role="columnheader">
+                End date
+              </th>
+              <th style="width: 51%;" scope="col" class="nhsuk-table__header nhsuk-table__header--numeric" role="columnheader">
+                Total amount
+              </th>
+              <th scope="col" class="nhsuk-table__header nhsuk-table__header--numeric" role="columnheader">
+                Recovered amount
+              </th>
+              <th scope="col" class="nhsuk-table__header" role="columnheader">
+                Status
+              </th>
+            </tr>
+          </thead>
+          <tbody class="nhsuk-table__body">
+            <tr class="nhsuk-table__row" role="row">
+              <td class="nhsuk-table__cell" role="cell">
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true">Recovery plan ID </span><a href="#" class="nhsuk-link">2418354</a>
+              </td>
+              <td class="nhsuk-table__cell" role="cell">
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true">Start date </span>12 Feb 2025
+              </td>
+              <td class="nhsuk-table__cell" role="cell">
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true">End date </span>28 Dec 2026
+              </td>
+              <td class="nhsuk-table__cell" role="cell">
+                <span class="nhsuk-table-responsive__heading nhsuk-table__cell--numeric" aria-hidden="true">Total amount </span>£1,116
+              </td>
+              <td class="nhsuk-table__cell" role="cell">
+                <span class="nhsuk-table-responsive__heading nhsuk-table__cell--numeric" aria-hidden="true">Recovered amount </span>£1,116
+              </td>
+              <td class="nhsuk-table__cell" role="cell">
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true">Status </span>Active
+              </td>
+            </tr>
+            <tr class="nhsuk-table__row" role="row">
+              <td class="nhsuk-table__cell" role="cell">
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true">Recovery plan ID </span><a href="#" class="nhsuk-link">2418354</a>
+              </td>
+              <td class="nhsuk-table__cell" role="cell">
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true">Start date </span>12 Feb 2025
+              </td>
+              <td class="nhsuk-table__cell" role="cell">
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true">End date </span>28 Dec 2026
+              </td>
+              <td class="nhsuk-table__cell" role="cell">
+                <span class="nhsuk-table-responsive__heading nhsuk-table__cell--numeric" aria-hidden="true">Total amount </span>£1,116
+              </td>
+              <td class="nhsuk-table__cell" role="cell">
+                <span class="nhsuk-table-responsive__heading nhsuk-table__cell--numeric" aria-hidden="true">Recovered amount </span>£1,116
+              </td>
+              <td class="nhsuk-table__cell" role="cell">
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true">Status </span>Active
+              </td>
+            </tr>
+            <tr class="nhsuk-table__row" role="row">
+              <td class="nhsuk-table__cell" role="cell">
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true">Recovery plan ID </span><a href="#" class="nhsuk-link">2418354</a>
+              </td>
+              <td class="nhsuk-table__cell" role="cell">
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true">Start date </span>12 Feb 2025
+              </td>
+              <td class="nhsuk-table__cell" role="cell">
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true">End date </span>28 Dec 2026
+              </td>
+              <td class="nhsuk-table__cell" role="cell">
+                <span class="nhsuk-table-responsive__heading nhsuk-table__cell--numeric" aria-hidden="true">Total amount </span>£1,116
+              </td>
+              <td class="nhsuk-table__cell" role="cell">
+                <span class="nhsuk-table-responsive__heading nhsuk-table__cell--numeric" aria-hidden="true">Recovered amount </span>£1,116
+              </td>
+              <td class="nhsuk-table__cell" role="cell">
+                <span class="nhsuk-table-responsive__heading" aria-hidden="true">Status </span>Active
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </details>
 
@@ -307,6 +388,7 @@
     </div>
 
     <div class="nhsuk-form-group nhsuk-file-upload" data-module="nhsuk-file-upload">
+      <h4>Drag and drop files here or</h4>
       <input class="nhsuk-file-upload__input" id="file-hint" name="file-hint" type="file">
     </div>
 
