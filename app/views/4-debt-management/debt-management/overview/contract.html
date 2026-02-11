@@ -7,6 +7,7 @@
 
 <!-- components -->
 {% from "action-link/macro.njk" import actionLink %}
+{% from "button/macro.njk" import button %}
 
 <!-- Set the page title -->
 {% block pageTitle %}
@@ -588,9 +589,10 @@
       <input class="nhsuk-file-upload__input" id="file-hint" name="file-hint" type="file">
     </div>
 
-    <button class="nhsuk-button nhsuk-button--secondary" data-module="nhsuk-button" type="submit">
-      Save case note
-    </button>
+    {{ button({
+      text: "Save case note",
+      classes: "nhsuk-button--secondary"
+    }) }}
   </div>
   <!-- CASE LOG -->
 
