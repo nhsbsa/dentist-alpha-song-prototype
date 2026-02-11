@@ -6,6 +6,7 @@
 {% extends 'default-layout.html' %}
 
 <!-- components -->
+ {% from "file-upload/macro.njk" import fileUpload %}
 {% from "action-link/macro.njk" import actionLink %}
 
 <!-- Set the page title -->
@@ -585,7 +586,6 @@
     </div>
 
     <div class="nhsuk-form-group nhsuk-file-upload" data-module="nhsuk-file-upload">
-      <h4>Drag and drop files here or</h4>
       <input class="nhsuk-file-upload__input" id="file-hint" name="file-hint" type="file">
     </div>
 
